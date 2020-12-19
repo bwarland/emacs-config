@@ -5,10 +5,15 @@
   (scroll-bar-mode -1))
 (setq inhibit-startup-message t)
 
-;; (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-13"))
-;; (set-face-attribute 'default t :font "DejaVu Sans Mono-13")
-;; (set-frame-font "DejaVu Sans Mono-12")
-(set-frame-font "Liberation Mono-15")
+;; HER GÅR ALT SOM HAR ULIK KONFIGURERING PÅ GRUNN AV FORSKJELL MELLOM LINUX OG WINDOWS
+;; En annen måte å gjøre dette på er å lage to filer som skal lastes, skjønt jeg antar dette neppe blir
+;; et så stort at det ville være en fordel å gjøre det på den måten. 
+;; =#=#=#=#=#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#= =#=#=#=# =#=#=#=# 
+(cond ((eq system-type 'windows-nt) (progn (set-frame-font "Consolas-14")
+					   (setq default-directory "~/C:/Users/bjorwa/Documents/GitHub/"))
+       (eq system-type 'gnu/linux) (progn (set-frame-font "Liberation Mono-15")
+					  (setq default-directory "~/Documents/GitHub/"))))
+;; =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# 
 
 (eval-when-compile
   (require 'use-package))
@@ -24,8 +29,6 @@
   (setq display-buffer-base-action '(display-buffer-below-selected))
   ;; (edwina-setup-dwm-keys)
   (edwina-mode 1))
-
-(setq default-directory "~/GitHub/")
 
 (require 'org-drill)
 
@@ -165,19 +168,20 @@
 	  ;; TODO-KONFIGURASJON
 	  ;;=====================
 	  org-todo-keywords (quote (
-				    (sequence "TODO(t)" "møte(M)" "pult(P)" "hjemme(H)" "jobb(J)" "|" "DONE(d)")
+				    (sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
 				    (sequence "jour(j)" "fund(f)")))
 
 	  org-todo-keyword-faces (quote (("jour" :foreground "red" :background "white")
 					 ("fund" :foreground "blue" :background "white")
 					 ("TODO" :foreground "red" :background "white")
+					 ("NEXT" :foreground "blue" :background "white")
 					 ("DONE" :foreground "dark green" :background "white")))
 	  ;; REFILE TARGETS
 	  ;;====================
-	  org-refile-targets (quote (
-				     ("liq.org" :maxlevel . 4)
-				     ("reg.org" :maxlevel . 4)
-				     ("energi-master.org" :maxlevel . 8)))
+	  org-refile-targets (quote (("~/GitHub/Markedsanalyse/journaler/arkiv.org" :maxlevel . 2)
+				     ("~/GitHub/Markedsanalyse/journaler/liq.org" :maxlevel . 4)
+				     ("~/GitHub/Markedsanalyse/journaler/reg.org" :maxlevel . 4)
+				     ("~/GitHub/Markedsanalyse/journaler/energi-master.org" :maxlevel . 4)))
 	  ;; CAPTURE TEMPLATES
 	  ;;=====================
 	  org-capture-templates (quote (
@@ -218,9 +222,18 @@
 					("1" "økonomijournal" entry (file+datetree+prompt "~/GitHub/Notater/econ.org")
 					 "* %?\n") 
 					 )))))
- 
+
+;; (cond ((eq system-type 'gnu/linux)
+;;        (setq org-refile-targets (quote (("~/GitHub/Markedsanalyse/journaler/arkiv.org" :maxlevel . 2`)
+;; 					("~/GitHub/Markedsanalyse/journaler/liq.org" :maxlevel . 4)
+;; 					("~/GitHub/Markedsanalyse/journaler/reg.org" :maxlevel . 4)
+;; 					("~/GitHub/Markedsanalyse/journaler/energi-master.org" :maxlevel . 4))))
+;;        (eq system-type 'windows-nt)
+;;        (setq org-refile-targets (quote (("
+
+(advice-add 'org-refile :after 'org-save-all-org-buffers)
+
 (require 'org-super-agenda)
-;; (org-super-agenda-mode 1)
 
 (use-package org-super-agenda
   :ensure t
@@ -248,16 +261,6 @@
 	(:discard (:tag "ikke_kal"))
 	)))
 
-
-;; ;; (use-package edwina
-;; ;;   :ensure t
-;; ;;   :config
-;; ;;   (progn
-;; ;;     (setq display-buffer-base-action '(display-buffer-below-selected))
-;; ;;     ;; (setq edwina-keymap-prefix
-;; ;;     )
-;; ;;   (edwina-setup-dwm-keys)
-;; ;;   (edwina-mode 1))
 
 ;; ;; MISC
 
@@ -322,15 +325,15 @@
 
 (use-package racket-mode
   :ensure t
-  ;; :config
-  ;; (progn
-  ;;   (setq racket-racket-program "C:\\Program Files\\Racket\\racket.exe")
-  ;;   (setq racket-raco-program "C:\\Program Files\\Racket\\raco.exe"))
-  ) 
+  :config
+  (when (eq system-type 'windows-nt) (progn
+				       (setq racket-racket-program "C:\\Program Files\\Racket\\racket.exe")
+				       (setq racket-raco-program "C:\\Program Files\\Racket\\raco.exe")))) 
 
-;; ;; (require 'sqlite)
-;; ;; (add-to-list 'exec-path "C:\\Appl\\sqlite-tools-win32-x86-3300100")
-;; ;; (put 'eval-expression 'disabled nil)
+(require 'sqlite)
+(when (eq system-type 'windows-nt) (add-to-list 'exec-path "C:\\Appl\\sqlite-tools-win32-x86-3300100"))
+
+;; (put 'eval-expression 'disabled nil)
 
 (use-package yasnippet
   :diminish yas-minor-mode
