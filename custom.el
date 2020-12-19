@@ -8,7 +8,7 @@
 ;; (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-13"))
 ;; (set-face-attribute 'default t :font "DejaVu Sans Mono-13")
 ;; (set-frame-font "DejaVu Sans Mono-12")
-(set-frame-font "Liberation Mono-12")
+(set-frame-font "Liberation Mono-16")
 
 (eval-when-compile
   (require 'use-package))
@@ -22,7 +22,7 @@
   :ensure t
   :config
   (setq display-buffer-base-action '(display-buffer-below-selected))
-  (edwina-setup-dwm-keys)
+  ;; (edwina-setup-dwm-keys)
   (edwina-mode 1))
 
 (setq default-directory "~/GitHub/")
@@ -145,6 +145,11 @@
 	  org-agenda-compact-blocks t
 	  org-agenda-block-seperator t
 	  org-agenda-span 5
+	  ;; AGENDA LOG
+	  org-agenda-start-with-log-mode t
+	  org-agenda-log-done 'note
+	  org-agenda-log-into-drawer t
+	  ;; TIME GRID
 	  org-agenda-use-time-grid t
 	  org-agenda-include-diary t
 	  org-agenda-skip-scheduled-if-done t
@@ -209,7 +214,7 @@
 					("1" "økonomijournal" entry (file+datetree+prompt "~/GitHub/Notater/econ.org")
 					 "* %?\n") 
 					 )))))
-
+ 
 (require 'org-super-agenda)
 ;; (org-super-agenda-mode 1)
 
@@ -311,13 +316,13 @@
 (setq save-abbrevs 'silent)
 (setq-default abbrev-mode t)
 
-;; ;; (use-package racket-mode
-;; ;;   :ensure t
-;; ;;   :config
-;; ;;   (progn
-;; ;;     (setq racket-racket-program "C:\\Program Files\\Racket\\racket.exe")
-;; ;;     (setq racket-raco-program "C:\\Program Files\\Racket\\raco.exe")
-;; ;;     )) 
+(use-package racket-mode
+  :ensure t
+  ;; :config
+  ;; (progn
+  ;;   (setq racket-racket-program "C:\\Program Files\\Racket\\racket.exe")
+  ;;   (setq racket-raco-program "C:\\Program Files\\Racket\\raco.exe"))
+  ) 
 
 ;; ;; (require 'sqlite)
 ;; ;; (add-to-list 'exec-path "C:\\Appl\\sqlite-tools-win32-x86-3300100")
@@ -339,14 +344,6 @@
        (global-set-key (kbd "C-c y") (lambda () (interactive)
                                         (yas/load-directory "~/elisp/snippets")))
 
-
-(global-visual-line-mode 1)
-;; ;; (setq-default auto-fill-function 'do-auto-fill)
-
-;; ;; (add-to-list 'exec-path "C:\\Appl\\aspell-0.60")
-;; ;; (setq ispell-program-name "aspell-0.60")
-;; ;; ;;(setq ispell-personal-dictionary "C:\\Appl\\Aspell")
-;; ;; (require 'ispell)
 
 (global-set-key (kbd "\C-x\C-k") 'kill-region)
 (global-set-key (kbd "\C-c\C-k") 'kill-region)
