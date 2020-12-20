@@ -5,15 +5,25 @@
   (scroll-bar-mode -1))
 (setq inhibit-startup-message t)
 
-;; HER GÅR ALT SOM HAR ULIK KONFIGURERING PÅ GRUNN AV FORSKJELL MELLOM LINUX OG WINDOWS
-;; En annen måte å gjøre dette på er å lage to filer som skal lastes, skjønt jeg antar dette neppe blir
-;; et så stort at det ville være en fordel å gjøre det på den måten. 
-;; =#=#=#=#=#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#= =#=#=#=# =#=#=#=# 
-(cond ((eq system-type 'windows-nt) (progn (set-frame-font "Consolas-14")
-					   (setq default-directory "~/C:/Users/bjorwa/Documents/GitHub/"))
-       (eq system-type 'gnu/linux) (progn (set-frame-font "Liberation Mono-15")
-					  (setq default-directory "~/Documents/GitHub/"))))
-;; =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# 
+;; ;; HER GÅR ALT SOM HAR ULIK KONFIGURERING PÅ GRUNN AV FORSKJELL MELLOM LINUX OG WINDOWS
+;; ;; En annen måte å gjøre dette på er å lage to filer som skal lastes, skjønt jeg antar dette neppe blir
+;; ;; et så stort at det ville være en fordel å gjøre det på den måten. 
+;; ;; =#=#=#=#=#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#= =#=#=#=# =#=#=#=# 
+;; (cond ((eq system-type 'windows-nt) (progn (set-frame-font "Consolas-14")
+;; 					   (setq default-directory "~/C:/Users/bjorwa/Documents/GitHub/")
+;; 					   (setq org-refile-targets (quote (("~/C:/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/arkiv.org" :maxlevel . 2)
+;; 									    ("~/C:/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/liq.org" :maxlevel . 4)
+;; 									    ("~/C:/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/reg.org" :maxlevel . 4)
+;; 									    ("~/C:/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/energi-master.org" :maxlevel . 4))))
+;; 					   )
+;;        (eq system-type 'gnu/linux) (progn (set-frame-font "Liberation Mono-15")
+;; 					  (setq default-directory "~/Documents/GitHub/")
+;; 					  (setq org-refile-targets (quote (("~/GitHub/Markedsanalyse/journaler/arkiv.org" :maxlevel . 2)
+;; 									   ("~/GitHub/Markedsanalyse/journaler/liq.org" :maxlevel . 4)
+;; 									   ("~/GitHub/Markedsanalyse/journaler/reg.org" :maxlevel . 4)
+;; 									   ("~/GitHub/Markedsanalyse/journaler/energi-master.org" :maxlevel . 4))))
+;; 					  )))
+;; ;; =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# =#=#=#=# 
 
 (eval-when-compile
   (require 'use-package))
@@ -184,44 +194,47 @@
 				     ("~/GitHub/Markedsanalyse/journaler/energi-master.org" :maxlevel . 4)))
 	  ;; CAPTURE TEMPLATES
 	  ;;=====================
-	  org-capture-templates (quote (
-					("b" "PowerBI" entry (file+olp "~/GitHub/Notater/informatikk.org" "PowerBI")
-					 "** %? :drill:power_bi:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-					("d" "Dagbok" entry (file+datetree+prompt "~/GitHub/Journal/dagbok.org")
-					 "* %?\n")
-					("D" "Database" entry (file+olp "~/GitHub/Notater/informatikk.org" "Database")
-					 "** %? :drill:db:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-					("e" "Emacs config" entry (file+olp "~/GitHub/Notater/informatikk.org" "Emacs")
-					 "** %? :drill:emacs:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-					("E" "Elisp" entry (file+olp "~/GitHub/Notater/informatikk.org" "Elisp")
-					 "** %? :drill:emacs:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-					("F" "Ferdigheter" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
-					 "* %?\n")
-					("g" "gjøremål" entry (file+olp "~/GitHub/Notater/moeter.org" "gjøremål")
-					 "* TODO %?\n%^t")
-					("i" "Informatikk" entry (file+olp "~/GitHub/Notater/informatikk.org" "Informatikk")
-					 "** %? :drill:informatikk:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-					("j" "Journal" entry (file+datetree+prompt "~/GitHub/Markedsanalyse/journaler/journal.org")
-					 "* %?\nhjlink")
-					("l" "Linux" entry (file+olp "~/GitHub/Notater/informatikk.org" "Linux")
-					 "** %? :drill:linux:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-					("m" "møter" entry (file+olp "~/GitHub/Notater/moeter.org" "møter")
-					 "* %?\n%^t")
-					("n" "Numpy" entry (file+olp "~/GitHub/Notater/informatikk.org" "Numpy")
-					 "** %? :drill:python:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-					("o" "Office" entry (file+olp "~/GitHub/Notater/informatikk.org" "Office")
-					 "** %? :drill:office:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-					("P" "Pandas" entry (file+olp "~/GitHub/Notater/informatikk.org" "Pandas")
-					 "** %? :drill:python:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-					("p" "Python" entry (file+olp "~/GitHub/Notater/informatikk.org" "Python")
-					 "** %? :drill:python:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-					("r" "Racket" entry (file+olp "~/GitHub/Notater/informatikk.org" "Racket")
-					 "** %? :drill:scheme:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-					("x" "Excel" entry (file+olp "~/GitHub/Notater/informatikk.org" "Racket")
-					 "** %? :drill:excel:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-					("1" "økonomijournal" entry (file+datetree+prompt "~/GitHub/Notater/econ.org")
-					 "* %?\n") 
-					 )))))
+	  ;; org-capture-templates (quote (
+	  ;; 				("d" "drill/emnder")
+	  ;; 				("db" "PowerBI" entry (file+olp "~/GitHub/Notater/informatikk.org" "PowerBI")
+	  ;; 				 "** %? :drill:power_bi:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+	  ;; 				("dd" "Database" entry (file+olp "~/GitHub/Notater/informatikk.org" "Database")
+	  ;; 				 "** %? :drill:db:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+	  ;; 				("de" "Emacs config" entry (file+olp "~/GitHub/Notater/informatikk.org" "Emacs")
+	  ;; 				 "** %? :drill:emacs:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+	  ;; 				("di" "Informatikk" entry (file+olp "~/GitHub/Notater/informatikk.org" "Informatikk")
+	  ;; 				 "** %? :drill:informatikk:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+	  ;; 				("dl" "Linux" entry (file+olp "~/GitHub/Notater/informatikk.org" "Linux")
+	  ;; 				 "** %? :drill:linux:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+	  ;; 				("dn" "Numpy" entry (file+olp "~/GitHub/Notater/informatikk.org" "Numpy")
+	  ;; 				 "** %? :drill:python:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+	  ;; 				("do" "Office" entry (file+olp "~/GitHub/Notater/informatikk.org" "Office")
+	  ;; 				 "** %? :drill:office:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+	  ;; 				("dP" "Pandas" entry (file+olp "~/GitHub/Notater/informatikk.org" "Pandas")
+	  ;; 				 "** %? :drill:python:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+	  ;; 				("dp" "Python" entry (file+olp "~/GitHub/Notater/informatikk.org" "Python")
+	  ;; 				  "** %? :drill:python:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+	  ;; 				("dr" "Racket" entry (file+olp "~/GitHub/Notater/informatikk.org" "Racket")
+	  ;; 				 "** %? :drill:scheme:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+	  ;; 				("dx" "Excel" entry (file+olp "~/GitHub/Notater/informatikk.org" "Racket")
+	  ;; 				 "** %? :drill:excel:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+	  ;; 				("h" "handling/gjøremål")
+	  ;; 				("hg" "gjøremål" entry (file+olp "~/GitHub/Notater/moeter.org" "gjøremål")
+	  ;; 				 "* TODO %?\n%^t")
+	  ;; 				("hm" "møter" entry (file+olp "~/GitHub/Notater/moeter.org" "møter")
+	  ;; 				 "* %?\n%^t")
+	  ;; 				("j" "journal/føring")
+	  ;; 				("jd" "Dagbok" entry (file+datetree+prompt "~/GitHub/Journal/dagbok.org")
+	  ;; 				 "* %?\n")
+	  ;; 				("jf" "Fundamentals" entry (file+datetree+prompt "~/GitHub/Markedsanalyse/journaler/fundamentals.org")
+	  ;; 				 "* %?\nhjlink")
+	  ;; 				("jF" "Ferdigheter" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
+	  ;; 				 "* %?\n")
+	  ;; 				("jj" "Journal" entry (file+datetree+prompt "~/GitHub/Markedsanalyse/journaler/journal.org")
+	  ;; 				 "* %?\nhjlink")
+	  ;; 				("jø" "Økonomi" entry (file+datetree+prompt "~/GitHub/Notater/econ.org")
+	  ;; 				 "* %?\n")))
+				       )))
 
 ;; (cond ((eq system-type 'gnu/linux)
 ;;        (setq org-refile-targets (quote (("~/GitHub/Markedsanalyse/journaler/arkiv.org" :maxlevel . 2`)
@@ -262,62 +275,9 @@
 	)))
 
 
-;; ;; MISC
-
-;; ;; (setq-default indicate-empty-lines t)
-;; ;; (when (not indicate-empty-lines)
-;; ;;   (toggle-indicate-empty-lines))
-
-;; (setq column-number-mode t)
-
-;; (defun other-window-backward (&optional n)
-;;   "Select n-th previous window"
-;;   (interactive "P")
-;;   (other-window (- (or n 1))))
-
-;; (defalias 'scroll-ahead 'scroll-up)
-
-;; (defalias 'scroll-behind 'scroll-down)
-
-;; (defun scroll-n-lines-ahead (&optional n)
-;;   "scroll ahead n line(s)"
-;;   (interactive "P")
-;;   (scroll-ahead (prefix-numeric-value n)))
-
-;; (defun scroll-n-lines-back (&optional n)
-;;   "scroll behind n line(s)"
-;;   (interactive "P")
-;;   (scroll-behind (prefix-numeric-value n)))
-
-
-;; (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-13"))
-;; (set-face-attribute 'default t :font "DejaVu Sans Mono-13")
-;; (set-default-font "DejaVu Sans Mono-13")
-
 (put 'downcase-region 'disabled nil)
 
 (set-language-environment "UTF-8")
-
-;; (defun s-trim-left (s)
-;;  "remove whitespace at the beginning of s"
-;;  (if (string-match "\\'[ \t\n\r]+" s)
-;;      (replace-match "" t t s) s))
-
-;; (defun s-strim-right (s)
-;;  "remove whitespace at the end of s"
-;;  (if (string-match "[ \t\n\r]+\\'" s)
-;;      (replace-match "" t t s) s))
-
-;; (defun s-trim (s)
-;;  "remove whitespace at the beginning and end of s"
-;;  (interactive "r")
-;;  (s-trim-left (s-trim-right s)))
-
-;;(visual-line-mode t)
-
-;; (defalias 'list-buffers 'ibuffer-other-window)
-
-;; ;;(setq initial-buffer-choice "~/Documents/oversikt.org")
 
 (setq abbrev-file-name "~/.emacs.d/abbrev_defs")
 (setq save-abbrevs 'silent)
@@ -331,9 +291,8 @@
 				       (setq racket-raco-program "C:\\Program Files\\Racket\\raco.exe")))) 
 
 (require 'sqlite)
-(when (eq system-type 'windows-nt) (add-to-list 'exec-path "C:\\Appl\\sqlite-tools-win32-x86-3300100"))
+;; (when (eq system-type 'windows-nt) (add-to-list 'exec-path "C:\\Appl\\sqlite-tools-win32-x86-3300100"))
 
-;; (put 'eval-expression 'disabled nil)
 
 (use-package yasnippet
   :diminish yas-minor-mode
@@ -396,3 +355,102 @@
 (setq org-drill-spaced-repetition-algorithm 'sm2)
 (setq org-drill-add-random-noise-to-intervals-p t)
 (setq org-drill-adjust-intervals-for-early-and-late-repetitions-p t)
+
+;; HER GÅR ALT SOM HAR ULIK KONFIGURERING PÅ GRUNN AV FORSKJELL MELLOM LINUX OG WINDOWS
+;; En annen måte å gjøre dette på er å lage to filer som skal lastes, skjønt jeg antar dette neppe blir
+;; et så stort at det ville være en fordel å gjøre det på den måten. 
+;; =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=# 
+(cond ((eq system-type 'windows-nt) (progn (set-frame-font "Consolas-14")
+					   (setq default-directory "~/C:/Users/bjorwa/Documents/GitHub/")
+					   (setq org-refile-targets (quote (("~/C:/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/arkiv.org" :maxlevel . 2)
+									    ("~/C:/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/liq.org" :maxlevel . 4)
+									    ("~/C:/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/reg.org" :maxlevel . 4)
+									    ("~/C:/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/energi-master.org" :maxlevel . 4))))
+					   (setq org-capture-templates (quote (("d" "drill/emnder")
+									       ("db" "PowerBI" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub/Notater/informatikk.org" "PowerBI")
+										"** %? :drill:power_bi:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									       ("dd" "Database" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub/Notater/informatikk.org" "Database")
+										"** %? :drill:db:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									       ("de" "Emacs config" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub/Notater/informatikk.org" "Emacs")
+										"** %? :drill:emacs:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									       ("di" "Informatikk" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub/Notater/informatikk.org" "Informatikk")
+										"** %? :drill:informatikk:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									       ("dl" "Linux" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub/Notater/informatikk.org" "Linux")
+										"** %? :drill:linux:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									       ("dn" "Numpy" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub/Notater/informatikk.org" "Numpy")
+										"** %? :drill:python:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									       ("do" "Office" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub/Notater/informatikk.org" "Office")
+										"** %? :drill:office:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									       ("dP" "Pandas" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub/Notater/informatikk.org" "Pandas")
+										"** %? :drill:python:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									       ("dp" "Python" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub/Notater/informatikk.org" "Python")
+										"** %? :drill:python:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									       ("dr" "Racket" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub/Notater/informatikk.org" "Racket")
+										"** %? :drill:scheme:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									       ("dx" "Excel" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub/Notater/informatikk.org" "Racket")
+										"** %? :drill:excel:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									       ("h" "handling/gjøremål")
+									       ("hg" "gjøremål" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub/Notater/moeter.org" "gjøremål")
+										"* TODO %?\n%^t")
+									       ("hm" "møter" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub/Notater/moeter.org" "møter")
+										"* %?\n%^t")
+									       ("j" "journal/føring")
+									       ("jd" "Dagbok" entry (file+datetree+prompt "~/C:/Users/bjorwa/Documents/GitHub/Journal/dagbok.org")
+										"* %?\n")
+									       ("jf" "Fundamentals" entry (file+datetree+prompt "~/C:/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/fundamentals.org")
+										"* %?\nhjlink")
+									       ("jF" "Ferdigheter" entry (file+datetree+prompt "~/C:/Users/bjorwa/Documents/GitHub/Notater/ferdigheter.org")
+										"* %?\n")
+									       ("jj" "Journal" entry (file+datetree+prompt "~/C:/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/journal.org")
+										"* %?\nhjlink")
+									       ("jø" "Økonomi" entry (file+datetree+prompt "~/C:/Users/bjorwa/Documents/GitHub/Notater/econ.org")
+										"* %?\n") 
+									      )))
+					   )
+       (eq system-type 'gnu/linux) (progn (set-frame-font "Liberation Mono-15")
+					  (setq default-directory "~/Documents/GitHub/")
+					  (setq org-refile-targets (quote (("~/GitHub/Markedsanalyse/journaler/arkiv.org" :maxlevel . 2)
+									   ("~/GitHub/Markedsanalyse/journaler/liq.org" :maxlevel . 4)
+									   ("~/GitHub/Markedsanalyse/journaler/reg.org" :maxlevel . 4)
+									   ("~/GitHub/Markedsanalyse/journaler/energi-master.org" :maxlevel . 4))))
+					  (setq org-capture-templates (quote (("d" "drill/emnder")
+									      ("db" "PowerBI" entry (file+olp "~/GitHub/Notater/informatikk.org" "PowerBI")
+									       "** %? :drill:power_bi:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									      ("dd" "Database" entry (file+olp "~/GitHub/Notater/informatikk.org" "Database")
+									       "** %? :drill:db:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									      ("de" "Emacs config" entry (file+olp "~/GitHub/Notater/informatikk.org" "Emacs")
+									       "** %? :drill:emacs:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									      ("di" "Informatikk" entry (file+olp "~/GitHub/Notater/informatikk.org" "Informatikk")
+									       "** %? :drill:informatikk:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									      ("dl" "Linux" entry (file+olp "~/GitHub/Notater/informatikk.org" "Linux")
+									       "** %? :drill:linux:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									      ("dn" "Numpy" entry (file+olp "~/GitHub/Notater/informatikk.org" "Numpy")
+									       "** %? :drill:python:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									      ("do" "Office" entry (file+olp "~/GitHub/Notater/informatikk.org" "Office")
+									       "** %? :drill:office:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									      ("dP" "Pandas" entry (file+olp "~/GitHub/Notater/informatikk.org" "Pandas")
+									       "** %? :drill:python:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									      ("dp" "Python" entry (file+olp "~/GitHub/Notater/informatikk.org" "Python")
+									       "** %? :drill:python:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									      ("dr" "Racket" entry (file+olp "~/GitHub/Notater/informatikk.org" "Racket")
+									       "** %? :drill:scheme:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									      ("dx" "Excel" entry (file+olp "~/GitHub/Notater/informatikk.org" "Racket")
+									       "** %? :drill:excel:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+									      ("h" "handling/gjøremål")
+									      ("hg" "gjøremål" entry (file+olp "~/GitHub/Notater/moeter.org" "gjøremål")
+									       "* TODO %?\n%^t")
+									      ("hm" "møter" entry (file+olp "~/GitHub/Notater/moeter.org" "møter")
+									       "* %?\n%^t")
+									      ("j" "journal/føring")
+									      ("jd" "Dagbok" entry (file+datetree+prompt "~/GitHub/Journal/dagbok.org")
+									       "* %?\n")
+									      ("jf" "Fundamentals" entry (file+datetree+prompt "~/GitHub/Markedsanalyse/journaler/fundamentals.org")
+									       "* %?\nhjlink")
+									      ("jF" "Ferdigheter" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
+									       "* %?\n")
+									      ("jj" "Journal" entry (file+datetree+prompt "~/GitHub/Markedsanalyse/journaler/journal.org")
+									       "* %?\nhjlink")
+									      ("jø" "Økonomi" entry (file+datetree+prompt "~/GitHub/Notater/econ.org")
+									       "* %?\n") 
+									      )))
+					  )))
