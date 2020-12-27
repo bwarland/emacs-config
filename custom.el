@@ -5,6 +5,8 @@
   (scroll-bar-mode -1))
 (setq inhibit-startup-message t)
 
+;; (set-fringe-mode 0)
+
 (global-visual-line-mode t)
 
 (setq-default major-mode 'org-mode)
