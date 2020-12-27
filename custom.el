@@ -5,6 +5,8 @@
   (scroll-bar-mode -1))
 (setq inhibit-startup-message t)
 
+;; (set-fringe-mode 0)
+
 (global-visual-line-mode t)
 
 (setq-default major-mode 'org-mode)
@@ -174,48 +176,6 @@
 					 ("NEXT" :foreground "blue" :background "white")
 					 ("DONE" :foreground "dark green" :background "white")))))
 
-;; (setq org-capture-templates (quote (
-;; 				    ("d" "drill/emner")
-;; 				    ("db" "PowerBI" entry (file+olp "~/GitHub/Notater/informatikk.org" "PowerBI")
-;; 				     "** %? :drill:power_bi:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-;; 				    ("dd" "Database" entry (file+olp "~/GitHub/Notater/informatikk.org" "Database")
-;; 				     "** %? :drill:db:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-;; 				    ("de" "Emacs config" entry (file+olp "~/GitHub/Notater/informatikk.org" "Emacs")
-;; 				     "** %? :drill:emacs:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-;; 				    ("di" "Informatikk" entry (file+olp "~/GitHub/Notater/informatikk.org" "Informatikk")
-;; 				     "** %? :drill:informatikk:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-;; 				    ("dl" "Linux" entry (file+olp "~/GitHub/Notater/informatikk.org" "Linux")
-;; 				     "** %? :drill:linux:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-;; 				    ("dn" "Numpy" entry (file+olp "~/GitHub/Notater/informatikk.org" "Numpy")
-;; 				     "** %? :drill:python:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-;; 				    ("do" "Office" entry (file+olp "~/GitHub/Notater/informatikk.org" "Office")
-;; 				     "** %? :drill:office:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-;; 				    ("dP" "Pandas" entry (file+olp "~/GitHub/Notater/informatikk.org" "Pandas")
-;; 				     "** %? :drill:python:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-;; 				    ("dp" "Python" entry (file+olp "~/GitHub/Notater/informatikk.org" "Python")
-;; 				     "** %? :drill:python:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-;; 				    ("dr" "Racket" entry (file+olp "~/GitHub/Notater/informatikk.org" "Racket")
-;; 				     "** %? :drill:scheme:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-;; 				    ("dx" "Excel" entry (file+olp "~/GitHub/Notater/informatikk.org" "Racket")
-;; 				     "** %? :drill:excel:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-;; 				    ("h" "handling/gjøremål")
-;; 				    ("hg" "gjøremål" entry (file+olp "~/GitHub/Notater/moeter.org" "gjøremål")
-;; 				     "* TODO %?\n%^t")
-;; 				    ("hm" "møter" entry (file+olp "~/GitHub/Notater/moeter.org" "møter")
-;; 				     "* %?\n%^t")
-;; 				    ("j" "journal/føring")
-;; 				    ("jd" "Dagbok" entry (file+datetree+prompt "~/GitHub/Journal/dagbok.org")
-;; 				     "* %?\n")
-;; 				    ("jf" "Fundamentals" entry (file+datetree+prompt "~/GitHub/Markedsanalyse/journaler/fundamentals.org")
-;; 				     "* %?\nhjlink")
-;; 				    ("jF" "Ferdigheter" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
-;; 				     "* %?\n")
-;; 				    ("jj" "Journal" entry (file+datetree+prompt "~/GitHub/Markedsanalyse/journaler/journal.org")
-;; 				     "* %?\nhjlink")
-;; 				    ("jø" "Økonomi" entry (file+datetree+prompt "~/GitHub/Notater/econ.org") 
-;; 				     "* %?\n")
-;; 				    )))
-
 
 (advice-add 'org-refile :after 'org-save-all-org-buffers)
 
@@ -255,13 +215,6 @@
 (setq abbrev-file-name "~/.emacs.d/abbrev_defs")
 (setq save-abbrevs 'silent)
 (setq-default abbrev-mode t)
-
-(use-package racket-mode
-  :ensure t
-  :config
-  (when (eq system-type 'windows-nt) (progn
-				       (setq racket-racket-program "C:\\Program Files\\Racket\\racket.exe")
-				       (setq racket-raco-program "C:\\Program Files\\Racket\\raco.exe")))) 
 
 ;; (require 'sqlite)
 ;; (when (eq system-type 'windows-nt) (add-to-list 'exec-path "C:\\Appl\\sqlite-tools-win32-x86-3300100"))
@@ -306,8 +259,8 @@
 				 (interactive)
 				 (popup-menu 'yank-menu)))
 
-;; ;;(global-set-key (kbd "<f5>") 'org-copy-subtree)
-;; (global-set-key (kbd "\M-?") 'help-command)
+(global-set-key (kbd "<f5>") 'org-copy-subtree)
+(global-set-key (kbd "\M-?") 'help-command)
 ;; (global-set-key "\C-h" 'delete-backward-char)
 
 ;; (use-package quelpa-use-package :ensure t)
@@ -340,9 +293,8 @@
 (use-package racket-mode
   :ensure t
   :config
-  (when (eq system-type 'windows-nt) (progn
-				       (setq racket-racket-program "C:\\Program Files\\Racket\\racket.exe")
-				       (setq racket-raco-program "C:\\Program Files\\Racket\\raco.exe")))) 
+  (when (eq system-type 'windows-nt) ((setq racket-racket-program "C:\\Program Files\\Racket\\racket.exe"
+				            racket-raco-program "C:\\Program Files\\Racket\\raco.exe")))) 
 
 ;; (require 'sqlite)
 ;; (when (eq system-type 'windows-nt) (add-to-list 'exec-path "C:\\Appl\\sqlite-tools-win32-x86-3300100"))
@@ -433,45 +385,4 @@
        		     ("jø" "Økonomi" entry (file+datetree+prompt "~/GitHub/Notater/econ.org") 
        		      "* %?\n"))))))
 
-       ;; (setq org-capture-templates
-       ;; 	     (quote (
-       ;; 		     ("d" "drill/emner")
-       ;; 		     ("db" "PowerBI" entry (file+olp "~/GitHub/Notater/informatikk.org" "PowerBI")
-       ;; 		      "** %? :drill:power_bi:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-       ;; 		     ("dd" "Database" entry (file+olp "~/GitHub/Notater/informatikk.org" "Database")
-       ;; 		      "** %? :drill:db:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-       ;; 		     ("de" "Emacs config" entry (file+olp "~/GitHub/Notater/informatikk.org" "Emacs")
-       ;; 		      "** %? :drill:emacs:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-       ;; 		     ("di" "Informatikk" entry (file+olp "~/GitHub/Notater/informatikk.org" "Informatikk")
-       ;; 		      "** %? :drill:informatikk:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-       ;; 		     ("dl" "Linux" entry (file+olp "~/GitHub/Notater/informatikk.org" "Linux")
-       ;; 		      "** %? :drill:linux:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-       ;; 		     ("dn" "Numpy" entry (file+olp "~/GitHub/Notater/informatikk.org" "Numpy")
-       ;; 		      "** %? :drill:python:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-       ;; 		     ("do" "Office" entry (file+olp "~/GitHub/Notater/informatikk.org" "Office")
-       ;; 		      "** %? :drill:office:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-       ;; 		     ("dP" "Pandas" entry (file+olp "~/GitHub/Notater/informatikk.org" "Pandas")
-       ;; 		      "** %? :drill:python:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-       ;; 		     ("dp" "Python" entry (file+olp "~/GitHub/Notater/informatikk.org" "Python")
-       ;; 		      "** %? :drill:python:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-       ;; 		     ("dr" "Racket" entry (file+olp "~/GitHub/Notater/informatikk.org" "Racket")
-       ;; 		      "** %? :drill:scheme:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-       ;; 		     ("dx" "Excel" entry (file+olp "~/GitHub/Notater/informatikk.org" "Racket")
-       ;; 		      "** %? :drill:excel:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-       ;; 		     ("h" "handling/gjøremål")
-       ;; 		     ("hg" "gjøremål" entry (file+olp "~/GitHub/Notater/moeter.org" "gjøremål")
-       ;; 		      "* TODO %?\n%^t")
-       ;; 		     ("hm" "møter" entry (file+olp "~/GitHub/Notater/moeter.org" "møter")
-       ;; 		      "* %?\n%^t")
-       ;; 		     ("j" "journal/føring")
-       ;; 		     ("jd" "Dagbok" entry (file+datetree+prompt "~/GitHub/Journal/dagbok.org")
-       ;; 		      "* %?\n")
-       ;; 		     ("jf" "Fundamentals" entry (file+datetree+prompt "~/GitHub/Markedsanalyse/journaler/fundamentals.org")
-       ;; 		      "* %?\nhjlink")
-       ;; 		     ("jF" "Ferdigheter" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
-       ;; 		      "* %?\n")
-       ;; 		     ("jj" "Journal" entry (file+datetree+prompt "~/GitHub/Markedsanalyse/journaler/journal.org")
-       ;; 		      "* %?\nhjlink")
-       ;; 		     ("jø" "Økonomi" entry (file+datetree+prompt "~/GitHub/Notater/econ.org") 
-       ;; 		      "* %?\n")))))
-		     
+
