@@ -4,8 +4,8 @@
   (menu-bar-mode -1)
   (scroll-bar-mode -1))
 (setq inhibit-startup-message t)
-
 ;; (set-fringe-mode 0)
+(setq visible-bell t)
 
 (global-visual-line-mode t)
 
@@ -67,14 +67,14 @@
 	 ("C-c h o" . helm-occur)
 	 ("C-c h x" . helm-register)
 	 ("C-c <f9>" . helm-calcul-expression)
-	 ("C-c <f1>" . helm-colors))
-  :bind (:map helm-map
-	      ("M-p" . helm-previous-line)
-	      ("M-k" . helm-next-line)
-	      ("M-I" . helm-previous-page)
-	      ("M-K" . helm-next-page)
-	      ("M-h" . helm-beginning-of-buffer)
-	      ("M-H" . helm-end-of-buffer))
+	 ("C-c <f1>" . helm-colors)
+	 ;; ("M-p" . helm-previous-line)
+	 ;; ("M-k" . helm-next-line)
+	 ;; ("M-I" . helm-previous-page)
+	 ;; ("M-K" . helm-next-page)
+	 ;; ("M-h" . helm-beginning-of-buffer)
+	 ;; ("M-H" . helm-end-of-buffer)
+	 ))
   :config
   (setq helm-buffers-lazy-matching t
 	helm-recentf-fuzzy-match t
@@ -112,8 +112,8 @@
   (("C-c o" . 'org-mode)
    ("C-c c" . 'org-capture)
    ("<f5>" . 'org-copy-subtree)
-   ("<f6>" . 'org-refile)
-   ("<f7>" . 'org-archive-subtree-default)
+   ;; ("<f6>" . 'org-refile)
+   ;; ("<f7>" . 'org-archive-subtree-default)
    ("C-c a" . 'org-agenda)
    ("C-c l" . 'org-store-link)
    ("C-c <down>" . org-time-stamp)
@@ -235,33 +235,6 @@
   (global-set-key (kbd "C-c y") (lambda () (interactive)
 				  (yas/load-directory "~/elisp/snippets"))))
 
-
-(global-set-key (kbd "\C-x\C-k") 'kill-region)
-(global-set-key (kbd "\C-c\C-k") 'kill-region)
-(global-set-key (kbd "C-<wheel-up>") 'text-scale-increase)
-(global-set-key (kbd "C-<wheel-down>") 'text-scale-decrease)
-(global-set-key (kbd "C-c r") 'comment-region)
-(global-set-key (kbd "C-c u") 'uncomment-region)
-(global-set-key (kbd "C-x a") 'define-global-abbrev)
-
-(global-set-key (kbd "<f1>") 'enlarge-window)
-(global-set-key (kbd "<f2>") 'shrink-window)
-(global-set-key (kbd "<f3>") 'shrink-window-horizontally)
-(global-set-key (kbd "<f4>") 'enlarge-window-horizontally)
-(global-set-key (kbd "<f9>") 'calc)
-
-(global-set-key (kbd "C-x C-<up>") 'windmove-up)
-(global-set-key (kbd "C-x C-<down>") 'windmove-down)
-(global-set-key (kbd "C-x C-<left>") 'windmove-left)
-(global-set-key (kbd "C-x C-<right>") 'windmove-right)
-
-(global-set-key (kbd "<f12>") '(lambda ()
-				 (interactive)
-				 (popup-menu 'yank-menu)))
-
-(global-set-key (kbd "<f5>") 'org-copy-subtree)
-(global-set-key (kbd "\M-?") 'help-command)
-;; (global-set-key "\C-h" 'delete-backward-char)
 
 ;; (use-package quelpa-use-package :ensure t)
 ;; (use-package bitwarden :ensure nil :quelpa (bitwarden :fetcher github :repo "seanfarley/emacs-bitwarden"))
