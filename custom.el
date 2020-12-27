@@ -19,12 +19,15 @@
       use-package-expand-minimally t
       use-package-enable-imenu-support t)
 
-;; HER GÅR ALT SOM HAR ULIK KONFIGURERING PÅ GRUNN AV FORSKJELL MELLOM LINUX OG WINDOWS
-;; En annen måte å gjøre dette på er å lage to filer som skal lastes, skjønt jeg antar dette neppe blir
-;; et så stort at det ville være en fordel å gjøre det på den måten. 
-;; =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=# 
+
+
+;; ;; ;; HER GÅR ALT SOM HAR ULIK KONFIGURERING PÅ GRUNN AV FORSKJELL MELLOM LINUX OG WINDOWS
+;; ;; ;; En annen måte å gjøre dette på er å lage to filer som skal lastes, skjønt jeg antar dette neppe blir
+;; ;; ;; et så stort at det ville være en fordel å gjøre det på den måten. 
+;; ;; ;; =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=# 
 (cond ((eq system-type 'windows-nt) (set-frame-font "Consolas-14"))
-      ((eq system-type 'gnu/linux) (set-frame-font "Liberation Mono-15")))
+      ;; ((eq system-name 'mbell) (set-frame-font "Liberation Mono-11"))
+      ((eq system-type 'gnu/linux) (set-frame-font "Liberation Mono-11")))
 
 (cond ((eq system-type 'windows-nt) (setq default-directory "~/C:/Users/bjorwa/Documents/GitHub/"))
       ((eq system-type 'gnu/linux) (setq default-directory "~/GitHub/")))
@@ -42,7 +45,7 @@
 
 (cond ((eq system-type 'gnu/linux) (setq python-shell-interpreter "/home/bwarland/anaconda3/bin/python3")))
 
-;; =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=# 
+;; ;; ;; =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=# 
 
 
 (use-package edwina
@@ -52,7 +55,7 @@
   ;; (edwina-setup-dwm-keys)
   (edwina-mode 1))
 
-(require 'org-drill)
+
 
 (use-package helm
   :ensure t
@@ -74,7 +77,7 @@
 	 ;; ("M-K" . helm-next-page)
 	 ;; ("M-h" . helm-beginning-of-buffer)
 	 ;; ("M-H" . helm-end-of-buffer)
-	 ))
+	 )
   :config
   (setq helm-buffers-lazy-matching t
 	helm-recentf-fuzzy-match t
@@ -359,3 +362,13 @@
        		      "* %?\n"))))))
 
 
+(use-package command-log-mode)
+ 
+(command-log-mode t)
+
+;; (require org-drill)
+;; (use-package 'org-drill)
+
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1))
