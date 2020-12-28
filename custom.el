@@ -26,8 +26,10 @@
 ;; ;; ;; et så stort at det ville være en fordel å gjøre det på den måten. 
 ;; ;; ;; =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=# 
 (cond ((eq system-type 'windows-nt) (set-frame-font "Consolas-14"))
-      ;; ((eq system-name 'mbell) (set-frame-font "Liberation Mono-11"))
-      ((eq system-type 'gnu/linux) (set-frame-font "Liberation Mono-11")))
+      ((string= system-name "macebell") (set-frame-font "Liberation Mono-14"))
+      ((string= system-name "kbell") (set-frame-font "Liberation Mono-14"))
+      ;; ((eq system-type 'gnu/linux) (set-frame-font "Liberation Mono-12"))
+      )
 
 (cond ((eq system-type 'windows-nt) (setq default-directory "~/C:/Users/bjorwa/Documents/GitHub/"))
       ((eq system-type 'gnu/linux) (setq default-directory "~/GitHub/")))
