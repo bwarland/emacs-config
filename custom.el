@@ -26,7 +26,7 @@
 ;; ;; ;; et så stort at det ville være en fordel å gjøre det på den måten. 
 ;; ;; ;; =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=# 
 (cond ((eq system-type 'windows-nt) (set-frame-font "Consolas-14"))
-      ((string= system-name "macebell") (set-frame-font "Liberation Mono-14"))
+      ((string= system-name "macebell") (set-frame-font "Liberation Mono-15"))
       ((string= system-name "kbell") (set-frame-font "Liberation Mono-14"))
       ;; ((eq system-type 'gnu/linux) (set-frame-font "Liberation Mono-12"))
       )
