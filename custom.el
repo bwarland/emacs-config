@@ -27,7 +27,7 @@
 ;; ;; ;; =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=# 
 (cond ((eq system-type 'windows-nt) (set-frame-font "Consolas-14"))
       ((string= system-name "macebell") (set-frame-font "Liberation Mono-15"))
-      ((string= system-name "kbell") (set-frame-font "Liberation Mono-14"))
+      ((string= system-name "kbell") (set-frame-font "Liberation Mono-12"))
       ;; ((eq system-type 'gnu/linux) (set-frame-font "Liberation Mono-12"))
       )
 

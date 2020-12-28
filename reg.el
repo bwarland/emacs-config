@@ -1,4 +1,6 @@
-(set-register ?c '(file . "~/GitHub/emacs-config/custom.el"))
+(cond ((eq system-type 'gnu/linux) (set-register ?c '(file . "~/GitHub/emacs-config/custom.el")))
+      ((eq system-type 'windows-nt) (set-register ?c '(file . "~/C:/Users/bjorwa/Documents/GitHub/emacs-config/custom.el"))))
+
 ;; (set-register ?C '(file . "~/notebook/col.org"))
 (set-register ?d '(file . "~/GitHub/Journal/dagbok.org"))
 (set-register ?g '(file . "~/GitHub/"))
