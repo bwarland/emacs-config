@@ -254,10 +254,10 @@
 (require 'org-fc-hydra)
 
 ;; https://gitlab.com/phillord/org-drill/
-(setq org-drill-maximum-duration 20)
-(setq org-drill-spaced-repetition-algorithm 'sm2)
-(setq org-drill-add-random-noise-to-intervals-p t)
-(setq org-drill-adjust-intervals-for-early-and-late-repetitions-p t)
+(setq org-drill-maximum-duration 20
+      org-drill-spaced-repetition-algorithm 'sm2
+      org-drill-add-random-noise-to-intervals-p t
+      org-drill-adjust-intervals-for-early-and-late-repetitions-p t)
 
 
 (put 'downcase-region 'disabled nil)
@@ -378,14 +378,23 @@
        		      "* %?\n"))))))
 
 
-(use-package command-log-mode)
- 
-;; (global-command-log-mode t)
 
 
-;; (require org-drill)
-;; (use-package 'org-drill)
+
+(require 'org-drill)
+(use-package org-drill)
 
 (use-package doom-modeline
   :ensure t
   :init (doom-modeline-mode 1))
+
+(use-package command-log-mode
+  :bind
+  ("<f10>" . clm/toggle-command-log-buffer)
+  :config
+  (global-command-log-mode t))
+
+(use-package hi-lock
+  :bind (("M-o l" . highlight-lines-matching-regexp)
+	 ("M-o r" . highlight-regexp)
+	 ("M-o w" . highlight-phrase)))
