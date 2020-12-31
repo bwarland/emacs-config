@@ -184,34 +184,27 @@
 
 (advice-add 'org-refile :after 'org-save-all-org-buffers)
 
-(require 'org-super-agenda)
+(when (eq system-type 'gnu/linux) (require 'org-super-agenda))
 
-(use-package org-super-agenda
-  :ensure t
-  :config
-  (org-super-agenda-mode 1)
-  (setq org-super-agenda-groups
-      '((:name "TIDSPLAN"
-	       :time-grid t
-	       :todo "TODO"
-	       
-	       )
-	(:name "Informatikk"
-	       :tag "informatikk")
-	(:name "Emacs"
-	       :tag "emacs")
-	(:name "Linux"
-	       :tag "linux")
-	(:name "Racket/Scheme"
-	       :tag "scheme")
-	(:name "Python"
-	       :tag "python")
-	(:name "Jobb"
-	       :tag "power_bi"
-	       :tag "excel")
-	(:discard (:tag "ikke_kal"))
-	)))
-
+(when (eq system-type 'gnu/linux)
+  (use-package org-super-agenda
+    :ensure t
+    :config
+    (org-super-agenda-mode 1)
+    (setq org-super-agenda-groups
+	  '((:name "TIDSPLAN"
+		   :time-grid t
+		   :todo "TODO")
+	    (:name "Informatikk" :tag "informatikk")
+	    (:name "Emacs" :tag "emacs")
+	    (:name "GitHub" :tag "git")
+	    (:name "Linux" :tag "linux")
+	    (:name "Racket/Scheme" :tag "scheme")
+	    (:name "Python" :tag "python")
+	    (:name "Jobb" 
+		   :tag "power_bi"
+		   :tag "excel")
+	    (:discard (:tag "ikke_kal"))))))
 
 (put 'downcase-region 'disabled nil)
 
@@ -252,12 +245,6 @@
 
 (quelpa '(discover-my-major :fetcher git :url "https://github.com/l3kn/org-fc"))
 (require 'org-fc-hydra)
-
-;; https://gitlab.com/phillord/org-drill/
-(setq org-drill-maximum-duration 20
-      org-drill-spaced-repetition-algorithm 'sm2
-      org-drill-add-random-noise-to-intervals-p t
-      org-drill-adjust-intervals-for-early-and-late-repetitions-p t)
 
 
 (put 'downcase-region 'disabled nil)
@@ -386,7 +373,15 @@
 
 
 (require 'org-drill)
-(use-package org-drill)
+
+(use-package org-drill
+  :ensure t
+  ;; https://gitlab.com/phillord/org-drill/
+  :config
+  (setq org-drill-maximum-duration 20
+	org-drill-spaced-repetition-algorithm 'sm2
+	org-drill-add-random-noise-to-intervals-p t
+	org-drill-adjust-intervals-for-early-and-late-repetitions-p t))
 
 (use-package doom-modeline
   :ensure t
