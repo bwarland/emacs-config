@@ -8,8 +8,8 @@
 (setq visible-bell t)
 
 (global-visual-line-mode t)
+(display-time-mode 1)
 
-(setq-default major-mode 'org-mode)
 
 (eval-when-compile
   (require 'use-package))
@@ -27,9 +27,7 @@
 ;; ;; ;; =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=# 
 (cond ((eq system-type 'windows-nt) (set-frame-font "Consolas-14"))
       ((string= system-name "macebell") (set-frame-font "Liberation Mono-15"))
-      ((string= system-name "kbell") (set-frame-font "Liberation Mono-12"))
-      ;; ((eq system-type 'gnu/linux) (set-frame-font "Liberation Mono-12"))
-      )
+      ((string= system-name "kbell") (set-frame-font "Liberation Mono-11")))
 
 (cond ((eq system-type 'windows-nt) (setq default-directory "~/C:/Users/bjorwa/Documents/GitHub/"))
       ((eq system-type 'gnu/linux) (setq default-directory "~/GitHub/")))
@@ -80,7 +78,7 @@
 	 ;; ("M-h" . helm-beginning-of-buffer)
 	 ;; ("M-H" . helm-end-of-buffer)
 	 )
-  :config
+  :init
   (setq helm-buffers-lazy-matching t
 	helm-recentf-fuzzy-match t
 	helm-locate-fuzzy-match t
@@ -88,11 +86,12 @@
 	helm-lisp-fuzzy-completion t
 	helm-autoresize-max-height 0
 	helm-autoresize-min-height 20)
+  :config
   (ido-mode -1)
   (helm-mode 1)
   (helm-autoresize-mode 1))
 
-(display-time-mode 1)
+
 
 (use-package swiper-helm
   :ensure t
@@ -111,24 +110,13 @@
 
 (use-package org
   :mode (("\\.org$" . org-mode))
-  ;; :mode (("\\.org$" . org))
   :hook (org-mode . org-bullets-mode)
-  :bind
-  (("C-c o" . 'org-mode)
-   ("C-c c" . 'org-capture)
-   ("<f5>" . 'org-copy-subtree)
-   ;; ("<f6>" . 'org-refile)
-   ;; ("<f7>" . 'org-archive-subtree-default)
-   ("C-c a" . 'org-agenda)
-   ("C-c l" . 'org-store-link)
-   ("C-c <down>" . org-time-stamp)
-   ("C-c C-t". 'org-todo)		;
-   ("C-c t" . 'org-show-todo-tree))
-  :config
+  :init
   (setq ;; UTSEENDE
           ;; ===================
           org-hide-leading-stars t
 	  org-startup-indented t
+	  org-startup-folded t
 	  initial-major-mode 'org-mode
 	  org-pretty-entities t
 	  org-pretty-entities-include-sub-superscripts nil
@@ -164,13 +152,9 @@
 	  org-agenda-time-grid (quote ((daily today remove-match)
                                        (0600 0800 1000 1200 1400 1600)
                                        "      " "................"))
-	  ;;=======================================================
     	  org-hide-emphasis-marker t
 	  org-ellipsis " ..."
 	  org-archive-location "~/Documents/org-arkiv/arkiv.org::* TASK"
-
-	  ;; TODO-KONFIGURASJON
-	  ;;=====================
 	  org-todo-keywords (quote (
 				    (sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
 				    (sequence "jour(j)" "fund(f)")))
@@ -179,7 +163,21 @@
 					 ("fund" :foreground "blue" :background "white")
 					 ("TODO" :foreground "red" :background "white")
 					 ("NEXT" :foreground "blue" :background "white")
-					 ("DONE" :foreground "dark green" :background "white")))))
+					 ("DONE" :foreground "dark green" :background "white"))))
+  :bind
+  (("C-c o" . 'org-mode)
+   ("C-c c" . 'org-capture)
+   ("<f5>" . 'org-copy-subtree)
+   ("C-c a" . 'org-agenda)
+   ("C-c l" . 'org-store-link)
+   ("C-c C-." . org-time-stamp)
+   ("C-c C-t". 'org-todo)		;
+   ("C-c t" . 'org-show-todo-tree)
+   ("C-c C-w" . 'org-capture-refile)
+   ("C-c C-k" . 'org-capture-kill))
+  :config
+  (setq-default major-mode 'org-mode)
+  )
 
 
 (advice-add 'org-refile :after 'org-save-all-org-buffers)
@@ -397,3 +395,5 @@
   :bind (("M-o l" . highlight-lines-matching-regexp)
 	 ("M-o r" . highlight-regexp)
 	 ("M-o w" . highlight-phrase)))
+
+
