@@ -15,6 +15,7 @@
   (require 'use-package))
 
 (setq use-package-always-defer t
+      ;; use-package-always-ensure t
       use-package-verbose nil
       use-package-expand-minimally t
       use-package-enable-imenu-support t)
@@ -311,13 +312,16 @@
        		      "* %?\nhjlink")
 		     ("jr" "Retorikk og kommunikasjon" entry (file+datetree+prompt "~/C:/Users/bjorwa/Documents/GitHub/Journal/retorikk.org")
        		      "* %?\n")
-       		     ("jø" "Økonomi" entry (file+datetree+prompt "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Notater/econ.org") 
+       		     ("jø" "Økonomi" entry (file+datetree+prompt "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Notater/econ.org")
+		      		     ("t" "tabell")
+		     ("th" "handel" table-line (file+headline "~/notebook/markedsvurdering.org" "dagsrapport" "handel")
+		      "|%^u|%^{type}|%^{selger}|%^{kjøper}|%^{periode}|%^{incoterm}|%^{pris}|%^{kilde}|%^{kommentar}|")
        		      "* %?\n"))))
        )
       ((eq system-type 'gnu/linux)
        (setq org-capture-templates
        	     (quote (
-       		     ("d" "drill/emner")
+       		     ("d" "drill")
        		     ("db" "PowerBI" entry (file+olp "~/GitHub/Notater/informatikk.org" "PowerBI")
        		      "** %? :drill:power_bi:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
        		     ("dd" "Database" entry (file+olp "~/GitHub/Notater/informatikk.org" "Database")
@@ -342,17 +346,17 @@
        		      "** %? :drill:scheme:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
        		     ("dx" "Excel" entry (file+olp "~/GitHub/Notater/informatikk.org" "Racket")
        		      "** %? :drill:excel:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-		     ("f" "fortelling og retorikk")
+		     ("f" "fortelling")
 		     ("ff" "fortelling" entry (file+olp "~/GitHub/Notater/forret.org" "fortelling")
 		      "* %?\n")
 		     ("fr" "retorikk" entry (file+olp "~/GitHub/Notater/forret.org" "retorikk")
 		      "* %?\n")
-       		     ("h" "handling/gjøremål")
+       		     ("h" "handling")
        		     ("hg" "gjøremål" entry (file+olp "~/GitHub/Notater/moeter.org" "gjøremål")
        		      "* TODO %?\n%^t")
        		     ("hm" "møter" entry (file+olp "~/GitHub/Notater/moeter.org" "møter")
        		      "* %?\n%^t")
-       		     ("j" "journal/føring")
+       		     ("j" "journal")
        		     ("jd" "Dagbok" entry (file+datetree+prompt "~/GitHub/Journal/dagbok.org")
        		      "* %?\n")
        		     ("jf" "Fundamentals" entry (file+datetree+prompt "~/GitHub/Markedsanalyse/journaler/fundamentals.org")
@@ -364,7 +368,11 @@
 		     ("jr" "Retorikk og kommunikasjon" entry (file+datetree+prompt "~/GitHub/Journal/retorikk.org")
        		      "* %?\n")
        		     ("jø" "Økonomi" entry (file+datetree+prompt "~/GitHub/Notater/econ.org") 
-       		      "* %?\n"))))))
+       		      "* %?\n")
+		     ("t" "tabell")
+		     ("th" "handel" table-line (file+headline "~/GitHub/Notater/test.org" "tabell")
+		      "|%^u|%^{type}|%^{selger}|%^{kjøper}|%^{periode}|%^{incoterm}|%^{pris}|%^{kilde}|%^{kommentar}|")
+		     )))))
 
 
 
@@ -387,7 +395,7 @@
 
 (use-package command-log-mode
   :bind
-  ("<f10>" . clm/toggle-command-log-buffer)
+  ("C-c <f10>" . clm/toggle-command-log-buffer)
   :config
   (global-command-log-mode t))
 
