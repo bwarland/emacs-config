@@ -30,7 +30,7 @@
       ((string= system-name "macebell") (set-frame-font "Liberation Mono-15"))
       ((string= system-name "kbell") (set-frame-font "Liberation Mono-11")))
 
-(cond ((eq system-type 'windows-nt) (setq default-directory "~/C:/Users/bjorwa/Documents/GitHub/"))
+(cond ((eq system-type 'windows-nt) (setq default-directory "~/C:Users/bjorwa/Documents/GitHub/"))
       ((eq system-type 'gnu/linux) (setq default-directory "~/GitHub/")))
 
 (let ((window-path "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/")
