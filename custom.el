@@ -128,7 +128,7 @@
 	  org-refile-use-outline-path t 
 	  org-outline-path-complete-in-steps nil
 	  org-refile-allow-creating-parent-nodes (quote confirm)
-	  org-completion-use-ido nil
+	  ;; org-completion-use-ido nil
 	  org-indirect-buffer-display 'current-window
 	  org-hide-emphasis-markers t
 	  org-tags-column -50
