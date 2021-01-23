@@ -367,7 +367,7 @@
        		      "* %?\nhjlink")
 		     ("jr" "Retorikk" entry (file+datetree+prompt "~/GitHub/Journal/retorikk.org")
        		      "* %?\n")
-		     ("jt" "trening" entry (file+datetree+prompt "~/GitHub/Journal/trening.org")
+		     ("jt" "Trening" entry (file+datetree+prompt "~/GitHub/Journal/trening.org")
 		      "* %?\n")
        		     ("jø" "Økonomi" entry (file+datetree+prompt "~/GitHub/Journal/econ.org") 
        		      "* %?\n")
