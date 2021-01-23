@@ -369,7 +369,7 @@
        		      "* %?\n")
 		     ("jt" "trening" entry (file+datetree+prompt "~/GitHub/Journal/trening.org")
 		      "* %?\n")
-       		     ("jø" "Økonomi" entry (file+datetree+prompt "~/GitHub/Notater/econ.org") 
+       		     ("jø" "Økonomi" entry (file+datetree+prompt "~/GitHub/Journal/econ.org") 
        		      "* %?\n")
 		     ("t" "tabell")
 		     ("tt" "trening" table-line (file+headline "~/GitHub/Journal/trening.org" "Tabell")
