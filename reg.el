@@ -8,6 +8,6 @@
 (set-register ?j '(file . "~/GitHub/Markedsanalyse/journaler/journal.org"))
 (set-register ?l '(file . "~/GitHub/Markedsanalyse/journaler/liq.org"))
 (set-register ?r '(file . "~/GitHub/Markedsanalyse/journaler/reg.org"))
-(set-register ?t '(file . "~/GitHub/Journal/dagbok.org"))
+(set-register ?t '(file . "~/GitHub/Journal/trening.org"))
 (set-register ?e '(file . "~/.emacs"))
 
