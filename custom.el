@@ -344,6 +344,8 @@
        		      "** %? :drill:python:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
        		     ("dr" "Racket" entry (file+olp "~/GitHub/Notater/informatikk.org" "Racket")
        		      "** %? :drill:scheme:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+		     ("ds" "Samfunn" entry (file+olp "~/GitHub/Notater/samfunndrill.org" "begreper")
+       		      "** %? :drill:samfunn:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
        		     ("dx" "Excel" entry (file+olp "~/GitHub/Notater/informatikk.org" "Racket")
        		      "** %? :drill:excel:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
 		     ("f" "fortelling")
@@ -367,6 +369,8 @@
        		      "* %?\nhjlink")
 		     ("jr" "Retorikk" entry (file+datetree+prompt "~/GitHub/Journal/retorikk.org")
        		      "* %?\n")
+		     ("js" "Samfunn" entry (file+datetree+prompt "~/GitHub/Journal/samfunn.org")
+       		      "* %?\n")
 		     ("jt" "Trening" entry (file+datetree+prompt "~/GitHub/Journal/trening.org")
 		      "* %?\n")
        		     ("jø" "Økonomi" entry (file+datetree+prompt "~/GitHub/Journal/econ.org") 
@@ -374,8 +378,6 @@
 		     ("t" "tabell")
 		     ("tt" "trening" table-line (file+headline "~/GitHub/Journal/trening.org" "Tabell")
 		      "|%^u|%^{type}|%^{oppvarming}|%^{runder}|%^{vekt}|%^{tid}|%^{kommentar}|")
-		     ;; ("th" "handel" table-line (file+headline "~/GitHub/Notater/test.org" "tabell")
-		     ;;  "|%^u|%^{type}|%^{selger}|%^{kjøper}|%^{periode}|%^{incoterm}|%^{pris}|%^{kilde}|%^{kommentar}|")
 		     )))))
 
 
