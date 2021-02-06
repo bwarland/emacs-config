@@ -28,7 +28,9 @@
 ;; ;; ;; =#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=# 
 (cond ((eq system-type 'windows-nt) (set-frame-font "Consolas-14"))
       ((string= system-name "macebell") (set-frame-font "Liberation Mono-15"))
-      ((string= system-name "kbell") (set-frame-font "Liberation Mono-11")))
+      ((string= system-name "kbell") (set-frame-font "Liberation Mono-11"))
+      ((string= system-name "ingentingen") (set-frame-font "Liberation Mono-12"))
+      )
 
 (cond ((eq system-type 'windows-nt) (setq default-directory "~/C:Users/bjorwa/Documents/GitHub/"))
       ((eq system-type 'gnu/linux) (setq default-directory "~/GitHub/")))
