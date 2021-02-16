@@ -422,3 +422,9 @@
   (auto-package-update-maybe)
   (auto-package-update-at-time "09:00")
   )
+
+(require 'org-tempo)
+
+;; (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
+;; (add-to-list 'org-structure-template-alist '("py" . "src python"))
+

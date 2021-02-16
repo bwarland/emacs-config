@@ -1,6 +1,8 @@
-#+title: Egen konfigurering av Emacs
-#+PROPERTY:
-#+startup: num
+#+TITLE: Konfigurering av Emacs
+#+PROPERTY: header-args :tangle ekonf.el
+#+STARTUP: num
+
+* Innhold :toc:
 * Utseende
 #+begin_src emacs-lisp
     (when window-system
