@@ -1,5 +1,3 @@
-
-
 (global-set-key (kbd "\C-x\C-k") 'kill-region)
 (global-set-key (kbd "\C-c\C-k") 'kill-region)
 
@@ -32,4 +30,3 @@
 				 (interactive)
 				 (popup-menu 'yank-menu)))
 (global-set-key (kbd "\M-?") 'help-command)
-

@@ -10,4 +10,3 @@
 (set-register ?r '(file . "~/GitHub/Markedsanalyse/journaler/reg.org"))
 (set-register ?t '(file . "~/GitHub/Journal/trening.org"))
 (set-register ?e '(file . "~/.emacs"))
-

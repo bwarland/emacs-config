@@ -209,7 +209,6 @@
 	    (:discard (:tag "ikke_kal"))))))
 
 (put 'downcase-region 'disabled nil)
-
 (set-language-environment "UTF-8")
 
 (setq abbrev-file-name "~/.emacs.d/abbrev_defs")
@@ -249,13 +248,6 @@
 (require 'org-fc-hydra)
 
 
-(put 'downcase-region 'disabled nil)
-
-(set-language-environment "UTF-8")
-
-(setq abbrev-file-name "~/.emacs.d/abbrev_defs")
-(setq save-abbrevs 'silent)
-(setq-default abbrev-mode t)
 
 (use-package racket-mode
   :ensure t
