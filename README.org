@@ -10,12 +10,16 @@ Konfigurasjon knyttet til moduler og pakker.
   (package-initialize)
   (setq package-archives '(("elpa" . "https://elpa.gnu.org/packages/")
                            ("marmalade" . "https://marmalade-repo.org/packages/")
-                               ("org" . "https://orgmode.org/elpa/")
+                           ("org" . "https://orgmode.org/elpa/")
                            ("melpa" . "https://melpa.org/packages/")
                            ))
 #+end_src
 
 ** Use-package
+Denne pakken er laget for det å samle konfigurasjon knyttet til en pakke, og man kan kontrollere lasting av pakker slik at man kan korte ned på oppstartstid for Emacs.
+:bind
+:init
+:mode
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/pakker.el"
 (eval-when-compile
   (require 'use-package))
@@ -48,11 +52,17 @@ Konfigurasjon knyttet til moduler og pakker.
   )
 #+end_src
 * Generelt
+En samling av ulik konfigurasjon knyttet til hvordan Emacs ser ut og hvordan Emacs generelt fungerer.
 ** Doom modeline
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
-(use-package doom-modeline
-  :ensure t
-  :init (doom-modeline-mode 1))
+        (use-package doom-modeline
+          :ensure t
+          :init (doom-modeline-mode 1)
+          :config (setq doom-modeline-bar-height 25
+                        doom-modeline-bar-width 3
+                        doom-modeline-buffer-encoding t
+                        doom-modeline-workspace-name t)
+          )
 #+end_src
 ** Forkortelser
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
@@ -120,50 +130,52 @@ Konfigurasjon knyttet til moduler og pakker.
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
 (add-to-list 'load-path "~/.emacs.d/ob-racket-master/")
 #+end_src
-* Helm
-** Generelt
+* Fullføring
+** Helm 
+*** Generelt
+Pakke for søking og innsnevring av valg og for det å fullføre navn på filer og kommandoer og så videre. 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/helm-konf.el"
-(use-package helm
-  :ensure t
-  :bind (
-	 ("M-x" . helm-M-x)
-	 ("C-x C-f" . helm-find-files)
-	 ("C-x f" . helm-recentf)
-	 ("M-y" . helm-show-kill-ring)
-	 ("C-x b" . helm-buffers-list)	;
-	 ("C-x c y" . helm-yas-complete)
-	 ("C-x c Y" . helm-yas-create-snippet-on-region)
-	 ("C-c h o" . helm-occur)
-	 ("C-c h x" . helm-register)
-	 ("C-c <f9>" . helm-calcul-expression)
-	 ("C-c <f1>" . helm-colors)
-	 ;; ("M-p" . helm-previous-line)
-	 ;; ("M-k" . helm-next-line)
-	 ;; ("M-I" . helm-previous-page)
-	 ;; ("M-K" . helm-next-page)
-	 ;; ("M-h" . helm-beginning-of-buffer)
-	 ;; ("M-H" . helm-end-of-buffer)
-	 )
-  :init
-  (setq helm-buffers-lazy-matching t
-	helm-recentf-fuzzy-match t
-	helm-locate-fuzzy-match t
-	helm-split-window-in-side-p t
-	helm-lisp-fuzzy-completion t
-	helm-autoresize-max-height 0
-	helm-autoresize-min-height 20)
-  :config
-  (ido-mode -1)
-  (helm-mode 1)
-  (helm-autoresize-mode 1))
+  (use-package helm
+    :ensure t
+    :bind (
+           ("M-x" . helm-M-x)
+           ("C-x C-f" . helm-find-files)
+           ("C-x f" . helm-recentf)
+           ("M-y" . helm-show-kill-ring)
+           ("C-x b" . helm-buffers-list)	;
+           ("C-x c y" . helm-yas-complete)
+           ("C-x c Y" . helm-yas-create-snippet-on-region)
+           ("C-c h o" . helm-occur)
+           ("C-c h x" . helm-register)
+           ("C-c <f9>" . helm-calcul-expression)
+           ("C-c <f1>" . helm-colors)
+           ;; ("M-p" . helm-previous-line)
+           ;; ("M-k" . helm-next-line)
+           ;; ("M-I" . helm-previous-page)
+           ;; ("M-K" . helm-next-page)
+           ;; ("M-h" . helm-beginning-of-buffer)
+           ;; ("M-H" . helm-end-of-buffer)
+           )
+    :init
+    (setq helm-buffers-lazy-matching t
+          helm-recentf-fuzzy-match t
+          helm-locate-fuzzy-match t
+          helm-split-window-in-side-p t
+          helm-lisp-fuzzy-completion t
+          helm-autoresize-max-height 0
+          helm-autoresize-min-height 20)
+    :config
+    (ido-mode -1)
+    (helm-mode 1)
+    (helm-autoresize-mode 1))
 #+end_src
-** Swiper-Helm
+*** Swiper-Helm
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/helm-konf.el"
 (use-package swiper-helm
   :ensure t
   :bind ("C-s" . swiper-helm))
 #+end_src
-* Multiple-Cursors
+* Flermarkør
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/flere-markører.el"
 (use-package multiple-cursors
   :bind
@@ -320,7 +332,7 @@ Alle moduler og pakker som har med org-mode å gjøre.
 (require 'org-fc-hydra)
 #+end_src
 ** Maler
-*** Infofangsmal
+*** Infofangstmal
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
 (cond ((eq system-type 'windows-nt)
        (setq org-capture-templates
@@ -492,18 +504,35 @@ F.eks <pyt + TAB vil eksandere til Python med tangle.
 
 * Register
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/reg.el"
-(cond ((eq system-type 'gnu/linux) (set-register ?c '(file . "~/GitHub/emacs-config/custom.el")))
-      ((eq system-type 'windows-nt) (set-register ?c '(file . "~/C:/Users/bjorwa/Documents/GitHub/emacs-config/custom.el"))))
+  (when (eq system-type 'gnu/linux) (set-register ?d '(file . "~/GitHub/Journal/dagbok.org"))
+  (when (eq system-type 'gnu/linux) (set-register ?t '(file . "~/GitHub/Journal/trening.org"))
+  (cond ((eq system-type 'gnu/linux) (set-register ?c '(file . "~/GitHub/emacs-config/custom.el")))
+        ((eq system-type 'windows-nt) (set-register ?c '(file . "~/C:/Users/bjorwa/Documents/GitHub/emacs-config/custom.el"))))
+  (cond ((eq system-type 'gnu/linux) (set-register ?g '(file . "~/GitHub/")))
+        ((eq system-type 'windows-nt) (set-register ?g '(file . "~/C:/Users/bjorwa/Documents/GitHub/"))))
+  (cond ((eq system-type 'gnu/linux) (set-register ?c '(file . "~/GitHub/Notater/ferdigheter.org")))
+        ((eq system-type 'windows-nt) (set-register ?c '(file . "~/C:/Users/bjorwa/Documents/GitHub/Notater/ferdigheter.org"))))
+  (cond ((eq system-type 'gnu/linux) (set-register ?k '(file . "~/GitHub/emacs-config/README.org")))
+        ((eq system-type 'windows-nt) (set-register ?k '(file . "~/C:/Users/bjorwa/Documents/GitHub/emacs-config/README.org"))))
+  (cond ((eq system-type 'gnu/linux) (set-register ?i '(file . "~/GitHub/Notater/informatikk.org")))
+        ((eq system-type 'windows-nt) (set-register ?i '(file . "~/C:/Users/bjorwa/Documents/GitHub/Notater/informatikk.org"))))
+  (cond ((eq system-type 'gnu/linux) (set-register ?j '(file . "~/GitHub/Markedsanalyse/journaler/journal.org")))
+        ((eq system-type 'windows-nt) (set-register ?j '(file . "~/C:/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/informatikk.org"))))
+  (cond ((eq system-type 'gnu/linux) (set-register ?l '(file . "~/GitHub/Markedsanalyse/journaler/liq.org")))
+        ((eq system-type 'windows-nt) (set-register ?l '(file . "~/C:/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/liq.org"))))
+  (cond ((eq system-type 'gnu/linux) (set-register ?r '(file . "~/GitHub/Markedsanalyse/journaler/reg.org")))
+        ((eq system-type 'windows-nt) (set-register ?r '(file . "~/C:/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/reg.org"))))
+  (cond ((eq system-type 'gnu/linux) (set-register ?e '(file . "~/.emacs")))
+        ((eq system-type 'windows-nt) (set-register ?e '(file . "~/C:/Users/bjorwa/AppData/Roaming/.emacs"))))
 
-(set-register ?d '(file . "~/GitHub/Journal/dagbok.org"))
-(set-register ?g '(file . "~/GitHub/"))
-(set-register ?f '(file . "~/GitHub/Notater/ferdigheter.org"))
-(set-register ?i '(file . "~/GitHub/Notater/informatikk.org"))
-(set-register ?j '(file . "~/GitHub/Markedsanalyse/journaler/journal.org"))
-(set-register ?l '(file . "~/GitHub/Markedsanalyse/journaler/liq.org"))
-(set-register ?r '(file . "~/GitHub/Markedsanalyse/journaler/reg.org"))
-(set-register ?t '(file . "~/GitHub/Journal/trening.org"))
-(set-register ?e '(file . "~/.emacs"))
+  ;; (set-register ?e '(file . "~/.emacs"))
+  ;; (set-register ?r '(file . "~/GitHub/Markedsanalyse/journaler/reg.org"))
+  ;; (set-register ?l '(file . "~/GitHub/Markedsanalyse/journaler/liq.org"))
+  ;; (set-register ?j '(file . "~/GitHub/Markedsanalyse/journaler/journal.org"))
+  ;; (set-register ?i '(file . "~/GitHub/Notater/informatikk.org"))
+  ;; (set-register ?g '(file . "~/GitHub/"))
+  ;; (set-register ?f '(file . "~/GitHub/Notater/ferdigheter.org"))
+  ;; (set-register ?k '(file . "~/GitHub/emacs-config/README.org"))
 #+end_src
 * Kommandoer og tastebinding
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/gkb.el"
@@ -539,6 +568,5 @@ F.eks <pyt + TAB vil eksandere til Python med tangle.
 				 (interactive)
 				 (popup-menu 'yank-menu)))
 (global-set-key (kbd "\M-?") 'help-command)
-
 #+end_src
 

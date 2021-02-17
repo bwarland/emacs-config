@@ -1,6 +1,11 @@
 (use-package doom-modeline
   :ensure t
-  :init (doom-modeline-mode 1))
+  :init (doom-modeline-mode 1)
+  :config (setq doom-modeline-bar-height 25
+                doom-modeline-bar-width 3
+                doom-modeline-buffer-encoding t
+                doom-modeline-workspace-name t)
+  )
 
 (setq abbrev-file-name "~/.emacs.d/abbrev_defs")
 (setq save-abbrevs 'silent)
