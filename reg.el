@@ -1,5 +1,5 @@
-(when (eq system-type 'gnu/linux) (set-register ?d '(file . "~/GitHub/Journal/dagbok.org"))
-(when (eq system-type 'gnu/linux) (set-register ?t '(file . "~/GitHub/Journal/trening.org"))
+(when (eq system-type 'gnu/linux) (set-register ?d '(file . "~/GitHub/Journal/dagbok.org")))
+(when (eq system-type 'gnu/linux) (set-register ?t '(file . "~/GitHub/Journal/trening.org")))
 (cond ((eq system-type 'gnu/linux) (set-register ?c '(file . "~/GitHub/emacs-config/custom.el")))
       ((eq system-type 'windows-nt) (set-register ?c '(file . "~/C:/Users/bjorwa/Documents/GitHub/emacs-config/custom.el"))))
 (cond ((eq system-type 'gnu/linux) (set-register ?g '(file . "~/GitHub/")))
