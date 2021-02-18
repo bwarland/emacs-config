@@ -20,9 +20,10 @@
     (url-insert-file-contents "https://raw.githubusercontent.com/quelpa/quelpa/master/quelpa.el")
     (eval-buffer)
     (quelpa-self-upgrade)))
-(quelpa '(discover-my-major :fetcher git :url "https://github.com/l3kn/org-fc"))
+;; (quelpa '(discover-my-major :fetcher git :url "https://github.com/l3kn/org-fc"))
 
 (use-package auto-package-update
+  :defer t
   :custom
   (auto-package-update-interval 14)
   (auto-package-update-prompt-before-update t)

@@ -1,4 +1,5 @@
 (use-package multiple-cursors
+  :defer t
   :bind
   (
    ("C-c m t" . mc/mark-all-like-this)

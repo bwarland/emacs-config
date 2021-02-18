@@ -21,27 +21,6 @@
    org-indirect-buffer-display 'current-window
    org-hide-emphasis-markers t
    org-tags-column -50
-
-          ;; AGENDA-KONFIGURASJON
-          ;;;=====================================================
-   org-agenda-columns t
-   org-agenda-tags-column -50
-   org-agenda-include-deadlines t
-   org-agenda-compact-blocks t
-   org-agenda-block-seperator t
-   org-agenda-span 5
-   ;; AGENDA LOG
-   org-agenda-start-with-log-mode t
-   org-agenda-log-done 'note
-   org-agenda-log-into-drawer t
-   ;; TIME GRID
-   org-agenda-use-time-grid t
-   org-agenda-include-diary t
-   org-agenda-skip-scheduled-if-done t
-   org-agenda-skip-deadline-if-done t
-   org-agenda-time-grid (quote ((daily today remove-match)
-                                (0600 0800 1000 1200 1400 1600)
-                                       "      " "................"))
    org-hide-emphasis-marker t
    org-ellipsis " ..."
    org-archive-location "~/Documents/org-arkiv/arkiv.org::* TASK"
@@ -66,8 +45,11 @@
    ("C-c C-w" . 'org-capture-refile)
    ("C-c C-k" . 'org-capture-kill))
   :config
-  (setq-default major-mode 'org-mode)
+  ;; (setq-default major-mode 'org-mode)
   )
+
+(cond ((eq system-type 'windows-nt) (setq default-directory "~/C:Users/bjorwa/Documents/GitHub/"))
+      ((eq system-type 'gnu/linux) (setq default-directory "~/GitHub/")))
 
 (when (eq system-type 'gnu/linux) (require 'org-super-agenda))
 
@@ -77,22 +59,19 @@
     :config
     (org-super-agenda-mode 1)
     (setq org-super-agenda-groups
-	  '((:name "TIDSPLAN"
-		   :time-grid t
-		   :todo "TODO")
-	    (:name "Informatikk" :tag "informatikk")
-	    (:name "Emacs" :tag "emacs")
-	    (:name "GitHub" :tag "git")
-	    (:name "Linux" :tag "linux")
-	    (:name "Racket/Scheme" :tag "scheme")
-	    (:name "Python" :tag "python")
-	    (:name "Jobb" 
-		   :tag "power_bi"
-		   :tag "excel")
-	    (:discard (:tag "ikke_kal"))))))
-
-(cond ((eq system-type 'windows-nt) (setq default-directory "~/C:Users/bjorwa/Documents/GitHub/"))
-      ((eq system-type 'gnu/linux) (setq default-directory "~/GitHub/")))
+          '((:name "TIDSPLAN"
+                   :time-grid t
+                   :todo "TODO")
+            (:name "Informatikk" :tag "informatikk")
+            (:name "Emacs" :tag "emacs")
+            (:name "GitHub" :tag "git")
+            (:name "Linux" :tag "linux")
+            (:name "Racket/Scheme" :tag "scheme")
+            (:name "Python" :tag "python")
+            (:name "Jobb" 
+                   :tag "power_bi"
+                   :tag "excel")
+            (:discard (:tag "ikke_kal"))))))
 
 (let ((window-path "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/")
         (linux-path "~/GitHub/Markedsanalyse/journaler/"))
@@ -240,9 +219,9 @@
   ;; https://gitlab.com/phillord/org-drill/
   :config
   (setq org-drill-maximum-duration 20
-	org-drill-spaced-repetition-algorithm 'sm2
-	org-drill-add-random-noise-to-intervals-p t
-	org-drill-adjust-intervals-for-early-and-late-repetitions-p t))
+        org-drill-spaced-repetition-algorithm 'sm2
+        org-drill-add-random-noise-to-intervals-p t
+        org-drill-adjust-intervals-for-early-and-late-repetitions-p t))
 
 (org-babel-do-load-languages
  'org-babel-load-languages (quote ((emacs-lisp . t)

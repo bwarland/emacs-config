@@ -1,4 +1,5 @@
 (use-package yasnippet
+  :defer t
   :diminish yas-minor-mode
   :init (yas-global-mode)
   :config
@@ -11,4 +12,4 @@
   (bind-key "\t" 'hippie-expand yas-minor-mode-map)
   (add-to-list 'yas-prompt-functions 'shk-yas/helm-prompt)
   (global-set-key (kbd "C-c y") (lambda () (interactive)
-				  (yas/load-directory "~/elisp/snippets"))))
+                                  (yas/load-directory "~/elisp/snippets"))))

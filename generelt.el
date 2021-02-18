@@ -1,24 +1,3 @@
-(use-package doom-modeline
-  :ensure t
-  :init (doom-modeline-mode 1)
-  :config (setq doom-modeline-bar-height 25
-                doom-modeline-bar-width 3
-                doom-modeline-buffer-encoding t
-                doom-modeline-workspace-name t)
-  )
-
-(setq abbrev-file-name "~/.emacs.d/abbrev_defs")
-(setq save-abbrevs 'silent)
-(setq-default abbrev-mode t)
-
-(put 'downcase-region 'disabled nil)
-(set-language-environment "UTF-8")
-
-(use-package hi-lock
-  :bind (("M-o l" . highlight-lines-matching-regexp)
-         ("M-o r" . highlight-regexp)
-         ("M-o w" . highlight-phrase)))
-
 (when window-system
     (tooltip-mode -1)
     (tool-bar-mode -1)
@@ -35,7 +14,31 @@
       ((string= system-name "kbell") (set-frame-font "Liberation Mono-11"))
       ((string= system-name "ingentingen") (set-frame-font "Liberation Mono-12")))
 
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1)
+  :config (setq doom-modeline-bar-height 25
+                doom-modeline-bar-width 3
+                doom-modeline-buffer-encoding t
+                doom-modeline-workspace-name t))
+;; (use-package doom-themes
+  ;; :init (load-theme 'doom-palenight t))
+
+(put 'downcase-region 'disabled nil)
+(set-language-environment "UTF-8")
+
+(setq abbrev-file-name "~/.emacs.d/abbrev_defs")
+(setq save-abbrevs 'silent)
+(setq-default abbrev-mode t)
+
+(use-package hi-lock
+  :defer t
+  :bind (("M-o l" . highlight-lines-matching-regexp)
+         ("M-o r" . highlight-regexp)
+         ("M-o w" . highlight-phrase)))
+
 (use-package command-log-mode
+  :defer t
   :bind
   ("C-c <f10>" . clm/toggle-command-log-buffer)
   :config
