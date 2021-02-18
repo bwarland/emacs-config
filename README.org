@@ -346,7 +346,8 @@ Alle Org-Mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][Bernt 
 (require 'org-fc-hydra)
 #+end_src
 ** Maler
-*** Infofangstmal
+*** Fangstmaler
+Jeg bruker mange av disse fangstmalene både i arbeid og privat da det er noe som hjelper meg å samle, fange og lagre informasjon raskt. Dette viser også konfigureringen, skjønt det kan bli noe graps i koden. 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
 (cond ((eq system-type 'windows-nt)
        (setq org-capture-templates
@@ -477,6 +478,7 @@ F.eks <pyt + TAB vil eksandere til Python med tangle.
   (add-to-list 'org-structure-template-alist '("srt" . "src racket :tangle"))
 #+end_src
 ** Terping
+En strukturert terping av viktig informasjon, metoder og teknikker er viktig for meg da jeg har en teflonhjerne som ikke raskt absorberer. Dette tror jeg er en pakke som ikke jevnlig oppdateres, om i det hele tatt. Og her har jeg hatt litt problemer med en feilmelding og kluss med kode som jeg på et vil klarte å kontrollere ved å blokke ut noe av koden i modulens el-fil (laster denne inn i stedet for elc-filen, [[file:Notater/ferdigheter.org::*Feil under Emacs-konfigurering][beskrivelse i filen ferdigheter.org]]).
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
   (require 'org-drill)
 
