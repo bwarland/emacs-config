@@ -505,7 +505,7 @@ En strukturert terping av viktig informasjon, metoder og teknikker er viktig for
 ** Yasnippet
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/maler.el"
   (use-package yasnippet
-    :defer t
+    :ensure t
     :diminish yas-minor-mode
     :init (yas-global-mode)
     :config
