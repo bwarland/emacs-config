@@ -21,7 +21,7 @@ Konfigurasjon knyttet til moduler og pakker.
                                                             ))))
 #+end_src
 
-** Use-package
+** [[https://github.com/jwiegley/use-package][Use-package]] 
 Denne pakken er laget for det å samle konfigurasjon knyttet til en pakke, og på det viset legge opp til en ryddigere konfigurasjonfil, og man kan kontrollere lasting av pakker slik at man kan korte ned på oppstartstid for Emacs.
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/pakker.el"
   (eval-when-compile
@@ -146,8 +146,8 @@ Denne filen har jeg lastet ned i fra GitHub og det er noe jeg trenger for å få
 #+end_src
 * Fullføring
 ** Helm 
-*** Generelt
-Pakke for søking og innsnevring av valg og for det å fullføre navn på filer og kommandoer og så videre. 
+*** [[https://emacs-helm.github.io/helm/#introduction][Generelt]]
+Pakke som lager et rammeverk for søking og innsnevring av valg og for det å fullføre navn på filer og kommandoer og så videre. 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/helm-konf.el"
   (use-package helm
     :ensure t
@@ -163,12 +163,12 @@ Pakke for søking og innsnevring av valg og for det å fullføre navn på filer 
            ("C-c h x" . helm-register)
            ("C-c <f9>" . helm-calcul-expression)
            ("C-c <f1>" . helm-colors)
-           ;; ("M-p" . helm-previous-line)
-           ;; ("M-k" . helm-next-line)
-           ;; ("M-I" . helm-previous-page)
-           ;; ("M-K" . helm-next-page)
-           ;; ("M-h" . helm-beginning-of-buffer)
-           ;; ("M-H" . helm-end-of-buffer)
+           ("M-p" . helm-previous-line)
+           ("M-k" . helm-next-line)
+           ("M-I" . helm-previous-page)
+           ("M-K" . helm-next-page)
+           ("M-h" . helm-beginning-of-buffer)
+           ("M-H" . helm-end-of-buffer)
            )
     :init
     (setq helm-buffers-lazy-matching t
@@ -182,6 +182,10 @@ Pakke for søking og innsnevring av valg og for det å fullføre navn på filer 
     (ido-mode -1)
     (helm-mode 1)
     (helm-autoresize-mode 1))
+  (when (eq system-type 'gnu/linux) (use-package helm-ls-git
+                                      :after helm
+                                      :bind (("C-x C-d" . helm-browse-project)
+                                             ("C-x r p" . helm-projects-history))))
 #+end_src
 *** Swiper-Helm
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/helm-konf.el"
@@ -248,7 +252,6 @@ Alle Org-Mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][Bernt 
      org-refile-use-outline-path t 
      org-outline-path-complete-in-steps nil
      org-refile-allow-creating-parent-nodes (quote confirm)
-     ;; org-completion-use-ido nil
      org-indirect-buffer-display 'current-window
      org-hide-emphasis-markers t
      org-tags-column -50
@@ -495,7 +498,7 @@ En strukturert terping av viktig informasjon, metoder og teknikker er viktig for
           org-drill-add-random-noise-to-intervals-p t
           org-drill-adjust-intervals-for-early-and-late-repetitions-p t))
 #+end_src
-** For "literate programming"
+** Org-babe for "literate programming"
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
   (org-babel-do-load-languages
    'org-babel-load-languages (quote ((emacs-lisp . t)
@@ -540,15 +543,15 @@ En strukturert terping av viktig informasjon, metoder og teknikker er viktig for
 #+end_src
 ** windows
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/winreg.el"
-  (set-register ?c '(file . "~/C:/Users/bjorwa/Documents/GitHub/emacs-config/custom.el"))
-  (set-register ?g '(file . "~/C:/Users/bjorwa/Documents/GitHub/"))
-  (set-register ?c '(file . "~/C:/Users/bjorwa/Documents/GitHub/Notater/ferdigheter.org"))
-  (set-register ?k '(file . "~/C:/Users/bjorwa/Documents/GitHub/emacs-config/README.org"))
-  (set-register ?i '(file . "~/C:/Users/bjorwa/Documents/GitHub/Notater/informatikk.org"))
-  (set-register ?j '(file . "~/C:/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/informatikk.org"))
-  (set-register ?l '(file . "~/C:/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/liq.org"))
-  (set-register ?r '(file . "~/C:/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/reg.org"))
-  (set-register ?e '(file . "~/C:/Users/bjorwa/AppData/Roaming/.emacs"))
+  (set-register ?c '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\emacs-config\\custom.el"))
+  (set-register ?g '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\"))
+  (set-register ?c '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\Notater\\ferdigheter.org"))
+  (set-register ?k '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\emacs-config\\README.org"))
+  (set-register ?i '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\Notater\\informatikk.org"))
+  (set-register ?j '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\Markedsanalyse\\journaler\\informatikk.org"))
+  (set-register ?l '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\Markedsanalyse\\journaler\\liq.org"))
+  (set-register ?r '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\Markedsanalyse\\journaler\\reg.org"))
+  (set-register ?e '(file . "~C:\\Users\\bjorwa\\AppData\\Roaming\\.emacs"))
 #+end_src
 * Kommandoer og tastebinding
 Samling av kommandoer og tastebindinger som ikke nødvendigvis knyttes mot en Emacs-pakke.
