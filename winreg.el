@@ -1,7 +1,7 @@
 (set-register ?c '(file . "~/.emacs.d/custom.el"))
 ;; (set-register ?C '(file . "~/notebook/col.org"))
 ;; (set-register ?d '(file . "~/.emacs.d/snippets/org-mode/dayrep"))
-(set-register ?e '(file . "~/.emacs"))
+;; (set-register ?e '(file . "~/.emacs"))
 (set-register ?j '(file . "C:\\Users\\bjorwa\\Documents\\GitHub\\Markedsanalyse\\journaler\\journal.org"))
 (set-register ?f '(file . "C:\\Users\\bjorwa\\Documents\\GitHub\\Markedsanalyse\\journaler\\fundamentals.org"))
 (set-register ?L '(file . "C:\\Users\\bjorwa\\Documents\\GitHub\\Markedsanalyse\\journaler\\liq.org"))
@@ -15,9 +15,9 @@
 (set-register ?d '(file . "C:\\Users\\bjorwa\\Desktop\\"))
 (set-register ?g '(file . "C:\\Users\\bjorwa\\Documents\\GitHub\\"))
 
-(set-register ?P '(file . "~/notebook/python.org"))
-(set-register ?r '(file . "~/notebook/rapporter.org"))
-(set-register ?R '(file . "~/.emacs.d/reg.el"))
+;; (set-register ?P '(file . "~/notebook/python.org"))
+;; (set-register ?r '(file . "~/notebook/rapporter.org"))
+;; (set-register ?R '(file . "~/.emacs.d/reg.el"))
 
   ;; (set-register ?c '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\emacs-config\\custom.el"))
   ;;   (set-register ?g '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\"))
