@@ -1,10 +1,11 @@
 (setq package-enable-at-startup nil)
 (package-initialize)
-(setq package-archives '(("elpa" . "https://elpa.gnu.org/packages/")
-                         ("marmalade" . "https://marmalade-repo.org/packages/")
-                         ("org" . "https://orgmode.org/elpa/")
-                         ("melpa" . "https://melpa.org/packages/")
-                         ))
+(if ((eq system-type 'windows-nt) (setq package-archives '(("elpa" . "https://elpa.gnu.org/packages/")))
+    ((eq system-type 'gnu/linux) (setq package-archives '(("elpa" . "https://elpa.gnu.org/packages/")
+                                                          ("marmalade" . "https://marmalade-repo.org/packages/")
+                                                          ("org" . "https://orgmode.org/elpa/")
+                                                          ("melpa" . "https://melpa.org/packages/")
+                                                          ))
 
 (eval-when-compile
   (require 'use-package))
@@ -14,6 +15,7 @@
       use-package-verbose nil
       use-package-expand-minimally t
       use-package-enable-imenu-support t
+
       )
 
 (unless (package-installed-p 'quelpa)
