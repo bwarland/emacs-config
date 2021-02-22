@@ -2,9 +2,9 @@
 (package-initialize)
 (cond ((eq system-type 'windows-nt) (setq package-archives '(("elpa" . "https://elpa.gnu.org/packages/"))))
       ((eq system-type 'gnu/linux) (setq package-archives '(("elpa" . "https://elpa.gnu.org/packages/")
-                                                          ("marmalade" . "https://marmalade-repo.org/packages/")
-                                                          ("org" . "https://orgmode.org/elpa/")
-                                                          ("melpa" . "https://melpa.org/packages/")
+                                                            ;; ("marmalade" . "https://marmalade-repo.org/packages/")
+                                                            ("org" . "https://orgmode.org/elpa/")
+                                                            ("melpa" . "https://melpa.org/packages/")
                                                           ))))
 
 (eval-when-compile

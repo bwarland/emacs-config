@@ -21,6 +21,7 @@
    org-hide-emphasis-markers t
    org-tags-column -50
    org-hide-emphasis-marker t
+   ;; org-list-allow-alphabetcial t
    org-ellipsis " ..."
    org-archive-location "~/Documents/org-arkiv/arkiv.org::* TASK"
    org-todo-keywords (quote (

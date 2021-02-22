@@ -15,9 +15,9 @@ Konfigurasjon knyttet til moduler og pakker.
   (package-initialize)
   (cond ((eq system-type 'windows-nt) (setq package-archives '(("elpa" . "https://elpa.gnu.org/packages/"))))
         ((eq system-type 'gnu/linux) (setq package-archives '(("elpa" . "https://elpa.gnu.org/packages/")
-                                                            ("marmalade" . "https://marmalade-repo.org/packages/")
-                                                            ("org" . "https://orgmode.org/elpa/")
-                                                            ("melpa" . "https://melpa.org/packages/")
+                                                              ;; ("marmalade" . "https://marmalade-repo.org/packages/")
+                                                              ("org" . "https://orgmode.org/elpa/")
+                                                              ("melpa" . "https://melpa.org/packages/")
                                                             ))))
 #+end_src
 
@@ -256,6 +256,7 @@ Alle Org-Mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][Bernt 
      org-hide-emphasis-markers t
      org-tags-column -50
      org-hide-emphasis-marker t
+     ;; org-list-allow-alphabetcial t
      org-ellipsis " ..."
      org-archive-location "~/Documents/org-arkiv/arkiv.org::* TASK"
      org-todo-keywords (quote (
