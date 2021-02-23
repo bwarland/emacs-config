@@ -311,7 +311,7 @@ Alle Org-Mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][Bernt 
                                      (0600 0800 1000 1200 1400 1600)
                                      "      " "................")))
 #+end_src
-*** Org-Super-Agenda
+*** [[https://github.com/alphapapa/org-super-agenda][Org-super-agenda]]
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
   (when (eq system-type 'gnu/linux) (require 'org-super-agenda))
 
@@ -324,12 +324,15 @@ Alle Org-Mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][Bernt 
             '((:name "TIDSPLAN"
                      :time-grid t
                      :todo "TODO")
-              (:name "Informatikk" :tag "informatikk")
-              (:name "Emacs" :tag "emacs")
-              (:name "GitHub" :tag "git")
-              (:name "Linux" :tag "linux")
-              (:name "Racket/Scheme" :tag "scheme")
-              (:name "Python" :tag "python")
+              (:name "Informatikk" :tag ("informatikk" "emacs" "git" "linux" "scheme" "python"))
+              (:name "Samfunn" :tag ("samfunn" "økonomi"))
+              ;; (:name "Økonomi" :tag "økonomi")
+              ;; (:name "Informatikk" :tag "informatikk")
+              ;; (:name "Emacs" :tag "emacs")
+              ;; (:name "GitHub" :tag "git")
+              ;; (:name "Linux" :tag "linux")
+              ;; (:name "Racket/Scheme" :tag "scheme")
+              ;; (:name "Python" :tag "python")
               (:name "Jobb" 
                      :tag "power_bi"
                      :tag "excel")
