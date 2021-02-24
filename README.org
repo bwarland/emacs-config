@@ -15,9 +15,9 @@ Konfigurasjon knyttet til moduler og pakker.
   (package-initialize)
   (cond ((eq system-type 'windows-nt) (setq package-archives '(("elpa" . "https://elpa.gnu.org/packages/"))))
         ((eq system-type 'gnu/linux) (setq package-archives '(("elpa" . "https://elpa.gnu.org/packages/")
-                                                            ("marmalade" . "https://marmalade-repo.org/packages/")
-                                                            ("org" . "https://orgmode.org/elpa/")
-                                                            ("melpa" . "https://melpa.org/packages/")
+                                                              ;; ("marmalade" . "https://marmalade-repo.org/packages/")
+                                                              ("org" . "https://orgmode.org/elpa/")
+                                                              ("melpa" . "https://melpa.org/packages/")
                                                             ))))
 #+end_src
 
@@ -256,6 +256,7 @@ Alle Org-Mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][Bernt 
      org-hide-emphasis-markers t
      org-tags-column -50
      org-hide-emphasis-marker t
+     ;; org-list-allow-alphabetcial t
      org-ellipsis " ..."
      org-archive-location "~/Documents/org-arkiv/arkiv.org::* TASK"
      org-todo-keywords (quote (
@@ -310,7 +311,7 @@ Alle Org-Mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][Bernt 
                                      (0600 0800 1000 1200 1400 1600)
                                      "      " "................")))
 #+end_src
-*** Org-Super-Agenda
+*** [[https://github.com/alphapapa/org-super-agenda][Org-super-agenda]]
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
   (when (eq system-type 'gnu/linux) (require 'org-super-agenda))
 
@@ -323,12 +324,15 @@ Alle Org-Mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][Bernt 
             '((:name "TIDSPLAN"
                      :time-grid t
                      :todo "TODO")
-              (:name "Informatikk" :tag "informatikk")
-              (:name "Emacs" :tag "emacs")
-              (:name "GitHub" :tag "git")
-              (:name "Linux" :tag "linux")
-              (:name "Racket/Scheme" :tag "scheme")
-              (:name "Python" :tag "python")
+              (:name "Informatikk" :tag ("informatikk" "emacs" "git" "linux" "scheme" "python"))
+              (:name "Samfunn" :tag ("samfunn" "økonomi"))
+              ;; (:name "Økonomi" :tag "økonomi")
+              ;; (:name "Informatikk" :tag "informatikk")
+              ;; (:name "Emacs" :tag "emacs")
+              ;; (:name "GitHub" :tag "git")
+              ;; (:name "Linux" :tag "linux")
+              ;; (:name "Racket/Scheme" :tag "scheme")
+              ;; (:name "Python" :tag "python")
               (:name "Jobb" 
                      :tag "power_bi"
                      :tag "excel")

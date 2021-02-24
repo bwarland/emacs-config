@@ -21,6 +21,7 @@
    org-hide-emphasis-markers t
    org-tags-column -50
    org-hide-emphasis-marker t
+   ;; org-list-allow-alphabetcial t
    org-ellipsis " ..."
    org-archive-location "~/Documents/org-arkiv/arkiv.org::* TASK"
    org-todo-keywords (quote (
@@ -61,12 +62,15 @@
           '((:name "TIDSPLAN"
                    :time-grid t
                    :todo "TODO")
-            (:name "Informatikk" :tag "informatikk")
-            (:name "Emacs" :tag "emacs")
-            (:name "GitHub" :tag "git")
-            (:name "Linux" :tag "linux")
-            (:name "Racket/Scheme" :tag "scheme")
-            (:name "Python" :tag "python")
+            (:name "Informatikk" :tag ("informatikk" "emacs" "git" "linux" "scheme" "python"))
+            (:name "Samfunnsfag" :tag "samfunn")
+            (:name "Økonomi" :tag "økonomi")
+            ;; (:name "Informatikk" :tag "informatikk")
+            ;; (:name "Emacs" :tag "emacs")
+            ;; (:name "GitHub" :tag "git")
+            ;; (:name "Linux" :tag "linux")
+            ;; (:name "Racket/Scheme" :tag "scheme")
+            ;; (:name "Python" :tag "python")
             (:name "Jobb" 
                    :tag "power_bi"
                    :tag "excel")
