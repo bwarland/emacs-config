@@ -26,6 +26,8 @@
 
 (put 'downcase-region 'disabled nil)
 (set-language-environment "UTF-8")
+(require 'rainbow-delimiters)
+;; (rainbow-delimiters-mode 1)
 
 (setq abbrev-file-name "~/.emacs.d/abbrev_defs")
 (setq save-abbrevs 'silent)
