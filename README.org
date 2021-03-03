@@ -264,10 +264,11 @@ Alle Org-Mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][Bernt 
      org-archive-location "~/Documents/org-arkiv/arkiv.org::* TASK"
      org-todo-keywords (quote (
                                (sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
-                               (sequence "jour(j)" "fund(f)")))
+                               ;; (sequence "jour(j)" "fund(f)")
+                               ))
 
      org-todo-keyword-faces (quote (("jour" :foreground "red" :background "white")
-                                           ("fund" :foreground "blue" :background "white")
+                                           ;; ("fund" :foreground "blue" :background "white")
                                            ("TODO" :foreground "red" :background "white")
                                            ("NEXT" :foreground "blue" :background "white")
                                            ("DONE" :foreground "dark green" :background "white"))))
@@ -288,57 +289,88 @@ Alle Org-Mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][Bernt 
 
 #+end_src
 *** startmappe
-#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
+#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el" 
 (cond ((eq system-type 'windows-nt) (setq default-directory "~/C:Users/bjorwa/Documents/GitHub/"))
       ((eq system-type 'gnu/linux) (setq default-directory "~/GitHub/")))
 #+end_src
 *** Agenda
 **** Org-agenda
-#+begin_src emacs-lisp
-  (setq org-agenda-columns t
-        org-agenda-tags-column -50
-        org-agenda-include-deadlines t
-        org-agenda-compact-blocks t
-        org-agenda-block-seperator t
-        org-agenda-span 5
-        ;; AGENDA LOG
-        org-agenda-start-with-log-mode t
-        org-agenda-log-done 'note
-        org-agenda-log-into-drawer t
-        ;; TIME GRID
-        org-agenda-use-time-grid t
-        org-agenda-include-diary t
-        org-agenda-skip-scheduled-if-done t
-        org-agenda-skip-deadline-if-done t
-        org-agenda-time-grid (quote ((daily today remove-match)
-                                     (0600 0800 1000 1200 1400 1600)
-                                     "      " "................")))
-#+end_src
-**** [[https://github.com/alphapapa/org-super-agenda][Org-super-agenda]]
-#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
-  (when (eq system-type 'gnu/linux) (require 'org-super-agenda))
+Ingen endring mulig i agendabuffer, men man kan gå fra agendabuffer til filene som det henvises til, og det er mulig å endre disse filene fra agendabufferen.
 
-  (when (eq system-type 'gnu/linux)
-    (use-package org-super-agenda
+Dersom man ønkser å beholde vindusoppsettet slik man har det når man påkaller agendabufferen så må man sette følgende variabel: (setq org-agenda-window-setup 'current-buffer).
+
+Det er ryddig å se TODO i sammenheng med "Scheduled:" og "Deadline:" ellers så risikerer man at hele TODO-listen blir kleiset rett inn under "time-grid", dvs. når man bruker aktiv data, for eksemple <2016-03-03 Thu>. 
+#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/linorg.el"
+    (setq org-agenda-columns t
+          org-agenda-tags-column -50
+          org-agenda-include-deadlines t
+          org-agenda-compact-blocks t
+          org-agenda-block-seperator t
+          org-agenda-span 5
+          org-agenda-window-setup 'current-window
+          ;; AGENDA LOG
+          org-agenda-start-with-log-mode t
+          org-agenda-log-done 'note
+          org-agenda-log-into-drawer t
+          ;; TIME GRID
+          org-agenda-use-time-grid t
+          org-agenda-include-diary t
+          org-agenda-skip-scheduled-if-done t
+          org-agenda-skip-deadline-if-done t
+          org-agenda-time-grid (quote ((daily today remove-match)
+                                       (0600 0800 1000 1200 1400 1600 1800)
+                                       "      " "................"))
+          )
+  ;; (org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+#+end_src
+**** [[https://github.com/alphapapa/org-super-agenda][Org-super-agenda]] 
+#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/linorg.el"
+    (when (eq system-type 'gnu/linux) (require 'org-super-agenda))
+
+    (when (eq system-type 'gnu/linux)
+      (use-package org-super-agenda
       :ensure t
       :config
-      (org-super-agenda-mode 1)
-      (setq org-super-agenda-groups
-            '((:name "TIDSPLAN"
-                     :time-grid t
-                     :todo "TODO")
-              (:name "Informatikk" :tag ("informatikk" "emacs" "git" "linux" "scheme" "python"))
-              (:name "Samfunn" :tag ("samfunn" "økonomi"))
-              ;; (:name "Økonomi" :tag "økonomi")
-              ;; (:name "Informatikk" :tag "informatikk")
-              ;; (:name "Emacs" :tag "emacs")
-              ;; (:name "GitHub" :tag "git")
-              ;; (:name "Linux" :tag "linux")
-              ;; (:name "Racket/Scheme" :tag "scheme")
-              ;; (:name "Python" :tag "python")
-              (:name "Jobb" :tag ("power_bi" "excel"))
-              (:discard (:tag "ikke_kal"))))))
+        (org-super-agenda-mode 1)
+        (setq org-super-agenda-groups
+              '((:name "TIDSPLAN     ==================================================================="
+                       :time-grid t)
+                (:name "SORTERING    ==================================================================="
+                       :todo "TODO")
+                (:name "Marked       ==================================================================="
+                       :todo "TODO"
+                       :tag ("hydrogen" "coal")
+                (:name "INFORMATIKK  ==================================================================="
+                       :tag ("informatikk" "emacs" "git" "linux" "scheme" "python"))
+                (:name "SAMFUNN      ==================================================================="
+                       :tag ("samfunn" "økonomi"))
+                (:name "Jobb" :tag ("power_bi" "excel"))
+                (:discard (:tag "ikke_kal"))))))
 #+end_src
+#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/winorg.el"
+    (require 'org-super-agenda)
+
+    
+      (use-package org-super-agenda
+      :ensure t
+      :config
+        (org-super-agenda-mode 1)
+        (setq org-super-agenda-groups
+              '((:name "TIDSPLAN     ==================================================================="
+                       :time-grid t)
+                (:name "SORTERING    ==================================================================="
+                       :todo "TODO")
+                (:name "Marked       ==================================================================="
+                       :todo "TODO"
+                       :tag ("hydrogen" "coal")
+                (:name "INFORMATIKK  ==================================================================="
+                       :tag ("informatikk" "emacs" "git" "linux" "scheme" "python"))
+                (:name "SAMFUNN      ==================================================================="
+                       :tag ("samfunn" "økonomi"))
+                (:name "Jobb" :tag ("power_bi" "excel"))
+                (:discard (:tag "ikke_kal")))))
+#+end_src
+
 *** Filer mye brukt i omarkivering
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
     (let ((window-path "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/")
@@ -355,7 +387,7 @@ Alle Org-Mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][Bernt 
 #+end_src
 *** Hydra
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
-(require 'org-fc-hydra)
+  (require 'org-fc-hydra)
 #+end_src
 *** Maler
 **** Fangstmaler
@@ -480,10 +512,6 @@ Jeg bruker mange av disse fangstmalene både i arbeid og privat da det er noe so
                         "|%^u|%^{type}|%^{oppvarming}|%^{runder}|%^{vekt}|%^{tid}|%^{kommentar}|")
                        )))))
 #+end_src
-
-#+RESULTS:
-| d  | drill   |       |                                                     |                        |
-| db | PowerBI | entry | (file+olp ~/GitHub/Notater/informatikk.org PowerBI) | ** %? :drill:power_bi: |
 
 **** Strukturmal
 F.eks <pyt + TAB vil eksandere til Python med tangle.

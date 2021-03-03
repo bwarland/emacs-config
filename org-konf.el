@@ -26,10 +26,11 @@
    org-archive-location "~/Documents/org-arkiv/arkiv.org::* TASK"
    org-todo-keywords (quote (
                              (sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
-                             (sequence "jour(j)" "fund(f)")))
+                             ;; (sequence "jour(j)" "fund(f)")
+                             ))
 
    org-todo-keyword-faces (quote (("jour" :foreground "red" :background "white")
-                                         ("fund" :foreground "blue" :background "white")
+                                         ;; ("fund" :foreground "blue" :background "white")
                                          ("TODO" :foreground "red" :background "white")
                                          ("NEXT" :foreground "blue" :background "white")
                                          ("DONE" :foreground "dark green" :background "white"))))
@@ -50,29 +51,6 @@
 
 (cond ((eq system-type 'windows-nt) (setq default-directory "~/C:Users/bjorwa/Documents/GitHub/"))
       ((eq system-type 'gnu/linux) (setq default-directory "~/GitHub/")))
-
-(when (eq system-type 'gnu/linux) (require 'org-super-agenda))
-
-(when (eq system-type 'gnu/linux)
-  (use-package org-super-agenda
-    :ensure t
-    :config
-    (org-super-agenda-mode 1)
-    (setq org-super-agenda-groups
-          '((:name "TIDSPLAN"
-                   :time-grid t
-                   :todo "TODO")
-            (:name "Informatikk" :tag ("informatikk" "emacs" "git" "linux" "scheme" "python"))
-            (:name "Samfunn" :tag ("samfunn" "økonomi"))
-            ;; (:name "Økonomi" :tag "økonomi")
-            ;; (:name "Informatikk" :tag "informatikk")
-            ;; (:name "Emacs" :tag "emacs")
-            ;; (:name "GitHub" :tag "git")
-            ;; (:name "Linux" :tag "linux")
-            ;; (:name "Racket/Scheme" :tag "scheme")
-            ;; (:name "Python" :tag "python")
-            (:name "Jobb" :tag ("power_bi" "excel"))
-            (:discard (:tag "ikke_kal"))))))
 
 (let ((window-path "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/")
         (linux-path "~/GitHub/Markedsanalyse/journaler/"))
