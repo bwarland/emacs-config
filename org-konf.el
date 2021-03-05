@@ -7,6 +7,7 @@
    org-hide-leading-stars t
    org-startup-indented t
    org-startup-folded t
+   ;; org-switch-to-buffer-other-window t
    initial-major-mode 'org-mode
    org-pretty-entities t
    org-pretty-entities-include-sub-superscripts nil
