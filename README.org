@@ -146,6 +146,12 @@ Denne filen har jeg lastet ned i fra GitHub og det er noe jeg trenger for å få
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
 (add-to-list 'load-path "~/.emacs.d/ob-racket-master/")
 #+end_src
+** Stavekontroll
+#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
+  (setq ispell-program-name "hunspell")
+        ;; ispell-hunspell-dict-path-alist '((/usr/share/doc/hunspell-no))
+
+#+end_src
 * Fullføring
 ** Helm 
 *** [[https://emacs-helm.github.io/helm/#introduction][Generelt]]

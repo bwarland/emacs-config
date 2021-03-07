@@ -59,3 +59,6 @@
 (setq gc-cons-threshold (* 50 1000 1000))
 
 (add-to-list 'load-path "~/.emacs.d/ob-racket-master/")
+
+(setq ispell-program-name "hunspell")
+      ;; ispell-hunspell-dict-path-alist '((/usr/share/doc/hunspell-no))
