@@ -7,6 +7,7 @@
 Den første emacskonfigurasjonen jeg kopierte mer eller mindre alt av og testet den gang jeg var rimelig fersk. Og ennå så tror jeg store deler av org-mode konfigurasjonen min bygger på hans oppsett. Dette er en kar som har rimelig god kontroll over verktøyet Emacs. 
 
 Sett bort fra det at hans arbeidsflyt ikke helt passer min - til det er den litt for regimentert - så er det at hav av gode eksempler her. Det var med denne jeg først lærte å bruke Emacs og org-mode for noen år siden. 
+*** [[http://ehneilsen.net/notebook/orgExamples/org-examples.html][cook book examples]]
 * Pakker
 Konfigurasjon knyttet til moduler og pakker. 
 ** Generell konfigurering inkludert pakkearkiv
