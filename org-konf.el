@@ -13,53 +13,52 @@
    ("C-c C-w" . 'org-capture-refile)
    ("C-c C-k" . 'org-capture-kill))
   :config
-  (setq ;; UTSEENDE
-          ;; ===================
-   org-hide-leading-stars t
-   org-startup-indented t
-   org-startup-folded t
-   ;; org-switch-to-buffer-other-window t
-   initial-major-mode 'org-mode
-   org-pretty-entities t
-   org-pretty-entities-include-sub-superscripts nil
-   org-use-fast-todo-selection t
-   org-treat-s-cursor-todo-selection-as-state-change nil
-   org-directory "~/GitHub"
-   org-reverse-note-order nil
-   org-refile-use-outline-path t 
-   org-outline-path-complete-in-steps nil
-   org-refile-allow-creating-parent-nodes (quote confirm)
-   org-indirect-buffer-display 'current-window
-   org-hide-emphasis-markers t
-   org-tags-column -50
-   org-hide-emphasis-marker t
-   ;; org-list-allow-alphabetcial t
-   org-ellipsis " ..."
-   org-archive-location "~/Documents/org-arkiv/arkiv.org::* TASK"
-   org-todo-keywords (quote (
-                             (sequence "TODO(t)" "NEXT(n)" "DATA(D)" "PRES(p)" "BAL(b)"  "|" "DONE(d)")
-                             ))
-   org-todo-keyword-faces (quote (("TODO" :foreground "red" :background "white")
-                                  ("NEXT" :foreground "blue" :background "white")
-                                  ("DATA" :foreground "light slate grey" :background "white")
-                                  ("PRES" :foreground "dark turquoise" :background "white")
-                                  ("BAL" :foreground "dark olive green" :background "white")
-                                  ("DONE" :foreground "dark green" :background "white"))))
-  )
+  (setq org-hide-leading-stars t
+        org-startup-indented t
+        org-startup-folded t
+        ;; org-switch-to-buffer-other-window t
+        initial-major-mode 'org-mode
+        org-pretty-entities t
+        org-pretty-entities-include-sub-superscripts nil
+        org-use-fast-todo-selection t
+        org-treat-s-cursor-todo-selection-as-state-change nil
+        org-directory "~/GitHub"
+        org-reverse-note-order nil
+        org-refile-use-outline-path t 
+        org-outline-path-complete-in-steps nil
+        org-refile-allow-creating-parent-nodes (quote confirm)
+        org-indirect-buffer-display 'current-window
+        org-hide-emphasis-markers t
+        org-tags-column -50
+        org-hide-emphasis-marker t
+        ;; org-list-allow-alphabetcial t
+        org-ellipsis " ..."
+        org-archive-location "~/Documents/org-arkiv/arkiv.org::* TASK"
+        org-todo-keywords (quote (
+                                  (sequence "TODO(t)" "NEXT(n)" "DATA(D)" "PRES(p)" "BAL(b)"  "|" "DONE(d)")
+                                  ))
+        org-todo-keyword-faces (quote (("TODO" :foreground "red" :background "white")
+                                       ("NEXT" :foreground "blue" :background "white")
+                                       ("DATA" :foreground "light slate grey" :background "white")
+                                       ("PRES" :foreground "dark turquoise" :background "white")
+                                       ("BAL" :foreground "dark olive green" :background "white")
+                                       ("DONE" :foreground "dark green" :background "white")))))
 
 (cond ((eq system-type 'windows-nt) (setq default-directory "~/C:Users/bjorwa/Documents/GitHub/"))
       ((eq system-type 'gnu/linux) (setq default-directory "~/GitHub/")))
 
-(let ((window-path "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/")
-        (linux-path "~/GitHub/Markedsanalyse/journaler/"))
-    (cond ((eq system-type 'windows-nt) (setq org-refile-targets (quote (((concat window-path "arkiv.org") :maxlevel . 2)
-                                                                         ((concat window-path "liq.org") :maxlevel . 4)
-                                                                         ((concat window-path "reg.org") :maxlevel . 4)
-                                                                         ((concat window-path "master-energi.org.org") :maxlevel . 4)))))
-          ((eq system-type 'gnu/linux) (setq org-refile-targets (quote (((concat linux-path "arkiv.org") :maxlevel . 2)
-                                                                       ((concat linux-path "liq.org") :maxlevel . 4)
-                                                                       ((concat linux-path "reg.org") :maxlevel . 4)
-                                                                       ((concat linux-path "master-energi.org.org") :maxlevel . 4)))))))
+(let ((WP "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/")
+        (LP "~/GitHub/Markedsanalyse/journaler/"))
+    (cond ((eq system-type 'windows-nt)
+           (setq org-refile-targets (quote (((concat WP "arkiv.org") :maxlevel . 2)
+                                            ((concat WP "liq.org") :maxlevel . 4)
+                                            ((concat WP "reg.org") :maxlevel . 4)
+                                            ((concat WP "master-energi.org.org") :maxlevel . 4)))))
+          ((eq system-type 'gnu/linux)
+           (setq org-refile-targets (quote (((concat LP "arkiv.org") :maxlevel . 2)
+                                            ((concat LP "liq.org") :maxlevel . 4)
+                                            ((concat LP "reg.org") :maxlevel . 4)
+                                            ((concat LP "master-energi.org.org") :maxlevel . 4)))))))
 (advice-add 'org-refile :after 'org-save-all-org-buffers)
 
 (require 'org-fc-hydra)

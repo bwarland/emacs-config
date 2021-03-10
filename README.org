@@ -146,7 +146,9 @@ Denne filen har jeg lastet ned i fra GitHub og det er noe jeg trenger for å få
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
 (add-to-list 'load-path "~/.emacs.d/ob-racket-master/")
 #+end_src
-** Stavekontroll
+** Sta
+
+vekontroll
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
   (setq ispell-program-name "hunspell")
         ;; ispell-hunspell-dict-path-alist '((/usr/share/doc/hunspell-no))
@@ -295,13 +297,39 @@ Alle Org-Mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][Bernt 
       ((eq system-type 'gnu/linux) (setq default-directory "~/GitHub/")))
 #+end_src
 ** Agenda
+*** Agenda-files
+Disse kan man legge automatisk inn i .emacs med kommandoen C-[ (og ta ut med C-]). Men jeg ser behov for å kunne ha et samlet syn på dette på tvers av tre maskiner (to linux-maskiner og en windows-maskin).
+
+Tatt i betrakningen av det nivået jeg har mht til programmering så er jeg relativt fornøyd med "generaliseringen". Jeg tror likevel jeg kan forbedre, dvs. heve nivået av generalisering ved hjelp av map/concat og to lister som skiller på mapper i GitHub. Men det får bli til en annen gang. 
+#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/agenda-files.el"
+  (and
+   (cond ((eq system-type 'windows-nt) 
+          (let ((MJO "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/")
+                (NOT "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/Notater/"))))
+         ((eq system-type 'gnu/linux) 
+          (let ((MJO "~/GitHub/Markedsanalyse/journaler/")
+                (NOT "~/GitHub/Markedsanalyse/Notater/")))))
+   (setq org-agenda-files '((concat MJO "energi-master.org")
+                            (concat MJO "balanser.org")
+                            (concat MJO "presentasjoner.org")
+                            (concat MJO "liq.org")
+                            (concat MJO "bd.org")
+                            (concat MJO "pk.org")
+                            (concat MJO "journal.org")
+                            (concat NOT "informatikk.org")
+                            (concat NOT "ferdigheter.org"))))
+
+
+            ;; (setq org-agenda-files '("~/GitHub/Markedsanalyse/journaler/energi-master.org"
+            ;;                          "~/GitHub/Markedsanalyse/journaler/balanse.org" "~/GitHub/Markedsanalyse/journaler/presentasjoner.org" "~/GitHub/Markedsanalyse/journaler/liq.org" "~/GitHub/Markedsanalyse/journaler/bd.org" "~/GitHub/Markedsanalyse/journaler/pk.org" "~/GitHub/Notater/samfunndrill.org" "~/GitHub/Markedsanalyse/journaler/journal.org" "~/GitHub/Notater/moeter.org" "/home/bwarland/GitHub/Notater/informatikk.org" "~/GitHub/Notater/ferdigheter.org"))
+#+end_src
 *** Org-agenda
 Ingen endring mulig i agendabuffer, men man kan gå fra agendabuffer til filene som det henvises til, og det er mulig å endre disse filene fra agendabufferen.
 
 Dersom man ønkser å beholde vindusoppsettet slik man har det når man påkaller agendabufferen så må man sette følgende variabel: (setq org-agenda-window-setup 'current-buffer).
 
 Det er ryddig å se TODO i sammenheng med "Scheduled:" og "Deadline:" ellers så risikerer man at hele TODO-listen blir kleiset rett inn under "time-grid", dvs. når man bruker aktiv data. 
-#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/linorg.el"
+#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-agenda.el"
   (setq org-agenda-columns t
         org-agenda-tags-column -100
         org-agenda-include-deadlines t
@@ -325,7 +353,7 @@ Det er ryddig å se TODO i sammenheng med "Scheduled:" og "Deadline:" ellers så
 (add-hook 'after-init-hook 'org-agenda-list)
 #+end_src
 *** [[https://github.com/alphapapa/org-super-agenda][Org-super-agenda]] 
-#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/linorg.el"
+#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-agenda.el"
   (require 'org-super-agenda)
   (use-package org-super-agenda
     :ensure t
@@ -353,63 +381,22 @@ Det er ryddig å se TODO i sammenheng med "Scheduled:" og "Deadline:" ellers så
             (:name "SAMFUNNSFAG  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
                    :tag ("samfunn" "økonomi"))
             )))
-  ;; (require 'org-super-agenda)
-  ;; (use-package org-super-agenda
-  ;;   :ensure t
-  ;;   :config
-  ;;   (org-super-agenda-mode 1)
-  ;;   (setq org-super-agenda-groups
-  ;;         '(
-  ;;           (:name "TIDSPLAN     ==================================================================="
-  ;;                  :time-grid t)
-  ;;           (:name "SORTERING    ==================================================================="
-  ;;                  :todo "TODO")
-  ;;           (:name "Marked       ==================================================================="
-  ;;                  :todo "TODO"
-  ;;                  :tag ("hydrogen" "coal")
-  ;;                  (:name "INFORMATIKK  ==================================================================="
-  ;;                         :tag ("informatikk" "emacs" "git" "linux" "scheme" "python"))
-  ;;                  (:name "SAMFUNN      ==================================================================="
-  ;;                         :tag ("samfunn" "økonomi"))
-  ;;                  (:name "Jobb" :tag ("power_bi" "excel"))
-  ;;                  (:discard (:tag "ikke_kal"))
-  ;;                  ))))
-#+end_src
-#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/winorg.el"
-  (require 'org-super-agenda)
 
-
-  (use-package org-super-agenda
-    :ensure t
-    :config
-    (org-super-agenda-mode 1)
-    (setq org-super-agenda-groups
-          '((:name "TIDSPLAN     ==================================================================="
-                   :time-grid t)
-            (:name "SORTERING    ==================================================================="
-                   :todo "TODO")
-            (:name "Marked       ==================================================================="
-                   :todo "TODO"
-                   :tag ("hydrogen" "coal")
-                   (:name "INFORMATIKK  ==================================================================="
-                          :tag ("informatikk" "emacs" "git" "linux" "scheme" "python"))
-                   (:name "SAMFUNN      ==================================================================="
-                          :tag ("samfunn" "økonomi"))
-                   (:name "Jobb" :tag ("power_bi" "excel"))
-                   (:discard (:tag "ikke_kal")))))
 #+end_src
 ** Filer mye brukt i omarkivering
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
-    (let ((window-path "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/")
-          (linux-path "~/GitHub/Markedsanalyse/journaler/"))
-      (cond ((eq system-type 'windows-nt) (setq org-refile-targets (quote (((concat window-path "arkiv.org") :maxlevel . 2)
-                                                                           ((concat window-path "liq.org") :maxlevel . 4)
-                                                                           ((concat window-path "reg.org") :maxlevel . 4)
-                                                                           ((concat window-path "master-energi.org.org") :maxlevel . 4)))))
-            ((eq system-type 'gnu/linux) (setq org-refile-targets (quote (((concat linux-path "arkiv.org") :maxlevel . 2)
-                                                                         ((concat linux-path "liq.org") :maxlevel . 4)
-                                                                         ((concat linux-path "reg.org") :maxlevel . 4)
-                                                                         ((concat linux-path "master-energi.org.org") :maxlevel . 4)))))))
+    (let ((WP "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/")
+          (LP "~/GitHub/Markedsanalyse/journaler/"))
+      (cond ((eq system-type 'windows-nt)
+             (setq org-refile-targets (quote (((concat WP "arkiv.org") :maxlevel . 2)
+                                              ((concat WP "liq.org") :maxlevel . 4)
+                                              ((concat WP "reg.org") :maxlevel . 4)
+                                              ((concat WP "master-energi.org.org") :maxlevel . 4)))))
+            ((eq system-type 'gnu/linux)
+             (setq org-refile-targets (quote (((concat LP "arkiv.org") :maxlevel . 2)
+                                              ((concat LP "liq.org") :maxlevel . 4)
+                                              ((concat LP "reg.org") :maxlevel . 4)
+                                              ((concat LP "master-energi.org.org") :maxlevel . 4)))))))
   (advice-add 'org-refile :after 'org-save-all-org-buffers)
 #+end_src
 ** Hydra
