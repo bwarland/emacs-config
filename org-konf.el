@@ -195,6 +195,12 @@
 (add-to-list 'org-structure-template-alist '("sr" . "src racket"))
 (add-to-list 'org-structure-template-alist '("srt" . "src racket :tangle"))
 
+(org-babel-do-load-languages
+ 'org-babel-load-languages (quote ((emacs-lisp . t)
+                                   (racket . t)
+                                   (sqlite . t)
+                                   (python . t))))
+
 (require 'org-drill)
 
 (use-package org-drill
@@ -205,9 +211,3 @@
         org-drill-spaced-repetition-algorithm 'sm2
         org-drill-add-random-noise-to-intervals-p t
         org-drill-adjust-intervals-for-early-and-late-repetitions-p t))
-
-(org-babel-do-load-languages
- 'org-babel-load-languages (quote ((emacs-lisp . t)
-                                   (racket . t)
-                                   (sqlite . t)
-                                   (python . t))))

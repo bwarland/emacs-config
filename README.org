@@ -306,13 +306,12 @@ Disse kan man legge automatisk inn i .emacs med kommandoen C-[ (og ta ut med C-]
 
 Tatt i betrakningen av det nivået jeg har mht til programmering så er jeg relativt fornøyd med "generaliseringen". Jeg tror likevel jeg kan forbedre, dvs. heve nivået av generalisering ved hjelp av map/concat og to lister som skiller på mapper i GitHub. Men det får bli til en annen gang. 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/agenda-files.el"
-  (and
    (cond ((eq system-type 'windows-nt) 
-          (let ((MJO "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/")
-                (NOT "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/Notater/"))))
+          (setq MJO "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/"
+                NOT "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/Notater/"))
          ((eq system-type 'gnu/linux) 
-          (let ((MJO "~/GitHub/Markedsanalyse/journaler/")
-                (NOT "~/GitHub/Markedsanalyse/Notater/")))))
+          (setq MJO "~/GitHub/Markedsanalyse/journaler/"
+                NOT "~/GitHub/Markedsanalyse/Notater/")))
    (setq org-agenda-files '((concat MJO "energi-master.org")
                             (concat MJO "balanser.org")
                             (concat MJO "presentasjoner.org")
@@ -321,8 +320,7 @@ Tatt i betrakningen av det nivået jeg har mht til programmering så er jeg rela
                             (concat MJO "pk.org")
                             (concat MJO "journal.org")
                             (concat NOT "informatikk.org")
-                            (concat NOT "ferdigheter.org"))))
-
+                            (concat NOT "ferdigheter.org")))
 
             ;; (setq org-agenda-files '("~/GitHub/Markedsanalyse/journaler/energi-master.org"
             ;;                          "~/GitHub/Markedsanalyse/journaler/balanse.org" "~/GitHub/Markedsanalyse/journaler/presentasjoner.org" "~/GitHub/Markedsanalyse/journaler/liq.org" "~/GitHub/Markedsanalyse/journaler/bd.org" "~/GitHub/Markedsanalyse/journaler/pk.org" "~/GitHub/Notater/samfunndrill.org" "~/GitHub/Markedsanalyse/journaler/journal.org" "~/GitHub/Notater/moeter.org" "/home/bwarland/GitHub/Notater/informatikk.org" "~/GitHub/Notater/ferdigheter.org"))
