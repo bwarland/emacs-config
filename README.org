@@ -304,26 +304,34 @@ Alle Org-Mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][Bernt 
 *** Agenda-files
 Disse kan man legge automatisk inn i .emacs med kommandoen C-[ (og ta ut med C-]). Men jeg ser behov for å kunne ha et samlet syn på dette på tvers av tre maskiner (to linux-maskiner og en windows-maskin).
 
-Tatt i betrakningen av det nivået jeg har mht til programmering så er jeg relativt fornøyd med "generaliseringen". Jeg tror likevel jeg kan forbedre, dvs. heve nivået av generalisering ved hjelp av map/concat og to lister som skiller på mapper i GitHub. Men det får bli til en annen gang. 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/agenda-files.el"
-   (cond ((eq system-type 'windows-nt) 
-          (setq MJO "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/"
-                NOT "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/Notater/"))
-         ((eq system-type 'gnu/linux) 
-          (setq MJO "~/GitHub/Markedsanalyse/journaler/"
-                NOT "~/GitHub/Markedsanalyse/Notater/")))
-   (setq org-agenda-files '((concat MJO "energi-master.org")
-                            (concat MJO "balanser.org")
-                            (concat MJO "presentasjoner.org")
-                            (concat MJO "liq.org")
-                            (concat MJO "bd.org")
-                            (concat MJO "pk.org")
-                            (concat MJO "journal.org")
-                            (concat NOT "informatikk.org")
-                            (concat NOT "ferdigheter.org")))
+  ;; (cond ((eq system-type 'windows-nt) 
+  ;;        (setq MJO "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/"
+  ;;              NOT "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/Notater/"))
+  ;;       ((eq system-type 'gnu/linux) 
+  ;;        (setq MJO "~/GitHub/Markedsanalyse/journaler/"
+  ;;              NOT "~/GitHub/Markedsanalyse/Notater/")))
+  ;; (setq org-agenda-files (concat MJO "energi-master.org"))
+  ;; ;; (setq org-agenda-files (concat MJO "balanser.org"))
+  ;;                         (concat MJO "presentasjoner.org")
+  ;;                         (concat MJO "liq.org")
+  ;;                        (concat MJO "bd.org")
+  ;;                         (concat MJO "pk.org")
+  ;;                         (concat MJO "journal.org")
+  ;;                         (concat NOT "informatikk.org")
+  ;;                         (concat NOT "ferdigheter.org"))
 
-            ;; (setq org-agenda-files '("~/GitHub/Markedsanalyse/journaler/energi-master.org"
-            ;;                          "~/GitHub/Markedsanalyse/journaler/balanse.org" "~/GitHub/Markedsanalyse/journaler/presentasjoner.org" "~/GitHub/Markedsanalyse/journaler/liq.org" "~/GitHub/Markedsanalyse/journaler/bd.org" "~/GitHub/Markedsanalyse/journaler/pk.org" "~/GitHub/Notater/samfunndrill.org" "~/GitHub/Markedsanalyse/journaler/journal.org" "~/GitHub/Notater/moeter.org" "/home/bwarland/GitHub/Notater/informatikk.org" "~/GitHub/Notater/ferdigheter.org"))
+  ;; (setq org-agenda-files '("~/GitHub/Markedsanalyse/journaler/energi-master.org"
+  ;;                           "~/GitHub/Markedsanalyse/journaler/balanse.org"
+  ;;                           "~/GitHub/Markedsanalyse/journaler/presentasjoner.org"
+  ;;                           "~/GitHub/Markedsanalyse/journaler/liq.org"
+  ;;                           "~/GitHub/Markedsanalyse/journaler/bd.org"
+  ;;                           "~/GitHub/Markedsanalyse/journaler/pk.org"
+  ;;                           "~/GitHub/Notater/samfunndrill.org"
+  ;;                           "~/GitHub/Markedsanalyse/journaler/journal.org" 
+  ;;                           "~/GitHub/Notater/moeter.org" 
+  ;;                           "/home/bwarland/GitHub/Notater/informatikk.org"
+  ;;                           "~/GitHub/Notater/ferdigheter.org"))
 #+end_src
 *** Org-agenda
 Ingen endring mulig i agendabuffer, men man kan gå fra agendabuffer til filene som det henvises til, og det er mulig å endre disse filene fra agendabufferen.
@@ -565,13 +573,13 @@ En strukturert terping av viktig informasjon, metoder og teknikker er viktig for
 #+end_src
 ** TODO-nøkkelord
 #+begin_src emacs-lisp :tangle orgtodo.el
-    (setq org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "DATA(D)" "PRES(p)" "BAL(b)" "|" "DONE(d)"))
-          org-todo-keyword-faces (quote (("TODO" :foreground "red" :background "white")
-                                           ("NEXT" :foreground "blue" :background "white")
-                                           ("DATA" :foreground "light slate grey" :background "white")
-                                           ("PRES" :foreground "dark turquoise" :background "white")
-                                           ("BAL" :foreground "dark olive green" :background "white")
-                                           ("DONE" :foreground "dark green" :background "white"))))
+  (setq org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "DATA(D)" "PRES(p)" "BAL(b)" "|" "DONE(d)"))
+        org-todo-keyword-faces (quote (("TODO" :foreground "red" :background "white")
+                                         ("NEXT" :foreground "blue" :background "white")
+                                         ("DATA" :foreground "light slate grey" :background "white")
+                                         ("PRES" :foreground "dark turquoise" :background "white")
+                                         ("BAL" :foreground "dark olive green" :background "white")
+                                         ("DONE" :foreground "dark green" :background "white"))))
 #+end_src
 * Maler
 ** Yasnippet
