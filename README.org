@@ -217,6 +217,7 @@ Pakke som lager et rammeverk for søking og innsnevring av valg og for det å fu
 #+end_src
 * Programmering
 ** Python
+
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/programmering.el"
   ;; (setq python-shell-completion-native-enable nil) 
   (setq python-shell-interpreter "/home/bwarland/anaconda3/bin/python3")
@@ -233,52 +234,17 @@ Pakke som lager et rammeverk for søking og innsnevring av valg og for det å fu
 
 ** SQLite
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/programmering.el"
-(setq sql-sqlite-program "/home/bwarland/anaconda3/bin/sqlite3")
+  (setq sql-sqlite-program "/home/bwarland/anaconda3/bin/sqlite3")
 #+end_src
 * Org-mode
 Alle moduler og pakker som har med org-mode å gjøre.
 
 Alle Org-Mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][Bernt Hansen sin konfigurasjonsfil]].
-** Linux
-*** generelt
+** generelt
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
   (use-package org
     :mode (("\\.org$" . org-mode))
     :hook (org-mode . org-bullets-mode)
-    :init
-    (setq ;; UTSEENDE
-            ;; ===================
-     org-hide-leading-stars t
-     org-startup-indented t
-     org-startup-folded t
-     ;; org-switch-to-buffer-other-window t
-     initial-major-mode 'org-mode
-     org-pretty-entities t
-     org-pretty-entities-include-sub-superscripts nil
-     org-use-fast-todo-selection t
-     org-treat-s-cursor-todo-selection-as-state-change nil
-     org-directory "~/GitHub"
-     org-reverse-note-order nil
-     org-refile-use-outline-path t 
-     org-outline-path-complete-in-steps nil
-     org-refile-allow-creating-parent-nodes (quote confirm)
-     org-indirect-buffer-display 'current-window
-     org-hide-emphasis-markers t
-     org-tags-column -50
-     org-hide-emphasis-marker t
-     ;; org-list-allow-alphabetcial t
-     org-ellipsis " ..."
-     org-archive-location "~/Documents/org-arkiv/arkiv.org::* TASK"
-     org-todo-keywords (quote (
-                               (sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
-                               ;; (sequence "jour(j)" "fund(f)")
-                               ))
-
-     org-todo-keyword-faces (quote (("jour" :foreground "red" :background "white")
-                                           ;; ("fund" :foreground "blue" :background "white")
-                                           ("TODO" :foreground "red" :background "white")
-                                           ("NEXT" :foreground "blue" :background "white")
-                                           ("DONE" :foreground "dark green" :background "white"))))
     :bind
     (("C-c o" . 'org-mode)
      ("C-c c" . 'org-capture)
@@ -291,17 +257,45 @@ Alle Org-Mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][Bernt 
      ("C-c C-w" . 'org-capture-refile)
      ("C-c C-k" . 'org-capture-kill))
     :config
-    ;; (setq-default major-mode 'org-mode)
-    )
+    (setq org-hide-leading-stars t
+          org-startup-indented t
+          org-startup-folded t
+          ;; org-switch-to-buffer-other-window t
+          initial-major-mode 'org-mode
+          org-pretty-entities t
+          org-pretty-entities-include-sub-superscripts nil
+          org-use-fast-todo-selection t
+          org-treat-s-cursor-todo-selection-as-state-change nil
+          org-directory "~/GitHub"
+          org-reverse-note-order nil
+          org-refile-use-outline-path t 
+          org-outline-path-complete-in-steps nil
+          org-refile-allow-creating-parent-nodes (quote confirm)
+          org-indirect-buffer-display 'current-window
+          org-hide-emphasis-markers t
+          org-tags-column -50
+          org-hide-emphasis-marker t
+          ;; org-list-allow-alphabetcial t
+          org-ellipsis " ..."
+          org-archive-location "~/Documents/org-arkiv/arkiv.org::* TASK"
+          org-todo-keywords (quote (
+                                    (sequence "TODO(t)" "NEXT(n)" "DATA(D)" "PRES(p)" "BAL(b)"  "|" "DONE(d)")
+                                    ))
+          org-todo-keyword-faces (quote (("TODO" :foreground "red" :background "white")
+                                         ("NEXT" :foreground "blue" :background "white")
+                                         ("DATA" :foreground "light slate grey" :background "white")
+                                         ("PRES" :foreground "dark turquoise" :background "white")
+                                         ("BAL" :foreground "dark olive green" :background "white")
+                                         ("DONE" :foreground "dark green" :background "white")))))
 
 #+end_src
-*** startmappe
+** startmappe
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el" 
 (cond ((eq system-type 'windows-nt) (setq default-directory "~/C:Users/bjorwa/Documents/GitHub/"))
       ((eq system-type 'gnu/linux) (setq default-directory "~/GitHub/")))
 #+end_src
-*** Agenda
-**** Org-agenda
+** Agenda
+*** Org-agenda
 Ingen endring mulig i agendabuffer, men man kan gå fra agendabuffer til filene som det henvises til, og det er mulig å endre disse filene fra agendabufferen.
 
 Dersom man ønkser å beholde vindusoppsettet slik man har det når man påkaller agendabufferen så må man sette følgende variabel: (setq org-agenda-window-setup 'current-buffer).
@@ -330,7 +324,7 @@ Det er ryddig å se TODO i sammenheng med "Scheduled:" og "Deadline:" ellers så
                                      "      " "................")))
 (add-hook 'after-init-hook 'org-agenda-list)
 #+end_src
-**** [[https://github.com/alphapapa/org-super-agenda][Org-super-agenda]] 
+*** [[https://github.com/alphapapa/org-super-agenda][Org-super-agenda]] 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/linorg.el"
   (require 'org-super-agenda)
   (use-package org-super-agenda
@@ -340,17 +334,24 @@ Det er ryddig å se TODO i sammenheng med "Scheduled:" og "Deadline:" ellers så
     (setq org-super-agenda-groups
           '((:name "TIDSPLAN     ========================================================================================"
                  :time-grid t)
+	  
             (:name "SORTERING    ========================================================================================"
                  :todo "TODO")
             (:name "BEARBEIDING  ========================================================================================"
-		 :todo "NEXT")
+                 :todo "NEXT")
+            (:name "DATAOPPDATERING ====================================================================================="
+                 :todo "DATA")
+            (:name "PRESENTASJONER ======================================================================================"
+                   :todo "PRES")
+            (:name "BALANSE      ========================================================================================"
+                   :todo "BAL")
             (:name "MARKED       ========================================================================================"
                  :todo "TODO"
                  :tag ("coal" "hydrogen"))
             (:name "INFORMATIKK  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
                  :tag ("informatikk" "emacs" "git" "linux" "scheme" "python"))
             (:name "SAMFUNNSFAG  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-                   :tag ("samfunn" "økonimi"))
+                   :tag ("samfunn" "økonomi"))
             )))
   ;; (require 'org-super-agenda)
   ;; (use-package org-super-agenda
@@ -397,7 +398,7 @@ Det er ryddig å se TODO i sammenheng med "Scheduled:" og "Deadline:" ellers så
                    (:name "Jobb" :tag ("power_bi" "excel"))
                    (:discard (:tag "ikke_kal")))))
 #+end_src
-*** Filer mye brukt i omarkivering
+** Filer mye brukt i omarkivering
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
     (let ((window-path "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/")
           (linux-path "~/GitHub/Markedsanalyse/journaler/"))
@@ -411,12 +412,12 @@ Det er ryddig å se TODO i sammenheng med "Scheduled:" og "Deadline:" ellers så
                                                                          ((concat linux-path "master-energi.org.org") :maxlevel . 4)))))))
   (advice-add 'org-refile :after 'org-save-all-org-buffers)
 #+end_src
-*** Hydra
+** Hydra
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
   (require 'org-fc-hydra)
 #+end_src
-*** Maler
-**** Fangstmaler
+** Maler
+*** Fangstmaler
 Jeg bruker mange av disse fangstmalene både i arbeid og privat da det er noe som hjelper meg å samle, fange og lagre informasjon raskt. Dette viser også konfigureringen, skjønt det kan bli noe graps i koden. 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
   (cond ((eq system-type 'windows-nt)
@@ -539,7 +540,7 @@ Jeg bruker mange av disse fangstmalene både i arbeid og privat da det er noe so
                        )))))
 #+end_src
 
-**** Strukturmal
+*** Strukturmal
 F.eks <pyt + TAB vil eksandere til Python med tangle.
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
   (require 'org-tempo)
@@ -550,7 +551,7 @@ F.eks <pyt + TAB vil eksandere til Python med tangle.
   (add-to-list 'org-structure-template-alist '("sr" . "src racket"))
   (add-to-list 'org-structure-template-alist '("srt" . "src racket :tangle"))
 #+end_src
-*** Terping
+** Terping
 En strukturert terping av viktig informasjon, metoder og teknikker er viktig for meg da jeg har en teflonhjerne som ikke raskt absorberer. Dette tror jeg er en pakke som ikke jevnlig oppdateres, om i det hele tatt. Og her har jeg hatt litt problemer med en feilmelding og kluss med kode som jeg på et vil klarte å kontrollere ved å blokke ut noe av koden i modulens el-fil (laster denne inn i stedet for elc-filen, [[file:Notater/ferdigheter.org::*Feil under Emacs-konfigurering][beskrivelse i filen ferdigheter.org]]).
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
   (require 'org-drill)
@@ -564,7 +565,7 @@ En strukturert terping av viktig informasjon, metoder og teknikker er viktig for
           org-drill-add-random-noise-to-intervals-p t
           org-drill-adjust-intervals-for-early-and-late-repetitions-p t))
 #+end_src
-*** Org-babel"
+** Org-babel"
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
   (org-babel-do-load-languages
    'org-babel-load-languages (quote ((emacs-lisp . t)
@@ -572,10 +573,6 @@ En strukturert terping av viktig informasjon, metoder og teknikker er viktig for
                                      (sqlite . t)
                                      (python . t))))
 #+end_src
-
-** Windows
-
-*** generelt
 
 * Maler
 ** Yasnippet

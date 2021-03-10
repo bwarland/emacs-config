@@ -1,7 +1,18 @@
 (use-package org
   :mode (("\\.org$" . org-mode))
   :hook (org-mode . org-bullets-mode)
-  :init
+  :bind
+  (("C-c o" . 'org-mode)
+   ("C-c c" . 'org-capture)
+   ("<f5>" . 'org-copy-subtree)
+   ("C-c a" . 'org-agenda)
+   ("C-c l" . 'org-store-link)
+   ("C-c C-." . org-time-stamp)
+   ("C-c C-t". 'org-todo)		;
+   ("C-c t" . 'org-show-todo-tree)
+   ("C-c C-w" . 'org-capture-refile)
+   ("C-c C-k" . 'org-capture-kill))
+  :config
   (setq ;; UTSEENDE
           ;; ===================
    org-hide-leading-stars t
@@ -26,28 +37,14 @@
    org-ellipsis " ..."
    org-archive-location "~/Documents/org-arkiv/arkiv.org::* TASK"
    org-todo-keywords (quote (
-                             (sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
-                             ;; (sequence "jour(j)" "fund(f)")
+                             (sequence "TODO(t)" "NEXT(n)" "DATA(D)" "PRES(p)" "BAL(b)"  "|" "DONE(d)")
                              ))
-
-   org-todo-keyword-faces (quote (("jour" :foreground "red" :background "white")
-                                         ;; ("fund" :foreground "blue" :background "white")
-                                         ("TODO" :foreground "red" :background "white")
-                                         ("NEXT" :foreground "blue" :background "white")
-                                         ("DONE" :foreground "dark green" :background "white"))))
-  :bind
-  (("C-c o" . 'org-mode)
-   ("C-c c" . 'org-capture)
-   ("<f5>" . 'org-copy-subtree)
-   ("C-c a" . 'org-agenda)
-   ("C-c l" . 'org-store-link)
-   ("C-c C-." . org-time-stamp)
-   ("C-c C-t". 'org-todo)		;
-   ("C-c t" . 'org-show-todo-tree)
-   ("C-c C-w" . 'org-capture-refile)
-   ("C-c C-k" . 'org-capture-kill))
-  :config
-  ;; (setq-default major-mode 'org-mode)
+   org-todo-keyword-faces (quote (("TODO" :foreground "red" :background "white")
+                                  ("NEXT" :foreground "blue" :background "white")
+                                  ("DATA" :foreground "light slate grey" :background "white")
+                                  ("PRES" :foreground "dark turquoise" :background "white")
+                                  ("BAL" :foreground "dark olive green" :background "white")
+                                  ("DONE" :foreground "dark green" :background "white"))))
   )
 
 (cond ((eq system-type 'windows-nt) (setq default-directory "~/C:Users/bjorwa/Documents/GitHub/"))
