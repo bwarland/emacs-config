@@ -29,4 +29,3 @@
 (global-set-key (kbd "<f12>") '(lambda ()
 				 (interactive)
 				 (popup-menu 'yank-menu)))
-(global-set-key (kbd "\M-?") 'help-command)

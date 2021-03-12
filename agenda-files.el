@@ -1,27 +1,27 @@
 ;; (cond ((eq system-type 'windows-nt) 
-;;        (setq MJO "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/"
-;;              NOT "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/Notater/"))
+;;        (setq mjo "~/:c/users/bjorwa/documents/GitHub/markedsanalyse/journaler/"
+;;              not "~/:c/users/bjorwa/documents/GitHub/markedsanalyse/notater/"))
 ;;       ((eq system-type 'gnu/linux) 
-;;        (setq MJO "~/GitHub/Markedsanalyse/journaler/"
-;;              NOT "~/GitHub/Markedsanalyse/Notater/")))
-;; (setq org-agenda-files (concat MJO "energi-master.org"))
-;; ;; (setq org-agenda-files (concat MJO "balanser.org"))
-;;                         (concat MJO "presentasjoner.org")
-;;                         (concat MJO "liq.org")
-;;                        (concat MJO "bd.org")
-;;                         (concat MJO "pk.org")
-;;                         (concat MJO "journal.org")
-;;                         (concat NOT "informatikk.org")
-;;                         (concat NOT "ferdigheter.org"))
+;;        (setq mjo "~/GitHub/markedsanalyse/journaler/"
+;;              not "~/GitHub/markedsanalyse/notater/")))
+;; (setq org-agenda-files (concat mjo "energi-master.org"))
+;; ;; (setq org-agenda-files (concat mjo "balanser.org"))
+;;                         (concat mjo "presentasjoner.org")
+;;                         (concat mjo "liq.org")
+;;                        (concat mjo "bd.org")
+;;                         (concat mjo "pk.org")
+;;                         (concat mjo "journal.org")
+;;                         (concat not "informatikk.org")
+;;                         (concat not "ferdigheter.org"))
 
-;; (setq org-agenda-files '("~/GitHub/Markedsanalyse/journaler/energi-master.org"
-;;                           "~/GitHub/Markedsanalyse/journaler/balanse.org"
-;;                           "~/GitHub/Markedsanalyse/journaler/presentasjoner.org"
-;;                           "~/GitHub/Markedsanalyse/journaler/liq.org"
-;;                           "~/GitHub/Markedsanalyse/journaler/bd.org"
-;;                           "~/GitHub/Markedsanalyse/journaler/pk.org"
-;;                           "~/GitHub/Notater/samfunndrill.org"
-;;                           "~/GitHub/Markedsanalyse/journaler/journal.org" 
-;;                           "~/GitHub/Notater/moeter.org" 
-;;                           "/home/bwarland/GitHub/Notater/informatikk.org"
-;;                           "~/GitHub/Notater/ferdigheter.org"))
+;; (setq org-agenda-files '("~/GitHub/markedsanalyse/journaler/energi-master.org"
+;;                           "~/GitHub/markedsanalyse/journaler/balanse.org"
+;;                           "~/GitHub/markedsanalyse/journaler/presentasjoner.org"
+;;                           "~/GitHub/markedsanalyse/journaler/liq.org"
+;;                           "~/GitHub/markedsanalyse/journaler/bd.org"
+;;                           "~/GitHub/markedsanalyse/journaler/pk.org"
+;;                           "~/GitHub/notater/samfunndrill.org"
+;;                           "~/GitHub/markedsanalyse/journaler/journal.org" 
+;;                           "~/GitHub/notater/moeter.org" 
+;;                           "/home/bwarland/GitHub/notater/informatikk.org"
+;;                           "~/GitHub/notater/ferdigheter.org"))

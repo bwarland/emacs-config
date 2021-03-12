@@ -1,15 +1,19 @@
-#+TITLE: Konfigurering av Emacs
-#+PROPERTY: 
-#+STARTUP: overview num
-* Kilder og forbilder
-** Gode eksempler
-*** [[http://doc.norang.ca/org-mode.html][Bernt Hansen sin emacs-konfigurering]]
-Den første emacskonfigurasjonen jeg kopierte mer eller mindre alt av og testet den gang jeg var rimelig fersk. Og ennå så tror jeg store deler av org-mode konfigurasjonen min bygger på hans oppsett. Dette er en kar som har rimelig god kontroll over verktøyet Emacs. 
+#+title: konfigurering av emacs
+#+property: 
+#+startup: overview num
+* kilder og forbilder
+** gode eksempler
+*** [[http://doc.norang.ca/org-mode.html][bernt hansen sin emacs-konfigurering]]
+den første emacskonfigurasjonen jeg kopierte mer eller mindre alt av og testet den gang jeg var rimelig fersk. og ennå så tror jeg store deler av org-mode konfigurasjonen min bygger på hans oppsett. dette er en kar som har rimelig god kontroll over verktøyet emacs. 
 
-Sett bort fra det at hans arbeidsflyt ikke helt passer min - til det er den litt for regimentert - så er det at hav av gode eksempler her. Det var med denne jeg først lærte å bruke Emacs og org-mode for noen år siden. 
-* Pakker
-Konfigurasjon knyttet til moduler og pakker. 
-** Generell konfigurering inkludert pakkearkiv
+sett bort fra det at hans arbeidsflyt ikke helt passer min - til det er den litt for regimentert - så er det at hav av gode eksempler her. det var med denne jeg først lærte å bruke emacs og org-mode for noen år siden. 
+*** [[http://ehneilsen.net/notebook/orgexamples/org-examples.html#sec-23-1][org-mode cookbook]]
+*** [[https://jamiecollinson.com/blog/my-emacs-config/][jamiecollisonemacsconfig]]
+*** [[https://gitlab.com/kaligule/emacs-config/-/blob/master/config.org][kaligule]]
+har en egendefinert funksjon for omlasting av konfigurasjonsfil som kan være vært å implementere.
+* pakker og lasting av konfigurasjonsfiler
+konfigurasjon knyttet til moduler og pakker. 
+** generell konfigurering inkludert pakkearkiv
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/pakker.el"
   (setq package-enable-at-startup nil)
   (package-initialize)
@@ -21,8 +25,8 @@ Konfigurasjon knyttet til moduler og pakker.
                                                             ))))
 #+end_src
 
-** [[https://github.com/jwiegley/use-package][Use-package]] 
-Denne pakken er laget for det å samle konfigurasjon knyttet til en pakke, og på det viset legge opp til en ryddigere konfigurasjonfil, og man kan kontrollere lasting av pakker slik at man kan korte ned på oppstartstid for Emacs.
+** [[https://github.com/jwiegley/use-package][use-package]] 
+denne pakken er laget for det å samle konfigurasjon knyttet til en pakke, og på det viset legge opp til en ryddigere konfigurasjonfil, og man kan kontrollere lasting av pakker slik at man kan korte ned på oppstartstid for emacs.
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/pakker.el"
   (eval-when-compile
     (require 'use-package))
@@ -35,18 +39,18 @@ Denne pakken er laget for det å samle konfigurasjon knyttet til en pakke, og p�
       
         )
 #+end_src
-** Quelpa
-Dette er en pakke som brukes for å bygge pakker fra lokal eller ekstern kilde. Quelpa funksjonen nederst som viser til "https://github.com/l3kn/org-fc" (dette er org flashcards) er jeg litt usikker hvorfor jeg har lagt inn, jeg kan ikke huske når denne kom til verden. Og reelt sett så skulle vel denne kommandoen kjøres kun en gang i det at man neppe trenger å laste ned org-flash hver gang man starter opp Emacs.
+** quelpa
+dette er en pakke som brukes for å bygge pakker fra lokal eller ekstern kilde. quelpa funksjonen nederst som viser til "https://GitHub.com/l3kn/org-fc" (dette er org flashcards) er jeg litt usikker hvorfor jeg har lagt inn, jeg kan ikke huske når denne kom til verden. og reelt sett så skulle vel denne kommandoen kjøres kun en gang i det at man neppe trenger å laste ned org-flash hver gang man starter opp emacs.
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/pakker.el"
   (unless (package-installed-p 'quelpa)
     (with-temp-buffer
-      (url-insert-file-contents "https://raw.githubusercontent.com/quelpa/quelpa/master/quelpa.el")
+      (url-insert-file-contents "https://raw.GitHubusercontent.com/quelpa/quelpa/master/quelpa.el")
       (eval-buffer)
       (quelpa-self-upgrade)))
-  ;; (quelpa '(discover-my-major :fetcher git :url "https://github.com/l3kn/org-fc"))
+  ;; (quelpa '(discover-my-major :fetcher git :url "https://GitHub.com/l3kn/org-fc"))
 #+end_src
-** Automatisk oppdatering
-For periodisk, automatisk oppdatering av Emacs-pakker. Denne fant jeg i Dave Wilson sin youtube-snutt https://www.youtube.com/watch?v=dtjq68F2dXw&t=839s. 
+** automatisk oppdatering
+for periodisk, automatisk oppdatering av emacs-pakker. denne fant jeg i dave wilson sin youtube-snutt https://www.youtube.com/watch?v=dtjq68f2dxw&t=839s. 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/pakker.el"
   (use-package auto-package-update
     :defer t
@@ -59,11 +63,11 @@ For periodisk, automatisk oppdatering av Emacs-pakker. Denne fant jeg i Dave Wil
     (auto-package-update-at-time "09:00")
     )
 #+end_src
-* Generelt
-En samling av ulik konfigurasjon knyttet til hvordan Emacs ser ut og hvordan Emacs generelt fungerer.
-** Utseende
-*** Meny
-Jeg synes at menyer generelt sett i Emacs gir visuell støy. Og hva oppstartsbeskjeder angår så forstår jeg lite av disse. Derfor slår jeg av det meste. 
+* generelt
+en samling av ulik konfigurasjon knyttet til hvordan emacs ser ut og hvordan emacs generelt fungerer.
+** utseende
+*** meny
+jeg synes at menyer generelt sett i emacs gir visuell støy. og hva oppstartsbeskjeder angår så forstår jeg lite av disse. derfor slår jeg av det meste. 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
     (when window-system
       (tooltip-mode -1)
@@ -76,15 +80,15 @@ Jeg synes at menyer generelt sett i Emacs gir visuell støy. Og hva oppstartsbes
   (global-visual-line-mode t)
   (display-time-mode 1)
 #+end_src
-*** Maskinspesifik generell konfigurasjon
-**** Basis font
+*** maskinspesifik generell konfigurasjon
+**** basis font
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
-  (cond ((eq system-type 'windows-nt) (set-frame-font "Consolas-14"))
-        ((string= system-name "macebell") (set-frame-font "Liberation Mono-15"))
-        ((string= system-name "kbell") (set-frame-font "Liberation Mono-11"))
-        ((string= system-name "ingentingen") (set-frame-font "Liberation Mono-12")))
+  (cond ((eq system-type 'windows-nt) (set-frame-font "consolas-14"))
+        ((string= system-name "macebell") (set-frame-font "liberation mono-15"))
+        ((string= system-name "kbell") (set-frame-font "liberation mono-11"))
+        ((string= system-name "ingentingen") (set-frame-font "liberation mono-12")))
 #+end_src
-*** Doom modeline
+*** doom modeline
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
   (use-package doom-modeline
     :ensure t
@@ -96,21 +100,21 @@ Jeg synes at menyer generelt sett i Emacs gir visuell støy. Og hva oppstartsbes
   ;; (use-package doom-themes
     ;; :init (load-theme 'doom-palenight t))
 #+end_src
-** Forskjellig
+** forskjellig
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
   (put 'downcase-region 'disabled nil)
-  (set-language-environment "UTF-8")
+  (set-language-environment "utf-8")
   (require 'rainbow-delimiters)
   ;; (rainbow-delimiters-mode 1)
 #+end_src
-** Tekstkontroll
-*** Forkortelser
+** tekstkontroll
+*** forkortelser
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
 (setq abbrev-file-name "~/.emacs.d/abbrev_defs")
 (setq save-abbrevs 'silent)
 (setq-default abbrev-mode t)
 #+end_src
-*** Tekstmarkering
+*** tekstmarkering
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
     (use-package hi-lock
       :defer t
@@ -118,7 +122,7 @@ Jeg synes at menyer generelt sett i Emacs gir visuell støy. Og hva oppstartsbes
              ("M-o r" . highlight-regexp)
              ("M-o w" . highlight-phrase)))
 #+end_src
-** Visning av kommandoer
+** visning av kommandoer
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
   (use-package command-log-mode
     :defer t
@@ -127,13 +131,13 @@ Jeg synes at menyer generelt sett i Emacs gir visuell støy. Og hva oppstartsbes
     :config
     (global-command-log-mode t))
 #+end_src
-** Oppstart av Emacs
+** oppstart av emacs
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
 (emacs-init-time)
-;; Use a hook so the message doesn't get clobbered by other messages.
+;; use a hook so the message doesn't get clobbered by other messages.
 (add-hook 'emacs-startup-hook
           (lambda ()
-            (message "Emacs ready in %s with %d garbage collections."
+            (message "emacs ready in %s with %d garbage collections."
                      (format "%.2f seconds"
                              (float-time
                               (time-subtract after-init-time before-init-time)))
@@ -141,44 +145,42 @@ Jeg synes at menyer generelt sett i Emacs gir visuell støy. Og hva oppstartsbes
 
 (setq gc-cons-threshold (* 50 1000 1000))
 #+end_src
-** Legg til når Emacs laster
-Denne filen har jeg lastet ned i fra GitHub og det er noe jeg trenger for å få org-babel til å kjøre programmeringsspråket Racket.
+** legg til når emacs laster
+denne filen har jeg lastet ned i fra GitHub og det er noe jeg trenger for å få org-babel til å kjøre programmeringsspråket racket.
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
 (add-to-list 'load-path "~/.emacs.d/ob-racket-master/")
 #+end_src
-** Sta
-
-vekontroll
+** stavekontroll
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
   (setq ispell-program-name "hunspell")
         ;; ispell-hunspell-dict-path-alist '((/usr/share/doc/hunspell-no))
 
 #+end_src
-* Fullføring
-** Helm 
-*** [[https://emacs-helm.github.io/helm/#introduction][Generelt]]
-Pakke som lager et rammeverk for søking og innsnevring av valg og for det å fullføre navn på filer og kommandoer og så videre. 
+* fullføring
+** helm 
+*** [[https://emacs-helm.github.io/helm/#introduction][generelt]]
+pakke som lager et rammeverk for søking og innsnevring av valg og for det å fullføre navn på filer og kommandoer og så videre. 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/helm-konf.el"
   (use-package helm
     :ensure t
     :bind (
-           ("M-x" . helm-M-x)
-           ("C-x C-f" . helm-find-files)
+           ;; ("M-x" . helm-m-x)
+           ("C-x c-f" . helm-find-files)
            ("C-x f" . helm-recentf)
            ("M-y" . helm-show-kill-ring)
            ("C-x b" . helm-buffers-list)	;
            ("C-x c y" . helm-yas-complete)
-           ("C-x c Y" . helm-yas-create-snippet-on-region)
+           ("C-x c y" . helm-yas-create-snippet-on-region)
            ("C-c h o" . helm-occur)
            ("C-c h x" . helm-register)
            ("C-c <f9>" . helm-calcul-expression)
            ("C-c <f1>" . helm-colors)
            ("M-p" . helm-previous-line)
            ("M-k" . helm-next-line)
-           ("M-I" . helm-previous-page)
-           ("M-K" . helm-next-page)
+           ("M-i" . helm-previous-page)
+           ("M-k" . helm-next-page)
            ("M-h" . helm-beginning-of-buffer)
-           ("M-H" . helm-end-of-buffer)
+           ("M-h" . helm-end-of-buffer)
            )
     :init
     (setq helm-buffers-lazy-matching t
@@ -194,16 +196,16 @@ Pakke som lager et rammeverk for søking og innsnevring av valg og for det å fu
     (helm-autoresize-mode 1))
   (when (eq system-type 'gnu/linux) (use-package helm-ls-git
                                       :after helm
-                                      :bind (("C-x C-d" . helm-browse-project)
+                                      :bind (("C-x c-d" . helm-browse-project)
                                              ("C-x r p" . helm-projects-history))))
 #+end_src
-*** Swiper-Helm
+*** swiper-helm
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/helm-konf.el"
 (use-package swiper-helm
   :ensure t
   :bind ("C-s" . swiper-helm))
 #+end_src
-* Flermarkør
+* flermarkør
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/flere-markører.el"
     (use-package multiple-cursors
       :defer t
@@ -217,31 +219,31 @@ Pakke som lager et rammeverk for søking og innsnevring av valg og for det å fu
        ("C-c m p" . mc/edit-previous-like-this)
        ("C-c m r" . set-rectangular-region-anchor)))
 #+end_src
-* Programmering
-** Python
+* programmering
+** python
 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/programmering.el"
   ;; (setq python-shell-completion-native-enable nil) 
   (setq python-shell-interpreter "/home/bwarland/anaconda3/bin/python3")
 #+end_src
-** Racket
+** racket
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/programmering.el"
   (use-package racket-mode
     :defer t
     :config
-    (when (eq system-type 'windows-nt) ((setq racket-racket-program "C:\\Program Files\\Racket\\racket.exe"
-                                              racket-raco-program "C:\\Program Files\\Racket\\raco.exe"))))
+    (when (eq system-type 'windows-nt) ((setq racket-racket-program "c:\\program files\\racket\\racket.exe"
+                                              racket-raco-program "c:\\program files\\racket\\raco.exe"))))
 (require 'ob-racket)
 #+end_src
 
-** SQLite
+** sqlite
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/programmering.el"
   (setq sql-sqlite-program "/home/bwarland/anaconda3/bin/sqlite3")
 #+end_src
-* Org-mode
-Alle moduler og pakker som har med org-mode å gjøre.
+* org-mode
+alle moduler og pakker som har med org-mode å gjøre.
 
-Alle Org-Mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][Bernt Hansen sin konfigurasjonsfil]].
+alle org-mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][bernt hansen sin konfigurasjonsfil]].
 ** generelt
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
           (use-package org
@@ -279,66 +281,66 @@ Alle Org-Mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][Bernt 
                   org-hide-emphasis-marker t
                   ;; org-list-allow-alphabetcial t
                   org-ellipsis " ..."
-                  ;; org-archive-location "~/Documents/org-arkiv/arkiv.org::* TASK"
+                  ;; org-archive-location "~/documents/org-arkiv/arkiv.org::* task"
                   ;; org-todo-keywords (quote (
-                  ;;                           (sequence "TODO(t)" "NEXT(n)" "DATA(D)" "PRES(p)" "BAL(b)"  "|" "DONE(d)")
+                  ;;                           (sequence "todo(t)" "next(n)" "data(d)" "pres(p)" "bal(b)"  "|" "done(d)")
                   ;;                           ))
-                  ;; org-todo-keyword-faces (quote (("TODO" :foreground "red" :background "white")
-                  ;;                                ("NEXT" :foreground "blue" :background "white")
-                  ;;                                ("DATA" :foreground "light slate grey" :background "white")
-                  ;;                                ("PRES" :foreground "dark turquoise" :background "white")
-                  ;;                                ("BAL" :foreground "dark olive green" :background "white")
-                  ;;                                ("DONE" :foreground "dark green" :background "white")))
+                  ;; org-todo-keyword-faces (quote (("todo" :foreground "red" :background "white")
+                  ;;                                ("next" :foreground "blue" :background "white")
+                  ;;                                ("data" :foreground "light slate grey" :background "white")
+                  ;;                                ("pres" :foreground "dark turquoise" :background "white")
+                  ;;                                ("bal" :foreground "dark olive green" :background "white")
+                  ;;                                ("done" :foreground "dark green" :background "white")))
                   ;;
                   ))
 
-  (cond ((eq system-type 'windows-nt) (setq org-archive-location "~/C:Users/bjorwa/Documents/org-arkiv/arkiv.org::* TASK"))
-          ((eq system-type 'gnu/linux) (setq org-archive-location "~/Documents/org-arkiv/arkiv.org::* TASK")))
+  (cond ((eq system-type 'windows-nt) (setq org-archive-location "~/c:users/bjorwa/documents/org-arkiv/arkiv.org::* task"))
+        ((eq system-type 'gnu/linux) (setq org-archive-location "~/documents/org-arkiv/arkiv.org::* task")))
 #+end_src
 ** startmappe
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el" 
-(cond ((eq system-type 'windows-nt) (setq default-directory "~/C:Users/bjorwa/Documents/GitHub/"))
+(cond ((eq system-type 'windows-nt) (setq default-directory "~/c:users/bjorwa/documents/GitHub/"))
       ((eq system-type 'gnu/linux) (setq default-directory "~/GitHub/")))
 #+end_src
-** Agenda
-*** Agenda-files
-Disse kan man legge automatisk inn i .emacs med kommandoen C-[ (og ta ut med C-]). Men jeg ser behov for å kunne ha et samlet syn på dette på tvers av tre maskiner (to linux-maskiner og en windows-maskin).
+** agenda
+*** agenda-files
+disse kan man legge automatisk inn i .emacs med kommandoen c-[ (og ta ut med c-]). men jeg ser behov for å kunne ha et samlet syn på dette på tvers av tre maskiner (to linux-maskiner og en windows-maskin).
 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/agenda-files.el"
   ;; (cond ((eq system-type 'windows-nt) 
-  ;;        (setq MJO "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/"
-  ;;              NOT "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/Notater/"))
+  ;;        (setq mjo "~/:c/users/bjorwa/documents/GitHub/markedsanalyse/journaler/"
+  ;;              not "~/:c/users/bjorwa/documents/GitHub/markedsanalyse/notater/"))
   ;;       ((eq system-type 'gnu/linux) 
-  ;;        (setq MJO "~/GitHub/Markedsanalyse/journaler/"
-  ;;              NOT "~/GitHub/Markedsanalyse/Notater/")))
-  ;; (setq org-agenda-files (concat MJO "energi-master.org"))
-  ;; ;; (setq org-agenda-files (concat MJO "balanser.org"))
-  ;;                         (concat MJO "presentasjoner.org")
-  ;;                         (concat MJO "liq.org")
-  ;;                        (concat MJO "bd.org")
-  ;;                         (concat MJO "pk.org")
-  ;;                         (concat MJO "journal.org")
-  ;;                         (concat NOT "informatikk.org")
-  ;;                         (concat NOT "ferdigheter.org"))
+  ;;        (setq mjo "~/GitHub/markedsanalyse/journaler/"
+  ;;              not "~/GitHub/markedsanalyse/notater/")))
+  ;; (setq org-agenda-files (concat mjo "energi-master.org"))
+  ;; ;; (setq org-agenda-files (concat mjo "balanser.org"))
+  ;;                         (concat mjo "presentasjoner.org")
+  ;;                         (concat mjo "liq.org")
+  ;;                        (concat mjo "bd.org")
+  ;;                         (concat mjo "pk.org")
+  ;;                         (concat mjo "journal.org")
+  ;;                         (concat not "informatikk.org")
+  ;;                         (concat not "ferdigheter.org"))
 
-  ;; (setq org-agenda-files '("~/GitHub/Markedsanalyse/journaler/energi-master.org"
-  ;;                           "~/GitHub/Markedsanalyse/journaler/balanse.org"
-  ;;                           "~/GitHub/Markedsanalyse/journaler/presentasjoner.org"
-  ;;                           "~/GitHub/Markedsanalyse/journaler/liq.org"
-  ;;                           "~/GitHub/Markedsanalyse/journaler/bd.org"
-  ;;                           "~/GitHub/Markedsanalyse/journaler/pk.org"
-  ;;                           "~/GitHub/Notater/samfunndrill.org"
-  ;;                           "~/GitHub/Markedsanalyse/journaler/journal.org" 
-  ;;                           "~/GitHub/Notater/moeter.org" 
-  ;;                           "/home/bwarland/GitHub/Notater/informatikk.org"
-  ;;                           "~/GitHub/Notater/ferdigheter.org"))
+  ;; (setq org-agenda-files '("~/GitHub/markedsanalyse/journaler/energi-master.org"
+  ;;                           "~/GitHub/markedsanalyse/journaler/balanse.org"
+  ;;                           "~/GitHub/markedsanalyse/journaler/presentasjoner.org"
+  ;;                           "~/GitHub/markedsanalyse/journaler/liq.org"
+  ;;                           "~/GitHub/markedsanalyse/journaler/bd.org"
+  ;;                           "~/GitHub/markedsanalyse/journaler/pk.org"
+  ;;                           "~/GitHub/notater/samfunndrill.org"
+  ;;                           "~/GitHub/markedsanalyse/journaler/journal.org" 
+  ;;                           "~/GitHub/notater/moeter.org" 
+  ;;                           "/home/bwarland/GitHub/notater/informatikk.org"
+  ;;                           "~/GitHub/notater/ferdigheter.org"))
 #+end_src
-*** Org-agenda
-Ingen endring mulig i agendabuffer, men man kan gå fra agendabuffer til filene som det henvises til, og det er mulig å endre disse filene fra agendabufferen.
+*** org-agenda
+ingen endring mulig i agendabuffer, men man kan gå fra agendabuffer til filene som det henvises til, og det er mulig å endre disse filene fra agendabufferen.
 
-Dersom man ønkser å beholde vindusoppsettet slik man har det når man påkaller agendabufferen så må man sette følgende variabel: (setq org-agenda-window-setup 'current-buffer).
+dersom man ønkser å beholde vindusoppsettet slik man har det når man påkaller agendabufferen så må man sette følgende variabel: (setq org-agenda-window-setup 'current-buffer).
 
-Det er ryddig å se TODO i sammenheng med "Scheduled:" og "Deadline:" ellers så risikerer man at hele TODO-listen blir kleiset rett inn under "time-grid", dvs. når man bruker aktiv data. 
+det er ryddig å se todo i sammenheng med "scheduled:" og "deadline:" ellers så risikerer man at hele todo-listen blir kleiset rett inn under "time-grid", dvs. når man bruker aktiv data. 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-agenda.el"
   (setq org-agenda-columns t
         org-agenda-tags-column -100
@@ -347,11 +349,11 @@ Det er ryddig å se TODO i sammenheng med "Scheduled:" og "Deadline:" ellers så
         org-agenda-block-seperator t
         org-agenda-span 5
         org-agenda-window-setup 'other-window
-        ;; AGENDA LOG
+        ;; agenda log
         org-agenda-start-with-log-mode t
         org-agenda-log-done 'note
         org-agenda-log-into-drawer t
-              ;; TIME GRID
+              ;; time grid
         org-agenda-include-diary t
         org-agenda-skip-scheduled-if-done t
         org-agenda-skip-deadline-if-done t
@@ -362,7 +364,7 @@ Det er ryddig å se TODO i sammenheng med "Scheduled:" og "Deadline:" ellers så
                                      "      " "................")))
 (add-hook 'after-init-hook 'org-agenda-list)
 #+end_src
-*** [[https://github.com/alphapapa/org-super-agenda][Org-super-agenda]] 
+*** [[https://GitHub.com/alphapapa/org-super-agenda][org-super-agenda]] 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-agenda.el"
   (require 'org-super-agenda)
   (use-package org-super-agenda
@@ -370,103 +372,103 @@ Det er ryddig å se TODO i sammenheng med "Scheduled:" og "Deadline:" ellers så
     :config
     (org-super-agenda-mode 1)
     (setq org-super-agenda-groups
-          '((:name "TIDSPLAN     ========================================================================================"
+          '((:name "tidsplan     ========================================================================================"
                  :time-grid t)
 	  
-            (:name "SORTERING    ========================================================================================"
+            (:name "sortering    ========================================================================================"
                  :todo "TODO")
-            (:name "BEARBEIDING  ========================================================================================"
+            (:name "bearbeiding  ========================================================================================"
                  :todo "NEXT")
-            (:name "DATAOPPDATERING ====================================================================================="
+            (:name "dataoppdatering ====================================================================================="
                  :todo "DATA")
-            (:name "PRESENTASJONER ======================================================================================"
+            (:name "presentasjoner ======================================================================================"
                    :todo "PRES")
-            (:name "BALANSE      ========================================================================================"
+            (:name "balanse      ========================================================================================"
                    :todo "BAL")
-            (:name "MARKED       ========================================================================================"
+            (:name "marked       ========================================================================================"
                  :todo "TODO"
                  :tag ("coal" "hydrogen"))
-            (:name "INFORMATIKK  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+            (:name "informatikk  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
                  :tag ("informatikk" "emacs" "git" "linux" "scheme" "python"))
-            (:name "SAMFUNNSFAG  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+            (:name "samfunnsfag  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
                    :tag ("samfunn" "økonomi"))
             )))
 
 #+end_src
-** Filer mye brukt i omarkivering
+** filer mye brukt i omarkivering
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
-    (let ((WP "~/:C/Users/bjorwa/Documents/GitHub/Markedsanalyse/journaler/")
-          (LP "~/GitHub/Markedsanalyse/journaler/"))
+    (let ((wp "~/:c/users/bjorwa/documents/GitHub/markedsanalyse/journaler/")
+          (lp "~/GitHub/markedsanalyse/journaler/"))
       (cond ((eq system-type 'windows-nt)
-             (setq org-refile-targets (quote (((concat WP "arkiv.org") :maxlevel . 2)
-                                              ((concat WP "liq.org") :maxlevel . 4)
-                                              ((concat WP "reg.org") :maxlevel . 4)
-                                              ((concat WP "master-energi.org.org") :maxlevel . 4)))))
+             (setq org-refile-targets (quote (((concat wp "arkiv.org") :maxlevel . 2)
+                                              ((concat wp "liq.org") :maxlevel . 4)
+                                              ((concat wp "reg.org") :maxlevel . 4)
+                                              ((concat wp "master-energi.org.org") :maxlevel . 4)))))
             ((eq system-type 'gnu/linux)
-             (setq org-refile-targets (quote (((concat LP "arkiv.org") :maxlevel . 2)
-                                              ((concat LP "liq.org") :maxlevel . 4)
-                                              ((concat LP "reg.org") :maxlevel . 4)
-                                              ((concat LP "master-energi.org.org") :maxlevel . 4)))))))
+             (setq org-refile-targets (quote (((concat lp "arkiv.org") :maxlevel . 2)
+                                              ((concat lp "liq.org") :maxlevel . 4)
+                                              ((concat lp "reg.org") :maxlevel . 4)
+                                              ((concat lp "master-energi.org.org") :maxlevel . 4)))))))
   (advice-add 'org-refile :after 'org-save-all-org-buffers)
 #+end_src
-** Hydra
+** hydra
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
   (require 'org-fc-hydra)
 #+end_src
-** Maler
-*** Fangstmaler
-Jeg bruker mange av disse fangstmalene både i arbeid og privat da det er noe som hjelper meg å samle, fange og lagre informasjon raskt. Dette viser også konfigureringen, skjønt det kan bli noe graps i koden. 
+** maler
+*** fangstmaler
+jeg bruker mange av disse fangstmalene både i arbeid og privat da det er noe som hjelper meg å samle, fange og lagre informasjon raskt. dette viser også konfigureringen, skjønt det kan bli noe graps i koden. 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
   (cond ((eq system-type 'windows-nt)
          (setq org-capture-templates
                (quote (
                        ("d" "drill/emner")
-                       ("db" "PowerBI" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Notater/informatikk.org" "PowerBI")
-                        "** %? :drill:power_bi:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("dd" "Database" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Notater/informatikk.org" "Database")
-                        "** %? :drill:db:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("de" "Emacs config" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Notater/informatikk.org" "Emacs")
-                        "** %? :drill:emacs:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("dg" "GitHub" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub/Notater/informatikk.org" "Git")
-                        "** %? :drill:git:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("di" "Informatikk" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Notater/informatikk.org" "Informatikk")
-                        "** %? :drill:informatikk:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("dl" "Linux" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Notater/informatikk.org" "Linux")
-                        "** %? :drill:linux:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("dn" "Numpy" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Notater/informatikk.org" "Numpy")
-                        "** %? :drill:python:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("do" "Office" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Notater/informatikk.org" "Office")
-                        "** %? :drill:office:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("dP" "Pandas" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Notater/informatikk.org" "Pandas")
-                        "** %? :drill:python:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("dp" "Python" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Notater/informatikk.org" "Python")
-                        "** %? :drill:python:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("dr" "Racket" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Notater/informatikk.org" "Racket")
-                        "** %? :drill:scheme:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("dx" "Excel" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Notater/informatikk.org" "Racket")
-                        "** %? :drill:excel:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+                       ("db" "powerbi" entry (file+olp "~/c:/users/bjorwa/documents/GitHub//GitHub/notater/informatikk.org" "powerbi")
+                        "** %? :drill:power_bi:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("dd" "database" entry (file+olp "~/c:/users/bjorwa/documents/GitHub//GitHub/notater/informatikk.org" "database")
+                        "** %? :drill:db:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("de" "emacs config" entry (file+olp "~/c:/users/bjorwa/documents/GitHub//GitHub/notater/informatikk.org" "emacs")
+                        "** %? :drill:emacs:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("dg" "GitHub" entry (file+olp "~/c:/users/bjorwa/documents/GitHub/notater/informatikk.org" "git")
+                        "** %? :drill:git:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("di" "informatikk" entry (file+olp "~/c:/users/bjorwa/documents/GitHub//GitHub/notater/informatikk.org" "informatikk")
+                        "** %? :drill:informatikk:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("dl" "linux" entry (file+olp "~/c:/users/bjorwa/documents/GitHub//GitHub/notater/informatikk.org" "linux")
+                        "** %? :drill:linux:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("dn" "numpy" entry (file+olp "~/c:/users/bjorwa/documents/GitHub//GitHub/notater/informatikk.org" "numpy")
+                        "** %? :drill:python:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("do" "office" entry (file+olp "~/c:/users/bjorwa/documents/GitHub//GitHub/notater/informatikk.org" "office")
+                        "** %? :drill:office:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("dp" "pandas" entry (file+olp "~/c:/users/bjorwa/documents/GitHub//GitHub/notater/informatikk.org" "pandas")
+                        "** %? :drill:python:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("dp" "python" entry (file+olp "~/c:/users/bjorwa/documents/GitHub//GitHub/notater/informatikk.org" "python")
+                        "** %? :drill:python:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("dr" "racket" entry (file+olp "~/c:/users/bjorwa/documents/GitHub//GitHub/notater/informatikk.org" "racket")
+                        "** %? :drill:scheme:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("dx" "excel" entry (file+olp "~/c:/users/bjorwa/documents/GitHub//GitHub/notater/informatikk.org" "racket")
+                        "** %? :drill:excel:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
                        ("f" "fortelling og retorikk")
-                       ("ff" "fortelling" entry (file+olp "~C:/Users/bjorwa/Documents/GitHub/Notater/forret.org" "fortelling")
+                       ("ff" "fortelling" entry (file+olp "~c:/users/bjorwa/documents/GitHub/notater/forret.org" "fortelling")
                         "* %?\n")
-                       ("fr" "retorikk" entry (file+olp "~C:/Users/bjorwa/Documents/GitHub/Notater/forret.org" "retorikk")
+                       ("fr" "retorikk" entry (file+olp "~c:/users/bjorwa/documents/GitHub/notater/forret.org" "retorikk")
                         "* %?\n")
                        ("h" "handling/gjøremål")
-                       ("hg" "gjøremål" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Notater/moeter.org" "gjøremål")
-                        "* TODO %?\n%^t")
-                       ("hm" "møter" entry (file+olp "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Notater/moeter.org" "møter")
+                       ("hg" "gjøremål" entry (file+olp "~/c:/users/bjorwa/documents/GitHub//GitHub/notater/moeter.org" "gjøremål")
+                        "* todo %?\n%^t")
+                       ("hm" "møter" entry (file+olp "~/c:/users/bjorwa/documents/GitHub//GitHub/notater/moeter.org" "møter")
                         "* %?\n%^t")
                        ("j" "journal/føring")
-                       ("jd" "Dagbok" entry (file+datetree+prompt "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Journal/dagbok.org")
+                       ("jd" "dagbok" entry (file+datetree+prompt "~/c:/users/bjorwa/documents/GitHub//GitHub/journal/dagbok.org")
                         "* %?\n")
-                       ("jf" "Fundamentals" entry (file+datetree+prompt "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Markedsanalyse/journaler/fundamentals.org")
+                       ("jf" "fundamentals" entry (file+datetree+prompt "~/c:/users/bjorwa/documents/GitHub//GitHub/markedsanalyse/journaler/fundamentals.org")
                         "* %?\nhjlink")
-                       ("jF" "Ferdigheter" entry (file+datetree+prompt "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Notater/ferdigheter.org")
+                       ("jf" "ferdigheter" entry (file+datetree+prompt "~/c:/users/bjorwa/documents/GitHub//GitHub/notater/ferdigheter.org")
                         "* %?\n")
-                       ("jj" "Journal" entry (file+datetree+prompt "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Markedsanalyse/journaler/journal.org")
+                       ("jj" "journal" entry (file+datetree+prompt "~/c:/users/bjorwa/documents/GitHub//GitHub/markedsanalyse/journaler/journal.org")
                         "* %?\nhjlink")
-                       ("jr" "Retorikk og kommunikasjon" entry (file+datetree+prompt "~/C:/Users/bjorwa/Documents/GitHub/Journal/retorikk.org")
+                       ("jr" "retorikk og kommunikasjon" entry (file+datetree+prompt "~/c:/users/bjorwa/documents/GitHub/journal/retorikk.org")
                         "* %?\n")
-                       ("jø" "Økonomi" entry (file+datetree+prompt "~/C:/Users/bjorwa/Documents/GitHub//GitHub/Notater/econ.org")
+                       ("jø" "økonomi" entry (file+datetree+prompt "~/c:/users/bjorwa/documents/GitHub//GitHub/notater/econ.org")
                                        ("t" "tabell")
                        ("th" "handel" table-line (file+headline "~/notebook/markedsvurdering.org" "dagsrapport" "handel")
                         "|%^u|%^{type}|%^{selger}|%^{kjøper}|%^{periode}|%^{incoterm}|%^{pris}|%^{kilde}|%^{kommentar}|")
@@ -476,69 +478,69 @@ Jeg bruker mange av disse fangstmalene både i arbeid og privat da det er noe so
          (setq org-capture-templates
                (quote (
                        ("d" "drill")
-                       ("db" "PowerBI" entry (file+olp "~/GitHub/Notater/informatikk.org" "PowerBI")
-                        "** %? :drill:power_bi:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("dd" "Database" entry (file+olp "~/GitHub/Notater/informatikk.org" "Database")
-                        "** %? :drill:db:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("de" "Emacs config" entry (file+olp "~/GitHub/Notater/informatikk.org" "Emacs")
-                        "** %? :drill:emacs:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("dg" "GitHub" entry (file+olp "~/GitHub/Notater/informatikk.org" "Git")
-                        "** %? :drill:git:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("di" "Informatikk" entry (file+olp "~/GitHub/Notater/informatikk.org" "Informatikk")
-                        "** %? :drill:informatikk:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("dl" "Linux" entry (file+olp "~/GitHub/Notater/informatikk.org" "Linux")
-                        "** %? :drill:linux:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("dn" "Numpy" entry (file+olp "~/GitHub/Notater/informatikk.org" "Numpy")
-                        "** %? :drill:python:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("do" "Office" entry (file+olp "~/GitHub/Notater/informatikk.org" "Office")
-                        "** %? :drill:office:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("dP" "Pandas" entry (file+olp "~/GitHub/Notater/informatikk.org" "Pandas")
-                        "** %? :drill:python:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("dp" "Python" entry (file+olp "~/GitHub/Notater/informatikk.org" "Python")
-                        "** %? :drill:python:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("dr" "Racket" entry (file+olp "~/GitHub/Notater/informatikk.org" "Racket")
-                        "** %? :drill:scheme:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("ds" "Samfunn" entry (file+olp "~/GitHub/Notater/samfunndrill.org" "begreper")
-                        "** %? :drill:samfunn:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
-                       ("dx" "Excel" entry (file+olp "~/GitHub/Notater/informatikk.org" "Racket")
-                        "** %? :drill:excel:\n:PROPERTIES:\n:DRILL_CARD_TYPE: twosided\n:end:\n# ")
+                       ("db" "powerbi" entry (file+olp "~/GitHub/notater/informatikk.org" "powerbi")
+                        "** %? :drill:power_bi:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("dd" "database" entry (file+olp "~/GitHub/notater/informatikk.org" "database")
+                        "** %? :drill:db:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("de" "emacs config" entry (file+olp "~/GitHub/notater/informatikk.org" "emacs")
+                        "** %? :drill:emacs:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("dg" "GitHub" entry (file+olp "~/GitHub/notater/informatikk.org" "git")
+                        "** %? :drill:git:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("di" "informatikk" entry (file+olp "~/GitHub/notater/informatikk.org" "informatikk")
+                        "** %? :drill:informatikk:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("dl" "linux" entry (file+olp "~/GitHub/notater/informatikk.org" "linux")
+                        "** %? :drill:linux:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("dn" "numpy" entry (file+olp "~/GitHub/notater/informatikk.org" "numpy")
+                        "** %? :drill:python:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("do" "office" entry (file+olp "~/GitHub/notater/informatikk.org" "office")
+                        "** %? :drill:office:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("dp" "pandas" entry (file+olp "~/GitHub/notater/informatikk.org" "pandas")
+                        "** %? :drill:python:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("dp" "python" entry (file+olp "~/GitHub/notater/informatikk.org" "python")
+                        "** %? :drill:python:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("dr" "racket" entry (file+olp "~/GitHub/notater/informatikk.org" "racket")
+                        "** %? :drill:scheme:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("ds" "samfunn" entry (file+olp "~/GitHub/notater/samfunndrill.org" "begreper")
+                        "** %? :drill:samfunn:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
+                       ("dx" "excel" entry (file+olp "~/GitHub/notater/informatikk.org" "racket")
+                        "** %? :drill:excel:\n:properties:\n:drill_card_type: twosided\n:end:\n# ")
                        ("f" "fortelling")
-                       ("ff" "fortelling" entry (file+olp "~/GitHub/Notater/forret.org" "fortelling")
+                       ("ff" "fortelling" entry (file+olp "~/GitHub/notater/forret.org" "fortelling")
                         "* %?\n")
-                       ("fr" "retorikk" entry (file+olp "~/GitHub/Notater/forret.org" "retorikk")
+                       ("fr" "retorikk" entry (file+olp "~/GitHub/notater/forret.org" "retorikk")
                         "* %?\n")
                        ("h" "handling")
-                       ("hg" "gjøremål" entry (file+olp "~/GitHub/Notater/moeter.org" "gjøremål")
-                        "* TODO %?\n%^t")
-                       ("hm" "møter" entry (file+olp "~/GitHub/Notater/moeter.org" "møter")
+                       ("hg" "gjøremål" entry (file+olp "~/GitHub/notater/moeter.org" "gjøremål")
+                        "* todo %?\n%^t")
+                       ("hm" "møter" entry (file+olp "~/GitHub/notater/moeter.org" "møter")
                         "* %?\n%^t")
                        ("j" "journal")
-                       ("jd" "Dagbok" entry (file+datetree+prompt "~/GitHub/Journal/dagbok.org")
+                       ("jd" "dagbok" entry (file+datetree+prompt "~/GitHub/journal/dagbok.org")
                         "* %?\n")
-                       ("jf" "Fundamentals" entry (file+datetree+prompt "~/GitHub/Markedsanalyse/journaler/fundamentals.org")
+                       ("jf" "fundamentals" entry (file+datetree+prompt "~/GitHub/markedsanalyse/journaler/fundamentals.org")
                         "* %?\nhjlink")
-                       ("jF" "Ferdigheter" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
+                       ("jf" "ferdigheter" entry (file+datetree+prompt "~/GitHub/notater/ferdigheter.org")
                         "* %?\n")
-                       ("jj" "Journal" entry (file+datetree+prompt "~/GitHub/Markedsanalyse/journaler/journal.org")
+                       ("jj" "journal" entry (file+datetree+prompt "~/GitHub/markedsanalyse/journaler/journal.org")
                         "* %?\nhjlink")
-                       ("jr" "Retorikk" entry (file+datetree+prompt "~/GitHub/Journal/retorikk.org")
+                       ("jr" "retorikk" entry (file+datetree+prompt "~/GitHub/journal/retorikk.org")
                         "* %?\n")
-                       ("js" "Samfunn" entry (file+datetree+prompt "~/GitHub/Journal/samfunn.org")
+                       ("js" "samfunn" entry (file+datetree+prompt "~/GitHub/journal/samfunn.org")
                         "* %?\n")
-                       ("jt" "Trening" entry (file+datetree+prompt "~/GitHub/Journal/trening.org")
+                       ("jt" "trening" entry (file+datetree+prompt "~/GitHub/journal/trening.org")
                         "* %?\n")
-                       ("jø" "Økonomi" entry (file+datetree+prompt "~/GitHub/Journal/econ.org") 
+                       ("jø" "økonomi" entry (file+datetree+prompt "~/GitHub/journal/econ.org") 
                         "* %?\n")
                        ("t" "tabell")
-                       ("ta" "price quote agencies" table-line (file+olp "~/GitHub/Markedsanalyse/journaler/daily-market-update.org" "LNG") 
-                        "|%^u|%^{Platts}|%^{Argus}|%^{ICIS}|" :prepend t)
-                       ("tt" "trening" table-line (file+headline "~/GitHub/Journal/trening.org" "Tabell")
+                       ("ta" "price quote agencies" table-line (file+olp "~/GitHub/markedsanalyse/journaler/daily-market-update.org" "lng") 
+                        "|%^u|%^{platts}|%^{argus}|%^{icis}|" :prepend t)
+                       ("tt" "trening" table-line (file+headline "~/GitHub/journal/trening.org" "tabell")
                         "|%^u|%^{type}|%^{oppvarming}|%^{runder}|%^{vekt}|%^{tid}|%^{kommentar}|")
                        )))))
 #+end_src
 
-*** Strukturmal
-F.eks <pyt + TAB vil eksandere til Python med tangle.
+*** strukturmal
+f.eks <pyt + tab vil eksandere til python med tangle.
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
   (require 'org-tempo)
   (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
@@ -548,7 +550,7 @@ F.eks <pyt + TAB vil eksandere til Python med tangle.
   (add-to-list 'org-structure-template-alist '("sr" . "src racket"))
   (add-to-list 'org-structure-template-alist '("srt" . "src racket :tangle"))
 #+end_src
-** Org-babel"
+** org-babel"
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
   (org-babel-do-load-languages
    'org-babel-load-languages (quote ((emacs-lisp . t)
@@ -557,8 +559,8 @@ F.eks <pyt + TAB vil eksandere til Python med tangle.
                                      (python . t))))
 #+end_src
 
-** Terping
-En strukturert terping av viktig informasjon, metoder og teknikker er viktig for meg da jeg har en teflonhjerne som ikke raskt absorberer. Dette tror jeg er en pakke som ikke jevnlig oppdateres, om i det hele tatt. Og her har jeg hatt litt problemer med en feilmelding og kluss med kode som jeg på et vil klarte å kontrollere ved å blokke ut noe av koden i modulens el-fil (laster denne inn i stedet for elc-filen, [[file:Notater/ferdigheter.org::*Feil under Emacs-konfigurering][beskrivelse i filen ferdigheter.org]]).
+** terping
+en strukturert terping av viktig informasjon, metoder og teknikker er viktig for meg da jeg har en teflonhjerne som ikke raskt absorberer. dette tror jeg er en pakke som ikke jevnlig oppdateres, om i det hele tatt. og her har jeg hatt litt problemer med en feilmelding og kluss med kode som jeg på et vil klarte å kontrollere ved å blokke ut noe av koden i modulens el-fil (laster denne inn i stedet for elc-filen, [[file:notater/ferdigheter.org::*feil under emacs-konfigurering][beskrivelse i filen ferdigheter.org]]).
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
   (require 'org-drill)
 
@@ -572,17 +574,19 @@ En strukturert terping av viktig informasjon, metoder og teknikker er viktig for
           org-drill-adjust-intervals-for-early-and-late-repetitions-p t))
 #+end_src
 ** TODO-nøkkelord
+når man setter variabelen "org-use-fast-todo-selection" til "t" så vil man få en meny med todo-nøkkelord man kan velge i fra. 
 #+begin_src emacs-lisp :tangle orgtodo.el
-  (setq org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "DATA(D)" "PRES(p)" "BAL(b)" "|" "DONE(d)"))
+  (setq org-todo-fast-todo-selection t
+        org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "DATA(D)" "PRES(p)" "BAL(b)" "|" "DONE(d)"))
         org-todo-keyword-faces (quote (("TODO" :foreground "red" :background "white")
-                                         ("NEXT" :foreground "blue" :background "white")
-                                         ("DATA" :foreground "light slate grey" :background "white")
-                                         ("PRES" :foreground "dark turquoise" :background "white")
-                                         ("BAL" :foreground "dark olive green" :background "white")
-                                         ("DONE" :foreground "dark green" :background "white"))))
+                                       ("NEXT" :foreground "blue" :background "white")
+                                       ("DATA" :foreground "light slate grey" :background "white")
+                                       ("PRES" :foreground "dark turquoise" :background "white")
+                                       ("BAL" :foreground "dark olive green" :background "white")
+                                       ("DONE" :foreground "dark green" :background "white"))))
 #+end_src
-* Maler
-** Yasnippet
+* maler
+** yasnippet
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/maler.el"
   (use-package yasnippet
     :ensure t
@@ -601,56 +605,56 @@ En strukturert terping av viktig informasjon, metoder og teknikker er viktig for
                                     (yas/load-directory "~/elisp/snippets"))))
 #+end_src
 
-* Register
-** Linux
+* register
+** linux
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/linreg.el"
-  (set-register ?d '(file . "~/GitHub/Journal/dagbok.org"))
-  (set-register ?t '(file . "~/GitHub/Journal/trening.org"))
+  (set-register ?d '(file . "~/GitHub/journal/dagbok.org"))
+  (set-register ?t '(file . "~/GitHub/journal/trening.org"))
   (set-register ?c '(file . "~/GitHub/emacs-config/custom.el"))
   (set-register ?g '(file . "~/GitHub/"))
-  (set-register ?c '(file . "~/GitHub/Notater/ferdigheter.org"))
-  (set-register ?k '(file . "~/GitHub/emacs-config/README.org"))
-  (set-register ?i '(file . "~/GitHub/Notater/informatikk.org"))
-  (set-register ?j '(file . "~/GitHub/Markedsanalyse/journaler/journal.org")))
-  (set-register ?l '(file . "~/GitHub/Markedsanalyse/journaler/liq.org")))
-  (set-register ?r '(file . "~/GitHub/Markedsanalyse/journaler/reg.org")))
+  (set-register ?f '(file . "~/GitHub/notater/ferdigheter.org"))
+  (set-register ?k '(file . "~/GitHub/emacs-config/readme.org"))
+  (set-register ?i '(file . "~/GitHub/notater/informatikk.org"))
+  (set-register ?j '(file . "~/GitHub/markedsanalyse/journaler/journal.org")))
+  (set-register ?l '(file . "~/GitHub/markedsanalyse/journaler/liq.org")))
+  (set-register ?r '(file . "~/GitHub/markedsanalyse/journaler/reg.org")))
   (set-register ?e '(file . "~/.emacs")))
 #+end_src
 ** windows
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/winreg.el"
   (set-register ?c '(file . "~/.emacs.d/custom.el"))
-  ;; (set-register ?C '(file . "~/notebook/col.org"))
+  ;; (set-register ?c '(file . "~/notebook/col.org"))
   ;; (set-register ?d '(file . "~/.emacs.d/snippets/org-mode/dayrep"))
   ;; (set-register ?e '(file . "~/.emacs"))
-  (set-register ?j '(file . "C:\\Users\\bjorwa\\Documents\\GitHub\\Markedsanalyse\\journaler\\journal.org"))
-  (set-register ?f '(file . "C:\\Users\\bjorwa\\Documents\\GitHub\\Markedsanalyse\\journaler\\fundamentals.org"))
-  (set-register ?L '(file . "C:\\Users\\bjorwa\\Documents\\GitHub\\Markedsanalyse\\journaler\\liq.org"))
-  (set-register ?l '(file . "C:\\Users\\bjorwa\\Documents\\GitHub\\Markedsanalyse\\journaler\\reg.org"))
-  (set-register ?v '(file . "C:\\Users\\bjorwa\\Documents\\GitHub\\Markedsanalyse\\journaler\\vedlikehold.org"))
+  (set-register ?j '(file . "c:\\users\\bjorwa\\documents\\GitHub\\markedsanalyse\\journaler\\journal.org"))
+  (set-register ?f '(file . "c:\\users\\bjorwa\\documents\\GitHub\\markedsanalyse\\journaler\\fundamentals.org"))
+  (set-register ?l '(file . "c:\\users\\bjorwa\\documents\\GitHub\\markedsanalyse\\journaler\\liq.org"))
+  (set-register ?l '(file . "c:\\users\\bjorwa\\documents\\GitHub\\markedsanalyse\\journaler\\reg.org"))
+  (set-register ?v '(file . "c:\\users\\bjorwa\\documents\\GitHub\\markedsanalyse\\journaler\\vedlikehold.org"))
 
-  (set-register ?o '(file . "C:/Users/bjorwa/AppData/Roaming/notebook/oversikt.org"))
-  (set-register ?m '(file . "C:/Users/bjorwa/AppData/Roaming/notebook/markedsvurdering.org"))
-  (set-register ?p '(file . "C:/Users/bjorwa/AppData/Roaming/notebook/prices.org"))
+  (set-register ?o '(file . "c:/users/bjorwa/appdata/roaming/notebook/oversikt.org"))
+  (set-register ?m '(file . "c:/users/bjorwa/appdata/roaming/notebook/markedsvurdering.org"))
+  (set-register ?p '(file . "c:/users/bjorwa/appdata/roaming/notebook/prices.org"))
 
-  (set-register ?d '(file . "C:\\Users\\bjorwa\\Desktop\\"))
-  (set-register ?g '(file . "C:\\Users\\bjorwa\\Documents\\GitHub\\"))
+  (set-register ?d '(file . "c:\\users\\bjorwa\\desktop\\"))
+  (set-register ?g '(file . "c:\\users\\bjorwa\\documents\\GitHub\\"))
 
-  ;; (set-register ?P '(file . "~/notebook/python.org"))
+  ;; (set-register ?p '(file . "~/notebook/python.org"))
   ;; (set-register ?r '(file . "~/notebook/rapporter.org"))
-  ;; (set-register ?R '(file . "~/.emacs.d/reg.el"))
+  ;; (set-register ?r '(file . "~/.emacs.d/reg.el"))
 
-    ;; (set-register ?c '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\emacs-config\\custom.el"))
-    ;;   (set-register ?g '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\"))
-    ;;   (set-register ?c '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\Notater\\ferdigheter.org"))
-    ;;   (set-register ?k '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\emacs-config\\README.org"))
-    ;;   (set-register ?i '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\Notater\\informatikk.org"))
-    ;;   (set-register ?j '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\Markedsanalyse\\journaler\\informatikk.org"))
-    ;;   (set-register ?l '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\Markedsanalyse\\journaler\\liq.org"))
-    ;;   (set-register ?r '(file . "~C:\\Users\\bjorwa\\Documents\\GitHub\\Markedsanalyse\\journaler\\reg.org"))
-    ;;   (set-register ?e '(file . "~C:\\Users\\bjorwa\\AppData\\Roaming\\.emacs"))
+    ;; (set-register ?c '(file . "~c:\\users\\bjorwa\\documents\\GitHub\\emacs-config\\custom.el"))
+    ;;   (set-register ?g '(file . "~c:\\users\\bjorwa\\documents\\GitHub\\"))
+    ;;   (set-register ?c '(file . "~c:\\users\\bjorwa\\documents\\GitHub\\notater\\ferdigheter.org"))
+    ;;   (set-register ?k '(file . "~c:\\users\\bjorwa\\documents\\GitHub\\emacs-config\\readme.org"))
+    ;;   (set-register ?i '(file . "~c:\\users\\bjorwa\\documents\\GitHub\\notater\\informatikk.org"))
+    ;;   (set-register ?j '(file . "~c:\\users\\bjorwa\\documents\\GitHub\\markedsanalyse\\journaler\\informatikk.org"))
+    ;;   (set-register ?l '(file . "~c:\\users\\bjorwa\\documents\\GitHub\\markedsanalyse\\journaler\\liq.org"))
+    ;;   (set-register ?r '(file . "~c:\\users\\bjorwa\\documents\\GitHub\\markedsanalyse\\journaler\\reg.org"))
+    ;;   (set-register ?e '(file . "~c:\\users\\bjorwa\\appdata\\roaming\\.emacs"))
 #+end_src
-* Kommandoer og tastebinding
-Samling av kommandoer og tastebindinger som ikke nødvendigvis knyttes mot en Emacs-pakke.
+* kommandoer og tastebinding
+samling av kommandoer og tastebindinger som ikke nødvendigvis knyttes mot en emacs-pakke.
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/gkb.el"
 (global-set-key (kbd "\C-x\C-k") 'kill-region)
 (global-set-key (kbd "\C-c\C-k") 'kill-region)
@@ -683,6 +687,5 @@ Samling av kommandoer og tastebindinger som ikke nødvendigvis knyttes mot en Em
 (global-set-key (kbd "<f12>") '(lambda ()
 				 (interactive)
 				 (popup-menu 'yank-menu)))
-(global-set-key (kbd "\M-?") 'help-command)
 #+end_src
 

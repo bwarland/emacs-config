@@ -20,10 +20,10 @@
 
 (unless (package-installed-p 'quelpa)
   (with-temp-buffer
-    (url-insert-file-contents "https://raw.githubusercontent.com/quelpa/quelpa/master/quelpa.el")
+    (url-insert-file-contents "https://raw.GitHubusercontent.com/quelpa/quelpa/master/quelpa.el")
     (eval-buffer)
     (quelpa-self-upgrade)))
-;; (quelpa '(discover-my-major :fetcher git :url "https://github.com/l3kn/org-fc"))
+;; (quelpa '(discover-my-major :fetcher git :url "https://GitHub.com/l3kn/org-fc"))
 
 (use-package auto-package-update
   :defer t

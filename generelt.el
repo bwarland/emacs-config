@@ -9,10 +9,10 @@
 (global-visual-line-mode t)
 (display-time-mode 1)
 
-(cond ((eq system-type 'windows-nt) (set-frame-font "Consolas-14"))
-      ((string= system-name "macebell") (set-frame-font "Liberation Mono-15"))
-      ((string= system-name "kbell") (set-frame-font "Liberation Mono-11"))
-      ((string= system-name "ingentingen") (set-frame-font "Liberation Mono-12")))
+(cond ((eq system-type 'windows-nt) (set-frame-font "consolas-14"))
+      ((string= system-name "macebell") (set-frame-font "liberation mono-15"))
+      ((string= system-name "kbell") (set-frame-font "liberation mono-11"))
+      ((string= system-name "ingentingen") (set-frame-font "liberation mono-12")))
 
 (use-package doom-modeline
   :ensure t
@@ -25,7 +25,7 @@
   ;; :init (load-theme 'doom-palenight t))
 
 (put 'downcase-region 'disabled nil)
-(set-language-environment "UTF-8")
+(set-language-environment "utf-8")
 (require 'rainbow-delimiters)
 ;; (rainbow-delimiters-mode 1)
 
@@ -47,10 +47,10 @@
   (global-command-log-mode t))
 
 (emacs-init-time)
-;; Use a hook so the message doesn't get clobbered by other messages.
+;; use a hook so the message doesn't get clobbered by other messages.
 (add-hook 'emacs-startup-hook
           (lambda ()
-            (message "Emacs ready in %s with %d garbage collections."
+            (message "emacs ready in %s with %d garbage collections."
                      (format "%.2f seconds"
                              (float-time
                               (time-subtract after-init-time before-init-time)))
