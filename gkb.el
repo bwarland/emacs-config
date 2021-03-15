@@ -1,6 +1,8 @@
 (global-set-key (kbd "\C-x\C-k") 'kill-region)
 (global-set-key (kbd "\C-c\C-k") 'kill-region)
 
+(global-set-key (kbd "M-j") 'join-line)
+
 (global-set-key (kbd "C-<up>") 'text-scale-increase)
 (global-set-key (kbd "C-<down>") 'text-scale-decrease)
 (global-set-key (kbd "C-<wheel-up>") 'text-scale-increase)
