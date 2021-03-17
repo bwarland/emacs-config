@@ -31,3 +31,4 @@
 (global-set-key (kbd "<f12>") '(lambda ()
 				 (interactive)
 				 (popup-menu 'yank-menu)))
+(global-set-key (kbd "C-x <f12>") 'org-drill)

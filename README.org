@@ -721,5 +721,6 @@ Samling av kommandoer og tastebindinger som ikke nødvendigvis knyttes mot en em
 (global-set-key (kbd "<f12>") '(lambda ()
 				 (interactive)
 				 (popup-menu 'yank-menu)))
+(global-set-key (kbd "C-x <f12>") 'org-drill)
 #+end_src
 
