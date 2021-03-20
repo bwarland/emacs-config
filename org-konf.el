@@ -168,7 +168,7 @@
                       "* %?\n")
                      ("jf" "fundamentals" entry (file+datetree+prompt "~/GitHub/markedsanalyse/Journaler/fundamentals.org")
                       "* %?\nhjlink")
-                     ("jf" "ferdigheter" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
+                     ("jF" "ferdigheter" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
                       "* %?\n")
                      ("jj" "Journal" entry (file+datetree+prompt "~/GitHub/markedsanalyse/Journaler/Journal.org")
                       "* %?\nhjlink")
