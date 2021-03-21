@@ -13,7 +13,7 @@ Tilnærmingen er som føler:
 Den siste tilnærmingen kan synes noe underlig, men min erfaring er at jeg ofte klumser til konfigureringen av Emacs. Når dette skjer får jeg ofte en god del arbeid med å finne frem til feilen og da kan det være greit å ha en form for modularisering av konfigureringen. Skjønt jeg har også opplevd det at man kan rote til denne les-meg-filen, som for eksempel når man gjør en "downcase-buffer", med den følge at feil distrubueres til en eller flere av konfigurasjonsfilene som leses inn ved oppstart av Emacs.
 
 ** Eksempler fra internett
-*** [[Http://doc.norang.ca/org-mode.html][Bernt Hansen sin emacs-konfigurering]]
+*** [[http://doc.norang.ca/org-mode.html][Bernt Hansen sin emacs-konfigurering]]
 Den første emacskonfigurasjonen jeg kopierte mer eller mindre alt av og testet den gang jeg var rimelig fersk. og ennå så tror jeg store deler av org-mode konfigurasjonen min bygger på hans oppsett. dette er en kar som har rimelig god kontroll over verktøyet emacs.
 
 Sett bort fra det at hans arbeidsflyt ikke helt passer min - til det er den litt for regimentert - så er det at hav av gode eksempler her. det var med denne jeg først lærte å bruke emacs og org-mode for noen år siden.
@@ -243,10 +243,12 @@ pakke som lager et rammeverk for søking og innsnevring av valg og for det å fu
        ("C-c m r" . set-rectangular-region-anchor)))
 #+end_src
 * Programmering
-** python
-
+** generelt
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/programmering.el"
 (setq org-src-preserve-indentation t)
+#+end_src
+** python
+#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/programmering.el"
 (setq python-shell-interpreter "/home/bwarland/anaconda3/bin/python3")
 #+end_src
 ** racket
@@ -396,27 +398,28 @@ det er ryddig å se todo i sammenheng med "scheduled:" og "deadline:" ellers så
     (org-super-agenda-mode 1)
     (setq org-super-agenda-groups
           '((:name "TIDSPLAN     =========================================================================================="
-                 :time-grid t)
+                   :time-grid t)
 
             (:name "SORTERING    =========================================================================================="
-                 :todo "TODO")
+                   :todo "TODO")
             (:name "BEARBEIDING  =========================================================================================="
-                 :todo "NEXT")
+                   :todo "NEXT")
             (:name "DATAOPPDATERING ======================================================================================="
-                 :todo "DATA")
+                   :todo "DATA")
             (:name "PRESENTASJONER ========================================================================================"
                    :todo "PRES")
             (:name "BALANSE      =========================================================================================="
                    :todo "BAL")
             (:name "MARKED       =========================================================================================="
-                 :todo "TODO"
-                 :tag ("coal" "hydrogen"))
+                   :todo "TODO"
+                   :tag ("coal" "hydrogen"))
             (:name "EGENFINANS   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
                    :todo "FIN")
             (:name "PRAKTISKE TING ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-                   :todo "PRAK")
+                   :todo "TODO"
+                   :tag "praktisk")
             (:name "INFORMATIKK  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-                 :tag ("informatikk" "emacs" "git" "linux" "scheme" "python"))
+                   :tag ("informatikk" "emacs" "git" "linux" "scheme" "python"))
             (:name "SAMFUNNSFAG  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
                    :tag ("samfunn" "økonomi"))
             )))
@@ -602,16 +605,18 @@ en strukturert terping av viktig informasjon, metoder og teknikker er viktig for
 ** TODO-nøkkelord
 når man setter variabelen "org-use-fast-todo-selection" til "t" så vil man få en meny med todo-nøkkelord man kan velge i fra.
 #+begin_src emacs-lisp :tangle orgtodo.el
-    (setq org-todo-fast-todo-selection t
-          org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "DATA(D)" "PRES(p)" "BAL(b)" "FIN(f)" "PRAK(P)" "|" "DONE(d)"))
-          org-todo-keyword-faces (quote (("TODO" :foreground "red" :background "white")
-                                         ("FIN" :foreground "red" :background "white")
-                                         ("NEXT" :foreground "blue" :background "white")
-                                         ("PRAK" :foreground "blue" :background "white")
-                                         ("DATA" :foreground "light slate grey" :background "white" :weight "bold")
-                                         ("PRES" :foreground "dark turquoise" :background "white" :weight "bold")
-                                         ("BAL" :foreground "dark olive green" :background "white" :weight "bold")
-                                         ("DONE" :foreground "dark green" :background "white" :weight "bold"))))
+(setq org-todo-fast-todo-selection t
+      org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "DATA(D)" "PRES(p)" "BAL(b)" "FIN(f)" "PRAK(P)" "|" "DONE(d)"))
+      org-todo-keyword-faces (quote (("TODO" :foreground "red" :background "white")
+				     ("FIN" :foreground "red" :background "white")
+				     ("NEXT" :foreground "blue" :background "white")
+				     ("PRAK" :foreground "blue" :background "white")
+				     ("DATA" :foreground "light slate grey" :background "white" :weight "bold")
+				     ("PRES" :foreground "dark turquoise" :background "white" :weight "bold")
+				     ("BAL" :foreground "dark olive green" :background "white" :weight "bold")
+				     ("DONE" :foreground "dark green" :background "white" :weight "bold")
+				     ("FERD" :foreground "dark green" :background "white" :weight "bold")
+				     )))
 #+end_src
 
 * Yasnippet-maler
