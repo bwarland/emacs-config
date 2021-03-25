@@ -10,10 +10,10 @@ Tilnærmingen er som føler:
 2) ordrike kommentarer og notater til konfigurering da denne les-meg-filen også er mitt dokument for læring av Elisp
 3) oppstykking eller oppdeling av konfigurasjon i ulike filer
 
-Den siste tilnærmingen kan synes noe underlig, men min erfaring er at jeg ofte klumser til konfigureringen av Emacs. Når dette skjer får jeg ofte en god del arbeid med å finne frem til feilen og da kan det være greit å ha en form for modularisering av konfigureringen. Skjønt jeg har også opplevd det at man kan rote til denne les-meg-filen, som for eksempel når man gjør en "downcase-buffer", med den følge at feil distrubueres til en eller flere av konfigurasjonsfilene som leses inn ved oppstart av Emacs.
+Den siste tilnærmingen kan synes noe underlig, men min erfaring er at jeg ofte klumser til konfigureringen av Emacs. Når dette skjer får jeg ofte en god del arbeid med å finne frem til feilen og da kan det være greit å ha en form for modularisering av konfigureringen. Skjønt jeg har også opplevd det at man kan rote til denne les-meg-filen, som for eksempel når man gjør en "downcase-buffer", med den følge at feil distrubueres til en eller flere av konfigurasjonsfilene som leses inn ved oppstart av Emacs. 
 
 ** Eksempler fra internett
-*** [[http://doc.norang.ca/org-mode.html][Bernt Hansen sin emacs-konfigurering]]
+*** [[Http://doc.norang.ca/org-mode.html][Bernt Hansen sin emacs-konfigurering]]
 Den første emacskonfigurasjonen jeg kopierte mer eller mindre alt av og testet den gang jeg var rimelig fersk. og ennå så tror jeg store deler av org-mode konfigurasjonen min bygger på hans oppsett. dette er en kar som har rimelig god kontroll over verktøyet emacs.
 
 Sett bort fra det at hans arbeidsflyt ikke helt passer min - til det er den litt for regimentert - så er det at hav av gode eksempler her. det var med denne jeg først lærte å bruke emacs og org-mode for noen år siden.
@@ -21,7 +21,7 @@ Sett bort fra det at hans arbeidsflyt ikke helt passer min - til det er den litt
 *** [[https://jamiecollinson.com/blog/my-emacs-config/][jamiecollisonemacsconfig]]
 *** [[https://gitlab.com/kaligule/emacs-config/-/blob/master/config.org][kaligule]]
 Har en egendefinert funksjon for omlasting av konfigurasjonsfil som kan være vært å implemente
-* Pakker og konfigurasjonsfiler
+* Pakker og konfigurarsjonsfiler
 Konfigurasjon knyttet til moduler og pakker.
 ** Pakkearkiv
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/pakker.el"
@@ -168,7 +168,7 @@ jeg synes at menyer generelt sett i emacs gir visuell støy. og hva oppstartsbes
 
 (setq gc-cons-threshold (* 50 1000 1000))
 #+end_src
-** legg til når emacs laster ob-racket
+** legg til når emacs laster
 denne filen har jeg lastet ned i fra GitHub og det er noe jeg trenger for å få org-babel til å kjøre programmeringsspråket racket.
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
 (add-to-list 'load-path "~/.emacs.d/emacs-ob-racket-master/")
@@ -243,13 +243,12 @@ pakke som lager et rammeverk for søking og innsnevring av valg og for det å fu
        ("C-c m r" . set-rectangular-region-anchor)))
 #+end_src
 * Programmering
-** generelt
-#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/programmering.el"
-(setq org-src-preserve-indentation t)
-#+end_src
 ** python
+
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/programmering.el"
-(setq python-shell-interpreter "/home/bwarland/anaconda3/bin/python3")
+    ;; (setq python-shell-completion-native-enable nil)
+  (setq org-src-preserve-indentation t) 
+  (setq python-shell-interpreter "/home/bwarland/anaconda3/bin/python3")
 #+end_src
 ** racket
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/programmering.el"
@@ -258,7 +257,7 @@ pakke som lager et rammeverk for søking og innsnevring av valg og for det å fu
       :config
       (when (eq system-type 'windows-nt) ((setq racket-racket-program "c:\\program files\\racket\\racket.exe"
                                                 racket-raco-program "c:\\program files\\racket\\raco.exe"))))
-  (require 'ob-racket)
+  ;; (require 'ob-racket)
 #+end_src
 
 ** sqlite
@@ -398,28 +397,27 @@ det er ryddig å se todo i sammenheng med "scheduled:" og "deadline:" ellers så
     (org-super-agenda-mode 1)
     (setq org-super-agenda-groups
           '((:name "TIDSPLAN     =========================================================================================="
-                   :time-grid t)
+                 :time-grid t)
 
             (:name "SORTERING    =========================================================================================="
-                   :todo "TODO")
+                 :todo "TODO")
             (:name "BEARBEIDING  =========================================================================================="
-                   :todo "NEXT")
+                 :todo "NEXT")
             (:name "DATAOPPDATERING ======================================================================================="
-                   :todo "DATA")
+                 :todo "DATA")
             (:name "PRESENTASJONER ========================================================================================"
                    :todo "PRES")
             (:name "BALANSE      =========================================================================================="
                    :todo "BAL")
             (:name "MARKED       =========================================================================================="
-                   :todo "TODO"
-                   :tag ("coal" "hydrogen"))
+                 :todo "TODO"
+                 :tag ("coal" "hydrogen"))
             (:name "EGENFINANS   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
                    :todo "FIN")
             (:name "PRAKTISKE TING ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-                   :todo "TODO"
-                   :tag "praktisk")
+                   :todo "PRAK")
             (:name "INFORMATIKK  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-                   :tag ("informatikk" "emacs" "git" "linux" "scheme" "python"))
+                 :tag ("informatikk" "emacs" "git" "linux" "scheme" "python"))
             (:name "SAMFUNNSFAG  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
                    :tag ("samfunn" "økonomi"))
             )))
@@ -447,7 +445,7 @@ det er ryddig å se todo i sammenheng med "scheduled:" og "deadline:" ellers så
 #+end_src
 ** maler
 *** fangstmaler
-jeg bruker mange av disse fangstmalene både i arbeid og privat da det er noe som hjelper meg å samle, fange og lagre informasjon raskt. dette viser også konfigureringen, skjønt det kan bli noe graps i koden. 
+Jeg bruker mange av disse fangstmalene både i arbeid og privat da det er noe som hjelper meg å samle, fange og lagre informasjon raskt. dette viser også konfigureringen, skjønt det kan bli noe graps i koden. 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
   (cond ((eq system-type 'windows-nt)
          (setq org-capture-templates
@@ -549,7 +547,7 @@ jeg bruker mange av disse fangstmalene både i arbeid og privat da det er noe so
                         "* %?\n")
                        ("jf" "fundamentals" entry (file+datetree+prompt "~/GitHub/markedsanalyse/Journaler/fundamentals.org")
                         "* %?\nhjlink")
-                       ("jF" "ferdigheter" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
+                       ("jf" "ferdigheter" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
                         "* %?\n")
                        ("jj" "Journal" entry (file+datetree+prompt "~/GitHub/markedsanalyse/Journaler/Journal.org")
                         "* %?\nhjlink")
@@ -570,7 +568,7 @@ jeg bruker mange av disse fangstmalene både i arbeid og privat da det er noe so
 #+end_src
 
 *** strukturmal
-f.eks <pyt + tab vil eksandere til python med tangle.
+F.eks <pyt + tab vil eksandere til python med tangle.
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
   (require 'org-tempo)
   (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
@@ -582,12 +580,13 @@ f.eks <pyt + tab vil eksandere til python med tangle.
 #+end_src
 ** org-babel"
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
-(org-babel-do-load-languages
-'org-babel-load-languages (quote ((emacs-lisp . t)
-(racket . t)
-(sqlite . t)
-(python . t))))
+  (org-babel-do-load-languages
+   'org-babel-load-languages (quote ((emacs-lisp . t)
+                                     (racket . t)
+                                     (sqlite . t)
+                                     (python . t))))
 #+end_src
+
 ** terping
 en strukturert terping av viktig informasjon, metoder og teknikker er viktig for meg da jeg har en teflonhjerne som ikke raskt absorberer. dette tror jeg er en pakke som ikke jevnlig oppdateres, om i det hele tatt. og her har jeg hatt litt problemer med en feilmelding og kluss med kode som jeg på et vil klarte å kontrollere ved å blokke ut noe av koden i modulens el-fil (laster denne inn i stedet for elc-filen, [[file:notater/ferdigheter.org::*feil under emacs-konfigurering][beskrivelse i filen ferdigheter.org]]).
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
@@ -605,18 +604,16 @@ en strukturert terping av viktig informasjon, metoder og teknikker er viktig for
 ** TODO-nøkkelord
 når man setter variabelen "org-use-fast-todo-selection" til "t" så vil man få en meny med todo-nøkkelord man kan velge i fra.
 #+begin_src emacs-lisp :tangle orgtodo.el
-(setq org-todo-fast-todo-selection t
-      org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "DATA(D)" "PRES(p)" "BAL(b)" "FIN(f)" "PRAK(P)" "|" "DONE(d)"))
-      org-todo-keyword-faces (quote (("TODO" :foreground "red" :background "white")
-				     ("FIN" :foreground "red" :background "white")
-				     ("NEXT" :foreground "blue" :background "white")
-				     ("PRAK" :foreground "blue" :background "white")
-				     ("DATA" :foreground "light slate grey" :background "white" :weight "bold")
-				     ("PRES" :foreground "dark turquoise" :background "white" :weight "bold")
-				     ("BAL" :foreground "dark olive green" :background "white" :weight "bold")
-				     ("DONE" :foreground "dark green" :background "white" :weight "bold")
-				     ("FERD" :foreground "dark green" :background "white" :weight "bold")
-				     )))
+    (setq org-todo-fast-todo-selection t
+          org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "DATA(D)" "PRES(p)" "BAL(b)" "FIN(f)" "PRAK(P)" "|" "DONE(d)"))
+          org-todo-keyword-faces (quote (("TODO" :foreground "red" :background "white")
+                                         ("FIN" :foreground "red" :background "white")
+                                         ("NEXT" :foreground "blue" :background "white")
+                                         ("PRAK" :foreground "blue" :background "white")
+                                         ("DATA" :foreground "light slate grey" :background "white" :weight "bold")
+                                         ("PRES" :foreground "dark turquoise" :background "white" :weight "bold")
+                                         ("BAL" :foreground "dark olive green" :background "white" :weight "bold")
+                                         ("DONE" :foreground "dark green" :background "white" :weight "bold"))))
 #+end_src
 
 * Yasnippet-maler

@@ -168,7 +168,7 @@
                       "* %?\n")
                      ("jf" "fundamentals" entry (file+datetree+prompt "~/GitHub/markedsanalyse/Journaler/fundamentals.org")
                       "* %?\nhjlink")
-                     ("jF" "ferdigheter" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
+                     ("jf" "ferdigheter" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
                       "* %?\n")
                      ("jj" "Journal" entry (file+datetree+prompt "~/GitHub/markedsanalyse/Journaler/Journal.org")
                       "* %?\nhjlink")
@@ -196,10 +196,10 @@
 (add-to-list 'org-structure-template-alist '("srt" . "src racket :tangle"))
 
 (org-babel-do-load-languages
-'org-babel-load-languages (quote ((emacs-lisp . t)
-(racket . t)
-(sqlite . t)
-(python . t))))
+ 'org-babel-load-languages (quote ((emacs-lisp . t)
+                                   (racket . t)
+                                   (sqlite . t)
+                                   (python . t))))
 
 (require 'org-drill)
 
