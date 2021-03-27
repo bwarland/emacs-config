@@ -64,3 +64,5 @@
 
 (setq ispell-program-name "hunspell")
       ;; ispell-hunspell-dict-path-alist '((/usr/share/doc/hunspell-no))
+
+(global-auto-revert-mode t)

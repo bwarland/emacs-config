@@ -37,6 +37,13 @@ Konfigurasjon knyttet til moduler og pakker.
 
 ** [[https://github.com/jwiegley/use-package][use-package]] 
 denne pakken er laget for det å samle konfigurasjon knyttet til en pakke, og på det viset legge opp til en ryddigere konfigurasjonfil, og man kan kontrollere lasting av pakker slik at man kan korte ned på oppstartstid for emacs.
+
+1) :init sørger for at kode eksekveres før pakken lastes
+2) :config sørger for at kode eksekveres etter at pakken har lastet
+3) :bind sørger for knytning av tastesekvens til kommando (tar liste eller liste med liste)
+4) :commands generer en autolasting for gitte kommandoer og utsetter lasting av modul til den brukes
+5) 
+
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/pakker.el"
   (eval-when-compile
     (require 'use-package))
@@ -178,6 +185,10 @@ denne filen har jeg lastet ned i fra GitHub og det er noe jeg trenger for å få
   (setq ispell-program-name "hunspell")
         ;; ispell-hunspell-dict-path-alist '((/usr/share/doc/hunspell-no))
 
+#+end_src
+** lese inn igjen fra disk
+#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
+(global-auto-revert-mode t)
 #+end_src
 * Fullføring
 ** helm 
@@ -604,16 +615,17 @@ en strukturert terping av viktig informasjon, metoder og teknikker er viktig for
 ** TODO-nøkkelord
 når man setter variabelen "org-use-fast-todo-selection" til "t" så vil man få en meny med todo-nøkkelord man kan velge i fra.
 #+begin_src emacs-lisp :tangle orgtodo.el
-    (setq org-todo-fast-todo-selection t
-          org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "DATA(D)" "PRES(p)" "BAL(b)" "FIN(f)" "PRAK(P)" "|" "DONE(d)"))
-          org-todo-keyword-faces (quote (("TODO" :foreground "red" :background "white")
-                                         ("FIN" :foreground "red" :background "white")
-                                         ("NEXT" :foreground "blue" :background "white")
-                                         ("PRAK" :foreground "blue" :background "white")
-                                         ("DATA" :foreground "light slate grey" :background "white" :weight "bold")
-                                         ("PRES" :foreground "dark turquoise" :background "white" :weight "bold")
-                                         ("BAL" :foreground "dark olive green" :background "white" :weight "bold")
-                                         ("DONE" :foreground "dark green" :background "white" :weight "bold"))))
+  (setq org-todo-fast-todo-selection t
+        org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "DATA(D)" "PRES(p)" "BAL(b)" "FIN(f)" "PRAK(P)" "|" "DONE(d)"))
+        org-todo-keyword-faces (quote (("TODO" :foreground "red" :background "white")
+                                       ("FIN" :foreground "red" :background "white")
+                                       ("NEXT" :foreground "blue" :background "white")
+                                       ("PRAK" :foreground "blue" :background "white")
+                                       ("DATA" :foreground "light slate grey" :background "white" :weight "bold")
+                                       ("PRES" :foreground "dark turquoise" :background "white" :weight "bold")
+                                       ("BAL" :foreground "dark olive green" :background "white" :weight "bold")
+                                       ("DONE" :foreground "dark green" :background "white" :weight "bold"))))
+(setq org-log-done 'note)
 #+end_src
 
 * Yasnippet-maler
