@@ -1,6 +1,5 @@
 #+title: konfigurering av emacs
-#+property:
-#+startup: overview num
+#+startup: overview
 * Formålet og tilnærming
 Formålet med pakken er å holde konfigurering av Emacs på tre eller flere maskiner. En maskin vil være en windowsbasert maskin. De andre er Linux-maskiner.
 
@@ -499,11 +498,11 @@ Jeg bruker mange av disse fangstmalene både i arbeid og privat da det er noe so
                        ("j" "Journal/føring")
                        ("jd" "dagbok" entry (file+datetree+prompt "~/c:/users/bjorwa/documents/GitHub//GitHub/Journal/dagbok.org")
                         "* %?\n")
-                       ("jf" "fundamentals" entry (file+datetree+prompt "~/c:/users/bjorwa/documents/GitHub//GitHub/markedsanalyse/Journaler/fundamentals.org")
+                       ("jf" "fundamentals" entry (file+datetree+prompt "~/c:/users/bjorwa/documents/GitHub//GitHub/markedsanalyse/journaler/fundamentals.org")
                         "* %?\nhjlink")
                        ("jf" "ferdigheter" entry (file+datetree+prompt "~/c:/users/bjorwa/documents/GitHub//GitHub/Notater/ferdigheter.org")
                         "* %?\n")
-                       ("jj" "Journal" entry (file+datetree+prompt "~/c:/users/bjorwa/documents/GitHub//GitHub/markedsanalyse/Journaler/Journal.org")
+                       ("jj" "Journal" entry (file+datetree+prompt "~/c:/users/bjorwa/documents/GitHub//GitHub/markedsanalyse/journaler/Journal.org")
                         "* %?\nhjlink")
                        ("jr" "retorikk og kommunikasjon" entry (file+datetree+prompt "~/c:/users/bjorwa/documents/GitHub/Journal/retorikk.org")
                         "* %?\n")
@@ -556,11 +555,11 @@ Jeg bruker mange av disse fangstmalene både i arbeid og privat da det er noe so
                        ("j" "Journal")
                        ("jd" "dagbok" entry (file+datetree+prompt "~/GitHub/Journal/dagbok.org")
                         "* %?\n")
-                       ("jf" "fundamentals" entry (file+datetree+prompt "~/GitHub/markedsanalyse/Journaler/fundamentals.org")
+                       ("jf" "fundamentals" entry (file+datetree+prompt "~/GitHub/markedsanalyse/journaler/fundamentals.org")
                         "* %?\nhjlink")
                        ("jf" "ferdigheter" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
                         "* %?\n")
-                       ("jj" "Journal" entry (file+datetree+prompt "~/GitHub/markedsanalyse/Journaler/Journal.org")
+                       ("jj" "Journal" entry (file+datetree+prompt "~/GitHub/markedsanalyse/journaler/journal.org")
                         "* %?\nhjlink")
                        ("jr" "retorikk" entry (file+datetree+prompt "~/GitHub/Journal/retorikk.org")
                         "* %?\n")
@@ -571,7 +570,7 @@ Jeg bruker mange av disse fangstmalene både i arbeid og privat da det er noe so
                        ("jø" "økonomi" entry (file+datetree+prompt "~/GitHub/Journal/econ.org")
                         "* %?\n")
                        ("t" "tabell")
-                       ("ta" "price quote agencies" table-line (file+olp "~/GitHub/markedsanalyse/Journaler/daily-market-update.org" "lng")
+                       ("ta" "price quote agencies" table-line (file+olp "~/GitHub/markedsanalyse/journaler/daily-market-update.org" "lng")
                         "|%^u|%^{platts}|%^{argus}|%^{icis}|" :prepend t)
                        ("tt" "trening" table-line (file+headline "~/GitHub/Journal/trening.org" "tabell")
                         "|%^u|%^{type}|%^{oppvarming}|%^{runder}|%^{vekt}|%^{tid}|%^{kommentar}|")
