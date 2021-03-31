@@ -1,4 +1,4 @@
-(setq org-todo-fast-todo-selection t
+  (setq org-todo-fast-todo-selection t
         org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "DATA(D)" "PRES(p)" "BAL(b)" "FIN(f)" "PRAK(P)" "|" "DONE(d)"))
         org-todo-keyword-faces (quote (("TODO" :foreground "red" :background "white")
                                        ("FIN" :foreground "red" :background "white")
