@@ -56,7 +56,7 @@ Denne pakken er laget for det å samle konfigurasjon knyttet til en pakke, og p�
       
         )
 #+end_src
-** quelpa
+** Quelpa
 Dette er en pakke som brukes for å bygge pakker fra lokal eller ekstern kilde. quelpa funksjonen nederst som viser til "https://GitHub.com/l3kn/org-fc" (dette er org flashcards) er jeg litt usikker hvorfor jeg har lagt inn, jeg kan ikke huske når denne kom til verden. og reelt sett så skulle vel denne kommandoen kjøres kun en gang i det at man neppe trenger å laste ned org-flash hver gang man starter opp emacs.
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/pakker.el"
   (unless (package-installed-p 'quelpa)
@@ -81,7 +81,7 @@ for periodisk, automatisk oppdatering av emacs-pakker. denne fant jeg i dave wil
     )
 #+end_src
 ** Lasting av konfigurasjonsfil
-Dette er en egendefinert funksjon som jeg fant på en side med Emacs-konfigurering. Formålet med denne er å kunne laste .emacs raskt ved hjelp av noen enkle tastetrykk. Slik funksjonen ligger nå så vil den kun fungere på Linux-maskinene. En forbedring vil være å gjøre denne funkasjonen mer operativagnostisk. [[https://gitlab.com/Kaligule/emacs-config/-/blob/master/config.org][Kaligule]].
+Dette er en egendefinert funksjon som jeg fant på en side med Emacs-konfigurering. Formålet med denne er å kunne laste .emacs raskt ved hjelp av noen enkle tastetrykk. [[https://gitlab.com/Kaligule/emacs-config/-/blob/master/config.org][Kaligule]].
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/pakker.el"
   (defun load-dot-emacs ()
     (interactive)
@@ -90,7 +90,7 @@ Dette er en egendefinert funksjon som jeg fant på en side med Emacs-konfigureri
   (global-set-key (kbd "C-x <f1>") 'load-dot-emacs)
 #+end_src
 * Generelt
-en samling av ulik konfigurasjon knyttet til hvordan emacs ser ut og hvordan emacs generelt fungerer.
+En samling av ulik konfigurasjon knyttet til hvordan emacs ser ut og hvordan emacs generelt fungerer.
 ** Utseende
 *** Meny
 Jeg synes at menyer generelt sett i emacs gir visuell støy. og hva oppstartsbeskjeder angår så forstår jeg lite av disse. derfor slår jeg av det meste. 
@@ -192,7 +192,7 @@ Jeg sender ofte filer fra maskin til masking i løpet av dagen og da er det grei
 (global-auto-revert-mode t)
 #+end_src
 * Fullføring
-** helm 
+** Helm 
 *** [[https://emacs-helm.github.io/helm/#introduction][Generelt]]
 Pakke som lager et rammeverk for søking og innsnevring av valg og for det å fullføre navn på filer og kommandoer og så videre.
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/helm-konf.el"
@@ -203,7 +203,7 @@ Pakke som lager et rammeverk for søking og innsnevring av valg og for det å fu
            ("C-x c-f" . helm-find-files)
            ("C-x f" . helm-recentf)
            ("M-y" . helm-show-kill-ring)
-           ("C-x b" . helm-buffers-list)	;
+           ("C-x b" . helm-buffers-list)
            ("C-x c y" . helm-yas-complete)
            ("C-x c y" . helm-yas-create-snippet-on-region)
            ("C-c h o" . helm-occur)
@@ -257,7 +257,6 @@ Bruk av flere markører over flere linjer.
 #+end_src
 * Programmering
 ** Python
-
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/programmering.el"
     ;; (setq python-shell-completion-native-enable nil)
   (setq org-src-preserve-indentation t)
