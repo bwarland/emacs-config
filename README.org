@@ -12,7 +12,7 @@ Tilnærmingen er som føler:
 Den siste tilnærmingen kan synes noe underlig, men min erfaring er at jeg ofte klumser til konfigureringen av Emacs. Når dette skjer får jeg ofte en god del arbeid med å finne frem til feilen og da kan det være greit å ha en form for modularisering av konfigureringen. Skjønt jeg har også opplevd det at man kan rote til denne les-meg-filen, som for eksempel når man gjør en "downcase-buffer", med den følge at feil distrubueres til en eller flere av konfigurasjonsfilene som leses inn ved oppstart av Emacs. 
 
 ** Eksempler fra internett
-*** [[Http://doc.norang.ca/org-mode.html][Bernt Hansen sin emacs-konfigurering]]
+*** [[http://doc.norang.ca/org-mode.html][Bernt Hansen sin emacs-konfigurering]]
 Den første emacskonfigurasjonen jeg kopierte mer eller mindre alt av og testet den gang jeg var rimelig fersk. og ennå så tror jeg store deler av org-mode konfigurasjonen min bygger på hans oppsett. dette er en kar som har rimelig god kontroll over verktøyet emacs.
 
 Sett bort fra det at hans arbeidsflyt ikke helt passer min - til det er den litt for regimentert - så er det at hav av gode eksempler her. det var med denne jeg først lærte å bruke emacs og org-mode for noen år siden.
@@ -41,7 +41,11 @@ denne pakken er laget for det å samle konfigurasjon knyttet til en pakke, og p�
 2) :config sørger for at kode eksekveres etter at pakken har lastet
 3) :bind sørger for knytning av tastesekvens til kommando (tar liste eller liste med liste)
 4) :commands generer en autolasting for gitte kommandoer og utsetter lasting av modul til den brukes
-5) 
+5) :hook
+6) :custom
+7) :custom-face
+8) :if
+9) :disabled dersom man ønsker å slå av en modul man har problemer med.
 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/pakker.el"
   (eval-when-compile
@@ -275,9 +279,9 @@ pakke som lager et rammeverk for søking og innsnevring av valg og for det å fu
   (setq sql-sqlite-program "/home/bwarland/anaconda3/bin/sqlite3")
 #+end_src
 * Org-mode
-alle moduler og pakker som har med org-mode å gjøre.
+Alle moduler og pakker som har med org-mode å gjøre.
 
-alle org-mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][bernt hansen sin konfigurasjonsfil]].
+Alle org-mode-konfigureringers mor: [[http://doc.norang.ca/org-mode.html][bernt hansen sin konfigurasjonsfil]].
 ** generelt
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
           (use-package org
@@ -400,38 +404,21 @@ det er ryddig å se todo i sammenheng med "scheduled:" og "deadline:" ellers så
 #+end_src
 *** [[https://GitHub.com/alphapapa/org-super-agenda][org-super-agenda]] 
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-agenda.el"
-  (require 'org-super-agenda)
-  (use-package org-super-agenda
-    :ensure t
-    :config
-    (org-super-agenda-mode 1)
-    (setq org-super-agenda-groups
-          '((:name "TIDSPLAN     =========================================================================================="
+(require 'org-super-agenda)
+(use-package org-super-agenda
+  :ensure t
+  :config
+  (org-super-agenda-mode 1)
+  (setq org-super-agenda-groups
+        '((:name "================================TIDSPLAN==============================================================="
                  :time-grid t)
-
-            (:name "SORTERING    =========================================================================================="
+          (:name "================================SORTERING OG GJØREMÅL=================================================="
                  :todo "TODO")
-            (:name "BEARBEIDING  =========================================================================================="
-                 :todo "NEXT")
-            (:name "DATAOPPDATERING ======================================================================================="
-                 :todo "DATA")
-            (:name "PRESENTASJONER ========================================================================================"
-                   :todo "PRES")
-            (:name "BALANSE      =========================================================================================="
-                   :todo "BAL")
-            (:name "MARKED       =========================================================================================="
-                 :todo "TODO"
-                 :tag ("coal" "hydrogen"))
-            (:name "EGENFINANS   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-                   :todo "FIN")
-            (:name "PRAKTISKE TING ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-                   :todo "PRAK")
-            (:name "INFORMATIKK  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-                 :tag ("informatikk" "emacs" "git" "linux" "scheme" "python"))
-            (:name "SAMFUNNSFAG  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-                   :tag ("samfunn" "økonomi"))
-            )))
-
+		 (:name "================================BEARBEIDING============================================================"
+			:todo "NEXT")
+		 (:name "++++++++++++++++++++++++++++++++TERPING++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+			:tag ("informatikk" "emacs" "git" "linux" "scheme" "python" "samfunn" "økonomi"))
+		 )))
 #+end_src
 ** filer mye brukt i omarkivering
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-konf.el"
@@ -500,7 +487,7 @@ Jeg bruker mange av disse fangstmalene både i arbeid og privat da det er noe so
                         "* %?\n")
                        ("jf" "fundamentals" entry (file+datetree+prompt "~/c:/users/bjorwa/documents/GitHub//GitHub/markedsanalyse/journaler/fundamentals.org")
                         "* %?\nhjlink")
-                       ("jf" "ferdigheter" entry (file+datetree+prompt "~/c:/users/bjorwa/documents/GitHub//GitHub/Notater/ferdigheter.org")
+                       ("jF" "ferdigheter" entry (file+datetree+prompt "~/c:/users/bjorwa/documents/GitHub//GitHub/Notater/ferdigheter.org")
                         "* %?\n")
                        ("jj" "Journal" entry (file+datetree+prompt "~/c:/users/bjorwa/documents/GitHub//GitHub/markedsanalyse/journaler/Journal.org")
                         "* %?\nhjlink")
@@ -557,7 +544,7 @@ Jeg bruker mange av disse fangstmalene både i arbeid og privat da det er noe so
                         "* %?\n")
                        ("jf" "fundamentals" entry (file+datetree+prompt "~/GitHub/markedsanalyse/journaler/fundamentals.org")
                         "* %?\nhjlink")
-                       ("jf" "ferdigheter" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
+                       ("jF" "ferdigheter" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
                         "* %?\n")
                        ("jj" "Journal" entry (file+datetree+prompt "~/GitHub/markedsanalyse/journaler/journal.org")
                         "* %?\nhjlink")
@@ -612,17 +599,20 @@ en strukturert terping av viktig informasjon, metoder og teknikker er viktig for
           org-drill-adjust-intervals-for-early-and-late-repetitions-p t))
 #+end_src
 ** TODO-nøkkelord
-når man setter variabelen "org-use-fast-todo-selection" til "t" så vil man få en meny med todo-nøkkelord man kan velge i fra.
+Når man setter variabelen "org-use-fast-todo-selection" til "t" så vil man få en meny med todo-nøkkelord man kan velge i fra.
+
+Her tror jeg at jeg igjen vil se på Bernt Hansen sitt oppsett. En del av det jeg har nedenfor er ting jeg knapt bruker, og det kan være fornuftig av meg å innarbeide dette med sette på vent og det å kansellere. 
 #+begin_src emacs-lisp :tangle orgtodo.el
   (setq org-todo-fast-todo-selection t
-        org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "DATA(D)" "PRES(p)" "BAL(b)" "FIN(f)" "PRAK(P)" "|" "DONE(d)"))
+        org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "WAIT(w@/!)" "|" "DONE(d)" "CANC(c@)"))
         org-todo-keyword-faces (quote (("TODO" :foreground "red" :background "white")
-                                       ("FIN" :foreground "red" :background "white")
+                                       ;; ("FIN" :foreground "red" :background "white")   ;; utgår
                                        ("NEXT" :foreground "blue" :background "white")
-                                       ("PRAK" :foreground "blue" :background "white")
-                                       ("DATA" :foreground "light slate grey" :background "white" :weight "bold")
-                                       ("PRES" :foreground "dark turquoise" :background "white" :weight "bold")
-                                       ("BAL" :foreground "dark olive green" :background "white" :weight "bold")
+                                       ;; ("PRAK" :foreground "blue" :background "white") ;; utgår
+                                       ("WAIT" :foreground "light slate grey" :background "white" :weight "bold") ;;utgår
+                                       ;; ("PRES" :foreground "dark turquoise" :background "white" :weight "bold")   ;;utgår
+                                       ;; ("BAL" :foreground "dark olive green" :background "white" :weight "bold")  ;;utgår
+                                       ("CANC" :foreground "dark olive green" :background "white" :weight "bold")  ;;utgår
                                        ("DONE" :foreground "dark green" :background "white" :weight "bold"))))
 (setq org-log-done 'note)
 #+end_src
@@ -646,22 +636,22 @@ når man setter variabelen "org-use-fast-todo-selection" til "t" så vil man få
     (global-set-key (kbd "C-c y") (lambda () (interactive)
                                     (yas/load-directory "~/elisp/snippets"))))
 #+end_src
-
 * Register
 ** linux
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/linreg.el"
-  (set-register ?d '(file . "~/GitHub/Journal/dagbok.org"))
-  (set-register ?t '(file . "~/GitHub/Journal/trening.org"))
-  (set-register ?c '(file . "~/GitHub/emacs-config/custom.el"))
-  (set-register ?g '(file . "~/GitHub/"))
-  (set-register ?o '(file . "~/GitHub/Journal/econ.org"))
-  (set-register ?f '(file . "~/GitHub/Notater/ferdigheter.org"))
-  (set-register ?k '(file . "~/GitHub/emacs-config/README.org"))
-  (set-register ?i '(file . "~/GitHub/Notater/informatikk.org"))
-  (set-register ?j '(file . "~/GitHub/Markedsanalyse/journaler/journal.org"))
-  (set-register ?l '(file . "~/GitHub/Markedsanalyse/journaler/liq.org"))
-  (set-register ?r '(file . "~/GitHub/Markedsanalyse/journaler/reg.org"))
-  (set-register ?e '(file . "~/.emacs"))
+(set-register ?d '(file . "~/GitHub/Journal/dagbok.org"))
+(set-register ?t '(file . "~/GitHub/Journal/trening.org"))
+(set-register ?c '(file . "~/GitHub/emacs-config/custom.el"))
+(set-register ?g '(file . "~/GitHub/"))
+(set-register ?o '(file . "~/GitHub/Journal/econ.org"))
+(set-register ?f '(file . "~/GitHub/Markedsanalyse/journaler/fundamentals.org"))
+(set-register ?F '(file . "~/GitHub/Notater/ferdigheter.org"))
+(set-register ?k '(file . "~/GitHub/emacs-config/README.org"))
+(set-register ?i '(file . "~/GitHub/Notater/informatikk.org"))
+(set-register ?j '(file . "~/GitHub/Markedsanalyse/journaler/journal.org"))
+(set-register ?l '(file . "~/GitHub/Markedsanalyse/journaler/liq.org"))
+(set-register ?r '(file . "~/GitHub/Markedsanalyse/journaler/reg.org"))
+(set-register ?e '(file . "~/.emacs"))
 #+end_src
 ** windows
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/winreg.el"
