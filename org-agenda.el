@@ -5,11 +5,9 @@
         org-agenda-block-seperator t
         org-agenda-span 5
         org-agenda-window-setup 'other-window
-        ;; agenda log
         org-agenda-start-with-log-mode t
         org-agenda-log-done 'note
         org-agenda-log-into-drawer t
-              ;; time grid
         org-agenda-include-diary t
         org-agenda-skip-scheduled-if-done t
         org-agenda-skip-deadline-if-done t
@@ -26,9 +24,9 @@
   :config
   (org-super-agenda-mode 1)
   (setq org-super-agenda-groups
-        '((:name "================================TIDSPLAN==============================================================="
+        '((:name "================================TIDSPLAN================================================================"
                  :time-grid t)
-          (:name "================================SORTERING OG GJØREMÅL=================================================="
+          (:name "================================SORTERING OG ENKLE GJØREMÅL============================================="
                  :todo "TODO")
 		 (:name "================================BEARBEIDING============================================================"
 			:todo "NEXT")

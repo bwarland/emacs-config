@@ -5,7 +5,7 @@
            ("C-x c-f" . helm-find-files)
            ("C-x f" . helm-recentf)
            ("M-y" . helm-show-kill-ring)
-           ("C-x b" . helm-buffers-list)	;
+           ("C-x b" . helm-buffers-list)
            ("C-x c y" . helm-yas-complete)
            ("C-x c y" . helm-yas-create-snippet-on-region)
            ("C-c h o" . helm-occur)

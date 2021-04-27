@@ -1,49 +1,34 @@
-          (use-package org
-            :mode (("\\.org$" . org-mode))
-            :hook (org-mode . org-bullets-mode)
-            :bind
-            (("C-c o" . 'org-mode)
-             ("C-c c" . 'org-capture)
-             ("<f5>" . 'org-copy-subtree)
-             ("C-c a" . 'org-agenda)
-             ("C-c l" . 'org-store-link)
-             ("C-c C-." . org-time-stamp)
-             ("C-c C-t". 'org-todo)		;
-             ("C-c t" . 'org-show-todo-tree)
-             ("C-c C-w" . 'org-capture-refile)
-             ("C-c C-k" . 'org-capture-kill))
-            :config
-            (setq org-hide-leading-stars t
-                  org-startup-indented t
-                  org-startup-folded t
-                  ;; org-switch-to-buffer-other-window t
-                  initial-major-mode 'org-mode
-                  org-pretty-entities t
-                  org-pretty-entities-include-sub-superscripts nil
-                  org-use-fast-todo-selection t
-                  org-treat-s-cursor-todo-selection-as-state-change nil
-                  org-directory "~/GitHub"
-                  org-reverse-note-order nil
-                  org-refile-use-outline-path t
-                  org-outline-path-complete-in-steps nil
-                  org-refile-allow-creating-parent-nodes (quote confirm)
-                  org-indirect-buffer-display 'current-window
-                  org-hide-emphasis-markers t
-                  org-tags-column -50
-                  org-hide-emphasis-marker t
-                  ;; org-list-allow-alphabetcial t
-                  org-ellipsis " ..."
-                  ;; org-archive-location "~/documents/org-arkiv/arkiv.org::* task"
-                  ;; org-todo-keywords (quote (
-                  ;;                           (sequence "todo(t)" "next(n)" "data(d)" "pres(p)" "bal(b)"  "|" "done(d)")
-                  ;;                           ))
-                  ;; org-todo-keyword-faces (quote (("todo" :foreground "red" :background "white")
-                  ;;                                ("next" :foreground "blue" :background "white")
-                  ;;                                ("data" :foreground "light slate grey" :background "white")
-                  ;;                                ("pres" :foreground "dark turquoise" :background "white")
-                  ;;                                ("bal" :foreground "dark olive green" :background "white")
-                  ;;                                ("done" :foreground "dark green" :background "white")))
-                  ;;
+(use-package org
+  :mode (("\\.org$" . org-mode))
+  :hook (org-mode . org-bullets-mode)
+  :bind
+  (("C-c o" . 'org-mode)
+   ("C-c c" . 'org-capture)
+   ("<f5>" . 'org-copy-subtree)
+   ("C-c a" . 'org-agenda)
+   ("C-c l" . 'org-store-link)
+   ("C-c C-." . org-time-stamp)
+   ("C-c C-t". 'org-todo)		;
+   ("C-c t" . 'org-show-todo-tree)
+   ("C-c C-w" . 'org-capture-refile)
+   ("C-c C-k" . 'org-capture-kill))
+  :config
+  (setq initial-major-mode 'org-mode
+	org-hide-leading-stars t
+	org-startup-indented t
+	org-startup-folded t
+	org-pretty-entities t
+	org-pretty-entities-include-sub-superscripts t
+	org-treat-s-cursor-todo-selection-as-state-change nil
+	org-directory "~/GitHub"
+	org-reverse-note-order nil
+	org-refile-use-outline-path t
+	org-outline-path-complete-in-steps nil
+	org-refile-allow-creating-parent-nodes (quote confirm)
+	org-indirect-buffer-display 'current-window
+	org-hide-emphasis-markers t
+	org-tags-column -50
+	org-ellipsis " ..."
                   ))
 
   (cond ((eq system-type 'windows-nt) (setq org-archive-location "~/c:users/bjorwa/Documents/org-arkiv/arkiv.org::* task"))
