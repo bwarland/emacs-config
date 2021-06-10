@@ -1,0 +1,182 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("c:/Appl/" . "SQLite/")
+ ("c:/Users/bjorwa/AppData/Roaming/programming/" . "racket/")
+ ("c:/Users/bjorwa/OneDrive - Equinor/python/" . "documentation/")
+ ("c:/Users/All Users/AppData/" . "Local/")
+ ("c:/Users/All Users/Adobe/" . "ARM/")
+ ("c:/Users/All Users/" . "AppData/")
+ ("c:/Users/bjorwa/AppData/Roaming/emacs.d/" . "git_hub/")
+ ("c:/appl/Emacs/share/emacs/25.1/lisp/" . "org/")
+ ("c:/appl/Emacs/share/" . "emacs/")
+ ("c:/appl/Emacs/" . "share/")
+ ("c:/appl/Emacs/share/emacs/25.1/" . "lisp/")
+ ("c:/appl/Emacs/share/emacs/" . "25.1/")
+ ("c:/appl/" . "Emacs/")
+ ("c:/Users/bjorwa/AppData/Roaming/notebook/" . "own-programs/")
+ ("c:/Users/bjorwa/AppData/Roaming/.emacs.d/snippets/" . "org-mode/")
+ ("c:/Users/bjorwa/AppData/Roaming/" . "notebook/")
+ ("c:/Users/bjorwa/AppData/Roaming/.emacs.d/" . "snippets/")
+ ("c:/Users/bjorwa/AppData/" . "Roaming/")
+ ("c:/Users/bjorwa/" . "AppData/")
+ ("c:/Users/" . "bjorwa/")
+ ("c:/" . "Appl/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "c:/Users/bjorwa/AppData/Roaming/.emacs.d/init/"
+ "c:/Users/bjorwa/AppData/Roaming/"
+ "c:/Users/bjorwa/AppData/Roaming/.emacs.d/"
+ "c:/Users/bjorwa/AppData/Roaming/notebook/"
+ "c:/Users/bjorwa/AppData/Roaming/.emacs.d/snippets/org-mode/"
+ "c:/Users/bjorwa/AppData/Roaming/notebook/own-programs/"
+ "c:/Users/bjorwa/AppData/Roaming/Racket/"
+ "c:/Appl/SQLite/"
+ "c:/Users/bjorwa/AppData/Roaming/programming/racket/"
+ "c:/Users/bjorwa/Racket/"
+ "c:/Users/bjorwa/Python/"
+ "c:/Users/bjorwa/Downloads/"
+ "c:/Users/bjorwa/OneDrive - Equinor/python/"
+ "c:/Users/bjorwa/OneDrive - Equinor/"
+ "c:/Users/bjorwa/AppData/Roaming/emacs.d/snippets/org-mode/"
+ "c:/Users/bjorwa/AppData/Roaming/.emacs.d/git_hub/"
+ "c:/Users/bjorwa/AppData/Roaming/emacs.d/git_hub/"
+ "c:/Users/bjorwa/AppData/Roaming/emacs.d/"
+ "c:/Users/bjorwa/AppData/Roaming/.emacs.d/elpa/"
+ "c:/appl/Emacs/share/emacs/25.1/lisp/org/"
+ "c:/Users/bjorwa/AppData/Roaming/.emacs.d/functions/"
+ "c:/Users/bjorwa/AppData/Roaming/.emacs.d/git-hub/"
+ "c:/Users/bjorwa/AppData/Roaming/notebook/csv-files/"
+ "c:/.emacs.d/init/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "ido.el"
+ ".emacs"
+ "custom.el"
+ "liq.org"
+ "tmp.el"
+ "cor.el"
+ "gkb.el"
+ "journal.org"
+ "awn.el"
+ "origination.org"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("c:/Users/bjorwa/AppData/Roaming/.emacs.d/init/" (24052 39847 0 0) "zenburn-theme.el" "vba.el" "tmp.el~" "tmp.el" "refile.el" "ido.el" "gkb.el~" "gkb.el" "gen.el" "flatland.el" "cor.el~" "cor.el" "awn.el~" "awn.el" "auto-complete.el" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/" (24052 39976 0 0) "Sun/" "Skype/" "SAP/" "Racket/" "QlikTech/" "notebook/" "Microsoft/" "Macromedia/" "IceDesktopPlatform/" "ICAClient/" "hpqLog/" "Google/" "dot-emacs-file" "databases/" "col.org_archive~" "col.org_archive" "Adobe/" ".emacs~" ".emacs.d/" ".emacs" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/.emacs.d/" (24052 39866 0 0) "snippets/" "recentf~" "recentf" "network-security.data" "init/" "ido.last~" "ido.last" "git_hub/" "functions/" "eshell/" "elpa/" "bookmarks" "backups/" "auto-save-list/" "abbrev_defs~" "abbrev_defs" ".org-id-locations" ".mc-lists.el" "%backup%~" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/notebook/" (24051 46651 0 0) "world.org_archive" "world.org" "work-problem.org" "why-not-pipeline-to-India.org" "visual-basic-code" "tz.org" "tw.org_archive" "tw.org" "travel.org" "training-python.py" "tr.org_archive" "tr.org" "th.org~" "th.org_archive" "th.org" "terminologi.org~" "terminologi.org" "termin.org~" "termin.org" "ship.org" "samfunn.org" "ru.org_archive" "ru.org" "reports.org_archive_archive" "reports.org_archive" "reg.org_archive" "reg.org" "reading.org" "RE BC-M-33 Brazil DG1 package input.msg" "qa.org_archive" "qa.org" "python.org_archive" "python.org" "prices.org~" "prices.org_archive~" "prices.org_archive" "prices.org" "prices.html~" "prices.html" "presentations.org" "pred.org" "power-of-siberia.org" "platts-jkm-and-crude-oil" "platts-jkm-and-crude" "platts-fid.org" "pk.org_archive" "pk.org" "personal.org_archive" "personal.org" "own-programs/" "origination.org~" "origination.org" "org-db.el" "oceania.org_archive" "oceania.org" "notebook_archive/" "mz.org" "markjour.org" "markets.org~" "markets.org_archive_archive" "markets.org_archive" "markets.org" "market-notes.org_archive" "market-database-update-of-tables" "market-database-take-x.org" "market-database" "macro.org" "ma.db" "ltxpng/" "lng-balance-pivot-query" "liq.org~" "liq.org_archive" "liq.org" "linux.org" "kr.org" "klokking.org_archive" "klokking.org" "kapitell-3.py" "kapitell-10.py" "jp.org_archive" "jp.org" "journal.org~" "journal.org_archive~" "journal.org_archive" "journal.org" "jinformatikk.org" "it.org~" "it.org" "investment-cycle.org~" "investment-cycle.org" "invest.org_archive" "invest.org" "infrastructure.org_archive" "infrastructure.org" "informatikk.org" "info.org~" "info.org_archive~" "info.org_archive" "info.org" "in.org" "illustrations/" "geopolitics.org" "fs.org" "forretningsutvikling.org" "food~" "food" "flex-value.org" "filosofi.org" "fid_status.csv" "fid-searches.org" "excel/" "europe.org_archive" "europe.org" "es.org" "energy.org" "energy-intelligence-fid.org" "emacs.org" "dummy-infra.org" "de.org" "data/" "cu.org" "csv-files/" "crepro.org" "comp.org" "collection_old.org" "collection.org_archive_until_June_13_2018" "collection.org_archive" "collection.org" "collection.html" "col.org~" "col.org_archive~" "col.org_archive_archive" "col.org_archive" "col.org" "col-2019-archive.org_archive" "col-2019-archive.org" "cn.org_archive_very_old" "cn.org_archive_old" "cn.org" "cn.html" "china.org_archive" "bd.org_archive" "bd.org" "bc-m-33-input" "balance.org~" "balance.org_archive" "balance.org" "bal.org" "asia.tex" "asia.org~" "asia.org_archive" "asia.org" "americas.org~" "americas.org_archive" "americas.org" "am-gruppearbeid.org~" "am-gruppearbeid.org" "africa.org_archive" "africa.org" "access-sql" "#journal.org! ! journal.org!  ...col.org!  ...!scratch!!  ...!Messages!!  ...africa.org!  ...americas.org!  ...asia.org!  ...bal.org!  ...balance.org!  ...bd.org!  ...cn.org!  ...col-2019-archive.org [#" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/.emacs.d/snippets/org-mode/" (24050 21620 0 0) "zzterm" "zzrev" "zzreg" "zzprice" "zzplatts" "zzliq" "zzclock" "zzbal" "replink~" "replink" "qqliqinfo" "qqkinet~" "qqkinet" "qqil" "qqcon" "dayrep" "1reg" "1liq" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/notebook/own-programs/" (24047 41304 0 0) "time-series.rkt~" "time-series.rkt" "flip-table.rkt" "elisp-snutter~" "elisp-snutter" "../" "./")
+
+ ("c:/Users/bjorwa/Downloads/" (24045 62919 0 0) "woodside_petroleum_corporate_report.zip" "woodside_petroleum_corporate_report.pdf" "woodside-petroleum_corporate_report.xlsx" "waterborne-tradeflow-dec-2-2019.txt" "Vietnam-resultat.xlsx" "upload-waterborne-lng.xlsx" "Travel document for  WARLAND - BJOERN - QYY6EI.pdf" "Travel document for  WARLAND - BJOERN - QYY6EI (1).pdf" "Travel document for  PAUL - THEO - QYY6EI.pdf" "Travel document for  PAUL - THEO - QYY6EI (1).pdf" "Travel document for  PAUL - KELLY - QYY6EI.pdf" "Travel document for  PAUL - KELLY - QYY6EI (1).pdf" "tokyo_gas_and_centrica_sign_deal_for_mozambique_area_1_lng.pdf" "THAILAND ENERGY.pdf" "THAILAND ENERGY (1).pdf" "tanker-updates-nov-15-2019.csv" "Tanker Updates.xlsx" "Tanker Updates.csv" "Tanker Updates (2).xlsx" "Tanker Updates (1).xlsx" "sqlite-tools-win32-x86-3300100.zip" "sqlite-tools-win32-x86-3290000.zip" "sqlite-dll-win64-x64-3290000.zip" "seasonticketnovember2019.pdf" "racket-7.4-x86_64-win32.exe" "payslip-mar-2019.pdf" "MMP-strategy.pdf" "London Flu Jabs (3).ics" "London Flu Jabs (2).ics" "LNG_Pricing_Analyst.docx" "LNG Trade Total Volumes.xlsx" "LNG Tool.csv" "LNG Tool (1).csv" "Import Volumes.xlsx" "Import Volumes (2).xlsx" "Import Volumes (1).xlsx" "IHS Markit Turkey LNG Data Sheet 2019_09_26.xlsx" "IHS Markit Thailand LNG Data Sheet 2019_11_22.xlsx" "IHS Markit Taiwan LNG Data Sheet 2019_11_22.xlsx" "IHS Markit Kuwait LNG Data Sheet 2019_10_03.xlsx" "IHS Markit Canada LNG Data Sheet 2019_10_03.xlsx" "IHS Markit Breakeven FOB LNG Costs 4_8_2019.xlsm" "IHS Markit Breakeven FOB LNG Costs 4_8_2019 (2).xlsm" "IHS Markit Breakeven FOB LNG Costs 4_8_2019 (1).xlsm" "IHS Markit Breakeven FOB Costs 11_19_2019.xlsm" "historic-lng-demand-cedigaz-upload.xlsx" "Global LNG Production.xlsx" "Global LNG Production (1).xlsx" "GL0242.pdf" "gas-demand-group-of-countries.pptx" "FR05.pdf" "FR04.pdf" "energies-12-02437.pdf" "emacs-w64-25.3-O2-with-modules.7z" "emacs-w64-25.3-O2-with-modules (1).7z" "emacs-26.3-x86_64.zip" "emacs/" "desktop.ini" "country_overview.xls" "BJORN_WARLAND_P60.pdf" "bae2f801-b008-460c-9e5e-93f00cc5428a.tmp" "Anadarko-Centricia-Tokyo-Gas.pdf" "2019-11-12_Natural_Gas_-_Global_LNG_-_Regas_offers_little_2020_price_support.pdf" "2019-10-24_Natural_Gas_-_Global_LNG_-_Global_supply_trends.pdf" "2019-09-London-Brunch.pdf" "../" "./")
+
+ ("c:/Users/" (23965 41160 0 0) "Public/" "i_mhira/" "desktop.ini" "defaultuser0/" "Default User/" "Default/" "bjorwa/" "All Users/" "../" "./")
+
+ ("c:/Users/bjorwa/" (24030 22248 0 0) "Videos/" "Templates/" "Start Menu/" "SendTo/" "Searches/" "Saved Games/" "Recent/" "PrintHood/" "Pictures/" "OneDrive - Equinor/" "ntuser.pol" "ntuser.ini" "NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{fd9a35db-49fe-11e9-aa2c-248a07783950}.TM.blf" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "NetHood/" "My Documents/" "Music/" "MicrosoftEdgeBackups/" "Local Settings/" "Links/" "IntelGraphicsProfiles/" "Favorites/" "Downloads/" "Documents/" "Desktop/" "Cookies/" "Contacts/" "Application Data/" "AppData/" "3D Objects/" ".swt/" ".cisco/" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/Racket/" (24022 50465 0 0) "_LOCKracket-prefs.rktd" "racket-prefs.rktd" "PLT-autosave-toc.rktd" "PLT-autosave-toc-save.rktd" "download-cache/" "7.4/" "../" "./")
+
+ ("c:/Users/bjorwa/OneDrive - Equinor/" (24019 37698 0 0) "Yammer-LNG-group/" "Weekly Overview June 4 2018.pdf" "training/" "text/" "statoil-reports/" "ssu/" "requests/" "reports/" "python/" "projects/" "prices/" "presentations/" "presentation-template.pptx" "presentation-template (3).pptx" "presentation-template (2).pptx" "presentation-template (1).pptx" "PowerBI/" "outlook/" "origination/" "old-f-drive/" "oil-and-gas-180703.pdf" "notebook/" "NGI20191003.pdf" "New folder/" "market-reports/" "lngscorecard062018.pdf" "lng-fundamentals/" "Kpler/" "it-problems/" "illustrations/" "ifall/" "gas_price_discussion_September_2016.pptx" "ferdigheter/" "FactSheet draft 280619 (002).docx" "emails/" "Email attachments/" "economic-planning-assumptions/" "economic-papers/" "Drawing1.vsdx" "Drawing.vsdx" "Documents/" "desktop.ini" "database/" "Daily-LNG-Report/" "crash course/" "con-docs/" "China gas market review 10 Jan 19.pptx" "China gas market review 10 Jan 19 (1).pptx" "C-disk-stuff/" "Bullets - Week 19 2017.docx" "Book3.xlsx" "Book2.xlsx" "Book1.xlsx" "Book.xlsx" "Bjorn @ Statoil ASA.url" "Bjorn @ OneDrive - Statoil ASA.url" "Bjorn @ Equinor.url" "better-commercial-decisions/" "ad-hoc-type-of-stuff/" ".849C9593-D756-4E56-8D6E-42412F2A707B" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/" (23965 41178 0 0) "Roaming/" "LocalLow/" "Local/" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/.emacs.d/elpa/" (23985 63391 0 0) "yasnippet.el" "yasnippet-classic-snippets-1.0.2/" "yasnippet-0.13.0/" "which-key-20190802.240/" "use-package-20190405.2047/" "stopwatch.el" "sqlite-20180708.1711/" "smex-20151212.2209/" "seq-2.20/" "s-20180406.808/" "racket-mode-readme.txt" "racket-mode-20190926.2016/" "racket-mode-20190522.1323/" "pythonic-20190725.1258/" "popup-20160709.1429/" "org-sql-20190621.2111/" "org-grep-20151202.1229/" "org-bullets.el" "org-bullets-20190802.927/" "neotree.el" "multiple-cursors-20190820.749/" "lv-20190821.947/" "hydra-20190821.939/" "hl-sentence-20171018.1519/" "helm-org-20190819.617/" "helm-core-20190523.1035/" "helm-20190522.1501/" "geiser-0.6/" "flatland-theme-20171113.1521/" "flatland-black-theme-20170808.1312/" "faceup-20170925.1946/" "f-20190109.906/" "emacsql-sqlite-20190727.1710/" "emacsql-20190625.1859/" "dash-20190920.1035/" "boxquote-20170802.1117/" "bind-key-20180513.430/" "beacon-20190104.1931/" "async-20190503.656/" "archives/" "anaconda-mode-20190918.353/" "ace-window-readme.txt" "../" "./")
+
+ ("c:/Appl/SQLite/" (23954 1959 0 0) "sqlite-tools-win32-x86-3290000/" "ma.db" "../" "./")
+
+ ("c:/Appl/" (23954 1610 0 0) "SQLite/" "SMSTemp/" "emacs/" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/notebook/csv-files/" (23949 46372 0 0) "us-nuclear.csv" "south-korea-nuclear.csv" "list-of-worlds-coal-plants.csv" "japan-nuclear.csv" "india-nuclear.csv" "fuel-oil-power-plants.csv" "france-nuclear.csv" "china-nuclear.csv" "belgium-nuclear.csv" "africa.org" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/.emacs.d/functions/" (23949 49262 0 0) "energy-conversions.el" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/.emacs.d/git_hub/" (23949 49262 0 0) "wrap-region.el" "ispell.el" "golden-ratio.el" "dash.el" "beacon.el" "../" "./")
+
+ ("c:/Users/bjorwa/OneDrive - Equinor/python/" (23949 46160 0 0) "__pycache__/" "vipp_excel_tabell.py" "test_title.py" "scripts/" "jkm_likviditet.py" "documentation/" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/.emacs.d/snippets/" (23949 46168 0 0) "org-mode/" "lisp-interaction-mode/" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/programming/racket/" (23894 30269 0 0) "time-series.rkt" "flip-table.rkt" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/programming/" (23894 28375 0 0) "racket/" "../" "./")
+
+ ("c:/Users/bjorwa/Python/" (23827 29162 0 0) "tbl_flip.py" "lng-breakeven.py" "lister.py" "iteration.py" "interface.py" "goodies.py" "flip_tbl.py" "flip_table_unit_test.py" "conversions.py" "../" "./")
+
+ ("c:/Users/bjorwa/Racket/" (23838 1207 0 0) "time-series.rkt" "stagnant-prices.rkt" "flip-table.rkt" "conversions.rkt" "../" "./")
+
+ ("c:/appl/Emacs/bin/" (23789 16863 0 0) "zlib1.dll" "runemacs.exe" "libXpm-noX4.dll" "libxml2-2.dll" "libwinpthread-1.dll" "libtiffxx-5.dll" "libtiff-5.dll" "libtasn1-6.dll" "libstdc++-6.dll" "librsvg-2-2.dll" "libpng16-16.dll" "libpixman-1-0.dll" "libpcre-1.dll" "libpangowin32-1.0-0.dll" "libpangoft2-1.0-0.dll" "libpangocairo-1.0-0.dll" "libpango-1.0-0.dll" "libp11-kit-0.dll" "libnettle-6-2.dll" "liblzma-5.dll" "libjpeg-8.dll" "libjbig-0.dll" "libintl-8.dll" "libidn-11.dll" "libiconv-2.dll" "libhogweed-4-2.dll" "libharfbuzz-icu-0.dll" "libharfbuzz-gobject-0.dll" "libharfbuzz-0.dll" "libgraphite2.dll" "libgomp-1.dll" "libgobject-2.0-0.dll" "libgnutlsxx-28.dll" "libgnutls-30.dll" "libgmp-10.dll" "libgmodule-2.0-0.dll" "libglib-2.0-0.dll" "libgio-2.0-0.dll" "libgif-7.dll" "libgdk_pixbuf-2.0-0.dll" "libgcc_s_seh-1.dll" "libfreetype-6.dll" "libfontconfig-1.dll" "libffi-6.dll" "libexpat-1.dll" "libcroco-0.6-3.dll" "libcairo-script-interpreter-2.dll" "libcairo-gobject-2.dll" "libcairo-2.dll" "libbz2-1.dll" "etags.exe" "emacsclientw.exe" "emacsclient.exe" "emacs.exe" "emacs-25.3.exe" "emacs-25.1.exe" "ebrowse.exe" "ctags.exe" "addpm.exe" ".emacs~" ".emacs" "../" "./")
+
+ ("c:/Users/bjorwa/OneDrive - Statoil ASA/illustrations/" (23710 11543 0 0) "new-liquefaction-startups-2016-2019-mt-energy-aspects-the-dogs.png" "japan-new-regas-ccgt-energy-aspects-jan-2018.png" "../" "./")
+
+ ("c:/appl/Racket/" (23779 54721 0 0) "Uninstall.exe" "swindle.exe" "Slideshow.exe" "slatex.exe" "share/" "setup-plt.exe" "scribble.exe" "README.txt" "raco.exe" "Racket.exe" "plt-web-server.exe" "plt-r6rs.exe" "plt-r5rs.exe" "plt-help.exe" "PLT Games.exe" "pdf-slatex.exe" "mztext.exe" "mzscheme.exe" "mzpp.exe" "mzc.exe" "mred-text.exe" "lib/" "include/" "GRacket.exe" "gracket-text.exe" "etc/" "DrRacket.exe" "doc/" "collects/" "../" "./")
+
+ ("c:/appl/" (23779 54550 0 0) "SMSTemp/" "Shockwave/" "Racket/" "Python/" "o15-ctrremove.diagcab" "MicrosoftProgram_Install_and_Uninstall.meta.diagcab" "kpler_excel_addin_lng_v3.2.4.xlam" "GWOS/" "Files/" "Emacs/" "cygwin64/" "Anaconda3-5.2.0-Windows-x86_64.exe" "Anaconda/" "../" "./")
+
+ ("c:/Users/bjorwa/OneDrive - Equinor/python/documentation/" (23548 63328 0 0) "python_pandas_tutorial.pdf" "PandasPythonForDataScience.pdf" "pandasguide.pdf" "pandas.pdf" "numpybook.pdf" "numpy-user-1.11.0.pdf" "mastering-pandas.pdf" "../" "./")
+
+ ("c:/Users/bjorwa/OneDrive/" (23762 28496 0 0) "desktop.ini" "../" "./")
+
+ ("c:/Users/All Users/AppData/Local/" (23667 60963 0 0) "Microsoft/" "../" "./")
+
+ ("c:/Users/All Users/AppData/" (23667 60963 0 0) "Local/" "../" "./")
+
+ ("c:/Users/All Users/Adobe/ARM/" (23769 2024 0 0) "{291AA914-A987-4CE9-BD63-AE0A92D435E5}/" "{291AA914-A987-4CE9-BD63-0E0A92D435E5}/" "S/" "../" "./")
+
+ ("c:/Users/All Users/Adobe/" (23550 16357 0 0) "SLStore/" "ARM/" "Adobe PDF/" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/notebook/notebook_archive/" (23355 4829 0 0) "org-mode-tutorial.org" "nnworo-ndoro-nigeria.org" "hug.org" "computer-science.org" "../" "./")
+
+ ("c:/appl/Emacs/share/emacs/25.1/etc/" (23348 31542 0 0) "yow.lines" "WHY-FREE" "tutorials/" "TODO" "themes/" "THE-GNU-PROJECT" "TERMS" "srecode/" "spook.lines" "ses-example.ses" "schema/" "rgb.txt" "refcards/" "README" "publicsuffix.txt" "ps-prin1.ps" "ps-prin0.ps" "PROBLEMS" "package-keyring.gpg" "ORG-NEWS" "org/" "ORDERS" "NXML-NEWS" "nxml/" "NEXTSTEP" "NEWS.24" "NEWS.23" "NEWS.22" "NEWS.21" "NEWS.20" "NEWS.19" "NEWS.18" "NEWS.1-17" "NEWS" "MORE.STUFF" "MH-E-NEWS" "MACHINES" "LINUX-GNU" "JOKES" "images/" "HISTORY" "HELLO" "grep.txt" "gnus-tut.txt" "GNUS-NEWS" "gnus/" "GNU" "future-bug" "FTP" "forms/" "ETAGS.README" "ETAGS.EBNF" "ERC-NEWS" "enriched.txt" "emacs.icon" "emacs.desktop" "emacs.appdata.xml" "emacs-buffer.gdb" "edt-user.el" "e/" "DOC" "DISTRIB" "DEVEL.HUMOR" "DEBUG" "COPYING" "compilation.txt" "charsets/" "CENSORSHIP" "CALC-NEWS" "AUTHORS" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/emacs.d/snippets/org-mode/" (23695 44278 0 0) "zzprice" "zzliq" "reading-notes" "qqreg" "qqprice" "qqplatts" "qqliq" "qqcon" "linux-link" "99read" "1cntr" ".yas-compiled-snippets.el" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Local/" (23678 7638 0 0) "VirtualStore/" "Temporary Internet Files/" "TempOfficeC2RBB1E2A11-9824-4094-99DF-108A4D53EC38/" "Temp/" "SquirrelTemp/" "Spyder/" "SAP/" "regid.1991-06.com.microsoft/" "Power BI Desktop/" "Phishline/" "OneDrive/" "Microsoft_Corporation/" "Microsoft/" "IsolatedStorage/" "IconCache.db" "History/" "GOOGLE/" "GDIPFONTCACHEV1.DAT" "Diagnostics/" "conda/" "Citrix/" "Cisco/" "CEF/" "cache/" "assembly/" "Application Data/" "Adobe/" "../" "./")
+
+ ("c:/Users/All Users/" (19036 4840 0 0) "Templates/" "Synaptics/" "StatoilLogs/" "Start Menu/" "Spark/" "SnowSoftware/" "regid.1991-06.com.microsoft/" "regid.1986-12.com.adobe/" "Phishline/" "Package Cache/" "ntuser.pol" "Microsoft OneDrive/" "Microsoft/" "Lexmark Universal v2 PS3/" "Hewlett-Packard/" "FileOpen/" "Favorites/" "F5 Networks/" "Documents/" "Desktop/" "DataGenic/" "Citrix/" "Cisco/" "bcua/" "AppLog/" "Application Data/" "AppData/" "Adobe/" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/emacs.d/" (23661 936 0 0) "snippets/" "golden-ratio.el" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/.emacs.d/auto-save-list/" (23467 13783 0 0) ".saves-9620-LT-947534~" ".saves-8968-LT-947534~" ".saves-6672-LT-947534~" ".saves-6152-PC-783817~" ".saves-5968-PC-783817~" ".saves-5924-PC-783817~" ".saves-5768-PC-783817~" ".saves-5624-PC-783817~" ".saves-5420-PC-783817~" ".saves-5368-PC-783817~" ".saves-5208-PC-783817~" ".saves-4020-PC-783817~" ".saves-3892-PC-783817~" ".saves-3876-PC-783817~" "#c!!Users!bjorwa!AppData!Roaming!notebook!col.org#" "#c!!Users!bjorwa!AppData!Roaming!init!cor.el#" "../" "./")
+
+ ("c:/appl/Emacs/share/emacs/25.1/lisp/org/" (23413 24682 0 0) "ox.elc" "ox.el" "ox-texinfo.elc" "ox-texinfo.el" "ox-publish.elc" "ox-publish.el" "ox-org.elc" "ox-org.el" "ox-odt.elc" "ox-odt.el" "ox-md.elc" "ox-md.el" "ox-man.elc" "ox-man.el" "ox-latex.elc" "ox-latex.el" "ox-icalendar.elc" "ox-icalendar.el" "ox-html.elc" "ox-html.el" "ox-beamer.elc" "ox-beamer.el" "ox-ascii.elc" "ox-ascii.el" "org.elc" "org.el" "org-w3m.elc" "org-w3m.el" "org-version.el" "org-timer.elc" "org-timer.el" "org-table.elc" "org-table.el" "org-src.elc" "org-src.el" "org-rmail.elc" "org-rmail.el" "org-protocol.elc" "org-protocol.el" "org-plot.elc" "org-plot.el" "org-pcomplete.elc" "org-pcomplete.el" "org-mouse.elc" "org-mouse.el" "org-mobile.elc" "org-mobile.el" "org-mhe.elc" "org-mhe.el" "org-macs.elc" "org-macs.el" "org-macro.elc" "org-macro.el" "org-loaddefs.el" "org-list.elc" "org-list.el" "org-irc.elc" "org-irc.el" "org-install.el" "org-inlinetask.elc" "org-inlinetask.el" "org-info.elc" "org-info.el" "org-indent.elc" "org-indent.el" "org-id.elc" "org-id.el" "org-habit.elc" "org-habit.el" "org-gnus.elc" "org-gnus.el" "org-footnote.elc" "org-footnote.el" "org-feed.elc" "org-feed.el" "org-faces.elc" "org-faces.el" "org-faces-old.el" "org-eshell.elc" "org-eshell.el" "org-entities.elc" "org-entities.el" "org-element.elc" "org-element.el" "org-docview.elc" "org-docview.el" "org-datetree.elc" "org-datetree.el" "org-ctags.elc" "org-ctags.el" "org-crypt.elc" "org-crypt.el" "org-compat.elc" "org-compat.el" "org-colview.elc" "org-colview.el" "org-clock.elc" "org-clock.el" "org-capture.elc" "org-capture.el" "org-bibtex.elc" "org-bibtex.el" "org-bbdb.elc" "org-bbdb.el" "org-attach.elc" "org-attach.el" "org-archive.elc" "org-archive.el" "org-agenda.elc" "org-agenda.el" "ob.elc" "ob.el" "ob-tangle.elc" "ob-tangle.el" "ob-table.elc" "ob-table.el" "ob-sqlite.elc" "ob-sqlite.el" "ob-sql.elc" "ob-sql.el" "ob-shen.elc" "ob-shen.el" "ob-sh.elc" "ob-sh.el" "ob-screen.elc" "ob-screen.el" "ob-scheme.elc" "ob-scheme.el" "ob-scala.elc" "ob-scala.el" "ob-sass.elc" "ob-sass.el" "ob-ruby.elc" "ob-ruby.el" "ob-ref.elc" "ob-ref.el" "ob-R.elc" "ob-R.el" "ob-python.elc" "ob-python.el" "ob-plantuml.elc" "ob-plantuml.el" "ob-picolisp.elc" "ob-picolisp.el" "ob-perl.elc" "ob-perl.el" "ob-org.elc" "ob-org.el" "ob-octave.elc" "ob-octave.el" "ob-ocaml.elc" "ob-ocaml.el" "ob-mscgen.elc" "ob-mscgen.el" "ob-maxima.elc" "ob-maxima.el" "ob-matlab.elc" "ob-matlab.el" "ob-makefile.elc" "ob-makefile.el" "ob-lob.elc" "ob-lob.el" "ob-lisp.elc" "ob-lisp.el" "ob-lilypond.elc" "ob-lilypond.el" "ob-ledger.elc" "ob-ledger.el" "ob-latex.elc" "ob-latex.el" "ob-keys.elc" "ob-keys.el" "ob-js.elc" "ob-js.el" "ob-java.elc" "ob-java.el" "ob-io.elc" "ob-io.el" "ob-haskell.elc" "ob-haskell.el" "ob-gnuplot.elc" "ob-gnuplot.el" "ob-fortran.elc" "ob-fortran.el" "ob-exp.elc" "ob-exp.el" "ob-eval.elc" "ob-eval.el" "ob-emacs-lisp.elc" "ob-emacs-lisp.el" "ob-dot.elc" "ob-dot.el" "ob-ditaa.elc" "ob-ditaa.el" "ob-css.elc" "ob-css.el" "ob-core.elc" "ob-core.el" "ob-comint.elc" "ob-comint.el" "ob-clojure.elc" "ob-clojure.el" "ob-calc.elc" "ob-calc.el" "ob-C.elc" "ob-C.el" "ob-awk.elc" "ob-awk.el" "ob-asymptote.elc" "ob-asymptote.el" "../" "./")
+
+ ("c:/appl/Emacs/share/emacs/25.1/lisp/" (23348 31733 0 0) "xwidget.elc" "xwidget.el" "xt-mouse.elc" "xt-mouse.el" "xml.elc" "xml.el" "x-dnd.elc" "x-dnd.el" "woman.elc" "woman.el" "winner.elc" "winner.el" "window.elc" "window.el" "windmove.elc" "windmove.el" "widget.elc" "widget.el" "wid-edit.elc" "wid-edit.el" "wid-browse.elc" "wid-browse.el" "whitespace.elc" "whitespace.el" "wdired.elc" "wdired.el" "w32-vars.elc" "w32-vars.el" "w32-fns.elc" "w32-fns.el" "vt100-led.elc" "vt100-led.el" "vt-control.elc" "vt-control.el" "view.elc" "view.el" "version.elc" "version.el" "vcursor.elc" "vcursor.el" "vc/" "userlock.elc" "userlock.el" "url/" "uniquify.elc" "uniquify.el" "type-break.elc" "type-break.el" "tutorial.elc" "tutorial.el" "tree-widget.elc" "tree-widget.el" "tooltip.elc" "tooltip.el" "tool-bar.elc" "tool-bar.el" "tmm.elc" "tmm.el" "timezone.elc" "timezone.el" "time.elc" "time.el" "time-stamp.elc" "time-stamp.el" "thumbs.elc" "thumbs.el" "thingatpt.elc" "thingatpt.el" "textmodes/" "term.elc" "term.el" "term/" "tempo.elc" "tempo.el" "tar-mode.elc" "tar-mode.el" "talk.elc" "talk.el" "tabify.elc" "tabify.el" "t-mouse.elc" "t-mouse.el" "subr.elc" "subr.el" "subdirs.el" "strokes.elc" "strokes.el" "startup.elc" "startup.el" "speedbar.elc" "speedbar.el" "soundex.elc" "soundex.el" "sort.elc" "sort.el" "skeleton.elc" "skeleton.el" "simple.elc" "simple.el" "shell.elc" "shell.el" "shadowfile.elc" "shadowfile.el" "ses.elc" "ses.el" "server.elc" "server.el" "select.elc" "select.el" "scroll-lock.elc" "scroll-lock.el" "scroll-bar.elc" "scroll-bar.el" "scroll-all.elc" "scroll-all.el" "sb-image.elc" "sb-image.el" "saveplace.elc" "saveplace.el" "savehist.elc" "savehist.el" "ruler-mode.elc" "ruler-mode.el" "rot13.elc" "rot13.el" "rfn-eshadow.elc" "rfn-eshadow.el" "reveal.elc" "reveal.el" "reposition.elc" "reposition.el" "replace.elc" "replace.el" "repeat.elc" "repeat.el" "register.elc" "register.el" "rect.elc" "rect.el" "recentf.elc" "recentf.el" "README" "ps-samp.elc" "ps-samp.el" "ps-print.elc" "ps-print.el" "ps-mule.elc" "ps-mule.el" "ps-def.elc" "ps-def.el" "ps-bdf.elc" "ps-bdf.el" "progmodes/" "profiler.elc" "profiler.el" "proced.elc" "proced.el" "printing.elc" "printing.el" "play/" "pcomplete.elc" "pcomplete.el" "pcmpl-x.elc" "pcmpl-x.el" "pcmpl-unix.elc" "pcmpl-unix.el" "pcmpl-rpm.elc" "pcmpl-rpm.el" "pcmpl-linux.elc" "pcmpl-linux.el" "pcmpl-gnu.elc" "pcmpl-gnu.el" "pcmpl-cvs.elc" "pcmpl-cvs.el" "password-cache.elc" "password-cache.el" "paren.elc" "paren.el" "outline.elc" "outline.el" "org/" "obsolete/" "obarray.elc" "obarray.el" "nxml/" "novice.elc" "novice.el" "notifications.elc" "notifications.el" "newcomment.elc" "newcomment.el" "net/" "mwheel.elc" "mwheel.el" "msb.elc" "msb.el" "mpc.elc" "mpc.el" "mouse.elc" "mouse.el" "mouse-drag.elc" "mouse-drag.el" "mouse-copy.elc" "mouse-copy.el" "misearch.elc" "misearch.el" "misc.elc" "misc.el" "minibuffer.elc" "minibuffer.el" "minibuf-eldef.elc" "minibuf-eldef.el" "midnight.elc" "midnight.el" "mh-e/" "menu-bar.elc" "menu-bar.el" "md4.elc" "md4.el" "mb-depth.elc" "mb-depth.el" "master.elc" "master.el" "man.elc" "man.el" "makesum.elc" "makesum.el" "mail/" "macros.elc" "macros.el" "ls-lisp.elc" "ls-lisp.el" "lpr.elc" "lpr.el" "locate.elc" "locate.el" "loadup.el" "loadhist.elc" "loadhist.el" "loaddefs.el" "linum.elc" "linum.el" "leim/" "ldefs-boot.el" "language/" "kmacro.elc" "kmacro.el" "kermit.elc" "kermit.el" "json.elc" "json.el" "jka-compr.elc" "jka-compr.el" "jka-cmpr-hook.elc" "jka-cmpr-hook.el" "jit-lock.elc" "jit-lock.el" "isearchb.elc" "isearchb.el" "isearch.elc" "isearch.el" "international/" "informat.elc" "informat.el" "info.elc" "info.el" "info-xref.elc" "info-xref.el" "info-look.elc" "info-look.el" "indent.elc" "indent.el" "imenu.elc" "imenu.el" "image.elc" "image.el" "image-mode.elc" "image-mode.el" "image-file.elc" "image-file.el" "image-dired.elc" "image-dired.el" "iimage.elc" "iimage.el" "ielm.elc" "ielm.el" "ido.elc" "ido.el" "icomplete.elc" "icomplete.el" "ibuffer.elc" "ibuffer.el" "ibuf-macs.elc" "ibuf-macs.el" "ibuf-ext.elc" "ibuf-ext.el" "htmlfontify.elc" "htmlfontify.el" "hl-line.elc" "hl-line.el" "hippie-exp.elc" "hippie-exp.el" "hilit-chg.elc" "hilit-chg.el" "hi-lock.elc" "hi-lock.el" "hfy-cmap.elc" "hfy-cmap.el" "hexl.elc" "hexl.el" "hex-util.elc" "hex-util.el" "help.elc" "help.el" "help-mode.elc" "help-mode.el" "help-macro.elc" "help-macro.el" "help-fns.elc" "help-fns.el" "help-at-pt.elc" "help-at-pt.el" "gs.elc" "gs.el" "gnus/" "generic-x.elc" "generic-x.el" "fringe.elc" "fringe.el" "frameset.elc" "frameset.el" "frame.elc" "frame.el" "forms.elc" "forms.el" "format.elc" "format.el" "format-spec.elc" "format-spec.el" "font-lock.elc" "font-lock.el" "font-core.elc" "font-core.el" "follow.elc" "follow.el" "foldout.elc" "foldout.el" "flow-ctrl.elc" "flow-ctrl.el" "finder.elc" "finder.el" "finder-inf.el" "find-lisp.elc" "find-lisp.el" "find-file.elc" "find-file.el" "find-dired.elc" "find-dired.el" "find-cmd.elc" "find-cmd.el" "filesets.elc" "filesets.el" "files.elc" "files.el" "files-x.elc" "files-x.el" "filenotify.elc" "filenotify.el" "filecache.elc" "filecache.el" "ffap.elc" "ffap.el" "faces.elc" "faces.el" "facemenu.elc" "facemenu.el" "face-remap.elc" "face-remap.el" "ezimage.elc" "ezimage.el" "expand.elc" "expand.el" "eshell/" "erc/" "epg.elc" "epg.el" "epg-config.elc" "epg-config.el" "epa.elc" "epa.el" "epa-mail.elc" "epa-mail.el" "epa-hook.elc" "epa-hook.el" "epa-file.elc" "epa-file.el" "epa-dired.elc" "epa-dired.el" "env.elc" "env.el" "emulation/" "emacs-lock.elc" "emacs-lock.el" "emacs-lisp/" "elide-head.elc" "elide-head.el" "electric.elc" "electric.el" "elec-pair.elc" "elec-pair.el" "ehelp.elc" "ehelp.el" "edmacro.elc" "edmacro.el" "echistory.elc" "echistory.el" "ebuff-menu.elc" "ebuff-menu.el" "dynamic-setting.elc" "dynamic-setting.el" "double.elc" "double.el" "dos-w32.elc" "dos-w32.el" "dos-vars.elc" "dos-vars.el" "dos-fns.elc" "dos-fns.el" "dom.elc" "dom.el" "doc-view.elc" "doc-view.el" "dnd.elc" "dnd.el" "disp-table.elc" "disp-table.el" "dirtrack.elc" "dirtrack.el" "dired.elc" "dired.el" "dired-x.elc" "dired-x.el" "dired-aux.elc" "dired-aux.el" "dframe.elc" "dframe.el" "desktop.elc" "desktop.el" "descr-text.elc" "descr-text.el" "delsel.elc" "delsel.el" "delim-col.elc" "delim-col.el" "dabbrev.elc" "dabbrev.el" "custom.elc" "custom.el" "cus-theme.elc" "cus-theme.el" "cus-start.elc" "cus-start.el" "cus-load.el" "cus-face.elc" "cus-face.el" "cus-edit.elc" "cus-edit.el" "cus-dep.elc" "cus-dep.el" "COPYING" "composite.elc" "composite.el" "completion.elc" "completion.el" "comint.elc" "comint.el" "color.elc" "color.el" "cmuscheme.elc" "cmuscheme.el" "chistory.elc" "chistory.el" "char-fold.elc" "char-fold.el" "cedet/" "cdl.elc" "cdl.el" "case-table.elc" "case-table.el" "calendar/" "calculator.elc" "calculator.el" "calc/" "button.elc" "button.el" "buff-menu.elc" "buff-menu.el" "bs.elc" "bs.el" "bookmark.elc" "bookmark.el" "bindings.elc" "bindings.el" "battery.elc" "battery.el" "avoid.elc" "avoid.el" "autorevert.elc" "autorevert.el" "autoinsert.elc" "autoinsert.el" "autoarg.elc" "autoarg.el" "array.elc" "array.el" "arc-mode.elc" "arc-mode.el" "apropos.elc" "apropos.el" "ansi-color.elc" "ansi-color.el" "allout.elc" "allout.el" "allout-widgets.elc" "allout-widgets.el" "align.elc" "align.el" "abbrev.elc" "abbrev.el" "../" "./")
+
+ ("c:/appl/Emacs/share/emacs/25.1/" (23348 31747 0 0) "site-lisp/" "README.W32" "lisp/" "etc/" "../" "./")
+
+ ("c:/appl/Emacs/share/emacs/" (23348 31747 0 0) "site-lisp/" "25.1/" "../" "./")
+
+ ("c:/appl/Emacs/share/" (23348 31748 0 0) "man/" "info/" "icons/" "emacs/" "applications/" "appdata/" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/emacs.d/snippets/" (23363 155 0 0) "org-mode/" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/.emacs.d/snippets/lisp-interaction-mode/" (22903 7990 0 0) "../" "./")
+
+ ("c:/appl/Emacs/" (23348 31748 0 0) "var/" "share/" "notebook/" "libexec/" "init/" "bin/" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/.emacs.d/git-hub/" (23282 49203 0 0) "wrap-region.el" "../" "./")
+
+ ("c:/APPL/" (23245 52780 0 0) "SMSTemp/" "Shockwave/" "Setup/" "SCCMClient1610/" "Python27/" "Patch/" "GWOS/" "gdm_5.2.3.17186_x64_enterprise/" "Emacs/" "ClientHealth/" "../" "./")
+
+ ("c:/Users/bjorwa/AppData/Roaming/notebook/ltxpng/" (22800 30243 0 0) "../" "./")
+
+ ("c:/APPL/Emacs/" (22763 13779 0 0) "var/" "share/" "notebook/" "libexec/" "init/" "bin/" "../" "./")
+
+ ("c:/APPL/Emacs/bin/" (22763 15200 0 0) "zlib1.dll" "runemacs.exe" "libXpm-noX4.dll" "libxml2-2.dll" "libwinpthread-1.dll" "libtiffxx-5.dll" "libtiff-5.dll" "libtasn1-6.dll" "libstdc++-6.dll" "librsvg-2-2.dll" "libpng16-16.dll" "libpixman-1-0.dll" "libpcre-1.dll" "libpangowin32-1.0-0.dll" "libpangoft2-1.0-0.dll" "libpangocairo-1.0-0.dll" "libpango-1.0-0.dll" "libp11-kit-0.dll" "libnettle-6-2.dll" "liblzma-5.dll" "libjpeg-8.dll" "libjbig-0.dll" "libintl-8.dll" "libidn-11.dll" "libiconv-2.dll" "libhogweed-4-2.dll" "libharfbuzz-icu-0.dll" "libharfbuzz-gobject-0.dll" "libharfbuzz-0.dll" "libgraphite2.dll" "libgomp-1.dll" "libgobject-2.0-0.dll" "libgnutlsxx-28.dll" "libgnutls-30.dll" "libgmp-10.dll" "libgmodule-2.0-0.dll" "libglib-2.0-0.dll" "libgio-2.0-0.dll" "libgif-7.dll" "libgdk_pixbuf-2.0-0.dll" "libgcc_s_seh-1.dll" "libfreetype-6.dll" "libfontconfig-1.dll" "libffi-6.dll" "libexpat-1.dll" "libcroco-0.6-3.dll" "libcairo-script-interpreter-2.dll" "libcairo-gobject-2.dll" "libcairo-2.dll" "libbz2-1.dll" "etags.exe" "emacsclientw.exe" "emacsclient.exe" "emacs.exe" "emacs-25.1.exe" "ebrowse.exe" "ctags.exe" "addpm.exe" ".emacs~" ".emacs" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
