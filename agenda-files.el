@@ -1,9 +1,9 @@
   ;; (cond ((eq system-type 'windows-nt) 
-  ;;        (setq mjo "~/:c/users/bjorwa/documents/GitHub/markedsanalyse/journaler/"
-  ;;              not "~/:c/users/bjorwa/documents/GitHub/markedsanalyse/notater/"))
+  ;;        (setq mjo "~/:c/users/bjorwa/documents/GitHub/Markedsanalyse/journaler/"
+  ;;              not "~/:c/users/bjorwa/documents/GitHub/Markedsanalyse/notater/"))
   ;;       ((eq system-type 'gnu/linux) 
-  ;;        (setq mjo "~/GitHub/markedsanalyse/journaler/"
-  ;;              not "~/GitHub/markedsanalyse/notater/")))
+  ;;        (setq mjo "~/GitHub/Markedsanalyse/journaler/"
+  ;;              not "~/GitHub/Markedsanalyse/notater/")))
   ;; (setq org-agenda-files (concat mjo "energi-master.org"))
   ;; ;; (setq org-agenda-files (concat mjo "balanser.org"))
   ;;                         (concat mjo "presentasjoner.org")
@@ -14,14 +14,14 @@
   ;;                         (concat not "informatikk.org")
   ;;                         (concat not "ferdigheter.org"))
 
-  ;; (setq org-agenda-files '("~/GitHub/markedsanalyse/journaler/energi-master.org"
-  ;;                           "~/GitHub/markedsanalyse/journaler/balanse.org"
-  ;;                           "~/GitHub/markedsanalyse/journaler/presentasjoner.org"
-  ;;                           "~/GitHub/markedsanalyse/journaler/liq.org"
-  ;;                           "~/GitHub/markedsanalyse/journaler/bd.org"
-  ;;                           "~/GitHub/markedsanalyse/journaler/pk.org"
+  ;; (setq org-agenda-files '("~/GitHub/Markedsanalyse/journaler/energi-master.org"
+  ;;                           "~/GitHub/Markedsanalyse/journaler/balanse.org"
+  ;;                           "~/GitHub/Markedsanalyse/journaler/presentasjoner.org"
+  ;;                           "~/GitHub/Markedsanalyse/journaler/liq.org"
+  ;;                           "~/GitHub/Markedsanalyse/journaler/bd.org"
+  ;;                           "~/GitHub/Markedsanalyse/journaler/pk.org"
   ;;                           "~/GitHub/notater/samfunndrill.org"
-  ;;                           "~/GitHub/markedsanalyse/journaler/journal.org" 
+  ;;                           "~/GitHub/Markedsanalyse/journaler/journal.org" 
   ;;                           "~/GitHub/notater/moeter.org" 
   ;;                           "/home/bwarland/GitHub/notater/informatikk.org"
   ;;                           "~/GitHub/notater/ferdigheter.org"))
