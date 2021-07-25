@@ -32,3 +32,5 @@
 				 (interactive)
 				 (popup-menu 'yank-menu)))
 (global-set-key (kbd "C-x <f12>") 'org-drill)
+(global-set-key (kbd "C-c w") 'whitespace-cleanup)
+(global-set-key (kbd "C-q") 'kill-this-buffer)
