@@ -24,7 +24,7 @@
   ;; (use-package doom-themes
     ;; :init (load-theme 'doom-palenight t))
 
-(setq-default show-trailing-whitespace t)
+;; (setq-default show-trailing-whitespace t)
 
   (put 'downcase-region 'disabled nil)
   (set-language-environment "utf-8")
