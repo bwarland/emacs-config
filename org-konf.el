@@ -60,7 +60,7 @@
 ;;                                           ((concat lp "master-energi.org.org") :maxlevel . 4)))))))
 ;; (advice-add 'org-refile :after 'org-save-all-org-buffers)
 
-  ;; (require 'org-fc-hydra)
+;; (require 'org-fc-hydra)
 
 (cond ((eq system-type 'windows-nt)
        (setq org-capture-templates
@@ -209,13 +209,13 @@
 				   )))
 (setq org-babel-python-command "python3")
 
-  (require 'org-drill)
+(require 'org-drill)
 
-  (use-package org-drill
-    :ensure t
-    ;; https://gitlab.com/phillord/org-drill/
-    :config
-    (setq org-drill-maximum-duration 20
-          org-drill-spaced-repetition-algorithm 'sm2
-          org-drill-add-random-noise-to-intervals-p t
-          org-drill-adjust-intervals-for-early-and-late-repetitions-p t))
+(use-package org-drill
+  :ensure t
+  ;; https://gitlab.com/phillord/org-drill/
+  :config
+  (setq org-drill-maximum-duration 20
+        org-drill-spaced-repetition-algorithm 'sm2
+        org-drill-add-random-noise-to-intervals-p t
+        org-drill-adjust-intervals-for-early-and-late-repetitions-p t))
