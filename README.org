@@ -116,7 +116,7 @@ Jeg synes at menyer generelt sett i emacs gir visuell støy. og hva oppstartsbes
   (cond ((eq system-type 'windows-nt) (set-frame-font "consolas-14"))
         ((string= system-name "mbell") (set-frame-font "liberation mono-12"))
         ((string= system-name "kbell") (set-frame-font "liberation mono-11"))
-        ((string= system-name "ingentingen") (set-frame-font "liberation mono-12")))
+        ((string= system-name "nyvaar") (set-frame-font "liberation mono-8")))
 #+end_src
 *** doom modeline
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
