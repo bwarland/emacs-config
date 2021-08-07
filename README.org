@@ -602,23 +602,23 @@ F.eks <pyt + tab vil eksandere til python med tangle.
 https://emacs.stackexchange.com/questions/28184/org-mode-how-can-i-point-to-python3-5-in-my-org-mode-doc
 ** Org-roam
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-roam.el"
-(use-package org-roam
-  :ensure t
-  :init
-  (setq org-roam-v2-ack t)
-  :custom
-  (org-roam-directory "~/GitHub/Notater/org-roam")
-  :bind (("C-c n l" . org-roam-buffer-toggle)
-	 ("C-c n f" . org-roam-node-find)
-	 ("C-c n i" . org-roam-node-insert)
-	 ("C-c n g" . org-roam-node-graph)
-	 ("C-c n c" . org-roam-capture)
-	 )"C-c b t" . org-roam-buffer-toggle)
-	 )
-  :config
-  (org-roam-setup))
-(require 'org-roam-protocol)
-;; (require 'company-org-roam)
+  (use-package org-roam
+    :ensure t
+    :init
+    (setq org-roam-v2-ack t)
+    :custom
+    (org-roam-directory "~/GitHub/Notater/org-roam")
+    :bind (("C-c n l" . org-roam-buffer-toggle)
+           ("C-c n f" . org-roam-node-find)
+           ("C-c n i" . org-roam-node-insert)
+           ("C-c n g" . org-roam-node-graph)
+           ("C-c n c" . org-roam-capture)
+           ;; )"C-c b t" . org-roam-buffer-toggle)
+           )
+    :config
+    (org-roam-setup))
+  (require 'org-roam-protocol)
+  ;; (require 'company-org-roam)
 #+end_src
 ** Terping
 En strukturert terping av viktig informasjon, metoder og teknikker er viktig for meg da jeg har en teflonhjerne som ikke raskt absorberer. Dette tror jeg er en pakke som ikke jevnlig oppdateres, om i det hele tatt. og her har jeg hatt litt problemer med en feilmelding og kluss med kode som jeg på et vil klarte å kontrollere ved å blokke ut noe av koden i modulens el-fil (laster denne inn i stedet for elc-filen, [[file:notater/ferdigheter.org::*feil under emacs-konfigurering][beskrivelse i filen ferdigheter.org]]).
