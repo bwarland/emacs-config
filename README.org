@@ -123,6 +123,7 @@ Jeg synes at menyer generelt sett i emacs gir visuell støy. og hva oppstartsbes
 (use-package doom-modeline
     :ensure t
     :init (doom-modeline-mode 1)
+    :hook (after-init . doom-modeline-init)
     :config (setq doom-modeline-bar-height 25
                   doom-modeline-bar-width 3
                   doom-modeline-buffer-encoding t
@@ -196,6 +197,26 @@ Jeg sender ofte filer fra maskin til masking i løpet av dagen og da er det grei
 (global-auto-revert-mode t)
 #+end_src
 * Fullføring
+** Company
+#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/helm-konf.el"
+(add-hook 'after-init-hook 'global-company-mode)
+(use-package company
+  :commands (company-mode
+	     company-complete-common
+	     company-complete-selection
+	     helm-company)
+  :init (setq company-minimum-prefix-length 3
+	      company-require-match nil
+	      company-selection-wrap-around t
+	      company-dabbrev-downcase t
+	      company-tooltip-limit 20
+	      company-tooltip-minimum-width 15
+	      company-tooltip-align-annotations 1)
+  :config (setq company-idle-delay 1000
+		company-minimum-prefix-length 3)
+  (global-company-mode))
+      
+#+end_src
 ** Helm 
 *** [[https://emacs-helm.github.io/helm/#introduction][Generelt]]
 Pakke som lager et rammeverk for søking og innsnevring av valg og for det å fullføre navn på filer og kommandoer og så videre.

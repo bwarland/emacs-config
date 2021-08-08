@@ -17,6 +17,7 @@
 (use-package doom-modeline
     :ensure t
     :init (doom-modeline-mode 1)
+    :hook (after-init . doom-modeline-init)
     :config (setq doom-modeline-bar-height 25
                   doom-modeline-bar-width 3
                   doom-modeline-buffer-encoding t
