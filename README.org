@@ -114,7 +114,7 @@ Jeg synes at menyer generelt sett i emacs gir visuell støy. og hva oppstartsbes
 **** basis font
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
   (cond ((eq system-type 'windows-nt) (set-frame-font "consolas-14"))
-        ((string= system-name "mbell") (set-frame-font "liberation mono-12"))
+        ((string= system-name "mbell") (set-frame-font "liberation mono-14"))
         ((string= system-name "kbell") (set-frame-font "liberation mono-11"))
         ((string= system-name "nyvaar") (set-frame-font "liberation mono-10")))
 #+end_src
@@ -127,7 +127,13 @@ Jeg synes at menyer generelt sett i emacs gir visuell støy. og hva oppstartsbes
     :config (setq doom-modeline-bar-height 25
                   doom-modeline-bar-width 3
                   doom-modeline-buffer-encoding t
-                  doom-modeline-workspace-name t))
+                  doom-modeline-workspace-name t
+		  doom-modeline-major-mode-icon t
+		  doom-modeline-buffer-state-icon t
+		  doom-modeline-buffer-modification-icon t
+		  doom-modeline-modal-icon t
+		  doom-modeline-env-python-executable "python"
+		  doom-modeline-icon (display-graphic-p)))
   ;; (use-package doom-themes
     ;; :init (load-theme 'doom-palenight t))
 #+end_src
@@ -304,7 +310,6 @@ Bruk av flere markører over flere linjer.
 * Org-mode
 Alle moduler og pakker som har med org-mode å gjøre. Svært mye av min org-mode konfigurering kommer i fra [[http://doc.norang.ca/org-mode.html][Bernt Hansen sin konfigurasjonsfil]].
 ** generelt
-=======
 De moduler og pakker som har med org-mode å gjøre. Generelt sett så kunne det vært hensiktsmessig å samle alle disse i en "use-package", og det har jeg forøvrig på Windows-maskinen, men jeg ser nytte i å dele opp over flere mindre moduler. 
 ** Generelt
 Det meste av det som ligger her har jeg hentet i fra Bernt Hansen sin konfigurasjon, dvs. det som ligger under setq-remsen.
@@ -618,20 +623,23 @@ F.eks <pyt + tab vil eksandere til python med tangle.
 https://emacs.stackexchange.com/questions/28184/org-mode-how-can-i-point-to-python3-5-in-my-org-mode-doc
 ** Org-roam
 #+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/org-roam.el"
-(use-package org-roam
-  :ensure t
-  :init
-  (setq org-roam-v2-ack t)
-  :custom
-  (org-roam-directory "~/GitHub/Notater/org-roam")
-  :bind (("C-c n l" . org-roam-buffer-toggle)
-	 ("C-c n f" . org-roam-node-find)
-	 ("C-c n i" . org-roam-node-insert)
-	 ("C-c n g" . org-roam-node-graph)
-	 ("C-c n c" . org-roam-capture)
-	 )
-  :config
-  (org-roam-setup))
+  (use-package org-roam
+    :ensure t
+    :init
+    (setq org-roam-v2-ack t)
+    :custom
+    (org-roam-directory "~/GitHub/Notater/org-roam")
+    :bind (("C-c n l" . org-roam-buffer-toggle)
+           ("C-c n f" . org-roam-node-find)
+           ("C-c n i" . org-roam-node-insert)
+           ("C-c n g" . org-roam-node-graph)
+           ("C-c n c" . org-roam-capture)
+           ;; )"C-c b t" . org-roam-buffer-toggle)
+           )
+    :config
+    (org-roam-setup))
+  (require 'org-roam-protocol)
+  ;; (require 'company-org-roam)
 #+end_src
 ** Terping
 En strukturert terping av viktig informasjon, metoder og teknikker er viktig for meg da jeg har en teflonhjerne som ikke raskt absorberer. Dette tror jeg er en pakke som ikke jevnlig oppdateres, om i det hele tatt. og her har jeg hatt litt problemer med en feilmelding og kluss med kode som jeg på et vil klarte å kontrollere ved å blokke ut noe av koden i modulens el-fil (laster denne inn i stedet for elc-filen, [[file:notater/ferdigheter.org::*feil under emacs-konfigurering][beskrivelse i filen ferdigheter.org]]).
