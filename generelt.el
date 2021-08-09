@@ -37,6 +37,9 @@
   (set-language-environment "utf-8")
   (require 'rainbow-delimiters)
   ;; (rainbow-delimiters-mode 1)
+(require 'openwith)
+(openwith-mode t)
+(setq openwith-associations '(("\\.pdf\\'" "evince" (file))))
 
 (setq abbrev-file-name "~/.emacs.d/abbrev_defs")
 (setq save-abbrevs 'silent)
