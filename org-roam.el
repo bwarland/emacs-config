@@ -9,7 +9,8 @@
            ("C-c n i" . org-roam-node-insert)
            ("C-c n g" . org-roam-node-graph)
            ("C-c n c" . org-roam-capture)
-           ;; )"C-c b t" . org-roam-buffer-toggle)
+           ("C-c b t" . org-roam-buffer-toggle)
+	   ("C-c d s" . org-roam-db-sync)
            )
     :config
     (org-roam-setup))
