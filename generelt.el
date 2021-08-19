@@ -45,11 +45,11 @@
 (setq save-abbrevs 'silent)
 (setq-default abbrev-mode t)
 
-    (use-package hi-lock
-      :defer t
-      :bind (("M-o l" . highlight-lines-matching-regexp)
-             ("M-o r" . highlight-regexp)
-             ("M-o w" . highlight-phrase)))
+    ;; (use-package hi-lock
+    ;;   :defer t
+    ;;   :bind (("M-o l" . highlight-lines-matching-regexp)
+    ;;          ("M-o r" . highlight-regexp)
+    ;;          ("M-o w" . highlight-phrase)))
 
   (use-package command-log-mode
     :defer t
