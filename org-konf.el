@@ -33,6 +33,8 @@
 
   (cond ((eq system-type 'windows-nt) (setq org-archive-location "~/c:users/bjorwa/Documents/org-arkiv/arkiv.org::* task"))
         ((eq system-type 'gnu/linux) (setq org-archive-location "~/Documents/org-arkiv/arkiv.org::* task")))
+(require 'org-id)
+(setq org-id-track-globally t)
 
 (cond ((eq system-type 'windows-nt) (setq default-directory "~/c:users/bjorwa/documents/GitHub/"))
       ((eq system-type 'gnu/linux) (setq default-directory "~/GitHub/")))
