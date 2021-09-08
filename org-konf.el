@@ -35,6 +35,7 @@
         ((eq system-type 'gnu/linux) (setq org-archive-location "~/Documents/org-arkiv/arkiv.org::* task")))
 (require 'org-id)
 (setq org-id-track-globally t)
+(setq org-agenda-files (directory-files-recursively "~/GitHub/Notater/" "\\.org$"))
 
 (cond ((eq system-type 'windows-nt) (setq default-directory "~/c:users/bjorwa/documents/GitHub/"))
       ((eq system-type 'gnu/linux) (setq default-directory "~/GitHub/")))
