@@ -51,13 +51,6 @@
     ;;          ("M-o r" . highlight-regexp)
     ;;          ("M-o w" . highlight-phrase)))
 
-  (use-package command-log-mode
-    :defer t
-    :bind
-    ("C-c <f10>" . clm/toggle-command-log-buffer)
-    :config
-    (global-command-log-mode t))
-
 (emacs-init-time)
 ;; use a hook so the message doesn't get clobbered by other messages.
 (add-hook 'emacs-startup-hook
@@ -76,3 +69,10 @@
         ;; ispell-hunspell-dict-path-alist '((/usr/share/doc/hunspell-no))
 
 (global-auto-revert-mode t)
+
+  (use-package command-log-mode
+    :defer t
+    :bind
+    ("C-c <f10>" . clm/toggle-command-log-buffer)
+    :config
+    (global-command-log-mode t))
