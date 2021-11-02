@@ -11,6 +11,7 @@
          ("C-c n i" . org-roam-node-insert)
          ("C-c n g" . org-roam-node-graph)
          ("C-c n c" . org-roam-capture)
+	 ("C-c n r" . org-roam-node-random)
          ("C-c b t" . org-roam-buffer-toggle)
 	 ("C-c d s" . org-roam-db-sync)
 	 ("C-c n j" . org-roam-dailies-capture-today)
@@ -23,6 +24,30 @@
   (org-roam-setup)
   (org-roam-db-autosync-mode)
   (require 'org-roam-protocol))
+(use-package helm-rg
+  :ensure t
+  :config
+  ;; Add actions for inserting org file link from selected match
+  (defun insert-org-mode-link-from-helm-result (candidate)
+    (interactive)
+    (with-helm-current-buffer
+      (insert (format "[[file:%s][%s]]"
+                      (plist-get candidate :file)
+                      ;; Extract the title from the file name
+                      (subst-char-in-string
+                       ?_ ?\s
+                       (first
+                        (split-string
+                         (first
+                          (last
+                           (split-string (plist-get candidate :file) "\\-")))
+                         "\\.")))))))
+
+  (helm-add-action-to-source "Insert org-mode link"
+                             'insert-org-mode-link-from-helm-result
+                             helm-rg-process-source))
+;; (use-package graphviz-dot-mode
+;;   :ensure t)
 ;; (require 'company-org-roam)
 
 (use-package deft

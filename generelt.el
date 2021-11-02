@@ -29,7 +29,7 @@
 		  doom-modeline-env-python-executable "python"
 		  doom-modeline-icon (display-graphic-p)))
   ;; (use-package doom-themes
-    ;; :init (load-theme 'doom-palenight t))
+  ;;   :init (load-theme 'doom-palenight t))
 
 ;; (setq-default show-trailing-whitespace t)
 

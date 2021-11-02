@@ -203,14 +203,14 @@
 (add-to-list 'org-structure-template-alist '("srt" . "src racket :tangle"))
 (add-to-list 'org-structure-template-alist '("sq" . "src sqlite"))
 
-(org-babel-do-load-languages
- 'org-babel-load-languages (quote ((emacs-lisp . t)
-                                   (racket . t)
-                                   (sqlite . t)
-                                   (python . t)
-				   ;; (ipython .t)
-				   )))
-(setq org-babel-python-command "python3")
+  (org-babel-do-load-languages
+   'org-babel-load-languages (quote ((emacs-lisp . t)
+                                     ;; (racket . t)
+                                     (sqlite . t)
+                                     (python . t)
+                                     ;; (ipython .t)
+                                     )))
+  (setq org-babel-python-command "python3")
 
   (require 'org-drill)
 
