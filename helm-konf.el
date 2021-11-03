@@ -15,6 +15,10 @@
 		company-minimum-prefix-length 3)
   (global-company-mode))
 
+(use-package swiper-helm
+  :ensure t
+  :bind ("C-s" . swiper-helm))
+
   (use-package helm
     :ensure t
     :bind (
@@ -33,8 +37,8 @@
            ("M-k" . helm-next-line)
            ("M-i" . helm-previous-page)
            ("M-k" . helm-next-page)
-           ("M-h" . helm-beginning-of-buffer)
-           ("M-h" . helm-end-of-buffer)
+           ;; ("M-h" . helm-beginning-of-buffer)
+           ;; ("M-h" . helm-end-of-buffer)
            )
     :init
     (setq helm-buffers-lazy-matching t
@@ -50,7 +54,7 @@
     (helm-autoresize-mode 1))
   (when (eq system-type 'gnu/linux) (use-package helm-ls-git
                                       :after helm
-                                      :bind (("C-x c-d" . helm-browse-project)
+                                      :bind (("C-x C-d" . helm-browse-project)
                                              ("C-x r p" . helm-projects-history))))
 (use-package helm-rg
   :ensure t
@@ -74,7 +78,3 @@
   (helm-add-action-to-source "Insert org-mode link"
                              'insert-org-mode-link-from-helm-result
                              helm-rg-process-source))
-
-(use-package swiper-helm
-  :ensure t
-  :bind ("C-s" . swiper-helm))
