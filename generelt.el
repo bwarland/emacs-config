@@ -33,6 +33,8 @@
 
 ;; (setq-default show-trailing-whitespace t)
 
+(global-hl-line-mode +1)
+
   (put 'downcase-region 'disabled nil)
   (set-language-environment "utf-8")
   (require 'rainbow-delimiters)
