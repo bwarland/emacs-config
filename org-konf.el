@@ -93,6 +93,9 @@
                "* %?\n")
               ("jø" "økonomi" entry (file+datetree+prompt "~/GitHub/Journal/autodidakt/econ.org")
                "* %?\n")
+	      ("r" "registrering")
+	      ("rb" "bolt" table-line (file+headline "~/GitHub/Notater/autodidakt/bolt.org" "bolt-skår")
+	       "|%u|%?||")
                      )))
 
 (require 'org-tempo)
@@ -107,6 +110,7 @@
   (org-babel-do-load-languages
    'org-babel-load-languages (quote ((emacs-lisp . t)
                                      ;; (racket . t)
+				     ;; (guile . t)
                                      (sqlite . t)
                                      (python . t)
                                      ;; (ipython .t)

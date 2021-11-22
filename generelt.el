@@ -38,7 +38,7 @@
   (put 'downcase-region 'disabled nil)
   (set-language-environment "utf-8")
   (require 'rainbow-delimiters)
-  ;; (rainbow-delimiters-mode 1)
+  (rainbow-delimiters-mode 1)
 ;; (require 'openwith)
 ;; (openwith-mode t)
 ;; (setq openwith-associations '(("\\.pdf\\'" "qpdfview" (file))))
