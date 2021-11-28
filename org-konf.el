@@ -83,7 +83,7 @@
                "* %?\n")
               ("jf" "fundamentals" entry (file+datetree+prompt "~/GitHub/Notater/journaler/fundamentals.org")
                "* ...%?\n* European Gas\n* US Gas\n* Crude Oil")
-              ("jF" "ferdigheter" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
+              ("jp" "problemløsning" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
                "* %?\n")
               ("jj" "Journal" entry (file+datetree+prompt "~/GitHub/Notater/journaler/journal.org") ;
                "* TODO %?\nSCHEDULED: %t")
