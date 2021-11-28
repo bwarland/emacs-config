@@ -5,7 +5,7 @@
 (set-register ?g '(file . "~/GitHub/"))
 ;; (set-register ?o '(file . "~/GitHub/Journal/econ.org"))
 (set-register ?f '(file . "~/GitHub/Notater/journaler/fundamentals.org"))
-(set-register ?F '(file . "~/GitHub/Notater/ferdigheter.org"))
+(set-register ?p '(file . "~/GitHub/Notater/journaler/ferdigheter.org"))
 (set-register ?k '(file . "~/GitHub/emacs-config/README.org"))
 ;; (set-register ?i '(file . "~/GitHub/Notater/informatikk.org"))
 (set-register ?j '(file . "~/GitHub/Notater/journaler/journal.org"))
