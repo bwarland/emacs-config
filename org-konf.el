@@ -75,7 +75,7 @@
 	      ("he" "Emacs" entry (file+olp "~/GitHub/Notater/journaler/frister.org" "prosjekter" "Emacs")
 	       "* TODO %?\nSCHEDULED: %^t")
               ("hm" "møter" entry (file+olp "~/GitHub/Notater/journaler/frister.org" "møter")
-	       "* %?\nSCHEDULED: %^T--%^T")
+	       "* %?\n %^T--%^T")
 	      ("hp" "Python" entry (file+olp "~/GitHub/Notater/journaler/frister.org" "prosjekter" "Python")
                "* TODO %?\nSCHEDULED: %^t")
               ("j" "Journal")
@@ -83,7 +83,7 @@
                "* %?\n")
               ("jf" "fundamentals" entry (file+datetree+prompt "~/GitHub/Notater/journaler/fundamentals.org")
                "* ...%?\n* European Gas\n* US Gas\n* Crude Oil")
-              ("jp" "problemløsning" entry (file+datetree+prompt "~/GitHub/Notater/ferdigheter.org")
+              ("jp" "problemløsning" entry (file+datetree+prompt "~/GitHub/Notater/journaler/ferdigheter.org")
                "* %?\n")
               ("jj" "Journal" entry (file+datetree+prompt "~/GitHub/Notater/journaler/journal.org") ;
                "* TODO %?\nSCHEDULED: %t")
