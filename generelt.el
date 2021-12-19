@@ -11,7 +11,7 @@
 
   (cond ((eq system-type 'windows-nt) (set-frame-font "consolas-14"))
         ((string= system-name "mbell") (set-frame-font "liberation mono-12"))
-        ((string= system-name "kbell") (set-frame-font "liberation mono-10"))
+        ((string= system-name "kbell") (set-frame-font "liberation mono-11"))
         ((string= system-name "nyvaar") (set-frame-font "liberation mono-10")))
 
 (use-package doom-modeline
