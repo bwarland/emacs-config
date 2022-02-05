@@ -15,6 +15,7 @@
          ("C-c b t" . org-roam-buffer-toggle)
 	 ("C-c d s" . org-roam-db-sync)
 	 ("C-c n j" . org-roam-dailies-capture-today)
+	 ("C-c n k" . org-roam-dailies-goto-date)
 	 :map org-mode-map
 	 ("C-M-i" . completion-at-point)
 	 ("C-c n o" . org-id-get-create)
