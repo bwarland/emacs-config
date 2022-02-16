@@ -121,6 +121,7 @@
 				     ;; (guile . t)
                                      (sqlite . t)
                                      (python . t)
+				     (shell . t)
                                      ;; (ipython .t)
                                      )))
   (setq org-babel-python-command "python3")
