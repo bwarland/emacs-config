@@ -21,10 +21,22 @@
 	 ("C-c n o" . org-id-get-create)
          ("C-c n t" . org-roam-tag-add)
 	 )
+  :custom
+   (org-roam-capture-templates
+   '(("d" "default" plain
+      "* beskrivelse\n* relatert\n- \n* kilder\n- %?"
+      :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+      :unnarrowed t)
+     ;; ("l" "programming language" plain
+     ;;  "* Characteristics\n\n- Family: %?\n- Inspired by: \n\n* Reference:\n\n"
+     ;;  :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+     ;;  :unnarrowed t)
+     ))
   :config
   (org-roam-setup)
   (org-roam-db-autosync-mode)
   (require 'org-roam-protocol))
+
 (use-package helm-rg
   :ensure t
   :config
