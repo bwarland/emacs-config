@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: link OIES
+# key:  >oies
+# --
+
+[[file:/home/bw/Documents/Marked/Products/OIES/${1:filnavn}.pdf][${2:filnavn}]

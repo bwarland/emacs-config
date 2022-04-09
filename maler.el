@@ -3,6 +3,7 @@
     :diminish yas-minor-mode
     :init (yas-global-mode)
     :config
+    (setq yas-snippet-dirs '("/home/bw/GitHub/emacs-config/org-mode-snippets"))
     (yas-global-mode)
     (add-hook 'hippie-expand-try-functions-list 'yas-hippie-try-expand)
     (setq yas-key-syntaxes '("w_" "w_." "^ "))

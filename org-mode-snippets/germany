@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Germany
+# key: >de
+# --
+
+[[file:/home/bw/Documents/Marked/Germany/rapporter/${1:filnavn}.pdf][${2:rapportnavn}]$0

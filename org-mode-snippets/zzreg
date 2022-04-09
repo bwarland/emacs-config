@@ -1,0 +1,29 @@
+# -*- mode: snippet -*-
+# name: zzreg
+# key: zzreg
+# --
+:PROPERTIES:    
+
+:cap_bcma:     
+
+:site:          onshore/FSRU
+
+:port:         
+
+:status:        operational/under-construction/speculative
+
+:start_year:    20
+
+:end_y:         20
+
+:operator:     
+
+:capex:        
+
+:port_cost:    
+
+:regas_cost:        
+
+:storage_cbm:
+
+:END:

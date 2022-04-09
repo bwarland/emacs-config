@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: zpic
+# key: >pic
+# --
+[[file:/home/bw/Pictures/${1:bilde}.png][${2:navn}]

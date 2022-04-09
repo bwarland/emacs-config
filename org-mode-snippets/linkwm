@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Wood Mackenzie
+# key: >wm
+# --
+
+[[file:/home/bw/Documents/Marked/Products/Wood_Mackenzie/${1:filnavn}.pdf][${2:filnavn}]
