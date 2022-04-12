@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: biofuels
+# key: >bio
+# --
+[[file:/home/bw/Documents/Marked/Biodrivstoff/${1:filnavn}.pdf][${2:rapportnavn}]$0
