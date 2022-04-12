@@ -82,7 +82,7 @@
               ("jd" "dagbok" entry (file+datetree+prompt "~/GitHub/Journal/dagbok.org")
                "* %?\n")
               ("jf" "fundamentals" entry (file+datetree+prompt "~/GitHub/Notater/journaler/fundamentals.org")
-               "* ...%?\n* European Gas\n* US Gas\n* Crude Oil")
+               "* LNG\n%?* European Gas\n* US Gas\n* Crude Oil")
               ("jp" "problemløsning" entry (file+datetree+prompt "~/GitHub/Notater/journaler/ferdigheter.org")
                "* %?\n")
               ("jj" "Journal" entry (file+datetree+prompt "~/GitHub/Notater/journaler/journal.org") ;
