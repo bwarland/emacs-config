@@ -2,4 +2,4 @@
 # name: SPGlobal
 # key: >spg
 # --
-[[file:/home/bw/Documents/Marked/Products/SPGlobal/${1:filnavn}.pdf][${2:filnavn}]
+[[file:/home/bw/Documents/Marked/Products/SPGlobal/${1:filnavn}.pdf][$1]$0

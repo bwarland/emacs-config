@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
 # name: hjlinks
-# key: >links
+# key: >lenker
 # --
 [[file:~/Documents/markedsrapporter/${1:rapportnavn}.pdf][H:$1]$0 [[file:C:\Users\bjorwa\OneDrive - Equinor\reports\$1.pdf][J:$1]
