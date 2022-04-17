@@ -2,4 +2,4 @@
 # name: zpic
 # key: >pic
 # --
-[[file:/home/bw/Pictures/${1:bilde}.png][$1]
+[[file:/home/bw/Pictures/${1:bilde}.png][${2:tekst}]
