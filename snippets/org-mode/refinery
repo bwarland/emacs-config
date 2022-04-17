@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: refinery
+# key: >ref
+# --
+:PROPERTIES:
+:country:    $1
+:location:   $2
+:crude_dest: $3
+:cap_mtpa:   $4
+:nci:        $5
+:END:
