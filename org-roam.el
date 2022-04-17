@@ -24,7 +24,7 @@
   :custom
    (org-roam-capture-templates
    '(("d" "default" plain
-      "* beskrivelse\n* relatert\n- \n* kilder [/]\n- [ ]%?"
+      "* beskrivelse\n* relatert\n- \n* kilder [/]\n- [ ] >%?"
       :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
       :unnarrowed t)
      ;; ("l" "programming language" plain

@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: United Kingdom
-# key: >uk
+# key: >gb
 # --
 
-[[file:/home/bw/Documents/Marked/United_Kingdom/rapporter/${1:filnavn}.pdf][${2:rapport}]$0
+[[file:/home/bw/Documents/Marked/United_Kingdom/rapporter/${1:filnavn}.pdf][$1]$0

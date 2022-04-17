@@ -2,4 +2,4 @@
 # name: Luxembourg
 # key: >lu
 # --
-[[file:/home/bw/Documents/Marked/Luxembourg/rapporter/${1:filnavn}.pdf][${2:rapportnavn}]$0
+[[file:/home/bw/Documents/Marked/Luxembourg/rapporter/${1:filnavn}.pdf][$1]$0

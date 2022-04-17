@@ -1,6 +1,5 @@
 # -*- mode: snippet -*-
 # name: hjlinks
-# key: zzz
+# key: >links
 # --
-[[file:~/Documents/markedsrapporter/.pdf][H:]
-[[file:C:\Users\bjorwa\OneDrive - Equinor\reports\.pdf][J:]
+[[file:~/Documents/markedsrapporter/${1:rapportnavn}.pdf][H:$1]$0 [[file:C:\Users\bjorwa\OneDrive - Equinor\reports\$1.pdf][J:$1]

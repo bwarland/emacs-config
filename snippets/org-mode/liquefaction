@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: zzliq
+# key: >liq
+# --
+:PROPERTIES:
+:cap_mtpa:   $1  
+:trains:     $2
+:site:       $3
+:type:       $4
+:status:     $5
+:FID:        $6
+:startY:     $7
+:end_y:      
+:operator:   $8
+:capex:      $9
+:opex: 
+:location:   $10  
+:END:

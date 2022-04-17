@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: mappe-products
+# key: >prod
+# --
+[[/home/bw/Documents/Marked/Products/${1:filnavn}.pdf][$1]$0
