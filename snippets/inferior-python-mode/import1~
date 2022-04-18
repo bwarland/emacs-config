@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: imp1
+# key: >imp1
+# --
+import os
+import pandas as pd
+import numpy as np

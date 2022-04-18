@@ -32,4 +32,4 @@
 		       (">by" "- [ ] [[file:/home/bw/Documents/Marked/Belarus/rapporter/${1:filnavn}.pdf][$1]$0\n- [[file:C:\\Users\\bjorwa\\OneDrive - Equinor\\reports\\$1.pdf][Win:$1]]\n" "Belarus" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/belarus" nil nil)))
 
 
-;;; Do not edit! File generated at Sun Apr 17 20:39:39 2022
+;;; Do not edit! File generated at Mon Apr 18 09:21:33 2022
