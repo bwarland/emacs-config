@@ -1,0 +1,97 @@
+;; All konfigurasjon som ikke gjøres autmatisk av Emacs gjøre fra filen README.org
+
+
+
+ ;; Denne er lagret under "~/GitHub/emacs-config/"
+;; Formålet med å dele opp konfigureringen i så mange filer er å lette på oppgaven
+;; med å rette opp feil i konfigurering.
+
+(load-file "~/GitHub/emacs-config/pakker.el")
+(use-package org
+  :ensure t
+  :pin elpa)
+;; (setq package-load-list '(all))     ;; List of packages to load
+;; (unless (package-installed-p 'org)  ;; Make sure the Org package is
+;;   (package-install 'org))
+;; (package-initialize)
+(load-file "~/GitHub/emacs-config/generelt.el")
+(load-file "~/GitHub/emacs-config/gkb.el")
+(load-file "~/GitHub/emacs-config/flere-markører.el")
+(load-file "~/GitHub/emacs-config/helm-konf.el")
+(load-file "~/GitHub/emacs-config/org-konf.el")
+(load-file "~/GitHub/emacs-config/org-roam.el")
+(load-file "~/GitHub/emacs-config/linorg.el")
+(load-file "~/GitHub/emacs-config/linreg.el")
+;; (load-file "~/GitHub/emacs-config/reg.el")
+(load-file "~/GitHub/emacs-config/org-agenda.el")
+(load-file "~/GitHub/emacs-config/orgtodo.el")
+(load-file "~/GitHub/emacs-config/agenda-files.el")
+(load-file "~/GitHub/emacs-config/programmering.el")
+(load-file "~/GitHub/emacs-config/maler.el")
+;; ;; (load-file "~/.emacs.d/elpa/org-drill-20200412.1912/org-drill.el")
+;; ;; (load-file "~/.emacs.d/init/bw-hydra-config.el")
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
+ '(custom-enabled-themes '(gruvbox))
+ '(custom-safe-themes
+   '("d14f3df28603e9517eb8fb7518b662d653b25b26e83bd8e129acea042b774298" "eb122e1df607ee9364c2dfb118ae4715a49f1a9e070b9d2eb033f1cefd50a908" "9b35c097a5025d5da1c97dba45fed027e4fb92faecbd2f89c2a79d2d80975181" "54449a089fc2f95f99ebc9b9b6067c802532fd50097cf44c46a53b4437d5c6cc" default))
+ '(ecb-option s-version)
+ '(global-ede-mode t)
+ '(helm-completion-style 'helm)
+ '(org-agenda-files '("~/GitHub/Notater/journaler/frister.org"))
+ '(org-export-with-priority t)
+ '(org-modules
+   '(ol-bbdb ol-bibtex ol-docview ol-eww ol-gnus ol-info ol-irc ol-mhe ol-rmail ol-w3m))
+ '(package-selected-packages
+   '(neotree beacon org-sticky-header org-id-cleanup org-ml org-ref citeproc org-roam-ui help-find-org-mode org-babel-eval-in-repl paradox treemacs spaceline-all-the-icons flycheck-guile geiser-guile haskell-emacs haskell-mode deft jedi company-ebdb company-jedi company-prescient company-anaconda helm-company company ob-ipython ess hippie-expand-slime vterm magit flymake-racket aggressive-indent doom-modeline-now-playing rainbow-delimiters ac-helm eradio epkg helm-ls-git ac-geiser geiser multiple-cursors doom-themes powerline doom-modeline ox-html5slide ox-asciidoc orgit command-log-mode tmux-pane latex-preview-pane latex-extra org-bullets org-noter-pdftools org-noter treemacs-magit pandoc-mode pandoc discover-my-major quelpa-use-package quelpa org-capture-pop-frame slime plisp-mode use-package-hydra ivy-hydra major-mode-hydra pamparam ipython cmake-ide multi-vterm boxquote yasnippet flatland-theme hydra sqlite esqlite-helm esqlite sqlite3 hackernews smooth-scrolling swiper-helm helm use-package racket-mode)))
+
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;; (add-to-list 'load-path "~/.emacs.d/emacs-libvterm")
+;; (require 'vterm)
+
+;; (use-package vterm
+;;   :load-path "~/.emacs.d/emacs-libvterm")
+
+;; (add-to-list 'load-path (expand-file-name "~/.emacs.d/elpa/slime"))
+
+
+(require 'slime)
+(add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
+(add-hook 'inferior-lisp-mode-hook (lambda () (inferior-slime-mode t)))
+(setq slime-lisp-implementations
+  `((sbcl ("/usr/bin/sbcl"))
+   ;; (ecl ("/usr/bin/ecl"))
+   ;; (clisp ("/usr/bin/clisp" "-q -I"))
+   ))
+(slime-setup '(slime-fancy slime-asdf hippie-expand-slime))
+
+;; (add-hook 'org-mode-hook
+;;       '(lambda ()
+;;          (setq org-file-apps
+;;            '((auto-mode . emacs)
+;;              ("\\.mm\\'" . default)
+;;              ("\\.x?html?\\'" . default)
+;;              ("\\.pdf\\'" . "evince %s")))))
+
+(load "~/.emacs.d/power-query-mode/power-query-mode.el")
+(setq python-shell-interpreter "/home/bw/anaconda3/bin/python")
+(add-hook 'after-init-hook (lambda () (load-theme 'gruvbox)))
+
+;; (setq org-agenda-files (directory-files-recursively "~/GitHub/Notater/journaler/" "\\.org$"
+;;  						    ;; "~/GitHub/Notater/org-roam/" "\\.org$"
+;; 						    ))
+
+;; (add-hook 'emacs-startup-hook (lambda () (yas-load-directory "path/to/your/.emacs.d/snippets")))
