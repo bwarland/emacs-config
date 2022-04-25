@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: link Energy Aspects
+# key:  >ea
+# --
+
+[[file:/home/bw/Documents/Marked/Products/Energy_Aspects/${1:filnavn}.pdf][$1]$0
