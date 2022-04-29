@@ -26,6 +26,7 @@
 		       (">ea" "[[file:/home/bw/Documents/Marked/Products/Energy_Aspects/${1:filnavn}.pdf][$1]$0\n" "link Energy Aspects" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/lenkeea" nil nil)
 		       (">lenke" "[[file:/home/bw/Documents/markedsrapporter/${1:filnavn}.pdf][${2:rapportnavn}]$0" "lenke linux" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/lenke" nil nil)
 		       (">jp" "[[file:/home/bw/Documents/Marked/Japan/rapporter/${1:filnavn}.pdf][$1]$0" "Japan" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/japan" nil nil)
+		       (">gs" "[[file:/home/bw/Documents/Marked/Products/Goldman_Sachs/${1:filnavn}.pdf][$1]$0" "goldman sachs" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/goldman_sachs" nil nil)
 		       (">de" "[[file:/home/bw/Documents/Marked/Germany/rapporter/${1:filnavn}.pdf][$1]$0" "Germany" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/germany" nil nil)
 		       (">fr" "[[file:/home/bw/Documents/Marked/France/rapporter/${1:filnavn}.pdf][$1]$0" "France" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/france" nil nil)
 		       (">fi" "[[file:/home/bw/Documents/Marked/Finland/rapporter/${1:filnavn}.pdf][$1]$0" "Finland" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/finland" nil nil)
@@ -38,4 +39,4 @@
 		       (">barcap" "[[file:/home/bw/Documents/Marked/Products/Barclays/${1:filnavn}.pdf][$1]$0" "SPGlobal" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/barclays" nil nil)))
 
 
-;;; Do not edit! File generated at Mon Apr 25 14:33:32 2022
+;;; Do not edit! File generated at Fri Apr 29 07:16:38 2022
