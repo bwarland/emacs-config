@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: IFP
+# key: >ifp
+# --
+
+[[file:/home/bw/Documents/Marked/Products/IFP/${1:filnavn}.pdf][$1]$0
