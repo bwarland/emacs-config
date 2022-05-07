@@ -48,6 +48,7 @@
 (save-place-mode 1)
 (global-auto-revert-mode 1)
 (setq global-auto-revert-non-file-buffers 1)
+(wc-mode 1)
 ;; (require 'openwith)
 ;; (openwith-mode t)
 ;; (setq openwith-associations '(("\\.pdf\\'" "qpdfview" (file))))
