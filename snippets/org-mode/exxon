@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: exxonmobil
+# key: >exxon
+# --
+[[file:/home/bw/Documents/Marked/Products/ExxonMobil/${1:filnavn}.pdf][$1]$0
