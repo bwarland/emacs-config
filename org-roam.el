@@ -9,7 +9,9 @@
   :bind (("C-c n l" . org-roam-buffer-toggle)
          ("C-c n f" . org-roam-node-find)
          ("C-c n i" . org-roam-node-insert)
-         ("C-c n g" . org-roam-node-graph)
+	 ("C-c n a" . org-roam-alias-add)
+	 ("C-c n r" . org-roam-alias-removet)
+	 ("C-c n g" . org-roam-node-graph)
          ("C-c n c" . org-roam-capture)
 	 ("C-c n r" . org-roam-node-random)
          ("C-c b t" . org-roam-buffer-toggle)
@@ -35,6 +37,9 @@
   :config
   (org-roam-setup)
   (org-roam-db-autosync-mode)
+  ;; (setq org-roam-mode-section-functions
+  ;; 	(list #'org-roam-backlinks-section
+  ;; 	      #'org-roam-reflinks-section))
   (require 'org-roam-protocol))
 
 (use-package helm-rg
@@ -65,7 +70,7 @@
 
 (use-package deft
     :config
-    (setq deft-directory org-directory
+    (setq deft-directory org-roam-directory;;org-directory
           deft-recursive t
           deft-strip-summary-regexp ":PROPERTIES:\n\\(.+\n\\)+:END:\n"
           deft-use-filename-as-title t)

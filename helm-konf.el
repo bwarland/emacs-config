@@ -34,7 +34,7 @@
            ("C-c <f9>" . helm-calcul-expression)
            ("C-c <f1>" . helm-colors)
            ("M-p" . helm-previous-line)
-           ("M-k" . helm-next-line)
+           ;; ("M-k" . helm-next-line)
            ("M-i" . helm-previous-page)
            ("M-k" . helm-next-page)
            ;; ("M-h" . helm-beginning-of-buffer)
