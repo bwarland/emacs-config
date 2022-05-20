@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: weekly market meeting
+# key: >mm
+# --
+:PROPERTIES:
+:kilde:       $1
+:regneark:    $2
+:ark:         $3
+:område:      $4
+:kommentar:   $5
+:nettside:    $6
+:END:

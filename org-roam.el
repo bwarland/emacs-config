@@ -12,7 +12,7 @@
 	 ("C-c n a" . org-roam-alias-add)
 	 ;; ("C-c n r" . org-roam-alias-remove)
 	 ("C-c n A" . org-roam-ref-add)
-	 ("C-c n R" . org-roam-fef-removet)
+	 ("C-c n R" . org-roam-ref-remove)
 	 ("C-c n g" . org-roam-node-graph)
          ("C-c n c" . org-roam-capture)
 	 ("C-c n r" . org-roam-node-random)
