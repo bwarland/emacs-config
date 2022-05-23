@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: weekly market meeting
-# key: >mm
+# name: mongstad
+# key: >mong
 # --
 :PROPERTIES:
 :kilde:       $1
