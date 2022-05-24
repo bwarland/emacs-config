@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: epa_brent
+# key: >ebrent
+# --
+:PROPERTIES:
+:sup1: $1
+:sup2: $2
+:sup3: $3
+:dem1: $4
+:dem2: $5
+:dem3: $6
+:END:
