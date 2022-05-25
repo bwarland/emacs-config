@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: epa bullets
+# key: >ebull
+# --
+:PROPERTIES:
+:bull1: $1
+:bull2: $2
+:bull3: $3
+:bull4: $4
+:bull5: $5
+:END:

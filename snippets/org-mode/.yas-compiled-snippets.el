@@ -35,7 +35,10 @@
 		       (">fi" "[[file:/home/bw/Documents/Marked/Finland/rapporter/${1:filnavn}.pdf][$1]$0" "Finland" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/finland" nil nil)
 		       (">exxon" "[[file:/home/bw/Documents/Marked/Products/ExxonMobil/${1:filnavn}.pdf][$1]$0" "exxonmobil" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/exxon" nil nil)
 		       (">equinor" "[[file:/home/bw/Documents/Marked/Products/Equinor/${1:filnavn}.pdf][$1]$0" "equinor" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/equinor" nil nil)
+		       (">eutil" ":PROPERTIES:\n:reas1: $1\n:reas2: $2\n:reas3: $3\n:reas4: $4\n:reas5: $5\n:END:" "epa utilization" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/epa_util" nil nil)
+		       (">ebull" ":PROPERTIES:\n:bull1:  $1\n:bull2:  $2\n:bull3:  $3\n:bull4:  $4\n:bull5:  $5\n:END:" "epa bullets" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/epa_bullets" nil nil)
 		       (">ebrent" ":PROPERTIES:\n:sup1: $1\n:sup2: $2\n:sup3: $3\n:dem1: $4\n:dem2: $5\n:dem3: $6\n:END:" "epa_brent" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/epa_brent" nil nil)
+		       (">erefdem" ":PROPERTIES:\n:dem1: $1\n:dem2: $2\n:dem3: $3\n:dem4: $4\n:dem5: $5\n:END:" "epa refinery demand" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/ep_refdem" nil nil)
 		       (">dk" "- [ ] [[file:/home/bw/Documents/Marked/Denmark/rapporter/${1:filnavn}.pdf][$1]$0\n- [[file:C:\\Users\\bjorwa\\OneDrive - Equinor\\reports\\$1.pdf][Win:$1]]" "Denmark" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/denmark" nil nil)
 		       (">crude" ":PROPERTIES:\n:name:	  $1\n:country:  $2\n:api:      $3\n:sulfur:   $4\n:END:$0" "crude oil" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/crude_oil" nil nil)
 		       (">cn" "- [ ] [[file:/home/bw/Documents/Marked/China/rapporter/${1:filnavn}.pdf][$1]$0\n- [[file:C:\\Users\\bjorwa\\OneDrive - Equinor\\reports\\$1.pdf][Win:$1]]" "China" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/china" nil nil)
@@ -45,4 +48,4 @@
 		       (">barcap" "[[file:/home/bw/Documents/Marked/Products/Barclays/${1:filnavn}.pdf][$1]$0" "SPGlobal" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/barclays" nil nil)))
 
 
-;;; Do not edit! File generated at Tue May 24 13:31:46 2022
+;;; Do not edit! File generated at Wed May 25 11:09:22 2022

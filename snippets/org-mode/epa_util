@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: epa utilization
+# key: >eutil
+# --
+:PROPERTIES:
+:reas1: $1
+:reas2: $2
+:reas3: $3
+:reas4: $4
+:reas5: $5
+:END:
