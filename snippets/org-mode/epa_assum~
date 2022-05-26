@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: assumptions
+# key: >assum
+# --
+:PROPERTIES:
+:one:
+:two:
+:three:
+:four:
+:five:
+:six:
+:END:
