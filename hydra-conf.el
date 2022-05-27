@@ -1,7 +1,7 @@
 (defhydra hyroam (:color blue
 		      :hint nil)
 "
-^indekskort^                                
+^INDEKSKORT^                                
 ^^^^^^^^-----------------------------------------------------------------------
 c: nytt kort                f: finn kort               i: legg inn kort
 d: daglig kommentar         D: gå til daglig           K: gå til dato
