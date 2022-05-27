@@ -4,24 +4,10 @@
 # --
 
 :PROPERTIES:
-:country:      $1
-:location:     $2
-:nci:          $3
-:adu:          $4
-:vdu:          $5
-:ther_crack:   $6
-:ther_proc:    $7
-:coking:       $8
-:fcc:          $9
-:hck:          $10
-:ref_apio:     $11
-:ref:          $12
-:alkyl:        $13
-:pol:          $14 
-:isom:         $15
-:oxyg:         $16
-:hds:          $17
-:asph:         $18
-:base_oils:    $19
+:status:  $1
+:year:    $2
+:future:  $3
+:kbd:     $4
+:cntr:    $5
+:risk:    $6
 :END:
-$0
