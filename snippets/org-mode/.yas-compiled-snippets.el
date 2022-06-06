@@ -11,10 +11,11 @@
 		       (">spg" "[[file:/home/bw/Documents/Marked/Products/SPGlobal/${1:filnavn}.pdf][$1]$0" "spglobal" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/spglobal" nil nil)
 		       (">ru" "[[file:/home/bw/Documents/Marked/Russia/rapporter/${1:filnavn}.pdf][$1]$0" "Russia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/russia" nil nil)
 		       (">reg" ":PROPERTIES:    \n:cap_bcma:      $1\n:site:          $2\n:port:          $3\n:status:        $4\n:start_year:    $5\n:end_y:         \n:operator:      $6\n:capex:         $7\n:port_cost:     \n:regas_cost:        \n:storage_cbm:   $8\n:END:" "zzreg" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/regasification" nil nil)
-		       (">ref" ":PROPERTIES:\n:status:  $1\n:year:    $2\n:future:  $3\n:kbd:     $4\n:cntr:    $5\n:END:\n" "refinery" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/refinery" nil nil)
+		       (">ref" ":PROPERTIES:\n:status:  $1\n:year:    $2\n:future:  $3\n:kbd:     $4\n:cntr:    $5\n:risk:    $6\n:END:\n" "refinery" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/refinery" nil nil)
 		       (">wmm" "" "weekly market meeting" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/products" nil nil)
 		       (">pl" "[[file:/home/bw/Documents/Marked/Poland/rapporter/${1:filnavn}.pdf][$1]$0" "Poland" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/poland" nil nil)
 		       (">pic" "[[file:/home/bw/Pictures/${1:bilde}.png][${2:tekst}]" "zpic" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/pictures" nil nil)
+		       (">om" "[[file:/home/bw/Documents/Marked/Oman/rapporter/${1:filnavn}.pdf][$1]$0" "Oman" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/oman" nil nil)
 		       (">no" "[[file:/home/bw/Documents/Marked/Norway/rapporter/${1:filnavn}.pdf][$1]$0" "Norway" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/norway" nil nil)
 		       (">nl" "[[file:/home/bw/Documents/Marked/Netherlands/rapporter/${1:filnavn}.pdf][$1]$0" "Netherlands" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/netherlands" nil nil)
 		       (">mong" ":PROPERTIES:\n:kilde:       $1\n:regneark:    $2\n:ark:         $3\n:område:      $4\n:kommentar:   $5\n:nettside:    $6\n:END:" "mongstad" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/mong" nil nil)
@@ -49,4 +50,4 @@
 		       (">barcap" "[[file:/home/bw/Documents/Marked/Products/Barclays/${1:filnavn}.pdf][$1]$0" "SPGlobal" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/barclays" nil nil)))
 
 
-;;; Do not edit! File generated at Fri May 27 09:48:12 2022
+;;; Do not edit! File generated at Mon Jun  6 13:46:04 2022
