@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Bahrain
+# key: >bh
+# --
+[[file:/home/bw/Documents/Marked/Bahrain/rapporter/${1:filnavn}.pdf][$1]$0
