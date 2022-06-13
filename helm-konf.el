@@ -1,24 +1,3 @@
-(add-hook 'after-init-hook 'global-company-mode)
-(use-package company
-  :commands (company-mode
-	     company-complete-common
-	     company-complete-selection
-	     helm-company)
-  :init (setq company-minimum-prefix-length 3
-	      company-require-match nil
-	      company-selection-wrap-around t
-	      company-dabbrev-downcase t
-	      company-tooltip-limit 20
-	      company-tooltip-minimum-width 15
-	      company-tooltip-align-annotations 1)
-  :config (setq company-idle-delay 1000
-		company-minimum-prefix-length 3)
-  (global-company-mode))
-
-(use-package swiper-helm
-  :ensure t
-  :bind ("C-s" . swiper-helm))
-
   (use-package helm
     :ensure t
     :bind (
@@ -78,3 +57,7 @@
   (helm-add-action-to-source "Insert org-mode link"
                              'insert-org-mode-link-from-helm-result
                              helm-rg-process-source))
+
+(use-package swiper-helm
+  :ensure t
+  :bind ("C-s" . swiper-helm))

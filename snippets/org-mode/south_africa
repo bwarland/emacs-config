@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: South_Africa
+# key: >za
+# --
+[[file:/home/bw/Documents/Marked/South_Africa/rapporter/${1:filnavn}.pdf][$1]$0

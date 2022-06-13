@@ -38,6 +38,18 @@
 
 (beacon-mode 1)
 
+(setq modus-themes-mode-line '(accented 3d padded)
+      modus-themes-region '(bg-only)
+      modus-themes-completiones 'opinionated
+      modus-themes-italic-constructs t
+      modus-themes-paren-match '(bold intense underline)
+      modus-themes-headings '((1 . (rainbow overline 1.1))
+			      (2 . (rainbow 1.05))
+			      (3 . (rainbow 1.025))
+			      (t . (semilight 1)))			      
+      modus-themes-scale-headings t)
+(load-theme 'modus-vivendi t)
+
 (put 'downcase-region 'disabled nil)
 (set-language-environment "utf-8")
 (require 'rainbow-delimiters)

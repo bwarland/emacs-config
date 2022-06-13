@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Kuwait
+# key: >kw
+# --
+- [[file:/home/bw/Documents/Marked/Kuwait/rapporter/${1:filnavn}.pdf][$1]$0
