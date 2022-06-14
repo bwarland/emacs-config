@@ -94,7 +94,7 @@
               ;; ("jø" "økonomi" entry (file+datetree+prompt "~/GitHub/Journal/autodidakt/econ.org")
 	      ("jw" "Weekly Market Meeting" entry (file+datetree+prompt "~/GitHub/Notater/journaler/wmm.org")
 	       ">wmm")
-              "* %?\n")
+              ;; "* %?\n")
 	      ("r" "registrering")
 	      ("rb" "bolt" table-line (file+headline "~/GitHub/Journal/helse.org" "bolt")
 	       "|%^u|%?|%?|%?|%?|%?|" :prepend t)
