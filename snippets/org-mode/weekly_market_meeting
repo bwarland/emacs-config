@@ -1,9 +1,21 @@
 # -*- mode: snippet -*-
 # name: weekly market meeting
 # key: >wmm
-# --
+# --   
 **** Crude Oil Market
 ***** Dated Brent and WTI
+****** NYMEX WTI
+      |------+------+-------+----------|
+      | date | pris |endring| kommentar|
+      |------+------+-------+----------|
+      |      |      |       |          |
+      |------+------+-------+----------|
+****** ICE Brent
+      |------+------+-------+----------|
+      | date | pris |endring| kommentar|
+      |------+------+-------+----------|
+      |      |      |       |          |
+      |------+------+-------+----------|
 ***** Crude Differentials
 ***** Forward Curve and Time Structure
 ***** Crude Supply
@@ -18,9 +30,30 @@
 ***** Scandinavian Refining Landscape 2
 **** Key OpEx Drivers
 ***** Natural Gas Prices
-****** NBP & TTF
+****** NBP
+      |------+------+-------+----------|
+      | date | pris |endring| kommentar|
+      |------+------+-------+----------|
+      |      |      |       |          |
+      |------+------+-------+----------|
+****** TTF
+      |------+------+-------+----------|
+      | date | pris |endring| kommentar|
+      |------+------+-------+----------|
+      |      |      |       |          |
+      |------+------+-------+----------|
 ****** LNG
+      |------+------+-------+----------|
+      | date | pris |endring| kommentar|
+      |------+------+-------+----------|
+      |      |      |       |          |
+      |------+------+-------+----------|
 ****** Henry Hub
+      |------+------+-------+----------|
+      | date | pris |endring| kommentar|
+      |------+------+-------+----------|
+      |      |      |       |          |
+      |------+------+-------+----------|
 ***** EU ETS Carbon Allowance
 **** Refined Products Market
 ***** NWE Refine Products Trade

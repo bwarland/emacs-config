@@ -1,6 +1,7 @@
   (setq package-enable-at-startup nil)
   (cond ((eq system-type 'windows-nt) (setq package-archives '(("elpa" . "https://elpa.gnu.org/packages/"))))
-        ((eq system-type 'gnu/linux) (setq package-archives '(("elpa" . "https://elpa.gnu.org/packages/")
+        ((eq system-type 'gnu/linux) (setq package-archives '(
+							      ("elpa" . "https://elpa.gnu.org/packages/")
                                                               ;; ("marmalade" . "https://marmalade-repo.org/packages/")
                                                               ;; ("org" . "https://orgmode.org/elpa/")
 							      ("nongnu" . "https://elpa.nongnu.org/nongnu/")
