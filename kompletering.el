@@ -15,4 +15,4 @@
 		company-minimum-prefix-length 3)
   (global-company-mode))
 
-(icomplete-mode 1)
+(icomplete-vertical-mode 1)

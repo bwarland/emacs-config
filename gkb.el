@@ -11,7 +11,10 @@
 (global-set-key (kbd "C-c r") 'comment-region)
 (global-set-key (kbd "C-c u") 'uncomment-region)
 
-(global-set-key (kbd "C-x a") 'define-global-abbrev)
+(global-set-key (kbd "C-x a g") 'add-global-abbrev)
+(global-set-key (kbd "C-x a d") 'define-global-abbrev)
+(global-set-key (kbd "C-x a m") 'add-mode-abbrev)
+(global-set-key (kbd "C-x a l") 'define-mode-abbrev)
 
 (global-set-key (kbd "C-c l") 'org-store-link)
 
@@ -25,6 +28,7 @@
 (global-set-key (kbd "<f2>") 'shrink-window)
 (global-set-key (kbd "<f3>") 'shrink-window-horizontally)
 (global-set-key (kbd "<f4>") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-x <f6>") 'modus-themes-toggle)
 ;; (global-set-key (kbd "<f5>") 'org-copy-subtree) ;; i custom.el
 (global-set-key (kbd "<f9>") 'calc)
 (global-set-key (kbd "<f11>") 'describe-function)
@@ -34,3 +38,4 @@
 ;; (global-set-key (kbd "C-x <f12>") 'org-drill)
 (global-set-key (kbd "C-c w") 'whitespace-cleanup)
 (global-set-key (kbd "C-q") 'kill-this-buffer)
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)

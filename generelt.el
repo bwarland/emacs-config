@@ -43,12 +43,12 @@
       modus-themes-completiones 'opinionated
       modus-themes-italic-constructs t
       modus-themes-paren-match '(bold intense underline)
-      modus-themes-headings '((1 . (rainbow overline 1.1))
-			      (2 . (rainbow 1.05))
-			      (3 . (rainbow 1.025))
-			      (t . (semilight 1)))			      
+      modus-themes-headings '((1 . (rainbow semilight overline 1.2))
+			      (2 . (rainbow light 1.1))
+			      (3 . (rainbow light 1.025))
+			      (t . (semilight 1.025)))			      
       modus-themes-scale-headings t)
-(load-theme 'modus-vivendi t)
+(load-theme 'modus-operandi t)
 
 (put 'downcase-region 'disabled nil)
 (set-language-environment "utf-8")
@@ -100,3 +100,6 @@
     ("C-c <f10>" . clm/toggle-command-log-buffer)
     :config
     (global-command-log-mode t))
+
+(setq abbrev-suggest 1)
+(setq abbrev-suggest-hint-threshold 3)
