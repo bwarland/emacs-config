@@ -43,10 +43,10 @@
       modus-themes-completiones 'opinionated
       modus-themes-italic-constructs t
       modus-themes-paren-match '(bold intense underline)
-      modus-themes-headings '((1 . (rainbow semilight overline 1.2))
-			      (2 . (rainbow light 1.1))
-			      (3 . (rainbow light 1.025))
-			      (t . (semilight 1.025)))			      
+      modus-themes-headings '((1 . (light overline 1.2))
+			      (2 . (light 1.15))
+			      (3 . (light 1.1))
+			      (t . (light 1.05)))			      
       modus-themes-scale-headings t)
 (load-theme 'modus-operandi t)
 
@@ -101,5 +101,5 @@
     :config
     (global-command-log-mode t))
 
-(setq abbrev-suggest 1)
-(setq abbrev-suggest-hint-threshold 3)
+;; (setq abbrev-suggest 1)
+;; (setq abbrev-suggest-hint-threshold 3)
