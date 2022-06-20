@@ -43,7 +43,7 @@
       modus-themes-completiones 'opinionated
       modus-themes-italic-constructs t
       modus-themes-paren-match '(bold intense underline)
-      modus-themes-headings '((1 . (light overline 1.2))
+      modus-themes-headings '((1 . (light overline underline 1.2))
 			      (2 . (light 1.15))
 			      (3 . (light 1.1))
 			      (t . (light 1.05)))			      
