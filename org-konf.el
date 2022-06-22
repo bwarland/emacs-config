@@ -68,8 +68,10 @@
 (setq org-capture-templates
       (quote (
               ("h" "handling")
-              ("ha" "ad-hoc" entry (file+olp "~/GitHub/Notater/journaler/frister.org" "ad-hoc")
-               "* TODO %?\n %^T--%^T")
+              ;; ("ha" "ad-hoc" entry (file+olp "~/GitHub/Notater/journaler/frister.org" "ad-hoc")
+              ;;  "* TODO %?\n %^T--%^T")
+	      ("hg" "gjøremål" entry (file+olp "~/GitHub/Notater/journaler/frister.org" "ad-hoc")
+	      "* TODO %?\n SCHEDULED: %^t")
 	      ("hm" "møter" entry (file+olp "~/GitHub/Notater/journaler/frister.org" "møter")
 	       "* %?\n %^T--%^T")
               ("j" "Journal")
