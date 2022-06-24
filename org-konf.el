@@ -83,6 +83,10 @@
                "* %?\n")
               ("jj" "Journal" entry (file+datetree+prompt "~/GitHub/Notater/journaler/journal.org") ;
                "* TODO %?\nSCHEDULED: %t")
+	      ("jm" "margins" plain (file+datetree+prompt "~/GitHub/Notater/journaler/margins.org")
+	       "**** %?\n%c\n- ")
+	      ("jo" "outages" plain (file+datetree+prompt "~/GitHub/Notater/journaler/outages.org")
+	       "%c \n- %?")
 	      ("jw" "Weekly Market Meeting" plain (file+datetree+prompt "~/GitHub/Notater/journaler/wmm.org")
 	       ">wmm%?")
               ;; "* %?\n")

@@ -1,17 +1,13 @@
 # -*- mode: snippet -*-
-# name: zzreg
+# name: regasification
 # key: >reg
 # --
 :PROPERTIES:    
-:cap_bcma:      $1
-:site:          $2
-:port:          $3
-:status:        $4
-:start_year:    $5
-:end_y:         
-:operator:      $6
-:capex:         $7
-:port_cost:     
-:regas_cost:        
-:storage_cbm:   $8
+:bcma:      $1
+:site:      $2
+:port:      $3
+:status:    $4
+:start:     $5
+:storage:   $6
+:cntr:      $7
 :END:
