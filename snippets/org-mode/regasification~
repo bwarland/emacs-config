@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: regasification
+# key: >reg
+# --
+:PROPERTIES:    
+:bcma:      $1
+:site:      $2
+:port:      $3
+:status:    $4
+:start:     $5
+:storage:   $6
+:END:
