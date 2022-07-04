@@ -27,7 +27,12 @@
 	 )
   :custom
    (org-roam-capture-templates
-   '(("d" "default" plain
+   '(
+     ("b" "bøker" plain
+      "* beskrivelse\n** hva?\n** hvorfor?\n** hvordan?\n* relatert\n- \n* kilder [/]\n- [ ] >%?"
+      :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+      :unnarrowed t)
+     ("d" "default" plain
       "* beskrivelse\n* relatert\n- \n* kilder [/]\n- [ ] >%?"
       :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
       :unnarrowed t)
