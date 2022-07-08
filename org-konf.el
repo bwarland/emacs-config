@@ -83,6 +83,8 @@
                "* %?\n")
               ;; ("jj" "Journal" entry (file+datetree+prompt "~/GitHub/Notater/journaler/journal.org") ;
               ;;  "* TODO %?\nSCHEDULED: %t")
+	      ("jb" "biofuels" plain (file+datetree+prompt "~/GitHub/Notater/journaler/biofuels.org")
+	       "**** %^u %?\n %c")
 	      ("jc" "crude oil" plain (file+datetree+prompt "~/GitHub/Notater/journaler/crude-oil-market.org")
 	       "**** %u %?\n %c")
 	      ("jg" "gas markets" plain (file+datetree+prompt "~/GitHub/Notater/journaler/opex-drivers.org")
