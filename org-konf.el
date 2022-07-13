@@ -79,7 +79,7 @@
                "* %?\n")
 
 	      ("jc" "crude oil" plain (file+datetree+prompt "~/GitHub/Notater/journaler/crude-oil-market.org")
-	       "**** %?\n %c")
+	       "**** %?\n ")
 
 	      ("jr" "refined product markets")
 	      ("jra" "arbitrage" plain (file+datetree+prompt "~/GitHub/Notater/journaler/arbitrage.org")
@@ -88,7 +88,7 @@
 	       "**** %?\n ")
 	      ("jrd" "diesel" plain (file+datetree+prompt "~/GitHub/Notater/journaler/diesel.org")
 	       "**** %?\n ")
-	      ("jrf" "fuel " plain (file+datetree+prompt "~/GitHub/Notater/journaler/fuel_oil.org")
+	      ("jrf" "fuel oil" plain (file+datetree+prompt "~/GitHub/Notater/journaler/fuel_oil.org")
 	       "**** %?\n ")
 	      ("jrg" "gasoline" plain (file+datetree+prompt "~/GitHub/Notater/journaler/gasoline.org")
 	       "**** %?\n ")
@@ -98,7 +98,7 @@
 	       "**** %?\n ")
 	      	      ("jrm" "margins" plain (file+datetree+prompt "~/GitHub/Notater/journaler/margins.org")
 	       "**** %?\n ")
-		      ("jrn" "naphtha" plain (file+datetree+prompt "~/GitHub/Notater/journaler/naphtha.org")
+		      ("jrn" "naphtha" plain (file+datetree+prompt "~/GitHub/Notater/journaler/nafta.org")
 	       "**** %?\n ")
 		      ("jrO" "opex" plain (file+datetree+prompt "~/GitHub/Notater/journaler/opex-drivers.org")
 	       "**** %?\n ")
