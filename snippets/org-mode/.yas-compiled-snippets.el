@@ -11,6 +11,7 @@
 		       (">tr" "[[file:/home/bw/Documents/Marked/Turkey/rapporter/${1:filnavn}.pdf][$1]$0" "Turkey" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/turkey" nil nil)
 		       (">tecon" "[[file:/home/bw/Documents/Histore_og_politikk/The_Economist/${1:filnavn}.pdf][$1]$0" "the economist" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/the_economist" nil nil)
 		       (">th" "[[file:/home/bw/Documents/Marked/Thailand/rapporter/${1:filnavn}.pdf][$1]$0" "Thailand" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/thailand" nil nil)
+		       (">kr" "[[file:/home/bw/Documents/Marked/Sørkorea/rapporter/${1:filnavn}.pdf][$1]$0\n" "Sørkorea" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/sørkorea" nil nil)
 		       (">se" "[[file:/home/bw/Documents/Marked/Sweden/rapporter/${1:filnavn}.pdf][$1]$0" "Sweden" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/sweden" nil nil)
 		       (">spg" "[[file:/home/bw/Documents/Marked/Products/SPGlobal/${1:filnavn}.pdf][$1]$0" "spglobal" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/spglobal" nil nil)
 		       (">es" "[[file:/home/bw/Documents/Marked/Spain/rapporter/${1:filnavn}.pdf][$1]$0\n" "Spain" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/spain" nil nil)
@@ -28,6 +29,7 @@
 		       (">no" "[[file:/home/bw/Documents/Marked/Norway/rapporter/${1:filnavn}.pdf][$1]$0" "Norway" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/norway" nil nil)
 		       (">nl" "[[file:/home/bw/Documents/Marked/Netherlands/rapporter/${1:filnavn}.pdf][$1]$0" "Netherlands" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/netherlands" nil nil)
 		       (">mong" ":PROPERTIES:\n:kilde:       $1\n:regneark:    $2\n:ark:         $3\n:område:      $4\n:kommentar:   $5\n:nettside:    $6\n:END:" "mongstad" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/mong" nil nil)
+		       (">mx" "[[file:/home/bw/Documents/Marked/Mexico/rapporter/${1:filnavn}.pdf][$1]$0\n" "Mexico" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/mexico" nil nil)
 		       (">lu" "[[file:/home/bw/Documents/Marked/Luxembourg/rapporter/${1:filnavn}.pdf][$1]$0" "Luxembourg" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/luxembourg" nil nil)
 		       (">liq" ":PROPERTIES:\n:status:  $1\n:site:    $2\n:year:    $3 \n:mtpa:    $4 \n:trains:  $5\n:cntr:    $6  \n:END:\n\n\n" "liquefaction" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/liquefaction" nil nil)
 		       (">wm" "[[file:/home/bw/Documents/Marked/Products/Wood_Mackenzie/${1:filnavn}.pdf][$1]$0\n" "Wood Mackenzie" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/linkwm" nil nil)
@@ -44,6 +46,7 @@
 		       (">id" "[[file:/home/bw/Documents/Marked/Indonesia/rapporter/${1:filnavn}.pdf][$1]$0" "Indonesia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/indonesia" nil nil)
 		       (">in" "[[file:/home/bw/Documents/Marked/India/rapporter/${1:filnavn}.pdf][$1]$0" "India" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/india" nil nil)
 		       (">ifp" "[[file:/home/bw/Documents/Marked/Products/IFP/${1:filnavn}.pdf][$1]$0\n" "IFP" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/ifp" nil nil)
+		       (">hu" "[[file:/home/bw/Documents/Marked/Hungary/rapporter/${1:filnavn}.pdf][$1]$0\n" "Hungary" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/hungary" nil nil)
 		       (">gs" "[[file:/home/bw/Documents/Marked/Products/Goldman_Sachs/${1:filnavn}.pdf][$1]$0" "goldman sachs" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/goldman_sachs" nil nil)
 		       (">de" "[[file:/home/bw/Documents/Marked/Germany/rapporter/${1:filnavn}.pdf][$1]$0" "Germany" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/germany" nil nil)
 		       (">fr" "[[file:/home/bw/Documents/Marked/France/rapporter/${1:filnavn}.pdf][$1]$0" "France" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/france" nil nil)
@@ -70,4 +73,4 @@
 		       (">au" "[[file:/home/bw/Documents/Marked/Australia/rapporter/${1:filnavn}.pdf][$1]$0\n" "Australia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/australia" nil nil)))
 
 
-;;; Do not edit! File generated at Fri Jul  8 09:55:53 2022
+;;; Do not edit! File generated at Fri Jul 15 10:16:56 2022

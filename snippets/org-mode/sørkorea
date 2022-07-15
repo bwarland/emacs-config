@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Sørkorea
+# key: >kr
+# --
+[[file:/home/bw/Documents/Marked/Sørkorea/rapporter/${1:filnavn}.pdf][$1]$0
