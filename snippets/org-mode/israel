@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Israel
+# key: >il
+# --
+[[file:/home/bw/Documents/Marked/Israel/rapporter/${1:filnavn}.pdf][$1]$0
