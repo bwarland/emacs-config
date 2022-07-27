@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: financial times
+# key: >fintim
+# --
+[[file:/home/bw/Documents/Marked/Products/FT/${1:filnavn}.pdf][$1]$0

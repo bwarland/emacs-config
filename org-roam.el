@@ -36,6 +36,10 @@
       "* beskrivelse\n* relatert\n- \n* kilder [/]\n- [ ] >%?"
       :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
       :unnarrowed t)
+     ("r" "raffineri" plain
+      "* beskrivelse\n[[id:672f32f5-2b41-4c62-bc48-53a458231609][raffineri]] i ... med kapasitet på\n* relatert\n- \n* kilder [/]\n- [ ] >%?"
+      :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+      :unnarrowed t)
      ;; ("l" "programming language" plain
      ;;  "* Characteristics\n\n- Family: %?\n- Inspired by: \n\n* Reference:\n\n"
      ;;  :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
