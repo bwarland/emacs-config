@@ -28,16 +28,24 @@
   :custom
    (org-roam-capture-templates
    '(
-     ("b" "bøker" plain
+     ("b" "Bøker" plain
       "* beskrivelse\n** hva?\n** hvorfor?\n** hvordan?\n* relatert\n- \n* kilder [/]\n- [ ] >%?"
       :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
       :unnarrowed t)
-     ("d" "default" plain
+     ("d" "Default" plain
       "* beskrivelse\n* relatert\n- \n* kilder [/]\n- [ ] >%?"
       :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
       :unnarrowed t)
-     ("r" "raffineri" plain
+     ("l" "Liquefaction" plain
+      "* beskrivelse\n[[id:6b442a80-5cb2-4f6b-a265-3962d93a1e0a][LNG-anlegg]] i .. med kapasitet på ...  mtpa over ... tog.\n* relatert\n- \n* kilder [/]\n- [ ] >%?"
+      :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+      :unnarrowed t)
+     ("r" "Raffineri" plain
       "* beskrivelse\n[[id:672f32f5-2b41-4c62-bc48-53a458231609][raffineri]] i ... med kapasitet på\n* relatert\n- \n* kilder [/]\n- [ ] >%?"
+      :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+      :unnarrowed t)
+     ("R" "Regas" plain
+      "* beskrivelse\n[[id:557e0fe8-3c1f-4fae-b4a7-29471bc4058b][LNG-import]]... i  med kapasitet på ... bcma.\n* relatert\n- \n* kilder [/]\n- [ ] >%?"
       :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
       :unnarrowed t)
      ;; ("l" "programming language" plain
