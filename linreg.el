@@ -1,5 +1,5 @@
-(set-register ?D '(file . "~/GitHub/Journal/dagbok.org"))
-(set-register ?d '(file . "~/GitHub/Notater/journaler/LNG-daglig.org"))
+(set-register ?d '(file . "~/GitHub/Journal/dagbok.org"))
+;; (set-register ?d '(file . "~/GitHub/Notater/journaler/LNG-daglig.org"))
 (set-register ?t '(file . "~/GitHub/Journal/trening.org"))
 (set-register ?c '(file . "~/GitHub/Notater/journaler/crude-oil-market.org"))
 (set-register ?g '(file . "~/GitHub/"))
