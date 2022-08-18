@@ -12,6 +12,7 @@
 		       (">tecon" "[[file:/home/bw/Documents/Histore_og_politikk/The_Economist/${1:filnavn}.pdf][$1]$0" "the economist" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/the_economist" nil nil)
 		       (">th" "[[file:/home/bw/Documents/Marked/Thailand/rapporter/${1:filnavn}.pdf][$1]$0" "Thailand" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/thailand" nil nil)
 		       (">kr" "[[file:/home/bw/Documents/Marked/Sørkorea/rapporter/${1:filnavn}.pdf][$1]$0\n" "Sørkorea" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/sørkorea" nil nil)
+		       (">ch" "[[file:/home/bw/Documents/Marked/Switzerland/rapporter/${1:filnavn}.pdf][$1]$0\n" "Switzerland" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/switzerland" nil nil)
 		       (">se" "[[file:/home/bw/Documents/Marked/Sweden/rapporter/${1:filnavn}.pdf][$1]$0" "Sweden" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/sweden" nil nil)
 		       (">spg" "[[file:/home/bw/Documents/Marked/Products/SPGlobal/${1:filnavn}.pdf][$1]$0" "spglobal" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/spglobal" nil nil)
 		       (">es" "[[file:/home/bw/Documents/Marked/Spain/rapporter/${1:filnavn}.pdf][$1]$0\n" "Spain" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/spain" nil nil)
@@ -41,6 +42,7 @@
 		       (">lenke" "[[file:/home/bw/Documents/markedsrapporter/${1:filnavn}.pdf][${2:rapportnavn}]$0" "lenke linux" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/lenke" nil nil)
 		       (">kw" "- [[file:/home/bw/Documents/Marked/Kuwait/rapporter/${1:filnavn}.pdf][$1]$0\n" "Kuwait" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/kuwait" nil nil)
 		       (">jp" "[[file:/home/bw/Documents/Marked/Japan/rapporter/${1:filnavn}.pdf][$1]$0" "Japan" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/japan" nil nil)
+		       (">il" "[[file:/home/bw/Documents/Marked/Israel/rapporter/${1:filnavn}.pdf][$1]$0\n" "Israel" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/israel" nil nil)
 		       (">iq" "[[file:/home/bw/Documents/Marked/Iraq/rapporter/${1:filnavn}.pdf][$1]$0" "Iraq" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/iraq" nil nil)
 		       (">ir" "[[file:/home/bw/Documents/Marked/Iran/rapporter/${1:filnavn}.pdf][$1]$0\n" "Iran" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/iran" nil nil)
 		       (">id" "[[file:/home/bw/Documents/Marked/Indonesia/rapporter/${1:filnavn}.pdf][$1]$0" "Indonesia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/indonesia" nil nil)
@@ -51,6 +53,7 @@
 		       (">de" "[[file:/home/bw/Documents/Marked/Germany/rapporter/${1:filnavn}.pdf][$1]$0" "Germany" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/germany" nil nil)
 		       (">fr" "[[file:/home/bw/Documents/Marked/France/rapporter/${1:filnavn}.pdf][$1]$0" "France" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/france" nil nil)
 		       (">fi" "[[file:/home/bw/Documents/Marked/Finland/rapporter/${1:filnavn}.pdf][$1]$0" "Finland" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/finland" nil nil)
+		       (">fintim" "[[file:/home/bw/Documents/Marked/Products/FT/${1:filnavn}.pdf][$1]$0" "financial times" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/financial_times" nil nil)
 		       (">exxon" "[[file:/home/bw/Documents/Marked/Products/ExxonMobil/${1:filnavn}.pdf][$1]$0" "exxonmobil" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/exxon" nil nil)
 		       (">equi" "[[file:/home/bw/Documents/Marked/Products/Equinor/${1:filnavn}.pdf][$1]$0" "equinor" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/equinor" nil nil)
 		       (">eutil" ":PROPERTIES:\n:reas1: $1\n:reas2: $2\n:reas3: $3\n:reas4: $4\n:reas5: $5\n:END:" "epa utilization" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/epa_util" nil nil)
@@ -73,4 +76,4 @@
 		       (">au" "[[file:/home/bw/Documents/Marked/Australia/rapporter/${1:filnavn}.pdf][$1]$0\n" "Australia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/australia" nil nil)))
 
 
-;;; Do not edit! File generated at Fri Jul 15 10:16:56 2022
+;;; Do not edit! File generated at Thu Aug 18 10:37:02 2022
