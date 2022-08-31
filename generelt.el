@@ -11,26 +11,26 @@
 
   (cond ((eq system-type 'windows-nt) (set-frame-font "consolas-14"))
         ((string= system-name "mbell") (set-frame-font "liberation mono-13"))
-        ((string= system-name "kbell") (set-frame-font "liberation mono-13"))
+        ((string= system-name "kbell") (set-frame-font "liberation mono-12"))
 	((string= system-name "biba") (set-frame-font "liberation mono-14"))
         ((string= system-name "nyvaar") (set-frame-font "liberation mono-12")))
 
-(use-package doom-modeline
-    :ensure t
-    :init (doom-modeline-mode 1)
-    :hook (after-init . doom-modeline-init)
-    :config (setq doom-modeline-bar-height 25
-                  doom-modeline-bar-width 3
-                  doom-modeline-buffer-encoding t
-                  doom-modeline-workspace-name t
-		  doom-modeline-major-mode-icon t
-		  doom-modeline-buffer-state-icon t
-		  doom-modeline-buffer-modification-icon t
-		  doom-modeline-modal-icon t
-		  doom-modeline-env-python-executable "python"
-		  doom-modeline-icon (display-graphic-p)))
-  ;; (use-package doom-themes
-  ;;   :init (load-theme 'doom-palenight t))
+  ;; (use-package doom-modeline
+  ;;     :ensure t
+  ;;     :init (doom-modeline-mode 1)
+  ;;     :hook (after-init . doom-modeline-init)
+  ;;     :config (setq doom-modeline-bar-height 25
+  ;;                   doom-modeline-bar-width 3
+  ;;                   doom-modeline-buffer-encoding t
+  ;;                   doom-modeline-workspace-name t
+  ;; 		  doom-modeline-major-mode-icon t
+  ;; 		  doom-modeline-buffer-state-icon t
+  ;; 		  doom-modeline-buffer-modification-icon t
+  ;; 		  doom-modeline-modal-icon t
+  ;; 		  doom-modeline-env-python-executable "python"
+  ;; 		  doom-modeline-icon (display-graphic-p)))
+    ;; (use-package doom-themes
+    ;;   :init (load-theme 'doom-palenight t))
 
 ;; (setq-default show-trailing-whitespace t)
 

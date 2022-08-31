@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Nigeria
+# key: >ng
+# --
+[[file:/home/bw/Documents/Marked/Nigeria/rapporter/${1:filnavn}.pdf][$1]$0

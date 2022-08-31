@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Taiwan
+# key: >tw
+# --
+[[file:/home/bw/Documents/Marked/Taiwan/rapporter/${1:filnavn}.pdf][$1]$0
