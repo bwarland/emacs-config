@@ -44,8 +44,8 @@
       modus-themes-italic-constructs t
       modus-themes-paren-match '(bold intense underline)
       modus-themes-headings '((1 . (light overline underline 1.2))
-			      (2 . (light 1.15))
-			      (3 . (light 1.1))
+			      (2 . (light 1.1))
+			      (3 . (light 1.075))
 			      (t . (light 1.05)))			      
       modus-themes-scale-headings t)
 (load-theme 'modus-operandi t)
