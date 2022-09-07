@@ -5,8 +5,8 @@
 (load-file "~/GitHub/emacs-config/generelt.el")
 (load-file "~/GitHub/emacs-config/maler.el")
 
-(load-file "~/GitHub/emacs-config/org-konf.el")
-(load-file "~/GitHub/emacs-config/linorg.el")
+;; (load-file "~/GitHub/emacs-config/org-konf.el")
+;; (load-file "~/GitHub/emacs-config/linorg.el")
 (load-file "~/GitHub/emacs-config/org-agenda.el")
 (load-file "~/GitHub/emacs-config/orgtodo.el")
 (load-file "~/GitHub/emacs-config/helm-konf.el")
