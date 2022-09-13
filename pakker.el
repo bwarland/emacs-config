@@ -4,7 +4,7 @@
 							      ("elpa" . "https://elpa.gnu.org/packages/")
                                                               ;; ("marmalade" . "https://marmalade-repo.org/packages/")
                                                               ;; ("org" . "https://orgmode.org/elpa/")
-							      ("nongnu" . "https://elpa.nongnu.org/nongnu/")
+							      ;; ("nongnu" . "https://elpa.nongnu.org/nongnu/")
                                                               ("melpa" . "https://melpa.org/packages/")
                                                             ))))
 
