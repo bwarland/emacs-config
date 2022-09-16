@@ -89,7 +89,7 @@
 
 (use-package deft
     :config
-    (setq deft-directory org-roam-directory;;org-directory
+    (setq deft-directory "~/GitHub/Notater/org-roam/";;org-directory
           deft-recursive t
           deft-strip-summary-regexp ":PROPERTIES:\n\\(.+\n\\)+:END:\n"
           deft-use-filename-as-title t)
