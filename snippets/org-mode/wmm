@@ -1,0 +1,26 @@
+# -*- mode: snippet -*-
+# name: Weekly Market Meeting
+# key: >wmm
+# --
+
+* Crude Oil
+** Outlook, Supply And Market Balance
+** Prices
+* Storage
+* Tradeflow And Fuel Substitution
+* Products
+** Gasoline
+** Diesel
+** Jet
+** Fuel Oil
+** LPG 
+** Naphtha 
+* Refinery
+** Throughput
+** Margins
+** Outage
+** Gas Supply
+** Market
+** Tax And Energy Savings
+** ETS
+* Biofuels

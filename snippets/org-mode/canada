@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Canada
+# key: >ca
+# --
+[[file:/home/bw/Documents/Marked/Canada/rapporter/${1:filnavn}.pdf][$1]$0
