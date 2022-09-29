@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: daglenke
+# key: >daylink
+# --
+[[file:/home/bw/GitHub/Notater/daglig/${1:filnavn}.org][$1]$0
