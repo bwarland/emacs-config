@@ -42,7 +42,7 @@
 		       (">jbc" "[[file:/home/bw/Documents/Marked/Products/JBC/${1:filnavn}.pdf][$1]$0\n" "link JBC" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/linkjbc" nil nil)
 		       (">lenker" "[[file:~/Documents/markedsrapporter/${1:rapportnavn}.pdf][H:$1]$0 [[file:C:\\Users\\bjorwa\\OneDrive - Equinor\\reports\\$1.pdf][J:$1]" "hjlinks" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/lenker" nil nil)
 		       (">ea" "[[file:/home/bw/Documents/Marked/Products/Energy_Aspects/${1:filnavn}.pdf][$1]$0\n" "link Energy Aspects" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/lenkeea" nil nil)
-		       (">lenke" "[[file:/home/bw/Documents/markedsrapporter/${1:filnavn}.pdf][${2:rapportnavn}]$0" "lenke linux" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/lenke" nil nil)
+		       (">lenke" "[[file:/home/bw/Documents/markedsrapporter/${1:filnavn}.pdf][$1]$0" "lenke linux" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/lenke" nil nil)
 		       (">kw" "- [[file:/home/bw/Documents/Marked/Kuwait/rapporter/${1:filnavn}.pdf][$1]$0\n" "Kuwait" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/kuwait" nil nil)
 		       (">jp" "[[file:/home/bw/Documents/Marked/Japan/rapporter/${1:filnavn}.pdf][$1]$0" "Japan" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/japan" nil nil)
 		       (">it" "[[file:/home/bw/Documents/Marked/Italia/rapporter/${1:filnavn}.pdf][$1]$0\n" "Italy" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/italy" nil nil)
@@ -67,6 +67,7 @@
 		       (">erefdem" ":PROPERTIES:\n:dem1: $1\n:dem2: $2\n:dem3: $3\n:dem4: $4\n:dem5: $5\n:END:" "epa refinery demand" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/ep_refdem" nil nil)
 		       (">eg" "[[file:/home/bw/Documents/Marked/Egypt/rapporter/${1:filnavn}.pdf][$1]$0" "Egypt" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/egypt" nil nil)
 		       (">dk" "[[file:/home/bw/Documents/Marked/Denmark/rapporter/${1:filnavn}.pdf][$1]$0\n" "Denmark" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/denmark" nil nil)
+		       (">daylink" "[[file:/home/bw/GitHub/Notater/daglig/${1:filnavn}.org][$1]$0" "daglenke" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/daglenke" nil nil)
 		       (">cw" "[[file:/home/bw/Documents/Marked/Curacao/rapporter/${1:filnavn}.pdf][$1]$0\n" "Curacao" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/curacao" nil nil)
 		       (">crude" ":PROPERTIES:\n:name:	  $1\n:country:  $2\n:api:      $3\n:sulfur:   $4\n:END:$0" "crude oil" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/crude_oil" nil nil)
 		       (">co" "[[file:/home/bw/Documents/Marked/Colombia/rapporter/${1:filnavn}.pdf][$1]$0\n" "Colombia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/colombia" nil nil)
@@ -82,4 +83,4 @@
 		       (">au" "[[file:/home/bw/Documents/Marked/Australia/rapporter/${1:filnavn}.pdf][$1]$0\n" "Australia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/australia" nil nil)))
 
 
-;;; Do not edit! File generated at Wed Sep 28 10:35:13 2022
+;;; Do not edit! File generated at Fri Sep 30 11:23:36 2022
