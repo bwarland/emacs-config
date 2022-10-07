@@ -82,8 +82,4 @@
 		       (">au" "[[file:/home/bw/Documents/Marked/Australia/rapporter/${1:filnavn}.pdf][$1]$0\n" "Australia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/australia" nil nil)))
 
 
-<<<<<<< HEAD
-;;; Do not edit! File generated at Fri Sep 30 11:23:36 2022
-=======
-;;; Do not edit! File generated at Wed Oct  5 09:12:32 2022
->>>>>>> 68e9331 (biba>kbell:snippets)
+;;; Do not edit! File generated at Fri Oct  7 06:54:22 2022

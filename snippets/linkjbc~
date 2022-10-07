@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: link JBC
-# key: >jbc
-# --
-
-[[file:/home/bw/Documents/Marked/Products/JBC/${1:filnavn}.pdf][${2:filnavn}]
