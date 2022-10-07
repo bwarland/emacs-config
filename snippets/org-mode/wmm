@@ -14,7 +14,11 @@
 ** Jet
 ** Fuel Oil
 ** LPG 
-** Naphtha 
+** Nafta
+* Opex
+** Gas Supply
+** ETS
+** Price
 * Refinery
 ** Throughput
 ** Margins
