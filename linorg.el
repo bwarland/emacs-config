@@ -64,7 +64,7 @@
       (quote (
               ("h" "handling")
 	      ("hg" "gjøremål" entry (file+olp "~/GitHub/Notater/journaler/frister.org" "ad-hoc")
-	      "* TODO %?\n SCHEDULED: %^t")
+	      "* TODO %?\n %^t")
 	      ("hm" "møter" entry (file+olp "~/GitHub/Notater/journaler/frister.org" "møter")
 	       "* %?\n %^T--%^T")
               ("j" "Journal")
