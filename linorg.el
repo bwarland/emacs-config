@@ -126,7 +126,12 @@
                                      (python . t)
 				     (shell . t)
                                      ;; (ipython .t)
+				     ;; (ditaa .t)
                                      )))
+;; (setq ob-ditaa-jar-path "/usr/bin/ditaa")
+(add-to-list 'load-path "/home/bw/.emacs.d/quelpa/recipes/ob-diagrams")
+(load "ob-diagrams.el")
+(require 'ob-diagrams)
 (setq org-babel-python-command "python3")
 
 ;; (setq org-format-latex-options (plist-put org-format-latex-options :scale 2.0))
