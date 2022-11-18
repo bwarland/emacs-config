@@ -62,10 +62,9 @@
 
 (setq org-capture-templates
       (quote (
-              ("h" "handling")
-	      ("hg" "gjøremål" entry (file+olp "~/GitHub/Notater/journaler/frister.org" "ad-hoc")
+	      ("g" "gjøremål" entry (file+olp "~/GitHub/Notater/journaler/frister.org" "ad-hoc")
 	      "* TODO %?\n %^t")
-	      ("hm" "møter" entry (file+olp "~/GitHub/Notater/journaler/frister.org" "møter")
+	      ("m" "møte" entry (file+olp "~/GitHub/Notater/møter/møte.org" "2022") ;
 	       "* %?\n %^T--%^T")
               ("j" "Journal")
               ("jd" "dagbok" entry (file+datetree+prompt "~/GitHub/Journal/dagbok.org")
