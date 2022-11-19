@@ -1,0 +1,106 @@
+
+
+
+(load-file "~/GitHub/emacs-config/pakker.el")
+;; (use-package org
+;;   :ensure t
+;;   :pin elpa)
+
+(load-file "~/GitHub/emacs-config/linreg.el")
+(load-file "~/GitHub/emacs-config/gkb.el")
+(load-file "~/GitHub/emacs-config/generelt.el")
+(load-file "~/GitHub/emacs-config/maler.el")
+(load-file "~/GitHub/emacs-config/hydra-conf.el")
+;; (load-file "~/GitHub/emacs-config/org-konf.el")
+(load-file "~/GitHub/emacs-config/kompletering.el")
+(load-file "~/GitHub/emacs-config/linorg.el")
+(load-file "~/GitHub/emacs-config/org-agenda.el")
+(load-file "~/GitHub/emacs-config/org-roam.el")
+(load-file "~/GitHub/emacs-config/orgtodo.el")
+(load-file "~/GitHub/emacs-config/helm-konf.el")
+(load-file "~/GitHub/emacs-config/programmering.el")
+(load-file "~/GitHub/emacs-config/flere-markører.el")
+(load-file "~/GitHub/emacs-config/konf_perspective.el")
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+(setq package-enable-at-startup nil)
+
+;; (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+;;                          ;; ("marmalade" . "https://marmalade-repo.org/packages/")
+;;                          ("melpa" . "https://melpa.org/packages/")))
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes '(modus-vivendi))
+ '(custom-safe-themes
+   '("3199be8536de4a8300eaf9ce6d864a35aa802088c0925e944e2b74a574c68fd0" "e87f48ec4aebdca07bb865b90088eb28ae4b286ee8473aadb39213d361d0c45f" "5a611788d47c1deec31494eb2bb864fde402b32b139fe461312589a9f28835db" "a0415d8fc6aeec455376f0cbcc1bee5f8c408295d1c2b9a1336db6947b89dd98" "7661b762556018a44a29477b84757994d8386d6edee909409fabe0631952dad9" "6b5c518d1c250a8ce17463b7e435e9e20faa84f3f7defba8b579d4f5925f60c1" "83e0376b5df8d6a3fbdfffb9fb0e8cf41a11799d9471293a810deb7586c131e6" "eb122e1df607ee9364c2dfb118ae4715a49f1a9e070b9d2eb033f1cefd50a908" "9b35c097a5025d5da1c97dba45fed027e4fb92faecbd2f89c2a79d2d80975181" "54449a089fc2f95f99ebc9b9b6067c802532fd50097cf44c46a53b4437d5c6cc" default))
+ '(org-agenda-files
+   '("~/GitHub/Notater/journaler/rapporter.org" "/home/bw/GitHub/Notater/org-roam/20220527103959-refinery_list.org" "/home/bw/GitHub/Notater/journaler/journal.org" "/home/bw/GitHub/Notater/journaler/frister.org"))
+ '(org-export-with-priority t)
+ '(org-modules
+   '(ol-bbdb ol-bibtex ol-docview ol-eww ol-gnus ol-info ol-irc ol-mhe ol-rmail ol-w3m org-learn ol-man org-registry orgtbl-sqlinsert))
+ '(package-selected-packages
+   '(org-anki evil perspective smog modus-themes use-package-hydra pamparam major-mode-hydra flycheck-guile geiser-guile geiser-racket writeroom-mode wc-goal-mode wc-mode emacsql-sqlite3 equake org-dashboard neotree geiser slime org-gcal org-books helm-org enlive helm-ls-git rainbow-delimiters auto-package-update counsel doom-themes doom-modeline command-log-mode discover-my-major edwina vterm-toggle magit org-super-agenda quelpa-use-package quelpa vterm org-drill-table org-drill org-bullets org-noter-pdftools org-noter origami treemacs anki-vocabulary anki-editor anki-connect anki-mode python-black ipython bbdb anaconda-mode sqlite esqlite-helm esqlite sqlite3 hackernews smooth-scrolling swiper-helm helm use-package racket-mode))
+ '(warning-suppress-types
+   '((modus-themes)
+     ((package reinitialization))
+     (modus-themes)
+     (modus-themes)
+     (modus-themes)
+     (modus-themes))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+
+;; (load-file "~/.emacs.d/init/bw-hydra-config.el")
+;; (load-file "~/.emacs.d/custom.el")
+;; (load-file "~/GitHub/emacs-config/custom.el")
+;; (load-file "~/GitHub/emacs-config/custom.org")
+
+;; (load-file "~/.emacs.d/elpa/org-drill-20200412.1812/org-drill.el")
+;;(load-file "~/.emacs.d/init/ido.el")
+;;(load-file "~/.emacs.d/init/tmp.el")
+;; (emacs-init-time)
+
+;; ;; Use a hook so the message doesn't get clobbered by other messages.
+;; (add-hook 'emacs-startup-hook
+;;           (lambda ()
+;;             (message "Emacs ready in %s with %d garbage collections."
+;;                      (format "%.2f seconds"
+;;                              (float-time
+;;                               (time-subtract after-init-time before-init-time)))
+;;                      gcs-done)))
+
+;; (org-babel-do-load-languages
+;;  'org-babel-load-languages
+;;  '((emacs-lisp . t)
+;;    (python . t)
+;;    ;; (racket . t)
+;;    ;; (guile . t)
+;;    ))
+
+;; (setq gc-cons-threshold (* 50 1000 1000))
+;; (setq python-indent-guess-indent-offset t)
+;; (setq python-indent-guess-indent-offset-verbose t)
+
+
+;; (load (expand-file-name "~/quicklisp/slime-helper.el"))
+;; Replace "sbcl" with the path to your implementation
+;; (setq inferior-lisp-program "/usr/bin/sbcl")
+
+(setq inferior-lisp-program "/usr/sbin/sbcl")
+
