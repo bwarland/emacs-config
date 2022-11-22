@@ -1,4 +1,4 @@
-;; (require 'org-fc-hydra)
+  ;; (require 'org-fc-hydra)
 
 (require 'org-tempo)
 (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
