@@ -48,7 +48,7 @@
 			      (3 . (light 1.075))
 			      (t . (light 1.05)))			      
       modus-themes-scale-headings t)
-(load-theme 'modus-vivendi t)
+(load-theme 'modus-operandi t)
 
 (put 'downcase-region 'disabled nil)
 (set-language-environment "utf-8")
