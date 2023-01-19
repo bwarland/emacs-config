@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Puerto Rico
+# key: >pr
+# --
+[[file:/home/bw/Documents/Marked/Puerto_Rico/rapporter/${1:filnavn}.pdf][$1]$0
