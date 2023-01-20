@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Ireland
+# key: >ie
+# --
+[[file:/home/bw/Documents/Marked/Irelandv/rapporter/${1:filnavn}.pdf][$1]$0
