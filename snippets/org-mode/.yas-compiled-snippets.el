@@ -22,7 +22,9 @@
 		       (">ru" "[[file:/home/bw/Documents/Marked/Russia/rapporter/${1:filnavn}.pdf][$1]$0" "Russia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/russia" nil nil)
 		       (">reg" ":PROPERTIES:    \n:bcma:      $1\n:site:      $2\n:port:      $3\n:status:    $4\n:start:     $5\n:storage:   $6\n:cntr:      $7\n:END:" "regasification" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/regasification" nil nil)
 		       (">ref" ":PROPERTIES:\n:status:  $1\n:year:    $2\n:future:  $3\n:kbd:     $4\n:cntr:    $5\n:petchem: $6\n:risk:    $7\n:END:\n" "refinery" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/refinery" nil nil)
+		       (">pr" "[[file:/home/bw/Documents/Marked/Puerto_Rico/rapporter/${1:filnavn}.pdf][$1]$0" "Puerto Rico" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/puerto_rico" nil nil)
 		       (">wmm" "" "weekly market meeting" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/products" nil nil)
+		       (">pt" "[[file:/home/bw/Documents/Marked/Portugal/rapporter/${1:filnavn}.pdf][$1]$0" "Portugal" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/portugal" nil nil)
 		       (">pl" "[[file:/home/bw/Documents/Marked/Poland/rapporter/${1:filnavn}.pdf][$1]$0" "Poland" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/poland" nil nil)
 		       (">pic" "[[file:/home/bw/Pictures/${1:bilde}.png][${2:tekst}]" "zpic" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/pictures" nil nil)
 		       (">pe" "[[file:/home/bw/Documents/Marked/Peru/rapporter/${1:filnavn}.pdf][$1]$0\n" "Peru" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/peru" nil nil)
@@ -46,6 +48,7 @@
 		       (">jp" "[[file:/home/bw/Documents/Marked/Japan/rapporter/${1:filnavn}.pdf][$1]$0" "Japan" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/japan" nil nil)
 		       (">it" "[[file:/home/bw/Documents/Marked/Italia/rapporter/${1:filnavn}.pdf][$1]$0\n" "Italy" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/italy" nil nil)
 		       (">il" "[[file:/home/bw/Documents/Marked/Israel/rapporter/${1:filnavn}.pdf][$1]$0\n" "Israel" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/israel" nil nil)
+		       (">ie" "[[file:/home/bw/Documents/Marked/Irelandv/rapporter/${1:filnavn}.pdf][$1]$0" "Ireland" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/ireland" nil nil)
 		       (">iq" "[[file:/home/bw/Documents/Marked/Iraq/rapporter/${1:filnavn}.pdf][$1]$0" "Iraq" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/iraq" nil nil)
 		       (">ir" "[[file:/home/bw/Documents/Marked/Iran/rapporter/${1:filnavn}.pdf][$1]$0\n" "Iran" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/iran" nil nil)
 		       (">id" "[[file:/home/bw/Documents/Marked/Indonesia/rapporter/${1:filnavn}.pdf][$1]$0" "Indonesia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/indonesia" nil nil)
@@ -67,13 +70,14 @@
 		       (">eg" "[[file:/home/bw/Documents/Marked/Egypt/rapporter/${1:filnavn}.pdf][$1]$0" "Egypt" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/egypt" nil nil)
 		       (">dk" "[[file:/home/bw/Documents/Marked/Denmark/rapporter/${1:filnavn}.pdf][$1]$0\n" "Denmark" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/denmark" nil nil)
 		       (">dailies" "* Rapporter\n\n* Bearbeiding\n\n* Marked\n** råolje\n** naturgass\n* Møter\n\n* Diskusjon\n\n* Agenda [/]\n  - [ ] " "dailies" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/dailies" nil nil)
-		       (">daylink" "[[file:/home/bw/GitHub/Notater/daglig/${1:filnavn}.org][$1]$0" "daglenke" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/daglenke" nil nil)
+		       (">dgl" "[[file:/home/bw/GitHub/Notater/daglig/${1:filnavn}.org][$1]$0" "daglenke" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/daglenke" nil nil)
 		       (">cw" "[[file:/home/bw/Documents/Marked/Curacao/rapporter/${1:filnavn}.pdf][$1]$0\n" "Curacao" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/curacao" nil nil)
 		       (">crude" ":PROPERTIES:\n:name:	  $1\n:country:  $2\n:api:      $3\n:sulfur:   $4\n:END:$0" "crude oil" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/crude_oil" nil nil)
 		       (">co" "[[file:/home/bw/Documents/Marked/Colombia/rapporter/${1:filnavn}.pdf][$1]$0\n" "Colombia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/colombia" nil nil)
 		       (">cn" "- [[file:/home/bw/Documents/Marked/China/rapporter/${1:filnavn}.pdf][$1]$0" "China" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/china" nil nil)
 		       (">cl" "[[file:/home/bw/Documents/Marked/Chile/rapporter/${1:filnavn}.pdf][$1]$0\n" "Chile" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/chile" nil nil)
 		       (">ca" "[[file:/home/bw/Documents/Marked/Canada/rapporter/${1:filnavn}.pdf][$1]$0\n" "Canada" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/canada" nil nil)
+		       (">bg" "[[file:/home/bw/Documents/Marked/Bulgaria/rapporter/${1:filnavn}.pdf][$1]$0" "Bulgaria" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/bulgaria" nil nil)
 		       (">bio" "[[file:/home/bw/Documents/Marked/Biodrivstoff/${1:filnavn}.pdf][$1]$0" "biofuels" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/bio" nil nil)
 		       (">be" "[[file:/home/bw/Documents/Marked/Belgium/rapporter/${1:filnavn}.pdf][$1]$0\n" "Belgium" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/belgium" nil nil)
 		       (">by" "- [ ] [[file:/home/bw/Documents/Marked/Belarus/rapporter/${1:filnavn}.pdf][$1]$0\n- [[file:C:\\Users\\bjorwa\\OneDrive - Equinor\\reports\\$1.pdf][Win:$1]]\n" "Belarus" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/belarus" nil nil)
@@ -83,4 +87,4 @@
 		       (">au" "[[file:/home/bw/Documents/Marked/Australia/rapporter/${1:filnavn}.pdf][$1]$0\n" "Australia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/australia" nil nil)))
 
 
-;;; Do not edit! File generated at Wed Nov 23 07:37:39 2022
+;;; Do not edit! File generated at Tue Jan 24 18:27:11 2023
