@@ -69,7 +69,7 @@
 		       (">erefdem" ":PROPERTIES:\n:dem1: $1\n:dem2: $2\n:dem3: $3\n:dem4: $4\n:dem5: $5\n:END:" "epa refinery demand" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/ep_refdem" nil nil)
 		       (">eg" "[[file:/home/bw/Documents/Marked/Egypt/rapporter/${1:filnavn}.pdf][$1]$0" "Egypt" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/egypt" nil nil)
 		       (">dk" "[[file:/home/bw/Documents/Marked/Denmark/rapporter/${1:filnavn}.pdf][$1]$0\n" "Denmark" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/denmark" nil nil)
-		       (">dailies" "* Rapporter\n\n* Bearbeiding\n\n* Marked\n** råolje\n** naturgass\n* Møter\n\n* Diskusjon\n\n* Agenda [/]\n  - [ ] " "dailies" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/dailies" nil nil)
+		       (">dailies" "* Rapporter\n\n* Marked\n** råolje\n** naturgass\n\n* Bearbeiding\n\n* Møter\n\n* Diskusjon\n\n* Agenda [/]\n  - [ ] " "dailies" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/dailies" nil nil)
 		       (">dgl" "[[file:/home/bw/GitHub/Notater/daglig/${1:filnavn}.org][$1]$0" "daglenke" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/daglenke" nil nil)
 		       (">cw" "[[file:/home/bw/Documents/Marked/Curacao/rapporter/${1:filnavn}.pdf][$1]$0\n" "Curacao" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/curacao" nil nil)
 		       (">crude" ":PROPERTIES:\n:name:	  $1\n:country:  $2\n:api:      $3\n:sulfur:   $4\n:END:$0" "crude oil" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/crude_oil" nil nil)
@@ -87,4 +87,4 @@
 		       (">au" "[[file:/home/bw/Documents/Marked/Australia/rapporter/${1:filnavn}.pdf][$1]$0\n" "Australia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/australia" nil nil)))
 
 
-;;; Do not edit! File generated at Tue Jan 24 18:27:11 2023
+;;; Do not edit! File generated at Wed Jan 25 15:37:04 2023
