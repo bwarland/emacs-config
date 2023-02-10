@@ -29,7 +29,7 @@
    (org-roam-capture-templates
    '(
      ("b" "Bøker" plain
-      "* beskrivelse\n** hva?\n** hvorfor?\n** hvordan?\n* relatert\n- \n* kilder [/]\n- [ ] >%?"
+      "* beskrivelse\n** hva?\n** hvordan?\n** verdifullt?\n** hvorfor?\n* relatert bøker\n* relaterte konsept\n- \n* kilder [/]\n- [ ] >%?"
       :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
       :unnarrowed t)
      ("d" "Default" plain

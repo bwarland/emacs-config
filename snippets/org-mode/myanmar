@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Myanmar
+# key: >mm
+# --
+[[file:/home/bw/Documents/Marked/Myanmar/rapporter/${1:filnavn}.pdf][$1]$0
