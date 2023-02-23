@@ -75,7 +75,7 @@
 		       (">erefdem" ":PROPERTIES:\n:dem1: $1\n:dem2: $2\n:dem3: $3\n:dem4: $4\n:dem5: $5\n:END:" "epa refinery demand" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/ep_refdem" nil nil)
 		       (">eg" "[[file:/home/bw/Documents/Marked/Egypt/rapporter/${1:filnavn}.pdf][$1]$0" "Egypt" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/egypt" nil nil)
 		       (">dk" "[[file:/home/bw/Documents/Marked/Denmark/rapporter/${1:filnavn}.pdf][$1]$0\n" "Denmark" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/denmark" nil nil)
-		       (">dailies" "* Marked\n:markedsrapporter:\n$0\n:end:\n** råolje\n*** marked\n*** [[id:672f32f5-2b41-4c62-bc48-53a458231609][raffineri]]\n** naturgass\n*** marked\n*** [[id:6b442a80-5cb2-4f6b-a265-3962d93a1e0a][LNG]]\n* Bearbeiding\n\n* Møter\n\n* Diskusjon\n\n* Agenda [/]\n  - [ ] Neste arbeidsdags møter" "dailies" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/dailies" nil nil)
+		       (">dailies" "* Arbeid\n** Marked\n:markedsrapporter:\n$0\n:end:\n*** råolje\n**** marked\n**** [[id:672f32f5-2b41-4c62-bc48-53a458231609][raffineri]]\n**** [[id:99960b50-5fc1-4369-afc7-cc5fb9d5042f][Russland]] & [[id:642e87de-0cb4-49ad-9c3f-7963bb4895a0][russisk-produktflyt-etter-krigsstart]]\n*** naturgass\n**** marked\n**** [[id:6b442a80-5cb2-4f6b-a265-3962d93a1e0a][LNG]]\n** Bearbeiding\n\n** Møter\n\n** Diskusjon\n\n** Agenda [/]\n  - [ ] Neste arbeidsdags møter\n* Refleksjoner" "dailies" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/dailies" nil nil)
 		       (">dgl" "[[file:/home/bw/GitHub/Notater/daglig/${1:filnavn}.org][$1]$0" "daglenke" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/daglenke" nil nil)
 		       (">cw" "[[file:/home/bw/Documents/Marked/Curacao/rapporter/${1:filnavn}.pdf][$1]$0\n" "Curacao" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/curacao" nil nil)
 		       (">crude" ":PROPERTIES:\n:name:	  $1\n:country:  $2\n:api:      $3\n:sulfur:   $4\n:END:$0" "crude oil" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/crude_oil" nil nil)
@@ -96,4 +96,4 @@
 		       (">au" "[[file:/home/bw/Documents/Marked/Australia/rapporter/${1:filnavn}.pdf][$1]$0\n" "Australia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/australia" nil nil)))
 
 
-;;; Do not edit! File generated at Sat Feb 11 08:12:31 2023
+;;; Do not edit! File generated at Thu Feb 23 06:33:37 2023
