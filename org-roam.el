@@ -33,7 +33,7 @@
       :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
       :unnarrowed t)
      ("d" "Default" plain
-      "* beskrivelse\n* relatert\n- \n* kilder [/]\n- [ ] >%?"
+      "* beskrivelse\n* notater\n* relatert\n- \n* kilder [/]\n- [ ] >%?"
       :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
       :unnarrowed t)
      ("l" "Liquefaction" plain
