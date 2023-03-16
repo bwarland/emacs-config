@@ -5,7 +5,7 @@
   :custom
   (org-roam-directory "~/GitHub/Notater/org-roam")
   ;; (org-roam-completion-everywhere t)
-  (org-roam-dailies-directory "~/GitHub/daglig_notater/")
+  (org-roam-dailies-directory "~/GitHub/daglige_notater/")
   :bind (("C-c n l" . org-roam-buffer-toggle)
          ("C-c n f" . org-roam-node-find)
          ("C-c n i" . org-roam-node-insert)

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Cape Verde
+# key: >cv
+# --
+[[file:/home/bw/Documents/Marked/Cape_Verde/rapporter/${1:filnavn}.pdf][$1]$0
