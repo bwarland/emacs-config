@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Ghana
+# key: >gh
+# --
+[[file:/home/bw/Documents/Marked/Ghana/rapporter/${1:filnavn}.pdf][$1]$0
