@@ -20,6 +20,7 @@
 		       (">za" "[[file:/home/bw/Documents/Marked/South_Africa/rapporter/${1:filnavn}.pdf][$1]$0\n" "South_Africa" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/south_africa" nil nil)
 		       (">sa" "[[file:/home/bw/Documents/Marked/Saudi_Arabia/rapporter/${1:filnavn}.pdf][$1]$0\n" "Saudi_Arabia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/saudi_arabia" nil nil)
 		       (">ru" "[[file:/home/bw/Documents/Marked/Russia/rapporter/${1:filnavn}.pdf][$1]$0" "Russia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/russia" nil nil)
+		       (">ro" "[[file:/home/bw/Documents/Marked/Romania/rapporter/${1:filnavn}.pdf][$1]$0" "Romania" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/romania" nil nil)
 		       (">reg" ":PROPERTIES:    \n:bcma:      $1\n:site:      $2\n:port:      $3\n:status:    $4\n:start:     $5\n:storage:   $6\n:cntr:      $7\n:END:" "regasification" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/regasification" nil nil)
 		       (">ref" ":PROPERTIES:\n:status:  $1\n:year:    $2\n:future:  $3\n:kbd:     $4\n:cntr:    $5\n:petchem: $6\n:risk:    $7\n:END:\n" "refinery" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/refinery" nil nil)
 		       (">raft" "|---------*-----------------+-----------------+------------|\n|raffineri| operasjonell kbd| konstruksjon kbd| stengt kbd |\n|---------*-----------------+-----------------+------------|\n||||\n|---------*-----------------+-----------------+------------|\n\n\n" "Raffineritabell" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/rafftab" nil nil)
@@ -84,6 +85,7 @@
 		       (">co" "[[file:/home/bw/Documents/Marked/Colombia/rapporter/${1:filnavn}.pdf][$1]$0\n" "Colombia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/colombia" nil nil)
 		       (">cn" "- [[file:/home/bw/Documents/Marked/China/rapporter/${1:filnavn}.pdf][$1]$0" "China" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/china" nil nil)
 		       (">cl" "[[file:/home/bw/Documents/Marked/Chile/rapporter/${1:filnavn}.pdf][$1]$0\n" "Chile" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/chile" nil nil)
+		       (">cv" "[[file:/home/bw/Documents/Marked/Cape_Verde/rapporter/${1:filnavn}.pdf][$1]$0" "Cape Verde" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/cape_verde" nil nil)
 		       (">ca" "[[file:/home/bw/Documents/Marked/Canada/rapporter/${1:filnavn}.pdf][$1]$0\n" "Canada" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/canada" nil nil)
 		       (">bg" "[[file:/home/bw/Documents/Marked/Bulgaria/rapporter/${1:filnavn}.pdf][$1]$0" "Bulgaria" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/bulgaria" nil nil)
 		       (">bio" "[[file:/home/bw/Documents/Marked/Biodrivstoff/${1:filnavn}.pdf][$1]$0" "biofuels" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/bio" nil nil)
@@ -98,4 +100,4 @@
 		       (">ao" "[[file:/home/bw/Documents/Marked/Angola/rapporter/${1:filnavn}.pdf][$1]$0" "Angola" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/angola" nil nil)))
 
 
-;;; Do not edit! File generated at Thu Mar 16 13:28:47 2023
+;;; Do not edit! File generated at Sun Mar 19 09:57:31 2023
