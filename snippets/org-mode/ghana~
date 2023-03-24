@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: Angola
-# key: >ao
-# --
-[[file:/home/bw/Documents/Marked/Angola/rapporter/${1:filnavn}.pdf][$1]$0

@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: USA
-# key: >us
-# --
-[[file:/home/bw/Documents/Marked/USA/rapporter/${1:filnavn}.pdf][$1]$0

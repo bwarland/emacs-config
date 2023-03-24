@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: Honduras
-# key: >hn
-# --
-[[file:/home/bw/Documents/Marked/Honduras/rapporter/${1:filnavn}.pdf][$1]$0

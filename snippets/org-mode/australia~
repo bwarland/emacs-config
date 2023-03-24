@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: Australia
-# key: >au
-# --
-- [[file:/home/bw/Documents/Marked/Australia/rapporter/${1:filnavn}.pdf][$1]$0
