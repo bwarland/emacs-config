@@ -102,4 +102,4 @@
 		       (">ao" "[[file:/home/bw/Documents/Marked/Angola/rapporter/${1:filnavn}.pdf][$1]$0" "Angola" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/angola" nil nil)))
 
 
-;;; Do not edit! File generated at Wed Mar 22 10:44:02 2023
+;;; Do not edit! File generated at Thu Mar 23 08:08:38 2023
