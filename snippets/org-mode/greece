@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Greece
+# key: >gr
+# --
+
+[[file:/home/bw/Documents/Marked/Greece/rapporter/${1:filnavn}.pdf][$1]$0

@@ -23,7 +23,7 @@
 		       (">ro" "[[file:/home/bw/Documents/Marked/Romania/rapporter/${1:filnavn}.pdf][$1]$0" "Romania" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/romania" nil nil)
 		       (">reg" ":PROPERTIES:    \n:bcma:      $1\n:site:      $2\n:port:      $3\n:status:    $4\n:start:     $5\n:storage:   $6\n:cntr:      $7\n:END:" "regasification" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/regasification" nil nil)
 		       (">ref" ":PROPERTIES:\n:status:  $1\n:year:    $2\n:future:  $3\n:kbd:     $4\n:cntr:    $5\n:petchem: $6\n:risk:    $7\n:END:\n" "refinery" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/refinery" nil nil)
-		       (">raft" "|---------*-----------------+-----------------+------------|\n|raffineri| operasjonell kbd| konstruksjon kbd| stengt kbd |\n|---------*-----------------+-----------------+------------|\n||||\n|---------*-----------------+-----------------+------------|\n\n\n" "Raffineritabell" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/rafftab" nil nil)
+		       (">raft" "|---------*-----------------+-----------------+------------|\n|raffineri| operasjonell kbd| konstruksjon kbd| stengt kbd |\n|---------*-----------------+-----------------+------------|\n||||\n|---------*-----------------+-----------------+------------|\n#+tblfm: @>$2=vsum(@II..@III)::@>$3=vsum(@II..@III)::@>$4=vsum(@II..@III)\n\n\n" "Raffineritabell" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/rafftab" nil nil)
 		       (">pr" "[[file:/home/bw/Documents/Marked/Puerto_Rico/rapporter/${1:filnavn}.pdf][$1]$0" "Puerto Rico" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/puerto_rico" nil nil)
 		       (">wmm" "" "weekly market meeting" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/products" nil nil)
 		       (">pt" "[[file:/home/bw/Documents/Marked/Portugal/rapporter/${1:filnavn}.pdf][$1]$0" "Portugal" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/portugal" nil nil)
@@ -63,6 +63,7 @@
 		       (">hu" "[[file:/home/bw/Documents/Marked/Hungary/rapporter/${1:filnavn}.pdf][$1]$0\n" "Hungary" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/hungary" nil nil)
 		       (">hn" "[[file:/home/bw/Documents/Marked/Honduras/rapporter/${1:filnavn}.pdf][$1]$0" "Honduras" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/honduras" nil nil)
 		       (">gt" "[[file:/home/bw/Documents/Marked/Guatemala/rapporter/${1:filnavn}.pdf][$1]$0" "Guatemala" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/guatemala" nil nil)
+		       (">gr" "[[file:/home/bw/Documents/Marked/Greece/rapporter/${1:filnavn}.pdf][$1]$0" "Greece" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/greece" nil nil)
 		       (">gs" "[[file:/home/bw/Documents/Marked/Products/Goldman_Sachs/${1:filnavn}.pdf][$1]$0" "goldman sachs" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/goldman_sachs" nil nil)
 		       (">gh" "[[file:/home/bw/Documents/Marked/Ghana/rapporter/${1:filnavn}.pdf][$1]$0" "Ghana" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/ghana" nil nil)
 		       (">de" "[[file:/home/bw/Documents/Marked/Germany/rapporter/${1:filnavn}.pdf][$1]$0" "Germany" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/germany" nil nil)
@@ -84,6 +85,7 @@
 		       (">cw" "[[file:/home/bw/Documents/Marked/Curacao/rapporter/${1:filnavn}.pdf][$1]$0\n" "Curacao" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/curacao" nil nil)
 		       (">crude" ":PROPERTIES:\n:name:	  $1\n:country:  $2\n:api:      $3\n:sulfur:   $4\n:END:$0" "crude oil" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/crude_oil" nil nil)
 		       (">cr" "[[file:/home/bw/Documents/Marked/Costa_Rica/rapporter/${1:filnavn}.pdf][$1]$0" "Costa Rica" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/costa_rica" nil nil)
+		       (">cg" "[[file:/home/bw/Documents/Marked/Congo_Brazzaville/rapporter/${1:filnavn}.pdf][$1]$0" "Congo Brazzaville" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/congo_brazzaville" nil nil)
 		       (">co" "[[file:/home/bw/Documents/Marked/Colombia/rapporter/${1:filnavn}.pdf][$1]$0\n" "Colombia" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/colombia" nil nil)
 		       (">cn" "- [[file:/home/bw/Documents/Marked/China/rapporter/${1:filnavn}.pdf][$1]$0" "China" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/china" nil nil)
 		       (">cl" "[[file:/home/bw/Documents/Marked/Chile/rapporter/${1:filnavn}.pdf][$1]$0\n" "Chile" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/chile" nil nil)
@@ -102,4 +104,8 @@
 		       (">ao" "[[file:/home/bw/Documents/Marked/Angola/rapporter/${1:filnavn}.pdf][$1]$0" "Angola" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/angola" nil nil)))
 
 
+<<<<<<< HEAD
 ;;; Do not edit! File generated at Thu Mar 23 08:08:38 2023
+=======
+;;; Do not edit! File generated at Fri Apr 14 10:11:05 2023
+>>>>>>> 36ee818 (nye yasnippets for land)

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Sierra Leone
+# key: >sl
+# --
+
+[[file:/home/bw/Documents/Marked/Sierra_Leone/rapporter/${1:filnavn}.pdf][$1]$0
