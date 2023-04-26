@@ -4,5 +4,5 @@
 (set-register ?l '(file . "~/GitHub/Notater/journaler/liq.org"))
 (set-register ?w '(file . "~/GitHub/Notater/møter/wmm.org"))
 (set-register ?r '(file . "~/GitHub/Notater/org-roam/20220916064720-rapplenker.org"))
-(set-register ?R '(file . "~/GitHub/Notater/journaler/reg.org"))
+(set-register ?R '(file . "~/GitHub/Notater/journaler/repetisjon_emner.org"))
 (set-register ?e '(file . "~/.emacs"))
