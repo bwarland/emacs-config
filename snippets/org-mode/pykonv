@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: navnekonvensjoner for python
+# key: >pykonv
+# binding: C-c C-p C-k
+# --
+
+# filename: $1
+# purpose: $2
+# created: $3
+# by: $4
+
+# This Python script aims for following naming rules:
+# 
+# 1) functions: verb, lower case with underscore if more than one word
+# 2) variables: noun, lower case with underscore if more than one word
+# 3) data structures: noun, lower case with underscore if more than one word
+# 4) objects: noun, CamelCase
+# 5) constants: noun, upper case with underscore if more than one word
+
+$5
