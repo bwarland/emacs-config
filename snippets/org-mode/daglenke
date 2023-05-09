@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: daglenke
 # key: >dgl
-# binding: C-c C-l C-d 
+# binding: C-x C-d C-g
 # --
 [[file:/home/bw/GitHub/daglige_notater/${1:filnavn}.org][$1]$0
