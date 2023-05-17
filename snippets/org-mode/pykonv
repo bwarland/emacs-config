@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name: navnekonvensjoner for python
 # key: >pykonv
-# binding: C-c C-p C-k
+# binding: C-z
 # --
 
 # filename: $1

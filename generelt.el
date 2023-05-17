@@ -104,3 +104,5 @@
 
 ;; (setq abbrev-suggest 1)
 ;; (setq abbrev-suggest-hint-threshold 3)
+
+(setq smartparens-global-mode 1)
