@@ -4,7 +4,7 @@
 ^INDEKSKORT^                                
 ^^^^^^^^-----------------------------------------------------------------------
 c: nytt kort                f: finn kort               i: legg inn kort
-d: daglig kommentar         D: gå til daglig           K: gå til dato
+d: gå til daglig            D: ny daglig kommentar     K: gå til dato
 a: alias                    A: fjern alias
 r: referanse                R: fjern referanse
 t: tag                      T: fjern tag
@@ -19,8 +19,8 @@ l: vis lokal graf
 ("c" org-roam-capture)
 ("f" org-roam-node-find)
 ("i" org-roam-node-insert)
-("d" org-roam-dailies-capture-today)
-("D" org-roam-dailies-goto-today)
+("D" org-roam-dailies-capture-today)
+("d" org-roam-dailies-goto-today)
 ("K" org-roam-dailies-goto-date)
 ("a" org-roam-alias-add)
 ("A" org-roam-alias-remove)
