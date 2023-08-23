@@ -1,2 +1,2 @@
 ;;; Compiled snippets and support files for `snippet-mode'
-;;; Do not edit! File generated at Wed Jul 26 15:21:56 2023
+;;; Do not edit! File generated at Wed Aug 23 09:45:25 2023
