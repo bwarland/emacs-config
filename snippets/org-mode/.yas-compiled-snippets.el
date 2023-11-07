@@ -85,7 +85,7 @@
 		       (">erefdem" ":PROPERTIES:\n:dem1: $1\n:dem2: $2\n:dem3: $3\n:dem4: $4\n:dem5: $5\n:END:" "epa refinery demand" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/ep_refdem" nil nil)
 		       (">eg" "[[file:/home/bw/Documents/Marked/Egypt/rapporter/${1:filnavn}.pdf][$1]$0" "Egypt" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/egypt" nil nil)
 		       (">dk" "[[file:/home/bw/Documents/Marked/Denmark/rapporter/${1:filnavn}.pdf][$1]$0\n" "Denmark" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/denmark" nil nil)
-		       (">dailies" "* Arbeid\n** Agenda [/]\n  - [ ] Neste arbeidsdags møter\n  - [ ] org-drill\n  - [ ] fritt fra minnet\n** Bearbeiding\n** Diskusjon\n** Marked\n:markedsrapporter:\n$0\n:end:\n*** [[id:7ef4f549-3ada-47c7-8829-73f0a5a65801][råolje]]\n**** marked\n**** [[id:672f32f5-2b41-4c62-bc48-53a458231609][raffineri]]\n**** [[id:99960b50-5fc1-4369-afc7-cc5fb9d5042f][Russland]] & [[id:642e87de-0cb4-49ad-9c3f-7963bb4895a0][russisk-produktflyt-etter-krigsstart]]\n*** [[id:c223bfa9-0dc0-474a-a8c6-39f6d48d1fcf][natural-gas]]\n**** marked\n**** [[id:6b442a80-5cb2-4f6b-a265-3962d93a1e0a][LNG]]\n*** [[id:b565c8aa-1ecf-45e5-a046-276206a72a7f][energiomstilling]]\n**** [[id:45d28959-aa3e-4029-9e31-e09d52c7452c][metanol]]\n** Møter\n* [[id:2118cf49-de1e-47ee-bae7-64254526b6aa][Refleksjoner]]\n" "dailies" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/dailies" "C-c C-a C-d" nil)
+		       (">dailies" "* Arbeid\n** Agenda [/]\n  - [ ] Neste arbeidsdags møter\n  - [ ] org-drill\n  - [ ] fritt fra minnet\n** Bearbeiding\n** Diskusjon\n** Marked\n:markedsrapporter:\n$0\n:end:\n** Møter\n* [[id:2118cf49-de1e-47ee-bae7-64254526b6aa][Refleksjoner]]\n" "dailies" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/dailies" "C-c C-a C-d" nil)
 		       (">dgl" "[[file:/home/bw/GitHub/daglige_notater/${1:`(format-time-string \"%Y-%m-%d\")`}.org][$1]] $0" "daglenke" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/daglenke" "C-x C-d C-g" nil)
 		       (">cw" "[[file:/home/bw/Documents/Marked/Curacao/rapporter/${1:filnavn}.pdf][$1]$0\n" "Curacao" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/curacao" nil nil)
 		       (">crude" ":PROPERTIES:\n:name:	  $1\n:country:  $2\n:api:      $3\n:sulfur:   $4\n:END:$0" "crude oil" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/crude_oil" nil nil)
@@ -111,4 +111,4 @@
 		       (">ao" "[[file:/home/bw/Documents/Marked/Angola/rapporter/${1:filnavn}.pdf][$1]$0" "Angola" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/angola" nil nil)))
 
 
-;;; Do not edit! File generated at Thu Sep 28 06:26:14 2023
+;;; Do not edit! File generated at Tue Nov  7 20:25:42 2023
