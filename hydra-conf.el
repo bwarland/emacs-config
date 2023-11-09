@@ -5,7 +5,7 @@
 ^^^^^^^^-----------------------------------------------------------------------
 c: nytt kort                f: finn kort               i: legg inn kort
 d: gå til daglig            D: ny daglig kommentar     K: gå til dato
-a: alias                    A: fjern alias
+a: alias                    A: fjern alias             x: spaced rep
 r: referanse                R: fjern referanse
 t: tag                      T: fjern tag
 -------------------------------------------------------------------------------
@@ -33,6 +33,7 @@ l: vis lokal graf
 ("s" org-roam-node-random)
 ("m" org-roam-ui-mode)
 ("g" org-roam-ui-open)
+("x" org-drill)
 ("l" org-roam-ui-node-local))
 ;; "V" Buffer-menu-select "select" :color blue)
 ;; ("o" Buffer-menu-other-window "other-window" :color blue)
