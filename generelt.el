@@ -13,8 +13,8 @@
         ((string= system-name "mbell") (set-frame-font "liberation mono-15"))
         ((string= system-name "kbell") (set-frame-font "liberation mono-15"))
 	      ((string= system-name "valsen") (set-frame-font "liberation mono-15"))
-	      ((string= system-name "bjorno") (set-frame-font "monospace-12"))
-	((string= system-name "biba") (set-frame-font "liberation mono-15"))
+	      ((string= system-name "bjorno") (set-frame-font "monospace-13"))
+	      ((string= system-name "biba") (set-frame-font "liberation mono-15"))
         ((string= system-name "nyvaar") (set-frame-font "liberation mono-12")))
 
   ;; (use-package doom-modeline
