@@ -15,7 +15,7 @@
         org-agenda-sticky t
         org-agenda-time-grid (quote ((daily today remove-match)
                                      (0600 0800 1000 1200 1400 1600 1800)
-                                     "      " "................")))
+                                     "------" "----------------")))
 (add-hook 'after-init-hook 'org-agenda-list)
 
 (require 'org-super-agenda)
@@ -24,12 +24,10 @@
   :config
   (org-super-agenda-mode 1)
   (setq org-super-agenda-groups
-        '((:name "================================TIDSPLAN============================================"
+        '((:name "TIDSPLAN"
                  :time-grid t)
-          (:name "================================INDEKSKORT=========================================="
-                 :todo "TODO")
-		 ;; (:name "================================BEARBEIDING============================="
-		 ;; 	:todo "NEXT")
+          (:name "REPETISJON"
+                 :tag (":drill:"))
 		 ;; (:name "++++++++++++++++++++++++++++++++TERPING+++++++++++++++++++++++++++++++++"
 		 ;; 	:tag ("informatikk" "emacs" "git" "linux" "scheme" "python" "samfunn" "økonomi"))
 		 )))
