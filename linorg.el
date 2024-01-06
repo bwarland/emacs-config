@@ -18,6 +18,7 @@
    	  org-startup-indented t
    	  org-startup-folded t
    	  org-pretty-entities t
+	          org-use-sub-superscripts "{}"
    	  org-pretty-entities-include-sub-superscripts t
    	  org-treat-s-cursor-todo-selection-as-state-change nil
    	  org-directory "~/GitHub"

@@ -27,7 +27,13 @@
         '((:name "TIDSPLAN"
                  :time-grid t)
           (:name "REPETISJON"
-                 :tag (":drill:"))
-		 ;; (:name "++++++++++++++++++++++++++++++++TERPING+++++++++++++++++++++++++++++++++"
-		 ;; 	:tag ("informatikk" "emacs" "git" "linux" "scheme" "python" "samfunn" "økonomi"))
-		 )))
+		       :tag "drill")
+	  )))
+
+(require 'org-modern)
+(use-package org-modern
+  :ensure t
+  :hook
+  (org-mode . global-org-modern-mode)
+  :config
+  (global-org-modern-mode t))
