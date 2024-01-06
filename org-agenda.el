@@ -10,12 +10,17 @@
         org-agenda-log-into-drawer t
         org-agenda-include-diary t
         org-agenda-skip-scheduled-if-done t
+	      org-agenda-skip-timestamp-if-done t
         org-agenda-skip-deadline-if-done t
+	      org-agenda-skip-scheduled-if-deadline-is-shown t
+	      org-agenda-skip-timestamp-if-deadline-is-shown t
         org-agenda-use-time-grid t
         org-agenda-sticky t
+	      org-agenda-hide-tags-regexp ".*"
+	      org-agenda-current-time-string ""
         org-agenda-time-grid (quote ((daily today remove-match)
-                                     (0600 0800 1000 1200 1400 1600 1800)
-                                     "------" "----------------")))
+                                     ()
+                                     "" "")))
 (add-hook 'after-init-hook 'org-agenda-list)
 
 (require 'org-super-agenda)
