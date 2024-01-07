@@ -63,9 +63,9 @@
 
 (setq org-capture-templates
       (quote (
-	      ("t" "todo" entry (file+olp "~/GitHub/Notater/journaler/todo.org" "2023")
+	      ("t" "todo" entry (file+olp "~/GitHub/Notater/journaler/todo.org" "2024")
 	      "* TODO %?\n %^t")
-	      ("m" "møte" entry (file+olp "~/GitHub/Notater/møter/møte.org" "2023") ;
+	      ("m" "møte" entry (file+olp "~/GitHub/Notater/møter/møte.org" "2024") ;
 	       "* %?\n %^T--%^T")
               ("j" "Journal")
               ("jd" "dagbok" entry (file+datetree+prompt "~/GitHub/Journal/dagbok.org")

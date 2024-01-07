@@ -36,9 +36,22 @@
   (setq org-super-agenda-groups
         '((:name "TIDSPLAN"
                  :time-grid t)
-          (:name "REPETISJON"
-		       :tag "drill")
-	  )))
+          ;; (:name "REPETISJON"
+	        ;; 	  :tag "drill")
+   	(:name "HISTORIE"
+		       :and (:tag "drill" :tag "historie"))
+	        (:name "MATEMATIKK"
+		       :and (:tag "drill" :tag "matte"))
+		(:name "POLITIKK"
+		       :and (:tag "drill" :tag "politikk"))
+		(:name "SPRÅK"
+		       :and (:tag "drill" :tag "språk"))
+		(:name "TILEGNING"
+		       :and (:tag "drill" :tag "studie"))
+		(:name "VERKTØY"
+		       :and (:tag "drill" :tag "verktøy"))
+		)
+	  ))
 
 (require 'org-modern)
 (use-package org-modern
@@ -47,3 +60,7 @@
   (org-mode . global-org-modern-mode)
   :config
   (global-org-modern-mode t))
+
+;; (defun org-agenda-open-hook ()
+;;   "Hook to be run when org-agenda is opened"
+;;   (olivetti-mode))
