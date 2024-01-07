@@ -21,6 +21,11 @@
         org-agenda-time-grid (quote ((daily today remove-match)
                                      ()
                                      "" "")))
+(setq org-agenda-prefix-format '(
+				 (agenda . "  %?-2i %t ")
+				 (todo . " %i %-12:c")
+				 (tags . " %i %-12:c")
+				 (search . " %i %-12:c")))
 (add-hook 'after-init-hook 'org-agenda-list)
 
 (require 'org-super-agenda)
