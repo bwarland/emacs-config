@@ -22,7 +22,7 @@
                                      ()
                                      "" "")))
 (setq org-agenda-prefix-format '(
-				 (agenda . "  %?-2i %t ")
+				 (agenda . "  %?-2i %t")
 				 (todo . " %i %-12:c")
 				 (tags . " %i %-12:c")
 				 (search . " %i %-12:c")))
