@@ -38,12 +38,14 @@
                  :time-grid t)
           ;; (:name "REPETISJON"
 	        ;; 	  :tag "drill")
-   	(:name "HISTORIE"
-		       :and (:tag "drill" :tag "historie"))
+   	;; (:name "HISTORIE"
+	;; 	       :and (:tag "drill" :tag "historie"))
 	        (:name "MATEMATIKK"
 		       :and (:tag "drill" :tag "matte"))
-		(:name "POLITIKK"
-		       :and (:tag "drill" :tag "politikk"))
+		;; (:name "POLITIKK"
+		;;        :and (:tag "drill" :tag "politikk"))
+		(:name "SAMFUNN"
+		       :and (:tag "drill" :tag "samfunn"))
 		(:name "SPRÅK"
 		       :and (:tag "drill" :tag "språk"))
 		(:name "TILEGNING"

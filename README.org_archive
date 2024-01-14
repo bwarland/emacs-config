@@ -1,0 +1,54 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/bw/GitHub/emacs-config/README.org
+
+
+* Latex
+:PROPERTIES:
+:ARCHIVE_TIME: 2024-01-12 Fri 18:59
+:ARCHIVE_FILE: ~/GitHub/emacs-config/README.org
+:ARCHIVE_OLPATH: Org-mode
+:ARCHIVE_CATEGORY: README
+:END:
+#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/linorg.el"
+;; (setq org-format-latex-options (plist-put org-format-latex-options :scale 2.0))
+#+end_src
+
+* forkortelser
+:PROPERTIES:
+:ARCHIVE_TIME: 2024-01-12 Fri 19:00
+:ARCHIVE_FILE: ~/GitHub/emacs-config/README.org
+:ARCHIVE_OLPATH: Forskjellig
+:ARCHIVE_CATEGORY: README
+:END:
+#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
+;; (setq abbrev-suggest 1)
+;; (setq abbrev-suggest-hint-threshold 3)
+#+end_src 
+
+* doom modeline
+:PROPERTIES:
+:ARCHIVE_TIME: 2024-01-13 Sat 08:30
+:ARCHIVE_FILE: ~/GitHub/emacs-config/README.org
+:ARCHIVE_OLPATH: Utseende
+:ARCHIVE_CATEGORY: README
+:END:
+#+begin_src emacs-lisp :tangle "~/GitHub/emacs-config/generelt.el"
+  ;; (use-package doom-modeline
+  ;;     :ensure t
+  ;;     :init (doom-modeline-mode 1)
+  ;;     :hook (after-init . doom-modeline-init)
+  ;;     :config (setq doom-modeline-bar-height 25
+  ;;                   doom-modeline-bar-width 3
+  ;;                   doom-modeline-buffer-encoding t
+  ;;                   doom-modeline-workspace-name t
+  ;; 		  doom-modeline-major-mode-icon t
+  ;; 		  doom-modeline-buffer-state-icon t
+  ;; 		  doom-modeline-buffer-modification-icon t
+  ;; 		  doom-modeline-modal-icon t
+  ;; 		  doom-modeline-env-python-executable "python"
+  ;; 		  doom-modeline-icon (display-graphic-p)))
+    ;; (use-package doom-themes
+    ;;   :init (load-theme 'doom-palenight t))
+#+end_src

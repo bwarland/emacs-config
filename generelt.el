@@ -17,25 +17,6 @@
 	      ((string= system-name "biba") (set-frame-font "liberation mono-15"))
         ((string= system-name "nyvaar") (set-frame-font "liberation mono-12")))
 
-  ;; (use-package doom-modeline
-  ;;     :ensure t
-  ;;     :init (doom-modeline-mode 1)
-  ;;     :hook (after-init . doom-modeline-init)
-  ;;     :config (setq doom-modeline-bar-height 25
-  ;;                   doom-modeline-bar-width 3
-  ;;                   doom-modeline-buffer-encoding t
-  ;;                   doom-modeline-workspace-name t
-  ;; 		  doom-modeline-major-mode-icon t
-  ;; 		  doom-modeline-buffer-state-icon t
-  ;; 		  doom-modeline-buffer-modification-icon t
-  ;; 		  doom-modeline-modal-icon t
-  ;; 		  doom-modeline-env-python-executable "python"
-  ;; 		  doom-modeline-icon (display-graphic-p)))
-    ;; (use-package doom-themes
-    ;;   :init (load-theme 'doom-palenight t))
-
-;; (setq-default show-trailing-whitespace t)
-
 (global-hl-line-mode +1)
 
 (beacon-mode 1)
@@ -67,16 +48,6 @@
 ;; (openwith-mode t)
 ;; (setq openwith-associations '(("\\.pdf\\'" "qpdfview" (file))))
 
-(setq abbrev-file-name "~/.emacs.d/abbrev_defs")
-(setq save-abbrevs 'silent)
-(setq-default abbrev-mode t)
-
-    ;; (use-package hi-lock
-    ;;   :defer t
-    ;;   :bind (("M-o l" . highlight-lines-matching-regexp)
-    ;;          ("M-o r" . highlight-regexp)
-    ;;          ("M-o w" . highlight-phrase)))
-
 (emacs-init-time)
 ;; use a hook so the message doesn't get clobbered by other messages.
 (add-hook 'emacs-startup-hook
@@ -91,9 +62,6 @@
 
 (add-to-list 'load-path "~/.emacs.d/emacs-ob-racket-master/")
 
-  (setq ispell-program-name "hunspell")
-        ;; ispell-hunspell-dict-path-alist '((/usr/share/doc/hunspell-no))
-
 (global-auto-revert-mode t)
 
   (use-package command-log-mode
@@ -103,7 +71,17 @@
     :config
     (global-command-log-mode t))
 
-;; (setq abbrev-suggest 1)
-;; (setq abbrev-suggest-hint-threshold 3)
+  (setq ispell-program-name "hunspell")
+        ;; ispell-hunspell-dict-path-alist '((/usr/share/doc/hunspell-no))
 
 (setq smartparens-global-mode 1)
+
+(setq abbrev-file-name "~/.emacs.d/abbrev_defs")
+(setq save-abbrevs 'silent)
+(setq-default abbrev-mode t)
+
+    (use-package hi-lock
+      :defer t
+      :bind (("M-o l" . highlight-lines-matching-regexp)
+             ("M-o r" . highlight-regexp)
+             ("M-o w" . highlight-phrase)))
