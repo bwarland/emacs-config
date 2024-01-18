@@ -7,7 +7,8 @@ c: nytt kort                f: finn kort               i: legg inn kort
 d: gå til daglig            D: ny daglig kommentar     K: gå til dato
 a: alias                    A: fjern alias             x: spaced rep
 r: referanse                R: fjern referanse         w: antall ord
-t: tag                      T: fjern tag
+t: tag                      T: fjern tag               o: olivetti-mode
+ 
 -------------------------------------------------------------------------------
 b: se baklenke
 s: et tilfeldig kort
@@ -35,6 +36,7 @@ l: vis lokal graf
 ("g" org-roam-ui-open)
 ("x" org-drill)
 ("w" wc)
+("o" olivetti-mode)
 ("l" org-roam-ui-node-local))
 ;; "V" Buffer-menu-select "select" :color blue)
 ;; ("o" Buffer-menu-other-window "other-window" :color blue)
