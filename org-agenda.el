@@ -40,6 +40,8 @@
 	        ;; 	  :tag "drill")
    	;; (:name "HISTORIE"
 	;; 	       :and (:tag "drill" :tag "historie"))
+	        (:name "ENERGI"
+		       :and (:tag "drill" :tag "energi"))
 	        (:name "MATEMATIKK"
 		       :and (:tag "drill" :tag "matte"))
 		;; (:name "POLITIKK"
