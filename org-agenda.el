@@ -1,4 +1,4 @@
-  (setq org-agenda-columns t
+(setq org-agenda-columns t
         org-agenda-tags-column -100
         org-agenda-include-deadlines t
         org-agenda-compact-blocks t
