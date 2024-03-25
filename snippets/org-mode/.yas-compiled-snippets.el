@@ -85,7 +85,7 @@
 		       (">erefdem" ":PROPERTIES:\n:dem1: $1\n:dem2: $2\n:dem3: $3\n:dem4: $4\n:dem5: $5\n:END:" "epa refinery demand" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/ep_refdem" nil nil)
 		       (">eg" "[[file:/home/bw/Documents/Marked/Egypt/rapporter/${1:filnavn}.pdf][$1]$0" "Egypt" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/egypt" nil nil)
 		       (">dk" "[[file:/home/bw/Documents/Marked/Denmark/rapporter/${1:filnavn}.pdf][$1]$0\n" "Denmark" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/denmark" nil nil)
-		       (">dailies" "* Arbeid\n** Agenda [/]\n  - [ ] Neste arbeidsdags møter\n  - [ ] org-drill\n  - [ ] fritt fra minnet\n** Bearbeiding\n** Diskusjon\n** Marked\n:markedsrapporter:\n$0\n:end:\n** Møter\n* [[id:2118cf49-de1e-47ee-bae7-64254526b6aa][Refleksjoner]]\n" "dailies" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/dailies" "C-c C-a C-d" nil)
+		       (">dailies" "* Agenda [/]\n  - [ ] Neste arbeidsdags møter\n  - [ ] org-drill\n  - [ ] fritt fra minnet\n* Arbeid\n** Bearbeiding\n** Diskusjon\n** Marked\n:markedsrapporter:\n$0\n:end:\n** Møter\n* [[id:2118cf49-de1e-47ee-bae7-64254526b6aa][Refleksjoner]]\n" "dailies" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/dailies" "C-c C-a C-d" nil)
 		       (">dgl" "[[file:/home/bw/GitHub/daglige_notater/${1:`(format-time-string \"%Y-%m-%d\")`}.org][$1]] $0" "daglenke" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/daglenke" "C-x C-d C-g" nil)
 		       (">cw" "[[file:/home/bw/Documents/Marked/Curacao/rapporter/${1:filnavn}.pdf][$1]$0\n" "Curacao" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/curacao" nil nil)
 		       (">crude" ":PROPERTIES:\n:name:	  $1\n:country:  $2\n:api:      $3\n:sulfur:   $4\n:END:$0" "crude oil" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/crude_oil" nil nil)
@@ -111,4 +111,4 @@
 		       (">ao" "[[file:/home/bw/Documents/Marked/Angola/rapporter/${1:filnavn}.pdf][$1]$0" "Angola" nil nil nil "/home/bw/GitHub/emacs-config/snippets/org-mode/angola" nil nil)))
 
 
-;;; Do not edit! File generated at Tue Nov  7 20:25:42 2023
+;;; Do not edit! File generated at Thu Mar 14 06:27:32 2024

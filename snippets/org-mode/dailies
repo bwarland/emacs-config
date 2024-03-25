@@ -3,11 +3,11 @@
 # key: >dailies
 # binding: C-c C-a C-d
 # --
-* Arbeid
-** Agenda [/]
+* Agenda [/]
   - [ ] Neste arbeidsdags møter
   - [ ] org-drill
   - [ ] fritt fra minnet
+* Arbeid
 ** Bearbeiding
 ** Diskusjon
 ** Marked
